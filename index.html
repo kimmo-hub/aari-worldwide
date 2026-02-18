@@ -1,1 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localization Demo (Original language: Finnish)</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      background: #0f0f0f;
+      color: #f0f0f0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      gap: 24px;
+    }
+
+    .page-header {
+      width: 100%;
+      max-width: 960px;
+      text-align: left;
+    }
+
+    .page-title {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 56px;
+      letter-spacing: -1px;
+      color: #ffffff;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    .page-title-sub {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 28px;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .page-subtitle {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      color: #aaaaaa;
+      margin-top: 6px;
+      letter-spacing: 0.2px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .player-wrapper {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+      aspect-ratio: 16 / 9;
+    }
+
+    #player {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* Hide any subtitles or captions on all browsers */
+    #player::cue { display: none; }
+    video::cue { display: none; }
+
+    .placeholder-message {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #555;
+      font-size: 15px;
+      pointer-events: none;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .placeholder-message.hidden {
+      display: none;
+    }
+
+    .placeholder-message svg {
+      opacity: 0.3;
+    }
+
+    .video-logo {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      width: 40px;
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .video-logo svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .timecode-block {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 3px;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .timecode-block.visible {
+      opacity: 1;
+    }
+
+    .timecode-flag {
+      width: 38px;
+      height: 25px;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+
+    /* ── SVG Flags via background-image ───────────────── */
+    .flag-fi { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 11'%3E%3Crect width='18' height='11' fill='%23fff'/%3E%3Crect x='4' width='3' height='11' fill='%23003580'/%3E%3Crect y='4' width='18' height='3' fill='%23003580'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-sv { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3Crect width='16' height='10' fill='%23006AA7'/%3E%3Crect x='4' width='2' height='10' fill='%23FECC02'/%3E%3Crect y='4' width='16' height='2' fill='%23FECC02'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-no { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 16'%3E%3Crect width='22' height='16' fill='%23EF2B2D'/%3E%3Crect x='6' width='4' height='16' fill='%23fff'/%3E%3Crect y='6' width='22' height='4' fill='%23fff'/%3E%3Crect x='7' width='2' height='16' fill='%23002868'/%3E%3Crect y='7' width='22' height='2' fill='%23002868'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-da { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Crect width='16' height='12' fill='%23C60C30'/%3E%3Crect x='5' width='2' height='12' fill='%23fff'/%3E%3Crect y='5' width='16' height='2' fill='%23fff'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-et { background: linear-gradient(to bottom, #0072CE 33.3%, #000 33.3% 66.6%, #fff 66.6%); }
+    .flag-is { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 18'%3E%3Crect width='25' height='18' fill='%23003897'/%3E%3Crect x='6' width='4' height='18' fill='%23fff'/%3E%3Crect y='7' width='25' height='4' fill='%23fff'/%3E%3Crect x='7' width='2' height='18' fill='%23D72828'/%3E%3Crect y='8' width='25' height='2' fill='%23D72828'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-en { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='c'%3E%3Crect width='60' height='30'/%3E%3C/clipPath%3E%3Crect width='60' height='30' fill='%23012169'/%3E%3Cg clip-path='url(%23c)'%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 V30 M0,15 H60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 V30 M0,15 H60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); background-size: cover; }
+    .flag-fr { background: linear-gradient(to right, #002395 33.3%, #fff 33.3% 66.6%, #ED2939 66.6%); }
+    .flag-de { background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%); }
+    .flag-nl { background: linear-gradient(to bottom, #AE1C28 33.3%, #fff 33.3% 66.6%, #21468B 66.6%); }
+    .flag-es { background: linear-gradient(to bottom, #c60b1e 25%, #ffc400 25% 75%, #c60b1e 75%); }
+    .flag-pt_br { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 14'%3E%3Crect width='20' height='14' fill='%23009C3B'/%3E%3Cpolygon points='3,7 10,1 17,7 10,13' fill='%23FFDF00'/%3E%3Ccircle cx='10' cy='7' r='3' fill='%23003087'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-it { background: linear-gradient(to right, #009246 33.3%, #fff 33.3% 66.6%, #CE2B37 66.6%); }
+    .flag-ro { background: linear-gradient(to right, #002B7F 33.3%, #FCD116 33.3% 66.6%, #CE1126 66.6%); }
+    .flag-el { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 18'%3E%3Crect width='27' height='18' fill='%230D5EAF'/%3E%3Crect y='0' width='27' height='2' fill='%23fff'/%3E%3Crect y='4' width='27' height='2' fill='%23fff'/%3E%3Crect y='8' width='27' height='2' fill='%23fff'/%3E%3Crect y='12' width='27' height='2' fill='%23fff'/%3E%3Crect y='16' width='27' height='2' fill='%23fff'/%3E%3Crect width='10' height='10' fill='%230D5EAF'/%3E%3Crect x='4' width='2' height='10' fill='%23fff'/%3E%3Crect y='4' width='10' height='2' fill='%23fff'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-pl { background: linear-gradient(to bottom, #fff 50%, #DC143C 50%); }
+    .flag-uk { background: linear-gradient(to bottom, #005BBB 50%, #FFD500 50%); }
+    .flag-hu { background: linear-gradient(to bottom, #CE2939 33.3%, #fff 33.3% 66.6%, #477050 66.6%); }
+    .flag-bg { background: linear-gradient(to bottom, #fff 33.3%, #00966E 33.3% 66.6%, #D62612 66.6%); }
+    .flag-hr { background: linear-gradient(to bottom, #FF0000 33.3%, #fff 33.3% 66.6%, #171796 66.6%); }
+    .flag-tr { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23E30A17'/%3E%3Ccircle cx='11' cy='10' r='6' fill='%23fff'/%3E%3Ccircle cx='13' cy='10' r='4.5' fill='%23E30A17'/%3E%3Cpolygon points='18,10 20.5,6.5 20.5,13.5' fill='%23fff'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-ar  { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 14'%3E%3Crect width='20' height='14' fill='%23006C35'/%3E%3Cpath d='M6,5 Q10,3 14,5 Q10,4.5 6,5Z M6,9 Q10,11 14,9 Q10,9.5 6,9Z' fill='%23fff' stroke='%23fff' stroke-width='0.5'/%3E%3Cline x1='10' y1='4' x2='10' y2='10' stroke='%23fff' stroke-width='0.8'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-hi  { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23fff'/%3E%3Crect width='30' height='6.67' fill='%23FF9933'/%3E%3Crect y='13.33' width='30' height='6.67' fill='%23138808'/%3E%3Ccircle cx='15' cy='10' r='3' fill='none' stroke='%23000080' stroke-width='0.8'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-ko  { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23fff'/%3E%3Ccircle cx='15' cy='10' r='5' fill='%23CD2E3A'/%3E%3Cpath d='M15,5 A5,5 0 0,1 15,15 Z' fill='%230047A0'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-zh_cn { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23DE2910'/%3E%3Cpolygon points='5,2 6.2,5.8 2.2,3.4 7.8,3.4 3.8,5.8' fill='%23FFDE00'/%3E%3Cpolygon points='10,1 10.8,3 13,3 11.4,4.2 12,6.2 10,5 8,6.2 8.6,4.2 7,3 9.2,3' fill='%23FFDE00'/%3E%3Cpolygon points='13,3.5 13.8,5.5 16,5.5 14.4,6.7 15,8.7 13,7.5 11,8.7 11.6,6.7 10,5.5 12.2,5.5' fill='%23FFDE00'/%3E%3Cpolygon points='13,7 13.8,9 16,9 14.4,10.2 15,12.2 13,11 11,12.2 11.6,10.2 10,9 12.2,9' fill='%23FFDE00'/%3E%3C/svg%3E"); background-size: cover; }
+    .flag-ja  { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23fff'/%3E%3Ccircle cx='15' cy='10' r='6' fill='%23BC002D'/%3E%3C/svg%3E"); background-size: cover; }
+
+    .timecode {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+
+    .lang-label {
+      width: 100%;
+      max-width: 960px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #888;
+      justify-content: flex-start;
+    }
+
+    .lang-label span {
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .flag-selector {
+      width: 100%;
+      max-width: 960px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .lang-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-group-label {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #555;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .lang-group-flags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+    }
+
+    .lang-group-flags.wrap-3 {
+      max-width: 234px; /* forces 3-per-row wrap for 6-flag groups */
+    }
+
+    .flag-btn {
+      background: #1a1a1a;
+      border: 2px solid transparent;
+      border-radius: 9px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding: 7px 9px;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+      min-width: 54px;
+      user-select: none;
+    }
+
+    .flag-btn:hover {
+      background: #252525;
+      transform: translateY(-2px);
+    }
+
+    .flag-btn.active {
+      border-color: #4a9eff;
+      background: #1a2a3a;
+    }
+
+    .flag-btn .flag-emoji {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .flag-btn .flag-code {
+      font-size: 10px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+
+    .flag-btn.active .flag-code {
+      color: #4a9eff;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 16px 12px;
+        gap: 16px;
+      }
+
+      .page-title {
+        font-size: 36px;
+        letter-spacing: -0.5px;
+      }
+
+      .page-title-sub {
+        font-size: 20px;
+        letter-spacing: -0.3px;
+      }
+
+      .page-subtitle {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .video-logo {
+        width: 28px;
+        top: 10px;
+        left: 12px;
+      }
+
+      .timecode {
+        font-size: 11px;
+        padding: 2px 6px;
+      }
+
+      .timecode-block {
+        bottom: 8px;
+        right: 10px;
+      }
+
+      .flag-btn {
+        min-width: 52px;
+        padding: 6px 8px;
+      }
+
+      .flag-btn .flag-emoji {
+        font-size: 24px;
+      }
+
+      .lang-group-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+      .flag-selector {
+        gap: 12px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px 10px;
+        gap: 12px;
+      }
+
+      .page-title {
+        font-size: 28px;
+        letter-spacing: -0.3px;
+      }
+
+      .page-title-sub {
+        font-size: 16px;
+        display: block;
+        margin-top: 2px;
+      }
+
+      .page-subtitle {
+        font-size: 12px;
+      }
+
+      .flag-btn {
+        min-width: 46px;
+        padding: 5px 6px;
+      }
+
+      .flag-btn .flag-emoji {
+        font-size: 20px;
+      }
+
+      .flag-btn .flag-code {
+        font-size: 9px;
+      }
+
+      .flag-selector {
+        gap: 10px 12px;
+      }
+
+      .lang-group-label {
+        font-size: 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <h1 class="page-title">Localization Demo <span class="page-title-sub">(original language in Finnish)</span></h1>
+    <p class="page-subtitle">Narrator: Kimmo Syväri, Founder, Ääri &nbsp;·&nbsp; Pursimiehenkatu 8, 00150 Helsinki &nbsp;·&nbsp; +358 40 520 3646 &nbsp;·&nbsp; www.aariofficial.com</p>
+  </header>
+
+  <div class="player-wrapper">
+    <div class="video-container">
+      <video id="player" loop playsinline disableRemotePlayback></video>
+      <div class="video-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.79 40.16" fill="black">
+          <path d="m24.9,0C10.7,0,0,8.63,0,20.08s10.7,20.08,24.9,20.08,24.9-8.63,24.9-20.08S39.09,0,24.9,0Zm6.69,7.45h4.47v4.32h-4.47v-4.32Zm-5.66,0h4.47v4.32h-4.47v-4.32Zm-6.64,0h4.47v4.32h-4.47v-4.32Zm-5.66,0h4.47v4.32h-4.47v-4.32Zm19.83,23.85l-.58-2.72h-3.78l-.58,2.72h-7.35l-.58-2.72h-3.78l-.58,2.72h-5.18l4.81-17.83h5.78l3.26,12.08,3.26-12.08h5.78l4.81,17.83h-5.28Z"/>
+          <polygon points="17.65 24.72 19.75 24.72 18.7 19.72 17.65 24.72"/>
+          <polygon points="29.94 24.72 32.04 24.72 30.99 19.72 29.94 24.72"/>
+        </svg>
+      </div>
+      <div class="timecode-block" id="timecodeBlock">
+        <span class="timecode" id="timecode">00:00:00</span>
+      </div>
+      <div class="placeholder-message" id="placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <div>Click on a flag below to choose a language</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lang-label" id="currentLangLabel">
+    Now playing: <span id="currentLangName">—</span>
+  </div>
+
+  <div class="flag-selector" id="flagSelector"></div>
+
+  <script>
+    // ─── Configuration ────────────────────────────────────────────────────────
+    // Set this to match the frame rate of your video files.
+    const FPS = 25;
+
+    // Language groups with region headings.
+    // Replace the 'src' values with your actual video file paths.
+    const GROUPS = [
+      {
+        region: 'Nordics & Baltic',
+        languages: [
+          { code: 'fi', label: 'FI', name: 'Finnish (Original language)', flag: '🇫🇮', src: 'https://aariworldwidevideos.b-cdn.net/video_fi.mp4' },
+          { code: 'sv', label: 'SV', name: 'Swedish',                     flag: '🇸🇪', src: 'https://aariworldwidevideos.b-cdn.net/video_sv.mp4' },
+          { code: 'no', label: 'NO', name: 'Norwegian',                   flag: '🇳🇴', src: 'https://aariworldwidevideos.b-cdn.net/video_no.mp4' },
+          { code: 'da', label: 'DA', name: 'Danish',                      flag: '🇩🇰', src: 'https://aariworldwidevideos.b-cdn.net/video_da.mp4' },
+          { code: 'et', label: 'ET', name: 'Estonian',                    flag: '🇪🇪', src: 'https://aariworldwidevideos.b-cdn.net/video_et.mp4' },
+          { code: 'is', label: 'IS', name: 'Icelandic',                   flag: '🇮🇸', src: 'https://aariworldwidevideos.b-cdn.net/video_is.mp4' },
+        ]
+      },
+      {
+        region: 'Asia',
+        languages: [
+          { code: 'ko',   label: 'KO', name: 'Korean',   flag: '🇰🇷', src: 'https://aariworldwidevideos.b-cdn.net/video_ko.mp4'    },
+          { code: 'zh_cn',label: 'ZH', name: 'Chinese',  flag: '🇨🇳', src: 'https://aariworldwidevideos.b-cdn.net/video_zh_cn.mp4' },
+          { code: 'ja',   label: 'JA', name: 'Japanese', flag: '🇯🇵', src: 'https://aariworldwidevideos.b-cdn.net/video_ja.mp4'    },
+        ]
+      },
+      {
+        region: 'Western Europe',
+        languages: [
+          { code: 'en',    label: 'EN', name: 'English',             flag: '🇬🇧', src: 'https://aariworldwidevideos.b-cdn.net/video_en.mp4'    },
+          { code: 'fr',    label: 'FR', name: 'French',              flag: '🇫🇷', src: 'https://aariworldwidevideos.b-cdn.net/video_fr.mp4'    },
+          { code: 'de',    label: 'DE', name: 'German',              flag: '🇩🇪', src: 'https://aariworldwidevideos.b-cdn.net/video_de.mp4'    },
+          { code: 'nl',    label: 'NL', name: 'Dutch',               flag: '🇳🇱', src: 'https://aariworldwidevideos.b-cdn.net/video_nl.mp4'    },
+        ]
+      },
+      {
+        region: 'Southern Europe & Latin America',
+        languages: [
+          { code: 'es',    label: 'ES', name: 'Spanish',             flag: '🇪🇸', src: 'https://aariworldwidevideos.b-cdn.net/video_es.mp4'    },
+          { code: 'pt_br', label: 'PT', name: 'Portuguese (Brazil)', flag: '🇧🇷', src: 'https://aariworldwidevideos.b-cdn.net/video_pt_br.mp4' },
+          { code: 'it',    label: 'IT', name: 'Italian',             flag: '🇮🇹', src: 'https://aariworldwidevideos.b-cdn.net/video_it.mp4'    },
+          { code: 'ro',    label: 'RO', name: 'Romanian',            flag: '🇷🇴', src: 'https://aariworldwidevideos.b-cdn.net/video_ro.mp4'    },
+          { code: 'el',    label: 'EL', name: 'Greek',               flag: '🇬🇷', src: 'https://aariworldwidevideos.b-cdn.net/video_el.mp4'    },
+        ]
+      },
+      {
+        region: 'Eastern Europe',
+        languages: [
+          { code: 'pl', label: 'PL', name: 'Polish',    flag: '🇵🇱', src: 'https://aariworldwidevideos.b-cdn.net/video_pl.mp4' },
+          { code: 'uk', label: 'UK', name: 'Ukrainian', flag: '🇺🇦', src: 'https://aariworldwidevideos.b-cdn.net/video_uk.mp4' },
+          { code: 'hu', label: 'HU', name: 'Hungarian', flag: '🇭🇺', src: 'https://aariworldwidevideos.b-cdn.net/video_hu.mp4' },
+          { code: 'bg', label: 'BG', name: 'Bulgarian', flag: '🇧🇬', src: 'https://aariworldwidevideos.b-cdn.net/video_bg.mp4' },
+          { code: 'hr', label: 'HR', name: 'Croatian',  flag: '🇭🇷', src: 'https://aariworldwidevideos.b-cdn.net/video_hr.mp4' },
+        ]
+      },
+      {
+        region: 'Middle East & South Asia',
+        languages: [
+          { code: 'tr', label: 'TR', name: 'Turkish', flag: '🇹🇷', src: 'https://aariworldwidevideos.b-cdn.net/video_tr.mp4' },
+          { code: 'ar', label: 'AR', name: 'Arabic',  flag: '🇸🇦', src: 'https://aariworldwidevideos.b-cdn.net/video_ar.mp4' },
+          { code: 'hi', label: 'HI', name: 'Hindi',   flag: '🇮🇳', src: 'https://aariworldwidevideos.b-cdn.net/video_hi.mp4' },
+        ]
+      },
+    ];
+
+    // Flatten for lookup
+    const LANGUAGES = GROUPS.flatMap(g => g.languages);
+    // ─────────────────────────────────────────────────────────────────────────
+
+    const video       = document.getElementById('player');
+    const selector    = document.getElementById('flagSelector');
+    const placeholder = document.getElementById('placeholder');
+    const langName    = document.getElementById('currentLangName');
+    const timecodeBlock = document.getElementById('timecodeBlock');
+    const timecode      = document.getElementById('timecode');
+    let activeLang    = null;
+    let buttons       = {};
+
+    // Timecode updater — format: MM:SS:FF
+    function updateTimecode() {
+      const t      = video.currentTime || 0;
+      const total  = Math.floor(t);
+      const mm     = String(Math.floor(total / 60)).padStart(2, '0');
+      const ss     = String(total % 60).padStart(2, '0');
+      const ff     = String(Math.floor((t % 1) * FPS)).padStart(2, '0');
+      timecode.textContent = `${mm}:${ss}:${ff}`;
+    }
+
+    // Disable all text tracks (subtitles/captions) whenever they appear
+    function disableTextTracks() {
+      for (let i = 0; i < video.textTracks.length; i++) {
+        video.textTracks[i].mode = 'hidden';
+      }
+    }
+    video.addEventListener('loadedmetadata', disableTextTracks);
+    video.textTracks.addEventListener('change', disableTextTracks);
+
+    video.addEventListener('timeupdate', updateTimecode);
+    video.addEventListener('play', () => timecodeBlock.classList.add('visible'));
+
+    // Build flag buttons grouped by region
+    GROUPS.forEach(group => {
+      const groupEl = document.createElement('div');
+      groupEl.className = 'lang-group';
+
+      const heading = document.createElement('div');
+      heading.className = 'lang-group-label';
+      heading.textContent = group.region;
+      groupEl.appendChild(heading);
+
+      const flagRow = document.createElement('div');
+      flagRow.className = 'lang-group-flags' + (group.wrap3 ? ' wrap-3' : '');
+
+      group.languages.forEach(lang => {
+        const btn = document.createElement('button');
+        btn.className = 'flag-btn';
+        btn.title = lang.name;
+        btn.innerHTML = `
+          <span class="flag-emoji">${lang.flag}</span>
+          <span class="flag-code">${lang.label}</span>
+        `;
+        btn.addEventListener('click', () => switchLanguage(lang));
+        flagRow.appendChild(btn);
+        buttons[lang.code] = btn;
+      });
+
+      groupEl.appendChild(flagRow);
+      selector.appendChild(groupEl);
+    });
+
+    function setActiveButton(lang) {
+      Object.values(buttons).forEach(b => b.classList.remove('active'));
+      if (lang) {
+        buttons[lang.code].classList.add('active');
+        langName.textContent = `${lang.flag}  ${lang.name}`;
+      }
+    }
+
+    function switchLanguage(lang) {
+      if (activeLang && activeLang.code === lang.code) return;
+
+      // Capture current frame before switching
+      const frame   = Math.round(video.currentTime * FPS);
+      const newTime = frame / FPS;
+
+      activeLang = lang;
+      setActiveButton(lang);
+      placeholder.classList.add('hidden');
+
+      video.src = lang.src;
+      video.load();
+
+      // Once enough data is available, seek to the same frame and play
+      const onReady = () => {
+        // Clamp to video duration in case the new video is shorter
+        const target = video.duration && newTime > video.duration
+          ? 0
+          : newTime;
+        video.currentTime = target;
+        video.play().catch(() => {
+          // Autoplay blocked by browser — video will play on first user interaction
+        });
+      };
+
+      video.addEventListener('canplay', onReady, { once: true });
+
+      // If file not found or other error, show placeholder
+      video.addEventListener('error', () => {
+        placeholder.classList.remove('hidden');
+        langName.textContent = `${lang.flag}  ${lang.name} — file not found`;
+      }, { once: true });
+    }
+
+    // No language pre-selected — user clicks a flag to start
+
+    // Preload all video files into the browser's cache on page load
+    // so language switching is instant with no buffering delay.
+    window.addEventListener('load', () => {
+      LANGUAGES.forEach(lang => {
+        const v = document.createElement('video');
+        v.src = lang.src;
+        v.preload = 'auto';
+        v.muted = true;
+        // No need to append to DOM — just loading into cache is enough
+      });
+    });
+  </script>
+
+</body>
+</html>
