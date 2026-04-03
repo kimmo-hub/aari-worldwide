@@ -1,0 +1,71 @@
+{
+  "common": {
+    "siteName": "Virkavastuu.fi",
+    "tagline": "Public accountability for civil servants",
+    "language": "Language",
+    "finnish": "Suomi",
+    "english": "English",
+    "home": "Home",
+    "officials": "Officials",
+    "about": "About",
+    "search": "Search",
+    "footer": {
+      "description": "Virkavastuu.fi is a civic platform promoting transparency and accountability in Finnish public governance.",
+      "openData": "All information is based on public sources.",
+      "copyright": "© {year} Virkavastuu.fi"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Know your officials",
+      "subtitle": "Virkavastuu.fi aggregates public information about Finnish civil servants and enables citizen feedback.",
+      "cta": "Browse officials"
+    },
+    "features": {
+      "profiles": {
+        "title": "Official profiles",
+        "description": "Comprehensive profiles of senior civil servants: appointment date, background, organizations, and public statements."
+      },
+      "sources": {
+        "title": "Source-linked data",
+        "description": "All profile data links to original public sources: lausunto.fi, valtioneuvosto.fi, PRH, media archives."
+      },
+      "feedback": {
+        "title": "Citizen feedback",
+        "description": "Theme-based ratings per policy area, with results showing sample size and distribution."
+      }
+    }
+  },
+  "official": {
+    "appointedBy": "Appointed by",
+    "appointmentDate": "Appointment date",
+    "organization": "Organization",
+    "position": "Position",
+    "previousRoles": "Previous roles",
+    "affiliations": "Affiliations",
+    "publicStatements": "Public statements",
+    "policyAreas": "Policy areas",
+    "source": "Source",
+    "viewSource": "View source",
+    "feedback": {
+      "title": "Citizen feedback",
+      "submitRating": "Submit rating",
+      "email": "Email (for verification)",
+      "comment": "Comment (optional)",
+      "ratings": "Ratings",
+      "responses": "responses",
+      "distribution": "Distribution",
+      "averageRating": "Average rating",
+      "submit": "Submit",
+      "thankYou": "Thank you for your feedback!",
+      "verificationSent": "A verification email has been sent to your address.",
+      "ratingLabels": {
+        "1": "Very poor",
+        "2": "Poor",
+        "3": "Adequate",
+        "4": "Good",
+        "5": "Excellent"
+      }
+    }
+  }
+}
