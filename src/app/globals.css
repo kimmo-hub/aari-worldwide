@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --color-civic-900: #1a2744;
+  --color-civic-800: #243554;
+  --color-civic-700: #2e4468;
+  --color-civic-600: #3a567e;
+  --color-civic-500: #4a6fa5;
+  --color-civic-400: #6b8fc0;
+  --color-civic-300: #92b0d5;
+  --color-civic-200: #bdd0e8;
+  --color-civic-100: #e0eaf5;
+  --color-civic-50: #f0f5fb;
+
+  --color-accent-600: #2563eb;
+  --color-accent-500: #3b82f6;
+
+  --background: #f8fafc;
+  --foreground: #1a2744;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-civic-900: var(--color-civic-900);
+  --color-civic-800: var(--color-civic-800);
+  --color-civic-700: var(--color-civic-700);
+  --color-civic-600: var(--color-civic-600);
+  --color-civic-500: var(--color-civic-500);
+  --color-civic-400: var(--color-civic-400);
+  --color-civic-300: var(--color-civic-300);
+  --color-civic-200: var(--color-civic-200);
+  --color-civic-100: var(--color-civic-100);
+  --color-civic-50: var(--color-civic-50);
+  --color-accent-600: var(--color-accent-600);
+  --color-accent-500: var(--color-accent-500);
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}

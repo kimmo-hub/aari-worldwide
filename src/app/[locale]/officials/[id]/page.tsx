@@ -1,0 +1,204 @@
+import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { getOfficialBySlug } from "@/lib/seed-data";
+import FeedbackSection from "@/components/FeedbackSection";
+import type { Locale } from "@/i18n/config";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function localized(obj: any, field: string, locale: Locale): string {
+  const key = `${field}_${locale}`;
+  return (obj[key] as string) ?? (obj[`${field}_en`] as string) ?? "";
+}
+
+function formatDate(dateStr: string, locale: Locale): string {
+  return new Date(dateStr).toLocaleDateString(locale === "fi" ? "fi-FI" : "en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+export default async function OfficialProfilePage({
+  params,
+}: {
+  params: Promise<{ id: string; locale: string }>;
+}) {
+  const { id, locale } = await params;
+  const profile = getOfficialBySlug(id);
+
+  if (!profile) {
+    notFound();
+  }
+
+  const t = await getTranslations("official");
+  const loc = locale as Locale;
+  const { official, previous_roles, affiliations, public_statements, feedback } =
+    profile;
+
+  const fullName = `${official.first_name} ${official.last_name}`;
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      {/* Profile header */}
+      <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-start">
+        <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-civic-200 text-2xl font-bold text-civic-800">
+          {official.first_name[0]}
+          {official.last_name[0]}
+        </div>
+        <div>
+          <h1 className="text-2xl font-bold text-civic-900 sm:text-3xl">
+            {fullName}
+          </h1>
+          <p className="mt-1 text-lg text-civic-600">
+            {localized(official, "title", loc)},{" "}
+            {localized(official, "organization", loc)}
+          </p>
+          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+            <span>
+              <span className="font-medium text-civic-800">
+                {t("appointmentDate")}:
+              </span>{" "}
+              {formatDate(official.appointment_date, loc)}
+            </span>
+            <span>
+              <span className="font-medium text-civic-800">
+                {t("appointedBy")}:
+              </span>{" "}
+              {localized(official, "appointed_by", loc)}
+            </span>
+          </div>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+            {localized(official, "bio", loc)}
+          </p>
+        </div>
+      </div>
+
+      <div className="space-y-10">
+        {/* Previous roles */}
+        {previous_roles.length > 0 && (
+          <section>
+            <h2 className="text-xl font-semibold text-civic-900 mb-4">
+              {t("previousRoles")}
+            </h2>
+            <div className="space-y-3">
+              {previous_roles.map((role) => (
+                <div
+                  key={role.id}
+                  className="flex flex-col gap-1 rounded-xl border border-border bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div>
+                    <p className="font-medium text-civic-800">
+                      {localized(role, "role", loc)}
+                    </p>
+                    <p className="text-sm text-muted">
+                      {localized(role, "organization", loc)}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted">
+                    <span>
+                      {formatDate(role.start_date, loc)} —{" "}
+                      {role.end_date ? formatDate(role.end_date, loc) : ""}
+                    </span>
+                    {role.source_url && (
+                      <a
+                        href={role.source_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-600 hover:underline"
+                      >
+                        {t("viewSource")}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Affiliations */}
+        {affiliations.length > 0 && (
+          <section>
+            <h2 className="text-xl font-semibold text-civic-900 mb-4">
+              {t("affiliations")}
+            </h2>
+            <div className="space-y-3">
+              {affiliations.map((aff) => (
+                <div
+                  key={aff.id}
+                  className="flex flex-col gap-1 rounded-xl border border-border bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div>
+                    <p className="font-medium text-civic-800">
+                      {localized(aff, "role", loc)}
+                    </p>
+                    <p className="text-sm text-muted">
+                      {localized(aff, "organization", loc)}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted">
+                    <span>
+                      {aff.start_date ? formatDate(aff.start_date, loc) : ""} —
+                    </span>
+                    {aff.source_url && (
+                      <a
+                        href={aff.source_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-600 hover:underline"
+                      >
+                        {t("viewSource")}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Public statements */}
+        {public_statements.length > 0 && (
+          <section>
+            <h2 className="text-xl font-semibold text-civic-900 mb-4">
+              {t("publicStatements")}
+            </h2>
+            <div className="space-y-3">
+              {public_statements.map((stmt) => (
+                <div
+                  key={stmt.id}
+                  className="rounded-xl border border-border bg-white p-4"
+                >
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="flex-1">
+                      <p className="font-medium text-civic-800">
+                        {localized(stmt, "title", loc)}
+                      </p>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">
+                        {localized(stmt, "summary", loc)}
+                      </p>
+                    </div>
+                    <div className="shrink-0 text-sm text-muted sm:text-right">
+                      <p>{formatDate(stmt.date, loc)}</p>
+                      <a
+                        href={stmt.source_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-600 hover:underline"
+                      >
+                        {stmt.source_name}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Feedback */}
+        <FeedbackSection feedback={feedback} />
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,71 @@
+{
+  "common": {
+    "siteName": "Virkavastuu.fi",
+    "tagline": "Julkisen vallan läpinäkyvyys",
+    "language": "Kieli",
+    "finnish": "Suomi",
+    "english": "English",
+    "home": "Etusivu",
+    "officials": "Virkamiehet",
+    "about": "Tietoa",
+    "search": "Haku",
+    "footer": {
+      "description": "Virkavastuu.fi on kansalaispalvelu, joka edistää julkisen vallan läpinäkyvyyttä ja vastuullisuutta Suomessa.",
+      "openData": "Kaikki tiedot perustuvat julkisiin lähteisiin.",
+      "copyright": "© {year} Virkavastuu.fi"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Tunne päättäjäsi",
+      "subtitle": "Virkavastuu.fi kokoaa julkista tietoa suomalaisista virkamiehistä ja mahdollistaa kansalaispalautteen antamisen.",
+      "cta": "Selaa virkamiehiä"
+    },
+    "features": {
+      "profiles": {
+        "title": "Virkamiesprofiilit",
+        "description": "Kattavat profiilit merkittävistä virkamiehistä: nimityspäivä, tausta, organisaatiot ja julkiset kannanotot."
+      },
+      "sources": {
+        "title": "Lähdeviitteet",
+        "description": "Kaikki profiilitiedot on linkitetty alkuperäisiin julkisiin lähteisiin: lausunto.fi, valtioneuvosto.fi, PRH, media-arkistot."
+      },
+      "feedback": {
+        "title": "Kansalaispalaute",
+        "description": "Teemapohjainen arviointi politiikka-alueittain, jossa tulokset näyttävät otoskoon ja jakauman."
+      }
+    }
+  },
+  "official": {
+    "appointedBy": "Nimittäjä",
+    "appointmentDate": "Nimityspäivä",
+    "organization": "Organisaatio",
+    "position": "Virka",
+    "previousRoles": "Aiemmat tehtävät",
+    "affiliations": "Organisaatioyhteydet",
+    "publicStatements": "Julkiset kannanotot",
+    "policyAreas": "Politiikka-alueet",
+    "source": "Lähde",
+    "viewSource": "Näytä lähde",
+    "feedback": {
+      "title": "Kansalaispalaute",
+      "submitRating": "Lähetä arvio",
+      "email": "Sähköposti (vahvistusta varten)",
+      "comment": "Kommentti (valinnainen)",
+      "ratings": "Arviot",
+      "responses": "vastausta",
+      "distribution": "Jakauma",
+      "averageRating": "Keskiarvo",
+      "submit": "Lähetä",
+      "thankYou": "Kiitos palautteestasi!",
+      "verificationSent": "Vahvistusviesti on lähetetty sähköpostiisi.",
+      "ratingLabels": {
+        "1": "Erittäin heikko",
+        "2": "Heikko",
+        "3": "Kohtalainen",
+        "4": "Hyvä",
+        "5": "Erinomainen"
+      }
+    }
+  }
+}
