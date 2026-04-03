@@ -1,17 +1,37 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n/config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../globals.css";
 
-export const metadata: Metadata = {
-  title: "Virkavastuu.fi — Julkisen vallan läpinäkyvyys",
-  description:
-    "Kansalaispalvelu, joka edistää julkisen vallan läpinäkyvyyttä ja vastuullisuutta Suomessa.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "common" });
+
+  return {
+    title: {
+      default: `${t("siteName")} — ${t("tagline")}`,
+      template: `%s | ${t("siteName")}`,
+    },
+    description:
+      locale === "fi"
+        ? "Kansalaispalvelu, joka edistää julkisen vallan läpinäkyvyyttä ja vastuullisuutta Suomessa."
+        : "A civic platform promoting transparency and accountability in Finnish public governance.",
+    metadataBase: new URL("https://virkavastuu.fi"),
+    openGraph: {
+      siteName: t("siteName"),
+      type: "website",
+      locale: locale === "fi" ? "fi_FI" : "en_GB",
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,

@@ -9,6 +9,7 @@
     "officials": "Officials",
     "about": "About",
     "search": "Search",
+    "backToHome": "Back to home",
     "footer": {
       "description": "Virkavastuu.fi is a civic platform promoting transparency and accountability in Finnish public governance.",
       "openData": "All information is based on public sources.",
@@ -34,7 +35,19 @@
         "title": "Citizen feedback",
         "description": "Theme-based ratings per policy area, with results showing sample size and distribution."
       }
+    },
+    "stats": {
+      "officials": "Officials",
+      "sources": "Public sources",
+      "feedback": "Citizen ratings"
     }
+  },
+  "officials": {
+    "title": "Officials",
+    "description": "Browse and search profiles of senior Finnish civil servants.",
+    "searchPlaceholder": "Search by name, position, or organization...",
+    "totalOfficials": "{count} officials in registry",
+    "noResults": "No results found."
   },
   "official": {
     "appointedBy": "Appointed by",
@@ -47,16 +60,18 @@
     "policyAreas": "Policy areas",
     "source": "Source",
     "viewSource": "View source",
+    "backToList": "Back to officials",
     "feedback": {
       "title": "Citizen feedback",
-      "submitRating": "Submit rating",
+      "submitRating": "Submit your rating",
+      "policyArea": "Policy area",
       "email": "Email (for verification)",
       "comment": "Comment (optional)",
-      "ratings": "Ratings",
+      "ratings": "Rating",
       "responses": "responses",
       "distribution": "Distribution",
       "averageRating": "Average rating",
-      "submit": "Submit",
+      "submit": "Submit feedback",
       "thankYou": "Thank you for your feedback!",
       "verificationSent": "A verification email has been sent to your address.",
       "ratingLabels": {
@@ -66,6 +81,66 @@
         "4": "Good",
         "5": "Excellent"
       }
+    }
+  },
+  "about": {
+    "title": "About Virkavastuu.fi",
+    "mission": {
+      "title": "Our mission",
+      "description": "Virkavastuu.fi promotes transparency in Finnish public governance. We aggregate public information about civil servants in significant positions of power and enable citizens to provide feedback on their performance by policy area."
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "step1": {
+        "title": "Public profiles",
+        "description": "We collect information about appointments, backgrounds, organizational affiliations, and public statements — all from public sources."
+      },
+      "step2": {
+        "title": "Source-linked data",
+        "description": "Every piece of profile data links to its original public source, so you can verify the accuracy yourself."
+      },
+      "step3": {
+        "title": "Citizen feedback",
+        "description": "Rate an official's performance by policy area. Results show sample size and distribution — not a simple up/down vote."
+      }
+    },
+    "principles": {
+      "title": "Our principles",
+      "transparency": {
+        "title": "Transparency",
+        "description": "All data and methods are open and verifiable."
+      },
+      "accuracy": {
+        "title": "Accuracy",
+        "description": "Information is based on official public sources and regularly verified."
+      },
+      "fairness": {
+        "title": "Fairness",
+        "description": "We do not make value judgments — we present data and citizen feedback as-is."
+      },
+      "privacy": {
+        "title": "Privacy",
+        "description": "We only process public information about people in public office. Feedback submitters' data is protected."
+      }
+    },
+    "dataPolicy": {
+      "title": "Data policy",
+      "description": "All profile data is sourced from public records: lausunto.fi, valtioneuvosto.fi, PRH, media archives, and agency websites. We do not use private data sources and do not collect information without public justification. Feedback email addresses are hashed and never stored in plain text."
+    },
+    "contact": {
+      "title": "Contact us",
+      "description": "Found an error in a profile? Want to suggest additions? Contact us at info@virkavastuu.fi."
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist or has been moved."
+    },
+    "error": {
+      "title": "Something went wrong",
+      "description": "Sorry, an unexpected error occurred. Please try reloading the page.",
+      "retry": "Try again"
     }
   }
 }

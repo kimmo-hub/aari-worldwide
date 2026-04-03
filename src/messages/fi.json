@@ -9,6 +9,7 @@
     "officials": "Virkamiehet",
     "about": "Tietoa",
     "search": "Haku",
+    "backToHome": "Takaisin etusivulle",
     "footer": {
       "description": "Virkavastuu.fi on kansalaispalvelu, joka edistää julkisen vallan läpinäkyvyyttä ja vastuullisuutta Suomessa.",
       "openData": "Kaikki tiedot perustuvat julkisiin lähteisiin.",
@@ -34,7 +35,19 @@
         "title": "Kansalaispalaute",
         "description": "Teemapohjainen arviointi politiikka-alueittain, jossa tulokset näyttävät otoskoon ja jakauman."
       }
+    },
+    "stats": {
+      "officials": "Virkamiestä",
+      "sources": "Julkista lähdettä",
+      "feedback": "Kansalaispalautetta"
     }
+  },
+  "officials": {
+    "title": "Virkamiehet",
+    "description": "Selaa ja hae merkittävien suomalaisten virkamiesten profiileja.",
+    "searchPlaceholder": "Hae nimellä, viralla tai organisaatiolla...",
+    "totalOfficials": "{count} virkamiestä rekisterissä",
+    "noResults": "Ei hakutuloksia."
   },
   "official": {
     "appointedBy": "Nimittäjä",
@@ -47,16 +60,18 @@
     "policyAreas": "Politiikka-alueet",
     "source": "Lähde",
     "viewSource": "Näytä lähde",
+    "backToList": "Takaisin virkamiehiin",
     "feedback": {
       "title": "Kansalaispalaute",
       "submitRating": "Lähetä arvio",
+      "policyArea": "Politiikka-alue",
       "email": "Sähköposti (vahvistusta varten)",
       "comment": "Kommentti (valinnainen)",
-      "ratings": "Arviot",
+      "ratings": "Arvio",
       "responses": "vastausta",
       "distribution": "Jakauma",
       "averageRating": "Keskiarvo",
-      "submit": "Lähetä",
+      "submit": "Lähetä palaute",
       "thankYou": "Kiitos palautteestasi!",
       "verificationSent": "Vahvistusviesti on lähetetty sähköpostiisi.",
       "ratingLabels": {
@@ -66,6 +81,66 @@
         "4": "Hyvä",
         "5": "Erinomainen"
       }
+    }
+  },
+  "about": {
+    "title": "Tietoa Virkavastuu.fi:stä",
+    "mission": {
+      "title": "Tehtävämme",
+      "description": "Virkavastuu.fi edistää julkisen vallan läpinäkyvyyttä Suomessa. Kokoamme julkista tietoa merkittävissä valta-asemissa olevista virkamiehistä ja mahdollistamme kansalaispalautteen antamisen heidän toiminnastaan politiikka-alueittain."
+    },
+    "howItWorks": {
+      "title": "Miten se toimii",
+      "step1": {
+        "title": "Julkiset profiilit",
+        "description": "Keräämme tietoa virkamiesten nimityksistä, taustoista, organisaatioyhteyksistä ja julkisista kannanotoista — kaikki julkisista lähteistä."
+      },
+      "step2": {
+        "title": "Lähdeviitteet",
+        "description": "Jokainen profiilitieto on linkitetty alkuperäiseen julkiseen lähteeseen, jotta voit itse tarkistaa tiedon oikeellisuuden."
+      },
+      "step3": {
+        "title": "Kansalaispalaute",
+        "description": "Anna arvio virkamiehen toiminnasta politiikka-alueittain. Tulokset näyttävät otoskoon ja jakauman — ei yksinkertaista ylös/alas-ääntä."
+      }
+    },
+    "principles": {
+      "title": "Periaatteemme",
+      "transparency": {
+        "title": "Läpinäkyvyys",
+        "description": "Kaikki tiedot ja menetelmät ovat avoimia ja tarkistettavissa."
+      },
+      "accuracy": {
+        "title": "Tarkkuus",
+        "description": "Tiedot perustuvat virallisiin julkisiin lähteisiin ja ne tarkistetaan säännöllisesti."
+      },
+      "fairness": {
+        "title": "Oikeudenmukaisuus",
+        "description": "Emme tee arvottavia johtopäätöksiä — esitämme tiedot ja kansalaispalautteet sellaisinaan."
+      },
+      "privacy": {
+        "title": "Yksityisyys",
+        "description": "Käsittelemme vain julkisessa virassa toimivien henkilöiden julkista tietoa. Palautteen antajien tiedot suojataan."
+      }
+    },
+    "dataPolicy": {
+      "title": "Tietopolitiikka",
+      "description": "Kaikki profiilitiedot perustuvat julkisiin lähteisiin: lausunto.fi, valtioneuvosto.fi, PRH, media-arkistot ja virastojen verkkosivut. Emme käytä yksityisiä tietolähteitä emmekä kerää tietoa ilman julkista perustetta. Palautteiden sähköpostiosoitteet hashataan eikä niitä tallenneta selkokielisinä."
+    },
+    "contact": {
+      "title": "Ota yhteyttä",
+      "description": "Onko profiilitiedoissa virhe? Haluatko ehdottaa lisäyksiä? Ota yhteyttä osoitteeseen info@virkavastuu.fi."
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Sivua ei löydy",
+      "description": "Etsimääsi sivua ei ole olemassa tai se on siirretty."
+    },
+    "error": {
+      "title": "Jokin meni pieleen",
+      "description": "Pahoittelut, tapahtui odottamaton virhe. Yritä ladata sivu uudelleen.",
+      "retry": "Yritä uudelleen"
     }
   }
 }

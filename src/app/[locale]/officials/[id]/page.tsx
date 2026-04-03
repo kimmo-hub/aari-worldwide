@@ -1,8 +1,11 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getOfficialBySlug } from "@/lib/seed-data";
+import { Link } from "@/i18n/navigation";
 import FeedbackSection from "@/components/FeedbackSection";
+import FeedbackForm from "@/components/FeedbackForm";
 import type { Locale } from "@/i18n/config";
+import type { Metadata } from "next";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function localized(obj: any, field: string, locale: Locale): string {
@@ -11,11 +14,34 @@ function localized(obj: any, field: string, locale: Locale): string {
 }
 
 function formatDate(dateStr: string, locale: Locale): string {
-  return new Date(dateStr).toLocaleDateString(locale === "fi" ? "fi-FI" : "en-GB", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return new Date(dateStr).toLocaleDateString(
+    locale === "fi" ? "fi-FI" : "en-GB",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }
+  );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string; locale: string }>;
+}): Promise<Metadata> {
+  const { id, locale } = await params;
+  const profile = getOfficialBySlug(id);
+  if (!profile) return { title: "Not Found" };
+
+  const loc = locale as Locale;
+  const name = `${profile.official.first_name} ${profile.official.last_name}`;
+  const title = localized(profile.official, "title", loc);
+  const org = localized(profile.official, "organization", loc);
+
+  return {
+    title: `${name} — ${title}, ${org} | Virkavastuu.fi`,
+    description: localized(profile.official, "bio", loc).slice(0, 160),
+  };
 }
 
 export default async function OfficialProfilePage({
@@ -32,13 +58,39 @@ export default async function OfficialProfilePage({
 
   const t = await getTranslations("official");
   const loc = locale as Locale;
-  const { official, previous_roles, affiliations, public_statements, feedback } =
-    profile;
+  const {
+    official,
+    previous_roles,
+    affiliations,
+    public_statements,
+    feedback,
+  } = profile;
 
   const fullName = `${official.first_name} ${official.last_name}`;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      {/* Back link */}
+      <Link
+        href="/officials"
+        className="mb-6 inline-flex items-center gap-1 text-sm text-muted hover:text-civic-800 transition-colors"
+      >
+        <svg
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        {t("backToList")}
+      </Link>
+
       {/* Profile header */}
       <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-start">
         <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-civic-200 text-2xl font-bold text-civic-800">
@@ -196,8 +248,15 @@ export default async function OfficialProfilePage({
           </section>
         )}
 
-        {/* Feedback */}
-        <FeedbackSection feedback={feedback} />
+        {/* Feedback display + submission form */}
+        <div className="grid gap-8 lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            <FeedbackSection feedback={feedback} />
+          </div>
+          <div>
+            <FeedbackForm officialId={official.id} policyAreas={feedback} />
+          </div>
+        </div>
       </div>
     </div>
   );
