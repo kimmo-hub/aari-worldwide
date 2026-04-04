@@ -253,76 +253,102 @@ export const MUNICIPALITIES: { region_fi: string; region_en: string; municipalit
 export const municipalProfiles: OfficialProfile[] = [
   // ═══ TOP 10 CITIES ═══
 
-  profile(mOfficial("m-1", "juhana-vartiainen", "Juhana", "Vartiainen",
+  profile(mOfficial("m-1", "daniel-sazonov", "Daniel", "Sazonov",
     "Pormestari", "Mayor",
     "Helsingin kaupunki", "City of Helsinki",
-    "2021-08-02",
-    "Juhana Vartiainen toimii Helsingin pormestarina. Kokoomuksen ehdokkaana valittu kuntavaaleissa 2021.",
-    "Juhana Vartiainen serves as the Mayor of Helsinki. Elected as the National Coalition Party candidate in the 2021 municipal elections."
+    "2025-06-01",
+    "Daniel Sazonov toimii Helsingin pormestarina kaudella 2025–2029. Valittu Kokoomuksen ehdokkaana.",
+    "Daniel Sazonov serves as the Mayor of Helsinki for the 2025–2029 term. Elected as the National Coalition Party candidate."
   )),
 
-  profile(mOfficial("m-2", "jukka-makela", "Jukka", "Mäkelä",
+  profile(mOfficial("m-2", "kai-mykkanen", "Kai", "Mykkänen",
     "Kaupunginjohtaja", "City Manager",
     "Espoon kaupunki", "City of Espoo",
-    "2011-01-01",
-    "Jukka Mäkelä on toiminut Espoon kaupunginjohtajana vuodesta 2011.",
-    "Jukka Mäkelä has served as City Manager of Espoo since 2011."
+    "2025-02-01",
+    "Kai Mykkänen on toiminut Espoon kaupunginjohtajana helmikuusta 2025. Aiemmin kansanedustaja ja ympäristö- ja ilmastoministeri.",
+    "Kai Mykkänen has served as City Manager of Espoo since February 2025. Previously a Member of Parliament and Minister of the Environment and Climate."
   )),
 
-  profile(mOfficial("m-3", "ritva-viljanen", "Ritva", "Viljanen",
+  profile(mOfficial("m-3", "pekka-timonen", "Pekka", "Timonen",
     "Kaupunginjohtaja", "City Manager",
     "Vantaan kaupunki", "City of Vantaa",
-    "2018-04-01",
-    "Ritva Viljanen on toiminut Vantaan kaupunginjohtajana vuodesta 2018.",
-    "Ritva Viljanen has served as City Manager of Vantaa since 2018."
+    "2023-09-01",
+    "Pekka Timonen on toiminut Vantaan kaupunginjohtajana syyskuusta 2023. Aiemmin Lahden kaupunginjohtaja.",
+    "Pekka Timonen has served as City Manager of Vantaa since September 2023. Previously City Manager of Lahti."
   )),
 
-  profile(mOfficial("m-4", "anna-kaisa-ikonen", "Anna-Kaisa", "Ikonen",
+  profile(mOfficial("m-4", "ilmari-nurminen", "Ilmari", "Nurminen",
     "Pormestari", "Mayor",
     "Tampereen kaupunki", "City of Tampere",
-    "2021-08-01",
-    "Anna-Kaisa Ikonen toimii Tampereen pormestarina. Valittu kuntavaaleissa 2021 Kokoomuksen ehdokkaana.",
-    "Anna-Kaisa Ikonen serves as the Mayor of Tampere. Elected in the 2021 municipal elections as the National Coalition Party candidate."
+    "2025-06-01",
+    "Ilmari Nurminen toimii Tampereen pormestarina kaudella 2025–2029. Valittu SDP:n ehdokkaana.",
+    "Ilmari Nurminen serves as the Mayor of Tampere for the 2025–2029 term. Elected as the SDP candidate."
   )),
 
-  profile(mOfficial("m-5", "seppo-maatta", "Seppo", "Määttä",
+  profile(mOfficial("m-5", "ari-alatossava", "Ari", "Alatossava",
     "Kaupunginjohtaja", "City Manager",
     "Oulun kaupunki", "City of Oulu",
-    "2022-05-01",
-    "Seppo Määttä on toiminut Oulun kaupunginjohtajana vuodesta 2022.",
-    "Seppo Määttä has served as City Manager of Oulu since 2022."
+    "2024-01-01",
+    "Ari Alatossava on toiminut Oulun kaupunginjohtajana vuodesta 2024. Aiemmin Oulun konsernijohtaja ja Iin kunnanjohtaja.",
+    "Ari Alatossava has served as City Manager of Oulu since 2024. Previously Oulu's Corporate Director and municipal manager of Ii."
   )),
 
-  profile(mOfficial("m-6", "minna-arve", "Minna", "Arve",
-    "Kaupunginjohtaja", "City Manager",
+  profile(mOfficial("m-6", "piia-elo", "Piia", "Elo",
+    "Pormestari", "Mayor",
     "Turun kaupunki", "City of Turku",
-    "2017-05-15",
-    "Minna Arve on toiminut Turun kaupunginjohtajana vuodesta 2017.",
-    "Minna Arve has served as City Manager of Turku since 2017."
+    "2025-06-01",
+    "Piia Elo toimii Turun pormestarina kaudella 2025–2029. Valittu SDP:n ehdokkaana.",
+    "Piia Elo serves as the Mayor of Turku for the 2025–2029 term. Elected as the SDP candidate."
   )),
 
   profile(mOfficial("m-7", "timo-koivisto", "Timo", "Koivisto",
     "Kaupunginjohtaja", "City Manager",
     "Jyväskylän kaupunki", "City of Jyväskylä",
     "2017-09-01",
-    "Timo Koivisto on toiminut Jyväskylän kaupunginjohtajana vuodesta 2017.",
-    "Timo Koivisto has served as City Manager of Jyväskylä since 2017."
+    "Timo Koivisto on toiminut Jyväskylän kaupunginjohtajana vuodesta 2017. Uudelleenvalittu 2022 kahdeksaksi vuodeksi.",
+    "Timo Koivisto has served as City Manager of Jyväskylä since 2017. Re-elected in 2022 for another eight-year term."
   )),
 
-  profile(mOfficial("m-8", "jarmo-pirhonen", "Jarmo", "Pirhonen",
+  profile(mOfficial("m-8", "soile-lahti", "Soile", "Lahti",
     "Kaupunginjohtaja", "City Manager",
     "Kuopion kaupunki", "City of Kuopio",
-    "2018-01-01",
-    "Jarmo Pirhonen on toiminut Kuopion kaupunginjohtajana vuodesta 2018.",
-    "Jarmo Pirhonen has served as City Manager of Kuopio since 2018."
+    "2023-01-01",
+    "Soile Lahti on toiminut Kuopion kaupunginjohtajana vuodesta 2023. Valittu yksimielisesti valtuustossa.",
+    "Soile Lahti has served as City Manager of Kuopio since 2023. Elected unanimously by the city council."
   )),
 
-  profile(mOfficial("m-9", "pekka-timonen", "Pekka", "Timonen",
+  profile(mOfficial("m-9", "niko-kyynarainen", "Niko", "Kyynäräinen",
     "Kaupunginjohtaja", "City Manager",
     "Lahden kaupunki", "City of Lahti",
-    "2018-01-01",
-    "Pekka Timonen on toiminut Lahden kaupunginjohtajana vuodesta 2018.",
-    "Pekka Timonen has served as City Manager of Lahti since 2018."
+    "2023-10-01",
+    "Niko Kyynäräinen on toiminut Lahden kaupunginjohtajana lokakuusta 2023. Aiemmin Turun kehitysjohtaja.",
+    "Niko Kyynäräinen has served as City Manager of Lahti since October 2023. Previously development director of Turku."
+  )),
+
+  // ─── Rakennusvalvonta (Building Control) heads ───
+
+  profile(mOfficial("m-31", "kai-miller", "Kai", "Miller",
+    "Rakennusvalvontapäällikkö", "Head of Building Control",
+    "Helsingin kaupunki", "City of Helsinki",
+    "2017-03-01",
+    "Kai Miller toimii Helsingin rakennusvalvontapäällikkönä vuodesta 2017.",
+    "Kai Miller has served as Head of Building Control in Helsinki since 2017."
+  )),
+
+  profile(mOfficial("m-32", "jari-saajo", "Jari", "Saajo",
+    "Rakennusvalvonnan päällikkö", "Head of Building Control",
+    "Espoon kaupunki", "City of Espoo",
+    "2020-01-01",
+    "Jari Saajo toimii Espoon rakennusvalvonnan päällikkönä.",
+    "Jari Saajo serves as Head of Building Control in Espoo."
+  )),
+
+  profile(mOfficial("m-33", "juha-henttonen", "Juha", "Henttonen",
+    "Rakennusvalvontapäällikkö", "Head of Building Control",
+    "Tampereen kaupunki", "City of Tampere",
+    "2022-10-01",
+    "Juha Henttonen on toiminut Tampereen rakennusvalvontapäällikkönä lokakuusta 2022. Aiemmin Hämeenlinnan rakennusvalvontapäällikkö.",
+    "Juha Henttonen has served as Head of Building Control in Tampere since October 2022. Previously Head of Building Control in Hämeenlinna."
   )),
 
   profile(mOfficial("m-10", "lauri-inna", "Lauri", "Inna",
