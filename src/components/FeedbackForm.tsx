@@ -23,19 +23,40 @@ export default function FeedbackForm({
   const [submitted, setSubmitted] = useState(false);
   const [hoveredRating, setHoveredRating] = useState(0);
 
-  function handleSubmit(e: React.FormEvent) {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!rating || !email || !selectedArea) return;
 
-    // MVP: show success state. In production, this would POST to an API route.
-    console.log("Feedback submitted:", {
-      officialId,
-      policyAreaId: selectedArea,
-      rating,
-      email,
-      comment,
-    });
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          officialId,
+          policyAreaId: selectedArea,
+          rating,
+          email,
+          comment,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to submit feedback");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -162,13 +183,25 @@ export default function FeedbackForm({
         />
       </div>
 
+      {/* Error */}
+      {error && (
+        <p className="text-sm text-red-600">{error}</p>
+      )}
+
       {/* Submit */}
       <button
         type="submit"
-        disabled={!rating || !email}
+        disabled={!rating || !email || submitting}
         className="w-full rounded-lg bg-civic-800 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-civic-700 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {t("submit")}
+        {submitting ? (
+          <span className="inline-flex items-center gap-2">
+            <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+            ...
+          </span>
+        ) : (
+          t("submit")
+        )}
       </button>
     </form>
   );
