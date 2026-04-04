@@ -8,7 +8,8 @@ import type {
   OfficialProfile,
 } from "@/types/database";
 
-// Policy areas
+// ─── Policy areas ───
+
 export const policyAreas: PolicyArea[] = [
   {
     id: "pa-1",
@@ -58,457 +59,686 @@ export const policyAreas: PolicyArea[] = [
     description_fi: "Koulutuksen kehittäminen ja tutkimuspolitiikka",
     description_en: "Education development and research policy",
   },
-];
-
-// ─── Official 1: Matti Virtanen ───
-
-const official1: Official = {
-  id: "official-1",
-  slug: "matti-virtanen",
-  first_name: "Matti",
-  last_name: "Virtanen",
-  title_fi: "Ylijohtaja",
-  title_en: "Director General",
-  organization_fi: "Valtiovarainministeriö",
-  organization_en: "Ministry of Finance",
-  photo_url: null,
-  appointment_date: "2021-03-15",
-  appointed_by_fi: "Valtioneuvosto",
-  appointed_by_en: "Council of State",
-  bio_fi:
-    "Matti Virtanen on toiminut valtiovarainministeriön ylijohtajana vuodesta 2021. Hän vastaa julkisen hallinnon ICT-osastosta ja digitalisaation edistämisestä valtionhallinnossa.",
-  bio_en:
-    "Matti Virtanen has served as Director General at the Ministry of Finance since 2021. He oversees the public administration ICT department and the advancement of digitalization in state governance.",
-  created_at: "2024-01-01T00:00:00Z",
-  updated_at: "2024-06-15T00:00:00Z",
-};
-
-const roles1: PreviousRole[] = [
   {
-    id: "role-1",
-    official_id: "official-1",
-    role_fi: "Osastopäällikkö",
-    role_en: "Department Head",
-    organization_fi: "Liikenne- ja viestintäministeriö",
-    organization_en: "Ministry of Transport and Communications",
-    start_date: "2016-06-01",
-    end_date: "2021-03-14",
-    source_url: "https://valtioneuvosto.fi",
+    id: "pa-7",
+    name_fi: "Turvallisuuspolitiikka",
+    name_en: "Security policy",
+    slug: "security-policy",
+    description_fi: "Sisäinen ja ulkoinen turvallisuus",
+    description_en: "Internal and external security",
   },
   {
-    id: "role-2",
-    official_id: "official-1",
-    role_fi: "Neuvotteleva virkamies",
-    role_en: "Ministerial Adviser",
-    organization_fi: "Valtioneuvoston kanslia",
-    organization_en: "Prime Minister's Office",
-    start_date: "2012-01-15",
-    end_date: "2016-05-31",
-    source_url: "https://valtioneuvosto.fi",
+    id: "pa-8",
+    name_fi: "Sosiaali- ja terveyspolitiikka",
+    name_en: "Social and health policy",
+    slug: "social-health-policy",
+    description_fi: "Sosiaaliturva, terveydenhuolto ja hyvinvointi",
+    description_en: "Social security, healthcare, and welfare",
+  },
+  {
+    id: "pa-9",
+    name_fi: "Liikenne- ja viestintäpolitiikka",
+    name_en: "Transport and communications policy",
+    slug: "transport-communications-policy",
+    description_fi: "Liikenne, viestintä ja infrastruktuuri",
+    description_en: "Transport, communications, and infrastructure",
+  },
+  {
+    id: "pa-10",
+    name_fi: "Elinkeinopolitiikka",
+    name_en: "Industrial policy",
+    slug: "industrial-policy",
+    description_fi: "Elinkeinoelämän edistäminen ja työllisyys",
+    description_en: "Business development and employment",
   },
 ];
 
-const affiliations1: Affiliation[] = [
-  {
-    id: "aff-1",
-    official_id: "official-1",
-    organization_fi: "Digi- ja väestötietovirasto",
-    organization_en: "Digital and Population Data Services Agency",
-    role_fi: "Hallituksen jäsen",
-    role_en: "Board member",
-    start_date: "2022-01-01",
-    end_date: null,
-    source_url: "https://www.prh.fi",
-  },
-  {
-    id: "aff-2",
-    official_id: "official-1",
-    organization_fi: "Julkisen hallinnon tietohallinnon neuvottelukunta (JUHTA)",
-    organization_en:
-      "Advisory Committee on Information Management in Public Administration (JUHTA)",
-    role_fi: "Puheenjohtaja",
-    role_en: "Chair",
-    start_date: "2021-06-01",
-    end_date: null,
-    source_url: "https://vm.fi",
-  },
-];
+// ─── Helper to create an official ───
 
-const statements1: PublicStatement[] = [
-  {
-    id: "stmt-1",
-    official_id: "official-1",
-    title_fi: "Lausunto julkisen hallinnon pilvipalvelulinjauksista",
-    title_en: "Statement on public administration cloud service policies",
-    summary_fi:
-      "Virtanen korosti tarvetta yhtenäiselle pilvipalvelustrategialle valtionhallinnossa ja esitti siirtymistä hybridipilvimalliin vuoteen 2025 mennessä.",
-    summary_en:
-      "Virtanen emphasized the need for a unified cloud service strategy in state governance and proposed a transition to a hybrid cloud model by 2025.",
-    date: "2023-11-15",
-    policy_area_id: "pa-2",
-    source_url:
-      "https://lausunto.fi/FI/Proposal/Participation?proposalId=example1",
-    source_name: "Lausunto.fi",
-  },
-  {
-    id: "stmt-2",
-    official_id: "official-1",
-    title_fi: "Puheenvuoro valtionhallinnon tuottavuusohjelmasta",
-    title_en: "Speech on public administration productivity programme",
-    summary_fi:
-      "Virtanen esitteli uuden tuottavuusohjelman, joka tähtää 15% tehokkuuden parantamiseen julkisissa palveluissa digitalisaation avulla.",
-    summary_en:
-      "Virtanen presented a new productivity programme aiming for 15% efficiency improvement in public services through digitalization.",
-    date: "2023-09-22",
-    policy_area_id: "pa-1",
-    source_url: "https://vm.fi/artikkeli/-/asset_publisher/example2",
-    source_name: "Valtiovarainministeriö",
-  },
-  {
-    id: "stmt-3",
-    official_id: "official-1",
-    title_fi: "Lausunto tiedonhallintalain muutosehdotuksesta",
-    title_en:
-      "Statement on proposed amendments to the Information Management Act",
-    summary_fi:
-      "Virtanen kannatti tiedonhallintalain tiukentamista ja esitti automaattisen päätöksenteon läpinäkyvyysvaatimuksia.",
-    summary_en:
-      "Virtanen supported tightening the Information Management Act and proposed transparency requirements for automated decision-making.",
-    date: "2024-02-10",
-    policy_area_id: "pa-4",
-    source_url:
-      "https://lausunto.fi/FI/Proposal/Participation?proposalId=example3",
-    source_name: "Lausunto.fi",
-  },
-];
+function official(
+  id: string,
+  slug: string,
+  firstName: string,
+  lastName: string,
+  titleFi: string,
+  titleEn: string,
+  orgFi: string,
+  orgEn: string,
+  appointmentDate: string,
+  appointedByFi: string,
+  appointedByEn: string,
+  bioFi: string,
+  bioEn: string
+): Official {
+  return {
+    id,
+    slug,
+    first_name: firstName,
+    last_name: lastName,
+    title_fi: titleFi,
+    title_en: titleEn,
+    organization_fi: orgFi,
+    organization_en: orgEn,
+    photo_url: null,
+    appointment_date: appointmentDate,
+    appointed_by_fi: appointedByFi,
+    appointed_by_en: appointedByEn,
+    bio_fi: bioFi,
+    bio_en: bioEn,
+    created_at: "2024-01-01T00:00:00Z",
+    updated_at: "2026-04-01T00:00:00Z",
+  };
+}
 
-const feedback1: FeedbackAggregation[] = [
-  {
-    policy_area_id: "pa-1",
-    policy_area_name_fi: "Talouspolitiikka",
-    policy_area_name_en: "Economic policy",
-    total_responses: 47,
-    average_rating: 3.2,
-    distribution: { 1: 5, 2: 8, 3: 15, 4: 12, 5: 7 },
-  },
-  {
-    policy_area_id: "pa-2",
-    policy_area_name_fi: "Digitalisaatio",
-    policy_area_name_en: "Digitalization",
-    total_responses: 83,
-    average_rating: 3.8,
-    distribution: { 1: 3, 2: 7, 3: 18, 4: 30, 5: 25 },
-  },
-  {
-    policy_area_id: "pa-3",
-    policy_area_name_fi: "Hallintopolitiikka",
-    policy_area_name_en: "Administrative policy",
-    total_responses: 31,
-    average_rating: 2.9,
-    distribution: { 1: 4, 2: 9, 3: 10, 4: 5, 5: 3 },
-  },
-  {
-    policy_area_id: "pa-4",
-    policy_area_name_fi: "Lainsäädäntö",
-    policy_area_name_en: "Legislation",
-    total_responses: 22,
-    average_rating: 3.5,
-    distribution: { 1: 1, 2: 3, 3: 8, 4: 6, 5: 4 },
-  },
-];
-
-// ─── Official 2: Anna Korhonen ───
-
-const official2: Official = {
-  id: "official-2",
-  slug: "anna-korhonen",
-  first_name: "Anna",
-  last_name: "Korhonen",
-  title_fi: "Kansliapäällikkö",
-  title_en: "Permanent Secretary",
-  organization_fi: "Ympäristöministeriö",
-  organization_en: "Ministry of the Environment",
-  photo_url: null,
-  appointment_date: "2020-09-01",
-  appointed_by_fi: "Tasavallan presidentti",
-  appointed_by_en: "President of the Republic",
-  bio_fi:
-    "Anna Korhonen johtaa ympäristöministeriön toimintaa kansliapäällikkönä. Hänellä on pitkä kokemus ympäristöhallinnosta ja ilmastopolitiikasta.",
-  bio_en:
-    "Anna Korhonen leads the Ministry of the Environment as Permanent Secretary. She has extensive experience in environmental administration and climate policy.",
-  created_at: "2024-01-01T00:00:00Z",
-  updated_at: "2024-08-01T00:00:00Z",
-};
-
-const roles2: PreviousRole[] = [
-  {
-    id: "role-3",
-    official_id: "official-2",
-    role_fi: "Ylijohtaja",
-    role_en: "Director General",
-    organization_fi: "Ympäristöministeriö, Luontoympäristöosasto",
-    organization_en:
-      "Ministry of the Environment, Natural Environment Department",
-    start_date: "2015-03-01",
-    end_date: "2020-08-31",
-    source_url: "https://valtioneuvosto.fi",
-  },
-];
-
-const affiliations2: Affiliation[] = [
-  {
-    id: "aff-3",
-    official_id: "official-2",
-    organization_fi: "Suomen ympäristökeskus (SYKE)",
-    organization_en: "Finnish Environment Institute (SYKE)",
-    role_fi: "Johtokunnan jäsen",
-    role_en: "Board member",
-    start_date: "2020-10-01",
-    end_date: null,
-    source_url: "https://www.syke.fi",
-  },
-];
-
-const statements2: PublicStatement[] = [
-  {
-    id: "stmt-4",
-    official_id: "official-2",
-    title_fi: "Lausunto ilmastolain toimeenpanosta",
-    title_en: "Statement on Climate Act implementation",
-    summary_fi:
-      "Korhonen esitti konkreettisia toimenpiteitä ilmastolain toimeenpanon nopeuttamiseksi ja korosti sektorirajat ylittävän yhteistyön merkitystä.",
-    summary_en:
-      "Korhonen proposed concrete measures to accelerate Climate Act implementation and emphasized the importance of cross-sector collaboration.",
-    date: "2024-01-20",
-    policy_area_id: "pa-5",
-    source_url:
-      "https://lausunto.fi/FI/Proposal/Participation?proposalId=example4",
-    source_name: "Lausunto.fi",
-  },
-  {
-    id: "stmt-5",
-    official_id: "official-2",
-    title_fi: "Puheenvuoro luonnon monimuotoisuuden suojelusta",
-    title_en: "Speech on biodiversity conservation",
-    summary_fi:
-      "Korhonen painotti Suomen vastuuta EU:n biodiversiteettistrategian toteuttamisessa ja esitti lisärahoitusta suojelualueiden laajentamiseen.",
-    summary_en:
-      "Korhonen emphasized Finland's responsibility in implementing the EU Biodiversity Strategy and proposed additional funding for expanding protected areas.",
-    date: "2023-06-05",
-    policy_area_id: "pa-5",
-    source_url: "https://ym.fi/artikkeli/-/asset_publisher/example5",
-    source_name: "Ympäristöministeriö",
-  },
-];
-
-const feedback2: FeedbackAggregation[] = [
-  {
-    policy_area_id: "pa-5",
-    policy_area_name_fi: "Ympäristöpolitiikka",
-    policy_area_name_en: "Environmental policy",
-    total_responses: 112,
-    average_rating: 4.1,
-    distribution: { 1: 4, 2: 8, 3: 15, 4: 40, 5: 45 },
-  },
-  {
-    policy_area_id: "pa-3",
-    policy_area_name_fi: "Hallintopolitiikka",
-    policy_area_name_en: "Administrative policy",
-    total_responses: 28,
-    average_rating: 3.4,
-    distribution: { 1: 2, 2: 4, 3: 10, 4: 8, 5: 4 },
-  },
-];
-
-// ─── Official 3: Jukka Lahtinen ───
-
-const official3: Official = {
-  id: "official-3",
-  slug: "jukka-lahtinen",
-  first_name: "Jukka",
-  last_name: "Lahtinen",
-  title_fi: "Pääjohtaja",
-  title_en: "Director General",
-  organization_fi: "Opetushallitus",
-  organization_en: "Finnish National Agency for Education",
-  photo_url: null,
-  appointment_date: "2019-01-01",
-  appointed_by_fi: "Valtioneuvosto",
-  appointed_by_en: "Council of State",
-  bio_fi:
-    "Jukka Lahtinen johtaa Opetushallitusta ja vastaa koulutuksen kehittämisestä, opetussuunnitelmien valmistelusta ja koulutuksen laadun arvioinnista.",
-  bio_en:
-    "Jukka Lahtinen leads the Finnish National Agency for Education and is responsible for education development, curriculum preparation, and education quality evaluation.",
-  created_at: "2024-01-01T00:00:00Z",
-  updated_at: "2024-05-20T00:00:00Z",
-};
-
-const roles3: PreviousRole[] = [
-  {
-    id: "role-4",
-    official_id: "official-3",
-    role_fi: "Johtaja",
-    role_en: "Director",
-    organization_fi: "Opetus- ja kulttuuriministeriö",
-    organization_en: "Ministry of Education and Culture",
-    start_date: "2013-09-01",
-    end_date: "2018-12-31",
-    source_url: "https://valtioneuvosto.fi",
-  },
-  {
-    id: "role-5",
-    official_id: "official-3",
-    role_fi: "Opetusneuvos",
-    role_en: "Counsellor of Education",
-    organization_fi: "Opetushallitus",
-    organization_en: "Finnish National Agency for Education",
-    start_date: "2008-01-01",
-    end_date: "2013-08-31",
-    source_url: "https://www.oph.fi",
-  },
-];
-
-const affiliations3: Affiliation[] = [
-  {
-    id: "aff-4",
-    official_id: "official-3",
-    organization_fi: "Koulutuksen arviointikeskus (Karvi)",
-    organization_en: "Finnish Education Evaluation Centre (FINEEC)",
-    role_fi: "Arviointineuvoston jäsen",
-    role_en: "Evaluation Council member",
-    start_date: "2019-03-01",
-    end_date: null,
-    source_url: "https://karvi.fi",
-  },
-];
-
-const statements3: PublicStatement[] = [
-  {
-    id: "stmt-6",
-    official_id: "official-3",
-    title_fi: "Lausunto perusopetuksen opetussuunnitelman uudistamisesta",
-    title_en: "Statement on basic education curriculum reform",
-    summary_fi:
-      "Lahtinen esitteli opetussuunnitelman uudistuksen päälinjat, korostaen digitaalisten taitojen ja kriittisen ajattelun roolia tulevaisuuden opetuksessa.",
-    summary_en:
-      "Lahtinen presented the main directions of curriculum reform, emphasizing the role of digital skills and critical thinking in future education.",
-    date: "2024-03-15",
-    policy_area_id: "pa-6",
-    source_url: "https://www.oph.fi/fi/uutiset/example6",
-    source_name: "Opetushallitus",
-  },
-];
-
-const feedback3: FeedbackAggregation[] = [
-  {
-    policy_area_id: "pa-6",
-    policy_area_name_fi: "Koulutuspolitiikka",
-    policy_area_name_en: "Education policy",
-    total_responses: 156,
-    average_rating: 3.0,
-    distribution: { 1: 20, 2: 30, 3: 40, 4: 38, 5: 28 },
-  },
-];
-
-// ─── Official 4: Liisa Nieminen ───
-
-const official4: Official = {
-  id: "official-4",
-  slug: "liisa-nieminen",
-  first_name: "Liisa",
-  last_name: "Nieminen",
-  title_fi: "Osastopäällikkö",
-  title_en: "Department Head",
-  organization_fi: "Sosiaali- ja terveysministeriö",
-  organization_en: "Ministry of Social Affairs and Health",
-  photo_url: null,
-  appointment_date: "2022-06-01",
-  appointed_by_fi: "Valtioneuvosto",
-  appointed_by_en: "Council of State",
-  bio_fi:
-    "Liisa Nieminen johtaa sosiaali- ja terveysministeriön hyvinvointiosastoa. Hän on erikoistunut sosiaaliturvan uudistamiseen ja terveydenhuollon digitalisaatioon.",
-  bio_en:
-    "Liisa Nieminen heads the welfare department at the Ministry of Social Affairs and Health. She specializes in social security reform and healthcare digitalization.",
-  created_at: "2024-01-01T00:00:00Z",
-  updated_at: "2024-07-10T00:00:00Z",
-};
-
-const roles4: PreviousRole[] = [
-  {
-    id: "role-6",
-    official_id: "official-4",
-    role_fi: "Neuvotteleva virkamies",
-    role_en: "Ministerial Adviser",
-    organization_fi: "Sosiaali- ja terveysministeriö",
-    organization_en: "Ministry of Social Affairs and Health",
-    start_date: "2017-01-01",
-    end_date: "2022-05-31",
-    source_url: "https://valtioneuvosto.fi",
-  },
-];
-
-const affiliations4: Affiliation[] = [];
-
-const statements4: PublicStatement[] = [
-  {
-    id: "stmt-7",
-    official_id: "official-4",
-    title_fi: "Lausunto sosiaaliturvan kokonaisuudistuksesta",
-    title_en: "Statement on comprehensive social security reform",
-    summary_fi:
-      "Nieminen esitteli sosiaaliturvauudistuksen vaiheistusta ja korosti tietopohjaisen päätöksenteon merkitystä uudistuksen valmistelussa.",
-    summary_en:
-      "Nieminen presented the phasing of social security reform and emphasized the importance of evidence-based decision-making in reform preparation.",
-    date: "2023-12-01",
-    policy_area_id: "pa-3",
-    source_url: "https://stm.fi/artikkeli/-/asset_publisher/example7",
-    source_name: "Sosiaali- ja terveysministeriö",
-  },
-];
-
-const feedback4: FeedbackAggregation[] = [
-  {
-    policy_area_id: "pa-3",
-    policy_area_name_fi: "Hallintopolitiikka",
-    policy_area_name_en: "Administrative policy",
-    total_responses: 64,
-    average_rating: 3.6,
-    distribution: { 1: 3, 2: 8, 3: 18, 4: 22, 5: 13 },
-  },
-];
-
-// ─── All profiles ───
+// ══════════════════════════════════════════════
+// MINISTRY PERMANENT SECRETARIES (Kansliapäälliköt)
+// ══════════════════════════════════════════════
 
 const allProfiles: OfficialProfile[] = [
+  // 1. Valtioneuvoston kanslia — Timo Lankinen
   {
-    official: official1,
-    previous_roles: roles1,
-    affiliations: affiliations1,
-    public_statements: statements1,
-    feedback: feedback1,
+    official: official(
+      "o-1",
+      "timo-lankinen",
+      "Timo",
+      "Lankinen",
+      "Alivaltiosihteeri kansliapäällikkönä",
+      "Permanent State Under-Secretary",
+      "Valtioneuvoston kanslia",
+      "Prime Minister's Office",
+      "2012-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Timo Lankinen toimii valtioneuvoston kanslian korkeimpana virkamiehenä alivaltiosihteerinä. Hän on johtanut kanslian hallintoa vuodesta 2012.",
+      "Timo Lankinen serves as the highest permanent civil servant at the Prime Minister's Office. He has led the office's administration since 2012."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
   },
+
+  // 2. Ulkoministeriö — Jukka Salovaara
   {
-    official: official2,
-    previous_roles: roles2,
-    affiliations: affiliations2,
-    public_statements: statements2,
-    feedback: feedback2,
+    official: official(
+      "o-2",
+      "jukka-salovaara",
+      "Jukka",
+      "Salovaara",
+      "Valtiosihteeri kansliapäällikkönä",
+      "Permanent State Secretary",
+      "Ulkoministeriö",
+      "Ministry for Foreign Affairs",
+      "2022-05-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Jukka Salovaara toimii ulkoministeriön kansliapäällikkönä. Hän nimitettiin tehtävään marraskuussa 2021 ja aloitti toukokuussa 2022. Kausi päättyy elokuussa 2026.",
+      "Jukka Salovaara serves as Permanent State Secretary at the Ministry for Foreign Affairs. He was appointed in November 2021 and took office in May 2022. His term ends in August 2026."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
   },
+
+  // 3. Oikeusministeriö — Antti Leinonen
   {
-    official: official3,
-    previous_roles: roles3,
-    affiliations: affiliations3,
-    public_statements: statements3,
-    feedback: feedback3,
+    official: official(
+      "o-3",
+      "antti-leinonen",
+      "Antti",
+      "Leinonen",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Oikeusministeriö",
+      "Ministry of Justice",
+      "2025-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Antti Leinonen aloitti oikeusministeriön kansliapäällikkönä tammikuussa 2025. Hän seurasi tehtävässä Pekka Timosta.",
+      "Antti Leinonen took office as Permanent Secretary of the Ministry of Justice in January 2025, succeeding Pekka Timonen."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
   },
+
+  // 4. Sisäministeriö — Matti Sarasmaa
   {
-    official: official4,
-    previous_roles: roles4,
-    affiliations: affiliations4,
-    public_statements: statements4,
-    feedback: feedback4,
+    official: official(
+      "o-4",
+      "matti-sarasmaa",
+      "Matti",
+      "Sarasmaa",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Sisäministeriö",
+      "Ministry of the Interior",
+      "2025-02-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Matti Sarasmaa nimitettiin sisäministeriön kansliapäälliköksi joulukuussa 2024 ja aloitti helmikuussa 2025. Viiden vuoden toimikausi.",
+      "Matti Sarasmaa was appointed Permanent Secretary of the Ministry of the Interior in December 2024, taking office in February 2025 for a five-year term."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 5. Puolustusministeriö — Janne Kuusela
+  {
+    official: official(
+      "o-5",
+      "janne-kuusela",
+      "Janne",
+      "Kuusela",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Puolustusministeriö",
+      "Ministry of Defence",
+      "2026-02-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Janne Kuusela nimitettiin puolustusministeriön kansliapäälliköksi marraskuussa 2025. Hän aloitti tehtävässä helmikuussa 2026 ja toimikausi kestää tammikuuhun 2031. Hän seurasi Esa Pulkkista.",
+      "Janne Kuusela was appointed Permanent Secretary of the Ministry of Defence in November 2025. He took office in February 2026 for a term until January 2031, succeeding Esa Pulkkinen."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 6. Valtiovarainministeriö — Juha Majanen
+  {
+    official: official(
+      "o-6",
+      "juha-majanen",
+      "Juha",
+      "Majanen",
+      "Valtiosihteeri kansliapäällikkönä",
+      "State Secretary as Permanent Secretary",
+      "Valtiovarainministeriö",
+      "Ministry of Finance",
+      "2020-04-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Juha Majanen toimii valtiovarainministeriön kansliapäällikkönä. Hän on ollut tehtävässä vuodesta 2020 ja hänet nimitettiin uudelleen marraskuussa 2025 kaudelle 2026–2031.",
+      "Juha Majanen serves as State Secretary and Permanent Secretary at the Ministry of Finance. He has been in the role since 2020 and was reappointed in November 2025 for the term 2026–2031."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 7. Opetus- ja kulttuuriministeriö — Heidi Backman
+  {
+    official: official(
+      "o-7",
+      "heidi-backman",
+      "Heidi",
+      "Backman",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Opetus- ja kulttuuriministeriö",
+      "Ministry of Education and Culture",
+      "2025-08-04",
+      "Valtioneuvosto",
+      "Council of State",
+      "Heidi Backman nimitettiin opetus- ja kulttuuriministeriön kansliapäälliköksi kesäkuussa 2025 ja aloitti elokuussa 2025. Hän seurasi Anita Lehikoista, joka toimi tehtävässä 2013–2025.",
+      "Heidi Backman was appointed Permanent Secretary of the Ministry of Education and Culture in June 2025, taking office in August 2025. She succeeded Anita Lehikoinen, who served from 2013 to 2025."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 8. Maa- ja metsätalousministeriö — Pekka Pesonen
+  {
+    official: official(
+      "o-8",
+      "pekka-pesonen",
+      "Pekka",
+      "Pesonen",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Maa- ja metsätalousministeriö",
+      "Ministry of Agriculture and Forestry",
+      "2024-02-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Pekka Pesonen nimitettiin maa- ja metsätalousministeriön kansliapäälliköksi tammikuussa 2024. Toimikausi kestää tammikuuhun 2029.",
+      "Pekka Pesonen was appointed Permanent Secretary of the Ministry of Agriculture and Forestry in January 2024 for a term until January 2029."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 9. Liikenne- ja viestintäministeriö — Anna-Mari Ahonen
+  {
+    official: official(
+      "o-9",
+      "anna-mari-ahonen",
+      "Anna-Mari",
+      "Ahonen",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Liikenne- ja viestintäministeriö",
+      "Ministry of Transport and Communications",
+      "2026-03-16",
+      "Valtioneuvosto",
+      "Council of State",
+      "Anna-Mari Ahonen nimitettiin liikenne- ja viestintäministeriön kansliapäälliköksi maaliskuussa 2026. Toimikausi kestää maaliskuuhun 2031.",
+      "Anna-Mari Ahonen was appointed Permanent Secretary of the Ministry of Transport and Communications in March 2026 for a term until March 2031."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 10. Työ- ja elinkeinoministeriö — Timo Jaatinen
+  {
+    official: official(
+      "o-10",
+      "timo-jaatinen",
+      "Timo",
+      "Jaatinen",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Työ- ja elinkeinoministeriö",
+      "Ministry of Economic Affairs and Employment",
+      "2023-11-06",
+      "Valtioneuvosto",
+      "Council of State",
+      "Timo Jaatinen nimitettiin työ- ja elinkeinoministeriön kansliapäälliköksi lokakuussa 2023. Toimikausi kestää marraskuuhun 2028.",
+      "Timo Jaatinen was appointed Permanent Secretary of the Ministry of Economic Affairs and Employment in October 2023 for a term until November 2028."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 11. Sosiaali- ja terveysministeriö — Veli-Mikko Niemi
+  {
+    official: official(
+      "o-11",
+      "veli-mikko-niemi",
+      "Veli-Mikko",
+      "Niemi",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Sosiaali- ja terveysministeriö",
+      "Ministry of Social Affairs and Health",
+      "2022-08-15",
+      "Valtioneuvosto",
+      "Council of State",
+      "Veli-Mikko Niemi toimii sosiaali- ja terveysministeriön kansliapäällikkönä elokuusta 2022. Hän seurasi tehtävässä Kirsi Varhilaa.",
+      "Veli-Mikko Niemi has served as Permanent Secretary of the Ministry of Social Affairs and Health since August 2022, succeeding Kirsi Varhila."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 12. Ympäristöministeriö — Juhani Damski
+  {
+    official: official(
+      "o-12",
+      "juhani-damski",
+      "Juhani",
+      "Damski",
+      "Kansliapäällikkö",
+      "Permanent Secretary",
+      "Ympäristöministeriö",
+      "Ministry of the Environment",
+      "2020-06-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Juhani Damski toimii ympäristöministeriön kansliapäällikkönä. Hänet nimitettiin uudelleen kaudelle 2025–2030. Damski on filosofian tohtori ja toimi aiemmin Ilmatieteen laitoksen pääjohtajana.",
+      "Juhani Damski serves as Permanent Secretary of the Ministry of the Environment, reappointed for the term 2025–2030. He holds a doctorate in philosophy and previously served as Director General of the Finnish Meteorological Institute."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // ══════════════════════════════════════════════
+  // AGENCY HEADS (Virastojen pääjohtajat)
+  // ══════════════════════════════════════════════
+
+  // 13. Olli Rehn — Suomen Pankki
+  {
+    official: official(
+      "o-13",
+      "olli-rehn",
+      "Olli",
+      "Rehn",
+      "Pääjohtaja",
+      "Governor",
+      "Suomen Pankki",
+      "Bank of Finland",
+      "2018-07-12",
+      "Tasavallan presidentti",
+      "President of the Republic",
+      "Olli Rehn on toiminut Suomen Pankin pääjohtajana vuodesta 2018. Hän toimi aiemmin EU:n talouskomissaarina ja Suomen elinkeinoministerinä.",
+      "Olli Rehn has served as Governor of the Bank of Finland since 2018. He previously served as EU Commissioner for Economic Affairs and as Finland's Minister of Economic Affairs."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 14. Outi Antila — Kela
+  {
+    official: official(
+      "o-14",
+      "outi-antila",
+      "Outi",
+      "Antila",
+      "Pääjohtaja",
+      "Director General",
+      "Kansaneläkelaitos (Kela)",
+      "Social Insurance Institution of Finland (Kela)",
+      "2022-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Outi Antila toimii Kelan pääjohtajana vuodesta 2022. Kela vastaa Suomen sosiaaliturvaetuuksien toimeenpanosta.",
+      "Outi Antila has served as Director General of Kela since 2022. Kela is responsible for implementing Finland's social security benefits."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 15. Minna Kelhä — Opetushallitus
+  {
+    official: official(
+      "o-15",
+      "minna-kelha",
+      "Minna",
+      "Kelhä",
+      "Pääjohtaja",
+      "Director General",
+      "Opetushallitus",
+      "Finnish National Agency for Education",
+      "2023-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Minna Kelhä toimii Opetushallituksen pääjohtajana vuodesta 2023. Opetushallitus vastaa koulutuksen kehittämisestä ja opetussuunnitelmien valmistelusta.",
+      "Minna Kelhä has served as Director General of the Finnish National Agency for Education since 2023. The agency is responsible for education development and curriculum preparation."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 16. Seppo Kolehmainen — Poliisihallitus
+  {
+    official: official(
+      "o-16",
+      "seppo-kolehmainen",
+      "Seppo",
+      "Kolehmainen",
+      "Poliisiylijohtaja",
+      "National Police Commissioner",
+      "Poliisihallitus",
+      "National Police Board",
+      "2016-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Seppo Kolehmainen on toiminut poliisiylijohtajana vuodesta 2016. Hän johtaa Poliisihallitusta, joka ohjaa ja valvoo poliisitoimintaa Suomessa.",
+      "Seppo Kolehmainen has served as National Police Commissioner since 2016. He leads the National Police Board, which directs and supervises police operations in Finland."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 17. Janne Jaakkola — Puolustusvoimat
+  {
+    official: official(
+      "o-17",
+      "janne-jaakkola",
+      "Janne",
+      "Jaakkola",
+      "Puolustusvoimain komentaja, kenraali",
+      "Commander of the Finnish Defence Forces, General",
+      "Puolustusvoimat",
+      "Finnish Defence Forces",
+      "2024-08-01",
+      "Tasavallan presidentti",
+      "President of the Republic",
+      "Kenraali Janne Jaakkola nimitettiin puolustusvoimain komentajaksi elokuussa 2024. Hän seurasi tehtävässä kenraali Timo Kivistä.",
+      "General Janne Jaakkola was appointed Commander of the Finnish Defence Forces in August 2024, succeeding General Timo Kivinen."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 18. Hannu Mäkinen — Tulli
+  {
+    official: official(
+      "o-18",
+      "hannu-makinen",
+      "Hannu",
+      "Mäkinen",
+      "Pääjohtaja",
+      "Director General",
+      "Tulli",
+      "Finnish Customs",
+      "2015-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Hannu Mäkinen on toiminut Tullin pääjohtajana vuodesta 2015. Tulli vastaa tullivalvonnasta, tuontiverotuksesta ja ulkomaankaupan tilastoinnista.",
+      "Hannu Mäkinen has served as Director General of Finnish Customs since 2015. Customs is responsible for customs control, import taxation, and foreign trade statistics."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 19. Ilkka Haahtela — Maahanmuuttovirasto
+  {
+    official: official(
+      "o-19",
+      "ilkka-haahtela",
+      "Ilkka",
+      "Haahtela",
+      "Ylijohtaja",
+      "Director General",
+      "Maahanmuuttovirasto",
+      "Finnish Immigration Service",
+      "2023-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Ilkka Haahtela toimii Maahanmuuttoviraston ylijohtajana. Virasto käsittelee maahanmuuttoon, turvapaikkaan ja kansalaisuuteen liittyviä asioita.",
+      "Ilkka Haahtela serves as Director General of the Finnish Immigration Service. The agency handles matters related to immigration, asylum, and citizenship."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 20. Jarkko Saarimäki — Traficom
+  {
+    official: official(
+      "o-20",
+      "jarkko-saarimaki",
+      "Jarkko",
+      "Saarimäki",
+      "Pääjohtaja",
+      "Director General",
+      "Liikenne- ja viestintävirasto Traficom",
+      "Finnish Transport and Communications Agency Traficom",
+      "2024-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Jarkko Saarimäki toimii Traficomin pääjohtajana. Traficom vastaa liikenteen ja viestinnän lupa-, rekisteri- ja valvontatehtävistä.",
+      "Jarkko Saarimäki serves as Director General of Traficom. The agency is responsible for transport and communications licensing, registration, and oversight."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 21. Janne Viskari — DVV
+  {
+    official: official(
+      "o-21",
+      "janne-viskari",
+      "Janne",
+      "Viskari",
+      "Pääjohtaja",
+      "Director General",
+      "Digi- ja väestötietovirasto (DVV)",
+      "Digital and Population Data Services Agency (DVV)",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Janne Viskari on johtanut Digi- ja väestötietovirastoa sen perustamisesta 2020 lähtien. DVV vastaa väestötietojärjestelmästä ja digitaalisten palveluiden kehittämisestä.",
+      "Janne Viskari has led the Digital and Population Data Services Agency since its establishment in 2020. DVV manages the population information system and digital service development."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 22. Mika Salminen — THL
+  {
+    official: official(
+      "o-22",
+      "mika-salminen",
+      "Mika",
+      "Salminen",
+      "Pääjohtaja",
+      "Director General",
+      "Terveyden ja hyvinvoinnin laitos (THL)",
+      "Finnish Institute for Health and Welfare (THL)",
+      "2022-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Mika Salminen toimii THL:n pääjohtajana vuodesta 2022. Hän tuli tunnetuksi koronapandemian aikana THL:n terveysturvallisuusjohtajana.",
+      "Mika Salminen has served as Director General of THL since 2022. He became widely known during the COVID-19 pandemic as THL's Director of Health Security."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 23. Leif Schulman — SYKE
+  {
+    official: official(
+      "o-23",
+      "leif-schulman",
+      "Leif",
+      "Schulman",
+      "Pääjohtaja",
+      "Director General",
+      "Suomen ympäristökeskus (SYKE)",
+      "Finnish Environment Institute (SYKE)",
+      "2017-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Leif Schulman on toiminut Suomen ympäristökeskuksen pääjohtajana vuodesta 2017. SYKE tuottaa tutkimustietoa ympäristöpolitiikan tueksi.",
+      "Leif Schulman has served as Director General of the Finnish Environment Institute since 2017. SYKE produces research to support environmental policy."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 24. Petteri Tiippana — STUK
+  {
+    official: official(
+      "o-24",
+      "petteri-tiippana",
+      "Petteri",
+      "Tiippana",
+      "Pääjohtaja",
+      "Director General",
+      "Säteilyturvakeskus (STUK)",
+      "Radiation and Nuclear Safety Authority (STUK)",
+      "2015-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Petteri Tiippana on toiminut Säteilyturvakeskuksen pääjohtajana vuodesta 2015. STUK valvoo ydin- ja säteilyturvallisuutta Suomessa.",
+      "Petteri Tiippana has served as Director General of the Radiation and Nuclear Safety Authority since 2015. STUK oversees nuclear and radiation safety in Finland."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 25. Kirsi Leivo — KKV
+  {
+    official: official(
+      "o-25",
+      "kirsi-leivo",
+      "Kirsi",
+      "Leivo",
+      "Pääjohtaja",
+      "Director General",
+      "Kilpailu- ja kuluttajavirasto (KKV)",
+      "Finnish Competition and Consumer Authority (KKV)",
+      "2019-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Kirsi Leivo on toiminut Kilpailu- ja kuluttajaviraston pääjohtajana vuodesta 2019. KKV valvoo kilpailulain noudattamista ja kuluttajansuojaa.",
+      "Kirsi Leivo has served as Director General of the Finnish Competition and Consumer Authority since 2019. KKV enforces competition law and consumer protection."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 26. Markku Heikura — Verohallinto
+  {
+    official: official(
+      "o-26",
+      "markku-heikura",
+      "Markku",
+      "Heikura",
+      "Pääjohtaja",
+      "Director General",
+      "Verohallinto",
+      "Finnish Tax Administration",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Markku Heikura toimii Verohallinnon pääjohtajana. Verohallinto vastaa verotuksen toimittamisesta ja verovalvonnasta Suomessa.",
+      "Markku Heikura serves as Director General of the Finnish Tax Administration. The agency is responsible for tax assessment and tax control in Finland."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
   },
 ];
+
+// ─── Exports ───
 
 export function getOfficialBySlug(slug: string): OfficialProfile | null {
   return allProfiles.find((p) => p.official.slug === slug) ?? null;
