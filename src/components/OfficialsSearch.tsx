@@ -10,31 +10,6 @@ function localized(obj: Record<string, unknown>, field: string, locale: Locale):
   return (obj[`${field}_${locale}`] as string) ?? (obj[`${field}_en`] as string) ?? "";
 }
 
-type Category = "all" | "ministries" | "agencies" | "directors";
-
-const MINISTRY_TITLES = [
-  "Kansliapäällikkö",
-  "Valtiosihteeri kansliapäällikkönä",
-  "Alivaltiosihteeri kansliapäällikkönä",
-];
-
-const DIRECTOR_TITLES = ["Osastopäällikkö"];
-
-function getCategory(official: Official): Category {
-  if (DIRECTOR_TITLES.includes(official.title_fi)) return "directors";
-  if (MINISTRY_TITLES.includes(official.title_fi)) return "ministries";
-  return "agencies";
-}
-
-function getCategoryLabel(category: Category, t: ReturnType<typeof useTranslations>): string {
-  switch (category) {
-    case "all": return t("allCategories");
-    case "ministries": return t("ministries");
-    case "agencies": return t("agencies");
-    case "directors": return t("directors");
-  }
-}
-
 export default function OfficialsSearch({
   officials,
 }: {
@@ -43,7 +18,15 @@ export default function OfficialsSearch({
   const t = useTranslations("officials");
   const locale = useLocale() as Locale;
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState<Category>("all");
+  const [selectedOrg, setSelectedOrg] = useState<string | null>(null);
+
+  // Build org list from all officials
+  const orgMap = new Map<string, number>();
+  for (const o of officials) {
+    const org = localized(o as unknown as Record<string, unknown>, "organization", locale);
+    orgMap.set(org, (orgMap.get(org) || 0) + 1);
+  }
+  const orgs = Array.from(orgMap.entries()).sort((a, b) => b[1] - a[1]);
 
   // Filter by search query
   const searchFiltered = query
@@ -61,10 +44,13 @@ export default function OfficialsSearch({
       })
     : officials;
 
-  // Filter by category
-  const filtered = category === "all"
-    ? searchFiltered
-    : searchFiltered.filter((o) => getCategory(o) === category);
+  // Filter by selected organization
+  const filtered = selectedOrg
+    ? searchFiltered.filter(
+        (o) =>
+          localized(o as unknown as Record<string, unknown>, "organization", locale) === selectedOrg
+      )
+    : searchFiltered;
 
   // Group by organization
   const grouped = new Map<string, Official[]>();
@@ -73,16 +59,6 @@ export default function OfficialsSearch({
     if (!grouped.has(org)) grouped.set(org, []);
     grouped.get(org)!.push(o);
   }
-
-  const categories: Category[] = ["all", "ministries", "agencies", "directors"];
-
-  // Count per category
-  const counts = {
-    all: searchFiltered.length,
-    ministries: searchFiltered.filter((o) => getCategory(o) === "ministries").length,
-    agencies: searchFiltered.filter((o) => getCategory(o) === "agencies").length,
-    directors: searchFiltered.filter((o) => getCategory(o) === "directors").length,
-  };
 
   return (
     <>
@@ -112,19 +88,29 @@ export default function OfficialsSearch({
         </div>
       </div>
 
-      {/* Category tabs */}
+      {/* Organization filter */}
       <div className="mb-8 flex flex-wrap gap-2">
-        {categories.map((cat) => (
+        <button
+          onClick={() => setSelectedOrg(null)}
+          className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+            selectedOrg === null
+              ? "bg-civic-700 text-white"
+              : "bg-civic-50 text-civic-700 hover:bg-civic-100"
+          }`}
+        >
+          {t("allCategories")} ({officials.length})
+        </button>
+        {orgs.map(([org, count]) => (
           <button
-            key={cat}
-            onClick={() => setCategory(cat)}
-            className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-              category === cat
+            key={org}
+            onClick={() => setSelectedOrg(selectedOrg === org ? null : org)}
+            className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+              selectedOrg === org
                 ? "bg-civic-700 text-white"
                 : "bg-civic-50 text-civic-700 hover:bg-civic-100"
             }`}
           >
-            {getCategoryLabel(cat, t)} ({counts[cat]})
+            {org} ({count})
           </button>
         ))}
       </div>
@@ -136,6 +122,9 @@ export default function OfficialsSearch({
             <div key={org}>
               <h2 className="mb-3 text-lg font-semibold text-civic-800 border-b border-civic-100 pb-2">
                 {org}
+                <span className="ml-2 text-sm font-normal text-muted">
+                  ({orgOfficials.length})
+                </span>
               </h2>
               <div className="grid gap-3 sm:grid-cols-2">
                 {orgOfficials.map((official) => (
