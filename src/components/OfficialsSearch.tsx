@@ -18,15 +18,16 @@ export default function OfficialsSearch({
   const t = useTranslations("officials");
   const locale = useLocale() as Locale;
   const [query, setQuery] = useState("");
-  const [selectedOrg, setSelectedOrg] = useState<string | null>(null);
+  const [selectedOrg, setSelectedOrg] = useState<string>("all");
 
-  // Build org list from all officials
-  const orgMap = new Map<string, number>();
+  // Group all officials by organization
+  const orgGroups = new Map<string, Official[]>();
   for (const o of officials) {
     const org = localized(o as unknown as Record<string, unknown>, "organization", locale);
-    orgMap.set(org, (orgMap.get(org) || 0) + 1);
+    if (!orgGroups.has(org)) orgGroups.set(org, []);
+    orgGroups.get(org)!.push(o);
   }
-  const orgs = Array.from(orgMap.entries()).sort((a, b) => b[1] - a[1]);
+  const orgList = Array.from(orgGroups.keys()).sort();
 
   // Filter by search query
   const searchFiltered = query
@@ -45,14 +46,16 @@ export default function OfficialsSearch({
     : officials;
 
   // Filter by selected organization
-  const filtered = selectedOrg
-    ? searchFiltered.filter(
-        (o) =>
-          localized(o as unknown as Record<string, unknown>, "organization", locale) === selectedOrg
-      )
-    : searchFiltered;
+  const filtered =
+    selectedOrg === "all"
+      ? searchFiltered
+      : searchFiltered.filter(
+          (o) =>
+            localized(o as unknown as Record<string, unknown>, "organization", locale) ===
+            selectedOrg
+        );
 
-  // Group by organization
+  // Group filtered results by organization
   const grouped = new Map<string, Official[]>();
   for (const o of filtered) {
     const org = localized(o as unknown as Record<string, unknown>, "organization", locale);
@@ -62,9 +65,9 @@ export default function OfficialsSearch({
 
   return (
     <>
-      {/* Search */}
-      <div className="mb-6">
-        <div className="relative">
+      {/* Search and filter row */}
+      <div className="mb-8 flex flex-col gap-3 sm:flex-row">
+        <div className="relative flex-1">
           <svg
             className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
             fill="none"
@@ -86,34 +89,28 @@ export default function OfficialsSearch({
             className="w-full rounded-xl border border-border bg-white py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted/60 focus:border-civic-400 focus:outline-none focus:ring-2 focus:ring-civic-100"
           />
         </div>
+        <select
+          value={selectedOrg}
+          onChange={(e) => setSelectedOrg(e.target.value)}
+          className="rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-civic-400 focus:outline-none focus:ring-2 focus:ring-civic-100 sm:w-72"
+        >
+          <option value="all">
+            {t("allCategories")} ({officials.length})
+          </option>
+          {orgList.map((org) => (
+            <option key={org} value={org}>
+              {org} ({orgGroups.get(org)!.length})
+            </option>
+          ))}
+        </select>
       </div>
 
-      {/* Organization filter */}
-      <div className="mb-8 flex flex-wrap gap-2">
-        <button
-          onClick={() => setSelectedOrg(null)}
-          className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
-            selectedOrg === null
-              ? "bg-civic-700 text-white"
-              : "bg-civic-50 text-civic-700 hover:bg-civic-100"
-          }`}
-        >
-          {t("allCategories")} ({officials.length})
-        </button>
-        {orgs.map(([org, count]) => (
-          <button
-            key={org}
-            onClick={() => setSelectedOrg(selectedOrg === org ? null : org)}
-            className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
-              selectedOrg === org
-                ? "bg-civic-700 text-white"
-                : "bg-civic-50 text-civic-700 hover:bg-civic-100"
-            }`}
-          >
-            {org} ({count})
-          </button>
-        ))}
-      </div>
+      {/* Results count */}
+      <p className="mb-4 text-xs text-muted/60">
+        {filtered.length !== officials.length
+          ? `${filtered.length} / ${officials.length}`
+          : t("totalOfficials", { count: String(officials.length) })}
+      </p>
 
       {/* Grouped officials */}
       {filtered.length > 0 ? (
@@ -143,7 +140,11 @@ export default function OfficialsSearch({
                           {official.first_name} {official.last_name}
                         </h3>
                         <p className="text-sm text-muted">
-                          {localized(official as unknown as Record<string, unknown>, "title", locale)}
+                          {localized(
+                            official as unknown as Record<string, unknown>,
+                            "title",
+                            locale
+                          )}
                         </p>
                       </div>
                     </div>
