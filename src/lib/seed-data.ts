@@ -736,6 +736,217 @@ const allProfiles: OfficialProfile[] = [
     public_statements: [],
     feedback: [],
   },
+
+  // ══════════════════════════════════════════════
+  // MINISTRY DIRECTORS GENERAL (Ylijohtajat)
+  // ══════════════════════════════════════════════
+
+  // 27. Tapio Laamanen — Oikeusministeriö
+  {
+    official: official(
+      "o-27",
+      "tapio-laamanen",
+      "Tapio",
+      "Laamanen",
+      "Ylijohtaja, hallinto- ja ohjausosasto",
+      "Director General, Department for Administration and Oversight",
+      "Oikeusministeriö",
+      "Ministry of Justice",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Tapio Laamanen toimii oikeusministeriön hallinto- ja ohjausosaston ylijohtajana.",
+      "Tapio Laamanen serves as Director General of the Department for Administration and Oversight at the Ministry of Justice."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 28. Johanna Suurpää — Oikeusministeriö
+  {
+    official: official(
+      "o-28",
+      "johanna-suurpaa",
+      "Johanna",
+      "Suurpää",
+      "Ylijohtaja, demokratia- ja julkisoikeusosasto",
+      "Director General, Department for Democracy and Public Law",
+      "Oikeusministeriö",
+      "Ministry of Justice",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Johanna Suurpää toimii oikeusministeriön demokratia- ja julkisoikeusosaston ylijohtajana.",
+      "Johanna Suurpää serves as Director General of the Department for Democracy and Public Law at the Ministry of Justice."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 29. Tomi Vuori — Sisäministeriö
+  {
+    official: official(
+      "o-29",
+      "tomi-vuori",
+      "Tomi",
+      "Vuori",
+      "Ylijohtaja, poliisiosasto",
+      "Director General, Police Department",
+      "Sisäministeriö",
+      "Ministry of the Interior",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Tomi Vuori toimii sisäministeriön poliisiosaston ylijohtajana.",
+      "Tomi Vuori serves as Director General of the Police Department at the Ministry of the Interior."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 30. Kimmo Kohvakka — Sisäministeriö
+  {
+    official: official(
+      "o-30",
+      "kimmo-kohvakka",
+      "Kimmo",
+      "Kohvakka",
+      "Ylijohtaja, pelastusosasto",
+      "Director General, Department for Rescue Services",
+      "Sisäministeriö",
+      "Ministry of the Interior",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Kimmo Kohvakka toimii sisäministeriön pelastusosaston ylijohtajana.",
+      "Kimmo Kohvakka serves as Director General of the Department for Rescue Services at the Ministry of the Interior."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 31. Minna Hulkkonen — Sisäministeriö
+  {
+    official: official(
+      "o-31",
+      "minna-hulkkonen",
+      "Minna",
+      "Hulkkonen",
+      "Ylijohtaja, maahanmuutto-osasto",
+      "Director General, Migration Department",
+      "Sisäministeriö",
+      "Ministry of the Interior",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Minna Hulkkonen toimii sisäministeriön maahanmuutto-osaston ylijohtajana.",
+      "Minna Hulkkonen serves as Director General of the Migration Department at the Ministry of the Interior."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 32. Terhi Järvikare — Valtiovarainministeriö
+  {
+    official: official(
+      "o-32",
+      "terhi-jarvikare",
+      "Terhi",
+      "Järvikare",
+      "Ylijohtaja, vero-osasto",
+      "Director General, Tax Department",
+      "Valtiovarainministeriö",
+      "Ministry of Finance",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Terhi Järvikare toimii valtiovarainministeriön vero-osaston ylijohtajana.",
+      "Terhi Järvikare serves as Director General of the Tax Department at the Ministry of Finance."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 33. Mikko Spolander — Valtiovarainministeriö
+  {
+    official: official(
+      "o-33",
+      "mikko-spolander",
+      "Mikko",
+      "Spolander",
+      "Ylijohtaja, kansantalousosasto",
+      "Director General, Economics Department",
+      "Valtiovarainministeriö",
+      "Ministry of Finance",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Mikko Spolander toimii valtiovarainministeriön kansantalousosaston ylijohtajana.",
+      "Mikko Spolander serves as Director General of the Economics Department at the Ministry of Finance."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 34. Pirjo Tulokas — Ulkoministeriö
+  {
+    official: official(
+      "o-34",
+      "pirjo-tulokas",
+      "Pirjo",
+      "Tulokas",
+      "Alivaltiosihteeri",
+      "Under-Secretary of State for Internal and External Services",
+      "Ulkoministeriö",
+      "Ministry for Foreign Affairs",
+      "2025-09-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Pirjo Tulokas toimii ulkoministeriön alivaltiosihteerinä. Toimikausi kestää elokuuhun 2029.",
+      "Pirjo Tulokas serves as Under-Secretary of State at the Ministry for Foreign Affairs. Her term runs until August 2029."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
+
+  // 35. Raimo Antila — Sosiaali- ja terveysministeriö
+  {
+    official: official(
+      "o-35",
+      "raimo-antila",
+      "Raimo",
+      "Antila",
+      "Ylijohtaja",
+      "Director General",
+      "Sosiaali- ja terveysministeriö",
+      "Ministry of Social Affairs and Health",
+      "2020-01-01",
+      "Valtioneuvosto",
+      "Council of State",
+      "Raimo Antila toimii sosiaali- ja terveysministeriön ylijohtajana.",
+      "Raimo Antila serves as Director General at the Ministry of Social Affairs and Health."
+    ),
+    previous_roles: [],
+    affiliations: [],
+    public_statements: [],
+    feedback: [],
+  },
 ];
 
 // ─── Exports ───
