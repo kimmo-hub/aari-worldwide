@@ -10,6 +10,56 @@ function localized(obj: Record<string, unknown>, field: string, locale: Locale):
   return (obj[`${field}_${locale}`] as string) ?? (obj[`${field}_en`] as string) ?? "";
 }
 
+function OrgGroup({ org, officials, locale }: { org: string; officials: Official[]; locale: Locale }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="rounded-xl border border-border bg-white overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between px-5 py-4 text-left hover:bg-civic-50 transition-colors"
+      >
+        <div>
+          <h2 className="text-lg font-semibold text-civic-800">{org}</h2>
+          <p className="text-sm text-muted">{officials.length} {officials.length === 1 ? "official" : "officials"}</p>
+        </div>
+        <svg
+          className={`h-5 w-5 text-civic-500 transition-transform ${open ? "rotate-180" : ""}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && (
+        <div className="border-t border-border divide-y divide-border">
+          {officials.map((official) => (
+            <Link
+              key={official.id}
+              href={`/officials/${official.slug}`}
+              className="flex items-center gap-3 px-5 py-3 hover:bg-civic-50 transition-colors"
+            >
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-civic-100 text-xs font-bold text-civic-700">
+                {official.first_name[0]}
+                {official.last_name[0]}
+              </div>
+              <div className="min-w-0">
+                <p className="font-medium text-civic-900">
+                  {official.first_name} {official.last_name}
+                </p>
+                <p className="text-sm text-muted">
+                  {localized(official as unknown as Record<string, unknown>, "title", locale)}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function OfficialsSearch({
   officials,
 }: {
@@ -114,44 +164,9 @@ export default function OfficialsSearch({
 
       {/* Grouped officials */}
       {filtered.length > 0 ? (
-        <div className="space-y-8">
+        <div className="space-y-3">
           {Array.from(grouped.entries()).map(([org, orgOfficials]) => (
-            <div key={org}>
-              <h2 className="mb-3 text-lg font-semibold text-civic-800 border-b border-civic-100 pb-2">
-                {org}
-                <span className="ml-2 text-sm font-normal text-muted">
-                  ({orgOfficials.length})
-                </span>
-              </h2>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {orgOfficials.map((official) => (
-                  <Link
-                    key={official.id}
-                    href={`/officials/${official.slug}`}
-                    className="group rounded-xl border border-border bg-white p-4 transition-all hover:border-civic-300 hover:shadow-md"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-civic-100 text-xs font-bold text-civic-700 transition-colors group-hover:bg-civic-200">
-                        {official.first_name[0]}
-                        {official.last_name[0]}
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="font-semibold text-civic-900 group-hover:text-civic-700">
-                          {official.first_name} {official.last_name}
-                        </h3>
-                        <p className="text-sm text-muted">
-                          {localized(
-                            official as unknown as Record<string, unknown>,
-                            "title",
-                            locale
-                          )}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <OrgGroup key={org} org={org} officials={orgOfficials} locale={locale} />
           ))}
         </div>
       ) : (
