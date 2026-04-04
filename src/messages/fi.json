@@ -47,7 +47,11 @@
     "description": "Selaa ja hae merkittävien suomalaisten virkamiesten profiileja.",
     "searchPlaceholder": "Hae nimellä, viralla tai organisaatiolla...",
     "totalOfficials": "{count} virkamiestä rekisterissä",
-    "noResults": "Ei hakutuloksia."
+    "noResults": "Ei hakutuloksia.",
+    "allCategories": "Kaikki",
+    "ministries": "Ministeriöt",
+    "agencies": "Virastot",
+    "directors": "Osastopäälliköt"
   },
   "official": {
     "appointedBy": "Nimittäjä",

@@ -47,7 +47,11 @@
     "description": "Browse and search profiles of senior Finnish civil servants.",
     "searchPlaceholder": "Search by name, position, or organization...",
     "totalOfficials": "{count} officials in registry",
-    "noResults": "No results found."
+    "noResults": "No results found.",
+    "allCategories": "All",
+    "ministries": "Ministries",
+    "agencies": "Agencies",
+    "directors": "Directors General"
   },
   "official": {
     "appointedBy": "Appointed by",
