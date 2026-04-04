@@ -7,6 +7,9 @@ import type {
   FeedbackAggregation,
   OfficialProfile,
 } from "@/types/database";
+import { municipalProfiles, MUNICIPALITIES, TOTAL_MUNICIPALITIES } from "./municipality-data";
+
+export { MUNICIPALITIES, TOTAL_MUNICIPALITIES };
 
 // ─── Policy areas ───
 
@@ -1291,14 +1294,17 @@ const allProfiles: OfficialProfile[] = [
   },
 ];
 
+// Combine ministry/agency officials with municipal officials
+const combinedProfiles: OfficialProfile[] = [...allProfiles, ...municipalProfiles];
+
 // ─── Exports ───
 
 export function getOfficialBySlug(slug: string): OfficialProfile | null {
-  return allProfiles.find((p) => p.official.slug === slug) ?? null;
+  return combinedProfiles.find((p) => p.official.slug === slug) ?? null;
 }
 
 export function getAllOfficials(): Official[] {
-  return allProfiles.map((p) => p.official);
+  return combinedProfiles.map((p) => p.official);
 }
 
 export function searchOfficials(query: string): Official[] {
@@ -1312,4 +1318,8 @@ export function searchOfficials(query: string): Official[] {
       o.title_fi.toLowerCase().includes(q) ||
       o.title_en.toLowerCase().includes(q)
   );
+}
+
+export function getPolicyAreas(): PolicyArea[] {
+  return policyAreas;
 }

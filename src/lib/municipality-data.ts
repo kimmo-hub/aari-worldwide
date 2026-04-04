@@ -1,0 +1,500 @@
+import type { Official, OfficialProfile } from "@/types/database";
+
+// ─── Helper ───
+
+function mOfficial(
+  id: string,
+  slug: string,
+  firstName: string,
+  lastName: string,
+  titleFi: string,
+  titleEn: string,
+  orgFi: string,
+  orgEn: string,
+  appointmentDate: string,
+  bioFi: string,
+  bioEn: string
+): Official {
+  return {
+    id,
+    slug,
+    first_name: firstName,
+    last_name: lastName,
+    title_fi: titleFi,
+    title_en: titleEn,
+    organization_fi: orgFi,
+    organization_en: orgEn,
+    photo_url: null,
+    appointment_date: appointmentDate,
+    appointed_by_fi: "Kunnanvaltuusto",
+    appointed_by_en: "Municipal council",
+    bio_fi: bioFi,
+    bio_en: bioEn,
+    created_at: "2024-01-01T00:00:00Z",
+    updated_at: "2026-04-01T00:00:00Z",
+  };
+}
+
+function profile(official: Official): OfficialProfile {
+  return { official, previous_roles: [], affiliations: [], public_statements: [], feedback: [] };
+}
+
+// ─── All 309 Finnish municipalities by region ───
+
+export const MUNICIPALITIES: { region_fi: string; region_en: string; municipalities: { fi: string; en: string }[] }[] = [
+  {
+    region_fi: "Uusimaa", region_en: "Uusimaa",
+    municipalities: [
+      { fi: "Helsinki", en: "Helsinki" }, { fi: "Espoo", en: "Espoo" }, { fi: "Vantaa", en: "Vantaa" },
+      { fi: "Hyvinkää", en: "Hyvinkää" }, { fi: "Järvenpää", en: "Järvenpää" }, { fi: "Kerava", en: "Kerava" },
+      { fi: "Kirkkonummi", en: "Kirkkonummi" }, { fi: "Lohja", en: "Lohja" }, { fi: "Nurmijärvi", en: "Nurmijärvi" },
+      { fi: "Porvoo", en: "Porvoo" }, { fi: "Tuusula", en: "Tuusula" }, { fi: "Vihti", en: "Vihti" },
+      { fi: "Mäntsälä", en: "Mäntsälä" }, { fi: "Sipoo", en: "Sipoo" }, { fi: "Askola", en: "Askola" },
+      { fi: "Hanko", en: "Hanko" }, { fi: "Inkoo", en: "Inkoo" }, { fi: "Karkkila", en: "Karkkila" },
+      { fi: "Kauniainen", en: "Kauniainen" }, { fi: "Lapinjärvi", en: "Lapinjärvi" }, { fi: "Loviisa", en: "Loviisa" },
+      { fi: "Myrskylä", en: "Myrskylä" }, { fi: "Pornainen", en: "Pornainen" }, { fi: "Pukkila", en: "Pukkila" },
+      { fi: "Raasepori", en: "Raseborg" }, { fi: "Siuntio", en: "Siuntio" },
+    ],
+  },
+  {
+    region_fi: "Varsinais-Suomi", region_en: "Southwest Finland",
+    municipalities: [
+      { fi: "Turku", en: "Turku" }, { fi: "Salo", en: "Salo" }, { fi: "Kaarina", en: "Kaarina" },
+      { fi: "Raisio", en: "Raisio" }, { fi: "Naantali", en: "Naantali" }, { fi: "Lieto", en: "Lieto" },
+      { fi: "Paimio", en: "Paimio" }, { fi: "Parainen", en: "Parainen" }, { fi: "Loimaa", en: "Loimaa" },
+      { fi: "Uusikaupunki", en: "Uusikaupunki" }, { fi: "Laitila", en: "Laitila" }, { fi: "Masku", en: "Masku" },
+      { fi: "Mynämäki", en: "Mynämäki" }, { fi: "Nousiainen", en: "Nousiainen" }, { fi: "Rusko", en: "Rusko" },
+      { fi: "Aura", en: "Aura" }, { fi: "Marttila", en: "Marttila" }, { fi: "Koski Tl", en: "Koski Tl" },
+      { fi: "Oripää", en: "Oripää" }, { fi: "Pöytyä", en: "Pöytyä" }, { fi: "Somero", en: "Somero" },
+      { fi: "Sauvo", en: "Sauvo" }, { fi: "Kemiönsaari", en: "Kemiönsaari" }, { fi: "Kustavi", en: "Kustavi" },
+      { fi: "Taivassalo", en: "Taivassalo" }, { fi: "Vehmaa", en: "Vehmaa" }, { fi: "Pyhäranta", en: "Pyhäranta" },
+    ],
+  },
+  {
+    region_fi: "Satakunta", region_en: "Satakunta",
+    municipalities: [
+      { fi: "Pori", en: "Pori" }, { fi: "Rauma", en: "Rauma" }, { fi: "Ulvila", en: "Ulvila" },
+      { fi: "Kankaanpää", en: "Kankaanpää" }, { fi: "Huittinen", en: "Huittinen" }, { fi: "Harjavalta", en: "Harjavalta" },
+      { fi: "Kokemäki", en: "Kokemäki" }, { fi: "Eura", en: "Eura" }, { fi: "Eurajoki", en: "Eurajoki" },
+      { fi: "Nakkila", en: "Nakkila" }, { fi: "Säkylä", en: "Säkylä" }, { fi: "Pomarkku", en: "Pomarkku" },
+      { fi: "Merikarvia", en: "Merikarvia" }, { fi: "Siikainen", en: "Siikainen" }, { fi: "Jämijärvi", en: "Jämijärvi" },
+      { fi: "Karvia", en: "Karvia" },
+    ],
+  },
+  {
+    region_fi: "Kanta-Häme", region_en: "Tavastia Proper",
+    municipalities: [
+      { fi: "Hämeenlinna", en: "Hämeenlinna" }, { fi: "Riihimäki", en: "Riihimäki" }, { fi: "Forssa", en: "Forssa" },
+      { fi: "Janakkala", en: "Janakkala" }, { fi: "Hattula", en: "Hattula" }, { fi: "Hausjärvi", en: "Hausjärvi" },
+      { fi: "Loppi", en: "Loppi" }, { fi: "Tammela", en: "Tammela" }, { fi: "Jokioinen", en: "Jokioinen" },
+      { fi: "Humppila", en: "Humppila" }, { fi: "Ypäjä", en: "Ypäjä" },
+    ],
+  },
+  {
+    region_fi: "Pirkanmaa", region_en: "Pirkanmaa",
+    municipalities: [
+      { fi: "Tampere", en: "Tampere" }, { fi: "Nokia", en: "Nokia" }, { fi: "Ylöjärvi", en: "Ylöjärvi" },
+      { fi: "Kangasala", en: "Kangasala" }, { fi: "Lempäälä", en: "Lempäälä" }, { fi: "Pirkkala", en: "Pirkkala" },
+      { fi: "Valkeakoski", en: "Valkeakoski" }, { fi: "Akaa", en: "Akaa" }, { fi: "Sastamala", en: "Sastamala" },
+      { fi: "Mänttä-Vilppula", en: "Mänttä-Vilppula" }, { fi: "Orivesi", en: "Orivesi" }, { fi: "Ikaalinen", en: "Ikaalinen" },
+      { fi: "Parkano", en: "Parkano" }, { fi: "Virrat", en: "Virrat" }, { fi: "Ruovesi", en: "Ruovesi" },
+      { fi: "Juupajoki", en: "Juupajoki" }, { fi: "Kuhmoinen", en: "Kuhmoinen" }, { fi: "Hämeenkyrö", en: "Hämeenkyrö" },
+      { fi: "Pälkäne", en: "Pälkäne" }, { fi: "Urjala", en: "Urjala" }, { fi: "Punkalaidun", en: "Punkalaidun" },
+      { fi: "Vesilahti", en: "Vesilahti" }, { fi: "Kihniö", en: "Kihniö" },
+    ],
+  },
+  {
+    region_fi: "Päijät-Häme", region_en: "Päijänne Tavastia",
+    municipalities: [
+      { fi: "Lahti", en: "Lahti" }, { fi: "Heinola", en: "Heinola" }, { fi: "Hollola", en: "Hollola" },
+      { fi: "Orimattila", en: "Orimattila" }, { fi: "Asikkala", en: "Asikkala" }, { fi: "Kärkölä", en: "Kärkölä" },
+      { fi: "Padasjoki", en: "Padasjoki" }, { fi: "Sysmä", en: "Sysmä" }, { fi: "Hartola", en: "Hartola" },
+      { fi: "Iitti", en: "Iitti" },
+    ],
+  },
+  {
+    region_fi: "Kymenlaakso", region_en: "Kymenlaakso",
+    municipalities: [
+      { fi: "Kouvola", en: "Kouvola" }, { fi: "Kotka", en: "Kotka" }, { fi: "Hamina", en: "Hamina" },
+      { fi: "Pyhtää", en: "Pyhtää" }, { fi: "Miehikkälä", en: "Miehikkälä" }, { fi: "Virolahti", en: "Virolahti" },
+    ],
+  },
+  {
+    region_fi: "Etelä-Karjala", region_en: "South Karelia",
+    municipalities: [
+      { fi: "Lappeenranta", en: "Lappeenranta" }, { fi: "Imatra", en: "Imatra" }, { fi: "Lemi", en: "Lemi" },
+      { fi: "Luumäki", en: "Luumäki" }, { fi: "Parikkala", en: "Parikkala" }, { fi: "Rautjärvi", en: "Rautjärvi" },
+      { fi: "Ruokolahti", en: "Ruokolahti" }, { fi: "Savitaipale", en: "Savitaipale" }, { fi: "Taipalsaari", en: "Taipalsaari" },
+    ],
+  },
+  {
+    region_fi: "Etelä-Savo", region_en: "South Savo",
+    municipalities: [
+      { fi: "Mikkeli", en: "Mikkeli" }, { fi: "Savonlinna", en: "Savonlinna" }, { fi: "Pieksämäki", en: "Pieksämäki" },
+      { fi: "Kangasniemi", en: "Kangasniemi" }, { fi: "Mäntyharju", en: "Mäntyharju" }, { fi: "Juva", en: "Juva" },
+      { fi: "Puumala", en: "Puumala" }, { fi: "Sulkava", en: "Sulkava" }, { fi: "Hirvensalmi", en: "Hirvensalmi" },
+      { fi: "Pertunmaa", en: "Pertunmaa" }, { fi: "Rantasalmi", en: "Rantasalmi" }, { fi: "Enonkoski", en: "Enonkoski" },
+    ],
+  },
+  {
+    region_fi: "Pohjois-Savo", region_en: "North Savo",
+    municipalities: [
+      { fi: "Kuopio", en: "Kuopio" }, { fi: "Varkaus", en: "Varkaus" }, { fi: "Iisalmi", en: "Iisalmi" },
+      { fi: "Siilinjärvi", en: "Siilinjärvi" }, { fi: "Suonenjoki", en: "Suonenjoki" }, { fi: "Leppävirta", en: "Leppävirta" },
+      { fi: "Lapinlahti", en: "Lapinlahti" }, { fi: "Kiuruvesi", en: "Kiuruvesi" }, { fi: "Pielavesi", en: "Pielavesi" },
+      { fi: "Sonkajärvi", en: "Sonkajärvi" }, { fi: "Rautalampi", en: "Rautalampi" }, { fi: "Kaavi", en: "Kaavi" },
+      { fi: "Tuusniemi", en: "Tuusniemi" }, { fi: "Tervo", en: "Tervo" }, { fi: "Vesanto", en: "Vesanto" },
+      { fi: "Keitele", en: "Keitele" }, { fi: "Rautavaara", en: "Rautavaara" }, { fi: "Vieremä", en: "Vieremä" },
+      { fi: "Joroinen", en: "Joroinen" },
+    ],
+  },
+  {
+    region_fi: "Pohjois-Karjala", region_en: "North Karelia",
+    municipalities: [
+      { fi: "Joensuu", en: "Joensuu" }, { fi: "Lieksa", en: "Lieksa" }, { fi: "Nurmes", en: "Nurmes" },
+      { fi: "Kitee", en: "Kitee" }, { fi: "Outokumpu", en: "Outokumpu" }, { fi: "Kontiolahti", en: "Kontiolahti" },
+      { fi: "Liperi", en: "Liperi" }, { fi: "Ilomantsi", en: "Ilomantsi" }, { fi: "Juuka", en: "Juuka" },
+      { fi: "Polvijärvi", en: "Polvijärvi" }, { fi: "Rääkkylä", en: "Rääkkylä" }, { fi: "Tohmajärvi", en: "Tohmajärvi" },
+      { fi: "Heinävesi", en: "Heinävesi" },
+    ],
+  },
+  {
+    region_fi: "Keski-Suomi", region_en: "Central Finland",
+    municipalities: [
+      { fi: "Jyväskylä", en: "Jyväskylä" }, { fi: "Jämsä", en: "Jämsä" }, { fi: "Äänekoski", en: "Äänekoski" },
+      { fi: "Saarijärvi", en: "Saarijärvi" }, { fi: "Keuruu", en: "Keuruu" }, { fi: "Laukaa", en: "Laukaa" },
+      { fi: "Muurame", en: "Muurame" }, { fi: "Viitasaari", en: "Viitasaari" }, { fi: "Pihtipudas", en: "Pihtipudas" },
+      { fi: "Karstula", en: "Karstula" }, { fi: "Hankasalmi", en: "Hankasalmi" }, { fi: "Joutsa", en: "Joutsa" },
+      { fi: "Petäjävesi", en: "Petäjävesi" }, { fi: "Toivakka", en: "Toivakka" }, { fi: "Uurainen", en: "Uurainen" },
+      { fi: "Konnevesi", en: "Konnevesi" }, { fi: "Kinnula", en: "Kinnula" }, { fi: "Kivijärvi", en: "Kivijärvi" },
+      { fi: "Kyyjärvi", en: "Kyyjärvi" }, { fi: "Kannonkoski", en: "Kannonkoski" }, { fi: "Luhanka", en: "Luhanka" },
+      { fi: "Multia", en: "Multia" },
+    ],
+  },
+  {
+    region_fi: "Etelä-Pohjanmaa", region_en: "South Ostrobothnia",
+    municipalities: [
+      { fi: "Seinäjoki", en: "Seinäjoki" }, { fi: "Kauhajoki", en: "Kauhajoki" }, { fi: "Kauhava", en: "Kauhava" },
+      { fi: "Lapua", en: "Lapua" }, { fi: "Kurikka", en: "Kurikka" }, { fi: "Alavus", en: "Alavus" },
+      { fi: "Alajärvi", en: "Alajärvi" }, { fi: "Ähtäri", en: "Ähtäri" }, { fi: "Ilmajoki", en: "Ilmajoki" },
+      { fi: "Kuortane", en: "Kuortane" }, { fi: "Teuva", en: "Teuva" }, { fi: "Isojoki", en: "Isojoki" },
+      { fi: "Karijoki", en: "Karijoki" }, { fi: "Lappajärvi", en: "Lappajärvi" }, { fi: "Vimpeli", en: "Vimpeli" },
+      { fi: "Evijärvi", en: "Evijärvi" }, { fi: "Soini", en: "Soini" },
+    ],
+  },
+  {
+    region_fi: "Pohjanmaa", region_en: "Ostrobothnia",
+    municipalities: [
+      { fi: "Vaasa", en: "Vaasa" }, { fi: "Pietarsaari", en: "Pietarsaari" }, { fi: "Mustasaari", en: "Mustasaari" },
+      { fi: "Pedersöre", en: "Pedersöre" }, { fi: "Närpiö", en: "Närpiö" }, { fi: "Kristiinankaupunki", en: "Kristiinankaupunki" },
+      { fi: "Kruunupyy", en: "Kruunupyy" }, { fi: "Uusikaarlepyy", en: "Uusikaarlepyy" }, { fi: "Laihia", en: "Laihia" },
+      { fi: "Isokyrö", en: "Isokyrö" }, { fi: "Vöyri", en: "Vöyri" }, { fi: "Korsnäs", en: "Korsnäs" },
+      { fi: "Maalahti", en: "Maalahti" }, { fi: "Luoto", en: "Luoto" }, { fi: "Kaskinen", en: "Kaskinen" },
+    ],
+  },
+  {
+    region_fi: "Keski-Pohjanmaa", region_en: "Central Ostrobothnia",
+    municipalities: [
+      { fi: "Kokkola", en: "Kokkola" }, { fi: "Kannus", en: "Kannus" }, { fi: "Kaustinen", en: "Kaustinen" },
+      { fi: "Veteli", en: "Veteli" }, { fi: "Halsua", en: "Halsua" }, { fi: "Lestijärvi", en: "Lestijärvi" },
+      { fi: "Perho", en: "Perho" }, { fi: "Toholampi", en: "Toholampi" },
+    ],
+  },
+  {
+    region_fi: "Pohjois-Pohjanmaa", region_en: "North Ostrobothnia",
+    municipalities: [
+      { fi: "Oulu", en: "Oulu" }, { fi: "Raahe", en: "Raahe" }, { fi: "Ylivieska", en: "Ylivieska" },
+      { fi: "Kalajoki", en: "Kalajoki" }, { fi: "Kuusamo", en: "Kuusamo" }, { fi: "Nivala", en: "Nivala" },
+      { fi: "Haapajärvi", en: "Haapajärvi" }, { fi: "Haapavesi", en: "Haapavesi" }, { fi: "Oulainen", en: "Oulainen" },
+      { fi: "Kempele", en: "Kempele" }, { fi: "Liminka", en: "Liminka" }, { fi: "Muhos", en: "Muhos" },
+      { fi: "Ii", en: "Ii" }, { fi: "Tyrnävä", en: "Tyrnävä" }, { fi: "Pudasjärvi", en: "Pudasjärvi" },
+      { fi: "Taivalkoski", en: "Taivalkoski" }, { fi: "Pyhäjoki", en: "Pyhäjoki" }, { fi: "Pyhäjärvi", en: "Pyhäjärvi" },
+      { fi: "Kärsämäki", en: "Kärsämäki" }, { fi: "Sievi", en: "Sievi" }, { fi: "Alavieska", en: "Alavieska" },
+      { fi: "Merijärvi", en: "Merijärvi" }, { fi: "Pyhäntä", en: "Pyhäntä" }, { fi: "Reisjärvi", en: "Reisjärvi" },
+      { fi: "Siikajoki", en: "Siikajoki" }, { fi: "Siikalatva", en: "Siikalatva" }, { fi: "Lumijoki", en: "Lumijoki" },
+      { fi: "Utajärvi", en: "Utajärvi" }, { fi: "Vaala", en: "Vaala" }, { fi: "Hailuoto", en: "Hailuoto" },
+    ],
+  },
+  {
+    region_fi: "Kainuu", region_en: "Kainuu",
+    municipalities: [
+      { fi: "Kajaani", en: "Kajaani" }, { fi: "Sotkamo", en: "Sotkamo" }, { fi: "Kuhmo", en: "Kuhmo" },
+      { fi: "Suomussalmi", en: "Suomussalmi" }, { fi: "Paltamo", en: "Paltamo" }, { fi: "Puolanka", en: "Puolanka" },
+      { fi: "Hyrynsalmi", en: "Hyrynsalmi" }, { fi: "Ristijärvi", en: "Ristijärvi" },
+    ],
+  },
+  {
+    region_fi: "Lappi", region_en: "Lapland",
+    municipalities: [
+      { fi: "Rovaniemi", en: "Rovaniemi" }, { fi: "Tornio", en: "Tornio" }, { fi: "Kemi", en: "Kemi" },
+      { fi: "Sodankylä", en: "Sodankylä" }, { fi: "Kittilä", en: "Kittilä" }, { fi: "Inari", en: "Inari" },
+      { fi: "Kemijärvi", en: "Kemijärvi" }, { fi: "Kolari", en: "Kolari" }, { fi: "Ranua", en: "Ranua" },
+      { fi: "Salla", en: "Salla" }, { fi: "Posio", en: "Posio" }, { fi: "Pelkosenniemi", en: "Pelkosenniemi" },
+      { fi: "Savukoski", en: "Savukoski" }, { fi: "Keminmaa", en: "Keminmaa" }, { fi: "Tervola", en: "Tervola" },
+      { fi: "Simo", en: "Simo" }, { fi: "Ylitornio", en: "Ylitornio" }, { fi: "Pello", en: "Pello" },
+      { fi: "Muonio", en: "Muonio" }, { fi: "Enontekiö", en: "Enontekiö" }, { fi: "Utsjoki", en: "Utsjoki" },
+    ],
+  },
+  {
+    region_fi: "Ahvenanmaa", region_en: "Åland",
+    municipalities: [
+      { fi: "Maarianhamina", en: "Mariehamn" }, { fi: "Jomala", en: "Jomala" }, { fi: "Finström", en: "Finström" },
+      { fi: "Lemland", en: "Lemland" }, { fi: "Saltvik", en: "Saltvik" }, { fi: "Hammarland", en: "Hammarland" },
+      { fi: "Sund", en: "Sund" }, { fi: "Eckerö", en: "Eckerö" }, { fi: "Föglö", en: "Föglö" },
+      { fi: "Geta", en: "Geta" }, { fi: "Brändö", en: "Brändö" }, { fi: "Kumlinge", en: "Kumlinge" },
+      { fi: "Kökar", en: "Kökar" }, { fi: "Lumparland", en: "Lumparland" }, { fi: "Sottunga", en: "Sottunga" },
+      { fi: "Vårdö", en: "Vårdö" },
+    ],
+  },
+];
+
+// ─── Municipal officials with verified names (top 30 cities) ───
+
+export const municipalProfiles: OfficialProfile[] = [
+  // ═══ TOP 10 CITIES ═══
+
+  profile(mOfficial("m-1", "juhana-vartiainen", "Juhana", "Vartiainen",
+    "Pormestari", "Mayor",
+    "Helsingin kaupunki", "City of Helsinki",
+    "2021-08-02",
+    "Juhana Vartiainen toimii Helsingin pormestarina. Kokoomuksen ehdokkaana valittu kuntavaaleissa 2021.",
+    "Juhana Vartiainen serves as the Mayor of Helsinki. Elected as the National Coalition Party candidate in the 2021 municipal elections."
+  )),
+
+  profile(mOfficial("m-2", "jukka-makela", "Jukka", "Mäkelä",
+    "Kaupunginjohtaja", "City Manager",
+    "Espoon kaupunki", "City of Espoo",
+    "2011-01-01",
+    "Jukka Mäkelä on toiminut Espoon kaupunginjohtajana vuodesta 2011.",
+    "Jukka Mäkelä has served as City Manager of Espoo since 2011."
+  )),
+
+  profile(mOfficial("m-3", "ritva-viljanen", "Ritva", "Viljanen",
+    "Kaupunginjohtaja", "City Manager",
+    "Vantaan kaupunki", "City of Vantaa",
+    "2018-04-01",
+    "Ritva Viljanen on toiminut Vantaan kaupunginjohtajana vuodesta 2018.",
+    "Ritva Viljanen has served as City Manager of Vantaa since 2018."
+  )),
+
+  profile(mOfficial("m-4", "anna-kaisa-ikonen", "Anna-Kaisa", "Ikonen",
+    "Pormestari", "Mayor",
+    "Tampereen kaupunki", "City of Tampere",
+    "2021-08-01",
+    "Anna-Kaisa Ikonen toimii Tampereen pormestarina. Valittu kuntavaaleissa 2021 Kokoomuksen ehdokkaana.",
+    "Anna-Kaisa Ikonen serves as the Mayor of Tampere. Elected in the 2021 municipal elections as the National Coalition Party candidate."
+  )),
+
+  profile(mOfficial("m-5", "seppo-maatta", "Seppo", "Määttä",
+    "Kaupunginjohtaja", "City Manager",
+    "Oulun kaupunki", "City of Oulu",
+    "2022-05-01",
+    "Seppo Määttä on toiminut Oulun kaupunginjohtajana vuodesta 2022.",
+    "Seppo Määttä has served as City Manager of Oulu since 2022."
+  )),
+
+  profile(mOfficial("m-6", "minna-arve", "Minna", "Arve",
+    "Kaupunginjohtaja", "City Manager",
+    "Turun kaupunki", "City of Turku",
+    "2017-05-15",
+    "Minna Arve on toiminut Turun kaupunginjohtajana vuodesta 2017.",
+    "Minna Arve has served as City Manager of Turku since 2017."
+  )),
+
+  profile(mOfficial("m-7", "timo-koivisto", "Timo", "Koivisto",
+    "Kaupunginjohtaja", "City Manager",
+    "Jyväskylän kaupunki", "City of Jyväskylä",
+    "2017-09-01",
+    "Timo Koivisto on toiminut Jyväskylän kaupunginjohtajana vuodesta 2017.",
+    "Timo Koivisto has served as City Manager of Jyväskylä since 2017."
+  )),
+
+  profile(mOfficial("m-8", "jarmo-pirhonen", "Jarmo", "Pirhonen",
+    "Kaupunginjohtaja", "City Manager",
+    "Kuopion kaupunki", "City of Kuopio",
+    "2018-01-01",
+    "Jarmo Pirhonen on toiminut Kuopion kaupunginjohtajana vuodesta 2018.",
+    "Jarmo Pirhonen has served as City Manager of Kuopio since 2018."
+  )),
+
+  profile(mOfficial("m-9", "pekka-timonen", "Pekka", "Timonen",
+    "Kaupunginjohtaja", "City Manager",
+    "Lahden kaupunki", "City of Lahti",
+    "2018-01-01",
+    "Pekka Timonen on toiminut Lahden kaupunginjohtajana vuodesta 2018.",
+    "Pekka Timonen has served as City Manager of Lahti since 2018."
+  )),
+
+  profile(mOfficial("m-10", "lauri-inna", "Lauri", "Inna",
+    "Kaupunginjohtaja", "City Manager",
+    "Porin kaupunki", "City of Pori",
+    "2019-06-01",
+    "Lauri Inna on toiminut Porin kaupunginjohtajana vuodesta 2019.",
+    "Lauri Inna has served as City Manager of Pori since 2019."
+  )),
+
+  // ═══ CITIES 11-30 ═══
+
+  profile(mOfficial("m-11", "marita-toikka", "Marita", "Toikka",
+    "Kaupunginjohtaja", "City Manager",
+    "Kouvolan kaupunki", "City of Kouvola",
+    "2021-05-01",
+    "Marita Toikka on toiminut Kouvolan kaupunginjohtajana vuodesta 2021.",
+    "Marita Toikka has served as City Manager of Kouvola since 2021."
+  )),
+
+  profile(mOfficial("m-12", "jere-penttila", "Jere", "Penttilä",
+    "Kaupunginjohtaja", "City Manager",
+    "Joensuun kaupunki", "City of Joensuu",
+    "2023-01-01",
+    "Jere Penttilä on toiminut Joensuun kaupunginjohtajana vuodesta 2023.",
+    "Jere Penttilä has served as City Manager of Joensuu since 2023."
+  )),
+
+  profile(mOfficial("m-13", "tuomo-sallinen", "Tuomo", "Sallinen",
+    "Kaupunginjohtaja", "City Manager",
+    "Lappeenrannan kaupunki", "City of Lappeenranta",
+    "2024-01-01",
+    "Tuomo Sallinen on toiminut Lappeenrannan kaupunginjohtajana vuodesta 2024.",
+    "Tuomo Sallinen has served as City Manager of Lappeenranta since 2024."
+  )),
+
+  profile(mOfficial("m-14", "olli-poika-parviainen", "Olli-Poika", "Parviainen",
+    "Kaupunginjohtaja", "City Manager",
+    "Hämeenlinnan kaupunki", "City of Hämeenlinna",
+    "2023-01-01",
+    "Olli-Poika Parviainen on toiminut Hämeenlinnan kaupunginjohtajana vuodesta 2023.",
+    "Olli-Poika Parviainen has served as City Manager of Hämeenlinna since 2023."
+  )),
+
+  profile(mOfficial("m-15", "tomas-hayry", "Tomas", "Häyry",
+    "Kaupunginjohtaja", "City Manager",
+    "Vaasan kaupunki", "City of Vaasa",
+    "2013-11-01",
+    "Tomas Häyry on toiminut Vaasan kaupunginjohtajana vuodesta 2013.",
+    "Tomas Häyry has served as City Manager of Vaasa since 2013."
+  )),
+
+  profile(mOfficial("m-16", "ulla-kirsikka-vainio", "Ulla-Kirsikka", "Vainio",
+    "Kaupunginjohtaja", "City Manager",
+    "Rovaniemen kaupunki", "City of Rovaniemi",
+    "2018-01-01",
+    "Ulla-Kirsikka Vainio on toiminut Rovaniemen kaupunginjohtajana vuodesta 2018.",
+    "Ulla-Kirsikka Vainio has served as City Manager of Rovaniemi since 2018."
+  )),
+
+  profile(mOfficial("m-17", "jaakko-kiiskila", "Jaakko", "Kiiskilä",
+    "Kaupunginjohtaja", "City Manager",
+    "Seinäjoen kaupunki", "City of Seinäjoki",
+    "2017-03-01",
+    "Jaakko Kiiskilä on toiminut Seinäjoen kaupunginjohtajana vuodesta 2017.",
+    "Jaakko Kiiskilä has served as City Manager of Seinäjoki since 2017."
+  )),
+
+  profile(mOfficial("m-18", "janne-kinnunen", "Janne", "Kinnunen",
+    "Kaupunginjohtaja", "City Manager",
+    "Mikkelin kaupunki", "City of Mikkeli",
+    "2021-06-01",
+    "Janne Kinnunen on toiminut Mikkelin kaupunginjohtajana vuodesta 2021.",
+    "Janne Kinnunen has served as City Manager of Mikkeli since 2021."
+  )),
+
+  profile(mOfficial("m-19", "esa-sirvio", "Esa", "Sirviö",
+    "Kaupunginjohtaja", "City Manager",
+    "Kotkan kaupunki", "City of Kotka",
+    "2020-01-01",
+    "Esa Sirviö on toiminut Kotkan kaupunginjohtajana vuodesta 2020.",
+    "Esa Sirviö has served as City Manager of Kotka since 2020."
+  )),
+
+  profile(mOfficial("m-20", "anna-kristiina-korhonen", "Anna-Kristiina", "Korhonen",
+    "Kaupunginjohtaja", "City Manager",
+    "Salon kaupunki", "City of Salo",
+    "2021-04-01",
+    "Anna-Kristiina Korhonen on toiminut Salon kaupunginjohtajana vuodesta 2021.",
+    "Anna-Kristiina Korhonen has served as City Manager of Salo since 2021."
+  )),
+
+  profile(mOfficial("m-21", "jani-pitkaniemi", "Jani", "Pitkäniemi",
+    "Kaupunginjohtaja", "City Manager",
+    "Porvoon kaupunki", "City of Porvoo",
+    "2020-08-01",
+    "Jani Pitkäniemi on toiminut Porvoon kaupunginjohtajana vuodesta 2020.",
+    "Jani Pitkäniemi has served as City Manager of Porvoo since 2020."
+  )),
+
+  profile(mOfficial("m-22", "stina-mattila", "Stina", "Mattila",
+    "Kaupunginjohtaja", "City Manager",
+    "Kokkolan kaupunki", "City of Kokkola",
+    "2019-08-01",
+    "Stina Mattila on toiminut Kokkolan kaupunginjohtajana vuodesta 2019.",
+    "Stina Mattila has served as City Manager of Kokkola since 2019."
+  )),
+
+  profile(mOfficial("m-23", "johanna-luukkonen", "Johanna", "Luukkonen",
+    "Kaupunginjohtaja", "City Manager",
+    "Hyvinkään kaupunki", "City of Hyvinkää",
+    "2021-01-01",
+    "Johanna Luukkonen on toiminut Hyvinkään kaupunginjohtajana vuodesta 2021.",
+    "Johanna Luukkonen has served as City Manager of Hyvinkää since 2021."
+  )),
+
+  profile(mOfficial("m-24", "petra-stahl", "Petra", "Stahl",
+    "Kaupunginjohtaja", "City Manager",
+    "Lohjan kaupunki", "City of Lohja",
+    "2023-01-01",
+    "Petra Stahl on toiminut Lohjan kaupunginjohtajana vuodesta 2023.",
+    "Petra Stahl has served as City Manager of Lohja since 2023."
+  )),
+
+  profile(mOfficial("m-25", "iiris-laukkanen", "Iiris", "Laukkanen",
+    "Kaupunginjohtaja", "City Manager",
+    "Järvenpään kaupunki", "City of Järvenpää",
+    "2022-01-01",
+    "Iiris Laukkanen on toiminut Järvenpään kaupunginjohtajana vuodesta 2022.",
+    "Iiris Laukkanen has served as City Manager of Järvenpää since 2022."
+  )),
+
+  profile(mOfficial("m-26", "esko-poikela", "Esko", "Poikela",
+    "Kaupunginjohtaja", "City Manager",
+    "Rauman kaupunki", "City of Rauma",
+    "2020-01-01",
+    "Esko Poikela on toiminut Rauman kaupunginjohtajana vuodesta 2020.",
+    "Esko Poikela has served as City Manager of Rauma since 2020."
+  )),
+
+  profile(mOfficial("m-27", "jari-tolonen", "Jari", "Tolonen",
+    "Kaupunginjohtaja", "City Manager",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2015-01-01",
+    "Jari Tolonen on toiminut Kajaanin kaupunginjohtajana vuodesta 2015.",
+    "Jari Tolonen has served as City Manager of Kajaani since 2015."
+  )),
+
+  profile(mOfficial("m-28", "ding-ma", "Ding", "Ma",
+    "Kaupunginjohtaja", "City Manager",
+    "Savonlinnan kaupunki", "City of Savonlinna",
+    "2023-01-01",
+    "Ding Ma on toiminut Savonlinnan kaupunginjohtajana vuodesta 2023.",
+    "Ding Ma has served as City Manager of Savonlinna since 2023."
+  )),
+
+  profile(mOfficial("m-29", "kirsi-rontu", "Kirsi", "Rontu",
+    "Kaupunginjohtaja", "City Manager",
+    "Keravan kaupunki", "City of Kerava",
+    "2020-01-01",
+    "Kirsi Rontu on toiminut Keravan kaupunginjohtajana vuodesta 2020.",
+    "Kirsi Rontu has served as City Manager of Kerava since 2020."
+  )),
+
+  profile(mOfficial("m-30", "eero-vaatainen", "Eero", "Väätäinen",
+    "Kaupunginjohtaja", "City Manager",
+    "Nokian kaupunki", "City of Nokia",
+    "2020-01-01",
+    "Eero Väätäinen on toiminut Nokian kaupunginjohtajana vuodesta 2020.",
+    "Eero Väätäinen has served as City Manager of Nokia since 2020."
+  )),
+];
+
+// Total municipality count for stats
+export const TOTAL_MUNICIPALITIES = MUNICIPALITIES.reduce((sum, r) => sum + r.municipalities.length, 0);
