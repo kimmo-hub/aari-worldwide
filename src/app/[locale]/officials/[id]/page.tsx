@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { getOfficialBySlug } from "@/lib/seed-data";
+import { getOfficialBySlug } from "@/lib/data";
 import { Link } from "@/i18n/navigation";
 import FeedbackSection from "@/components/FeedbackSection";
 import FeedbackForm from "@/components/FeedbackForm";
@@ -30,7 +30,7 @@ export async function generateMetadata({
   params: Promise<{ id: string; locale: string }>;
 }): Promise<Metadata> {
   const { id, locale } = await params;
-  const profile = getOfficialBySlug(id);
+  const profile = await getOfficialBySlug(id);
   if (!profile) return { title: "Not Found" };
 
   const loc = locale as Locale;
@@ -50,7 +50,7 @@ export default async function OfficialProfilePage({
   params: Promise<{ id: string; locale: string }>;
 }) {
   const { id, locale } = await params;
-  const profile = getOfficialBySlug(id);
+  const profile = await getOfficialBySlug(id);
 
   if (!profile) {
     notFound();
@@ -72,7 +72,7 @@ export default async function OfficialProfilePage({
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       {/* Back link */}
       <Link
-        href="/officials"
+        href={official.category === "municipal" ? "/municipal-officials" : "/state-officials"}
         className="mb-6 inline-flex items-center gap-1 text-sm text-muted hover:text-civic-800 transition-colors"
       >
         <svg
@@ -122,6 +122,26 @@ export default async function OfficialProfilePage({
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
             {localized(official, "bio", loc)}
           </p>
+          {(official.email || official.phone) && (
+            <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              {official.email && (
+                <a href={`mailto:${official.email}`} className="inline-flex items-center gap-1.5 text-accent-600 hover:underline">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  {official.email}
+                </a>
+              )}
+              {official.phone && (
+                <a href={`tel:${official.phone}`} className="inline-flex items-center gap-1.5 text-accent-600 hover:underline">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  {t("phone")}: {official.phone}
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

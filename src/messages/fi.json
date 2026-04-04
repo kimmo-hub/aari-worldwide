@@ -6,7 +6,8 @@
     "finnish": "Suomi",
     "english": "English",
     "home": "Etusivu",
-    "officials": "Virkamiehet",
+    "stateOfficials": "Valtion viranhaltijat",
+    "municipalOfficials": "Kuntien viranhaltijat",
     "about": "Tietoa",
     "search": "Haku",
     "backToHome": "Takaisin etusivulle",
@@ -19,13 +20,13 @@
   "home": {
     "hero": {
       "title": "Tunne päättäjäsi",
-      "subtitle": "Virkavastuu.fi kokoaa julkista tietoa suomalaisista virkamiehistä ja mahdollistaa kansalaispalautteen antamisen.",
-      "cta": "Selaa virkamiehiä"
+      "subtitle": "Virkavastuu.fi kokoaa julkista tietoa suomalaisista viranhaltijoista ja mahdollistaa kansalaispalautteen antamisen.",
+      "cta": "Selaa viranhaltijoita"
     },
     "features": {
       "profiles": {
-        "title": "Virkamiesprofiilit",
-        "description": "Kattavat profiilit merkittävistä virkamiehistä: nimityspäivä, tausta, organisaatiot ja julkiset kannanotot."
+        "title": "Viranhaltijaprofiilit",
+        "description": "Kattavat profiilit merkittävistä viranhaltijoista: nimityspäivä, tausta, organisaatiot ja julkiset kannanotot."
       },
       "sources": {
         "title": "Lähdeviitteet",
@@ -37,21 +38,29 @@
       }
     },
     "stats": {
-      "officials": "Virkamiestä",
+      "officials": "Viranhaltijaa",
       "sources": "Julkista lähdettä",
       "feedback": "Kansalaispalautetta"
     }
   },
   "officials": {
-    "title": "Virkamiehet",
-    "description": "Selaa ja hae merkittävien suomalaisten virkamiesten profiileja.",
+    "title": "Viranhaltijat",
+    "description": "Selaa ja hae suomalaisten viranhaltijoiden profiileja.",
     "searchPlaceholder": "Hae nimellä, viralla tai organisaatiolla...",
-    "totalOfficials": "{count} virkamiestä rekisterissä",
+    "totalOfficials": "{count} viranhaltijaa rekisterissä",
     "noResults": "Ei hakutuloksia.",
     "allCategories": "Kaikki",
     "ministries": "Ministeriöt",
     "agencies": "Virastot",
     "directors": "Osastopäälliköt"
+  },
+  "stateOfficials": {
+    "title": "Valtion viranhaltijat",
+    "description": "Selaa ja hae valtion viranhaltijoiden profiileja — ministeriöt, virastot ja keskushallinto."
+  },
+  "municipalOfficials": {
+    "title": "Kuntien viranhaltijat",
+    "description": "Selaa ja hae kuntien viranhaltijoiden profiileja — kaupunginjohtajat, rakennusvalvonta ja kaavoitus."
   },
   "official": {
     "appointedBy": "Nimittäjä",
@@ -64,7 +73,9 @@
     "policyAreas": "Politiikka-alueet",
     "source": "Lähde",
     "viewSource": "Näytä lähde",
-    "backToList": "Takaisin virkamiehiin",
+    "backToList": "Takaisin viranhaltijoihin",
+    "email": "Sähköposti",
+    "phone": "Vaihde",
     "feedback": {
       "title": "Kansalaispalaute",
       "submitRating": "Lähetä arvio",
@@ -91,13 +102,13 @@
     "title": "Tietoa Virkavastuu.fi:stä",
     "mission": {
       "title": "Tehtävämme",
-      "description": "Virkavastuu.fi edistää julkisen vallan läpinäkyvyyttä Suomessa. Kokoamme julkista tietoa merkittävissä valta-asemissa olevista virkamiehistä ja mahdollistamme kansalaispalautteen antamisen heidän toiminnastaan politiikka-alueittain."
+      "description": "Virkavastuu.fi edistää julkisen vallan läpinäkyvyyttä Suomessa. Kokoamme julkista tietoa merkittävissä valta-asemissa olevista viranhaltijoista ja mahdollistamme kansalaispalautteen antamisen heidän toiminnastaan politiikka-alueittain."
     },
     "howItWorks": {
       "title": "Miten se toimii",
       "step1": {
         "title": "Julkiset profiilit",
-        "description": "Keräämme tietoa virkamiesten nimityksistä, taustoista, organisaatioyhteyksistä ja julkisista kannanotoista — kaikki julkisista lähteistä."
+        "description": "Keräämme tietoa viranhaltijoiden nimityksistä, taustoista, organisaatioyhteyksistä ja julkisista kannanotoista — kaikki julkisista lähteistä."
       },
       "step2": {
         "title": "Lähdeviitteet",
@@ -105,7 +116,7 @@
       },
       "step3": {
         "title": "Kansalaispalaute",
-        "description": "Anna arvio virkamiehen toiminnasta politiikka-alueittain. Tulokset näyttävät otoskoon ja jakauman — ei yksinkertaista ylös/alas-ääntä."
+        "description": "Anna arvio viranhaltijan toiminnasta politiikka-alueittain. Tulokset näyttävät otoskoon ja jakauman — ei yksinkertaista ylös/alas-ääntä."
       }
     },
     "principles": {

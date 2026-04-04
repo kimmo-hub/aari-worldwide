@@ -35,24 +35,41 @@ function OrgGroup({ org, officials, locale }: { org: string; officials: Official
       {open && (
         <div className="border-t border-border divide-y divide-border">
           {officials.map((official) => (
-            <Link
-              key={official.id}
-              href={`/officials/${official.slug}`}
-              className="flex items-center gap-3 px-5 py-3 hover:bg-civic-50 transition-colors"
-            >
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-civic-100 text-xs font-bold text-civic-700">
-                {official.first_name[0]}
-                {official.last_name[0]}
+            <div key={official.id} className="flex items-center gap-3 px-5 py-3 hover:bg-civic-50 transition-colors">
+              <Link
+                href={`/officials/${official.slug}`}
+                className="flex items-center gap-3 flex-1 min-w-0"
+              >
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-civic-100 text-xs font-bold text-civic-700">
+                  {official.first_name[0]}
+                  {official.last_name[0]}
+                </div>
+                <div className="min-w-0">
+                  <p className="font-medium text-civic-900">
+                    {official.first_name} {official.last_name}
+                  </p>
+                  <p className="text-sm text-muted">
+                    {localized(official as unknown as Record<string, unknown>, "title", locale)}
+                  </p>
+                </div>
+              </Link>
+              <div className="hidden sm:flex items-center gap-3 shrink-0 text-xs text-muted">
+                {official.email && (
+                  <a href={`mailto:${official.email}`} className="hover:text-civic-800 transition-colors" title={official.email}>
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </a>
+                )}
+                {official.phone && (
+                  <a href={`tel:${official.phone}`} className="hover:text-civic-800 transition-colors" title={official.phone}>
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </a>
+                )}
               </div>
-              <div className="min-w-0">
-                <p className="font-medium text-civic-900">
-                  {official.first_name} {official.last_name}
-                </p>
-                <p className="text-sm text-muted">
-                  {localized(official as unknown as Record<string, unknown>, "title", locale)}
-                </p>
-              </div>
-            </Link>
+            </div>
           ))}
         </div>
       )}

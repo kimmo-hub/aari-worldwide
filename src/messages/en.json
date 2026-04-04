@@ -6,7 +6,8 @@
     "finnish": "Suomi",
     "english": "English",
     "home": "Home",
-    "officials": "Officials",
+    "stateOfficials": "State officials",
+    "municipalOfficials": "Municipal officials",
     "about": "About",
     "search": "Search",
     "backToHome": "Back to home",
@@ -19,13 +20,13 @@
   "home": {
     "hero": {
       "title": "Know your officials",
-      "subtitle": "Virkavastuu.fi aggregates public information about Finnish civil servants and enables citizen feedback.",
+      "subtitle": "Virkavastuu.fi aggregates public information about Finnish public officials and enables citizen feedback.",
       "cta": "Browse officials"
     },
     "features": {
       "profiles": {
         "title": "Official profiles",
-        "description": "Comprehensive profiles of senior civil servants: appointment date, background, organizations, and public statements."
+        "description": "Comprehensive profiles of senior public officials: appointment date, background, organizations, and public statements."
       },
       "sources": {
         "title": "Source-linked data",
@@ -44,7 +45,7 @@
   },
   "officials": {
     "title": "Officials",
-    "description": "Browse and search profiles of senior Finnish civil servants.",
+    "description": "Browse and search profiles of Finnish public officials.",
     "searchPlaceholder": "Search by name, position, or organization...",
     "totalOfficials": "{count} officials in registry",
     "noResults": "No results found.",
@@ -52,6 +53,14 @@
     "ministries": "Ministries",
     "agencies": "Agencies",
     "directors": "Directors General"
+  },
+  "stateOfficials": {
+    "title": "State officials",
+    "description": "Browse and search state official profiles — ministries, agencies, and central government."
+  },
+  "municipalOfficials": {
+    "title": "Municipal officials",
+    "description": "Browse and search municipal official profiles — city managers, building control, and zoning."
   },
   "official": {
     "appointedBy": "Appointed by",
@@ -65,6 +74,8 @@
     "source": "Source",
     "viewSource": "View source",
     "backToList": "Back to officials",
+    "email": "Email",
+    "phone": "Switchboard",
     "feedback": {
       "title": "Citizen feedback",
       "submitRating": "Submit your rating",
@@ -91,7 +102,7 @@
     "title": "About Virkavastuu.fi",
     "mission": {
       "title": "Our mission",
-      "description": "Virkavastuu.fi promotes transparency in Finnish public governance. We aggregate public information about civil servants in significant positions of power and enable citizens to provide feedback on their performance by policy area."
+      "description": "Virkavastuu.fi promotes transparency in Finnish public governance. We aggregate public information about officials in significant positions of power and enable citizens to provide feedback on their performance by policy area."
     },
     "howItWorks": {
       "title": "How it works",

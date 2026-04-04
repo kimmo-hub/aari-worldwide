@@ -19,7 +19,8 @@ export default function Header() {
 
   const navLinks = [
     { href: "/" as const, label: t("home") },
-    { href: "/officials" as const, label: t("officials") },
+    { href: "/state-officials" as const, label: t("stateOfficials") },
+    { href: "/municipal-officials" as const, label: t("municipalOfficials") },
     { href: "/about" as const, label: t("about") },
   ];
 

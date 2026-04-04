@@ -151,7 +151,9 @@ function official(
   appointedByFi: string,
   appointedByEn: string,
   bioFi: string,
-  bioEn: string
+  bioEn: string,
+  email: string | null = null,
+  phone: string | null = null
 ): Official {
   return {
     id,
@@ -168,6 +170,9 @@ function official(
     appointed_by_en: appointedByEn,
     bio_fi: bioFi,
     bio_en: bioEn,
+    email,
+    phone,
+    category: "state",
     created_at: "2024-01-01T00:00:00Z",
     updated_at: "2026-04-01T00:00:00Z",
   };
@@ -192,7 +197,7 @@ const allProfiles: OfficialProfile[] = [
       "2012-01-01",
       "Valtioneuvosto",
       "Council of State",
-      "Timo Lankinen toimii valtioneuvoston kanslian korkeimpana virkamiehenä alivaltiosihteerinä. Hän on johtanut kanslian hallintoa vuodesta 2012.",
+      "Timo Lankinen toimii valtioneuvoston kanslian korkeimpana viranhaltijana alivaltiosihteerinä. Hän on johtanut kanslian hallintoa vuodesta 2012.",
       "Timo Lankinen serves as the highest permanent civil servant at the Prime Minister's Office. He has led the office's administration since 2012."
     ),
     previous_roles: [],
@@ -1294,6 +1299,67 @@ const allProfiles: OfficialProfile[] = [
   },
 ];
 
+// ─── Contact info by organization ───
+
+const orgSwitchboards: Record<string, string> = {
+  "Valtioneuvoston kanslia": "+358 295 16001",
+  "Ulkoministeriö": "+358 295 16000",
+  "Oikeusministeriö": "+358 295 16001",
+  "Sisäministeriö": "+358 295 480 171",
+  "Puolustusministeriö": "+358 295 16001",
+  "Valtiovarainministeriö": "+358 295 16001",
+  "Opetus- ja kulttuuriministeriö": "+358 295 16001",
+  "Maa- ja metsätalousministeriö": "+358 295 16001",
+  "Liikenne- ja viestintäministeriö": "+358 295 16001",
+  "Työ- ja elinkeinoministeriö": "+358 295 16001",
+  "Sosiaali- ja terveysministeriö": "+358 295 16001",
+  "Ympäristöministeriö": "+358 295 16001",
+  "Verohallinto": "+358 29 512 000",
+  "Tulli": "+358 295 5200",
+  "Maahanmuuttovirasto": "+358 295 430 431",
+  "Patentti- ja rekisterihallitus": "+358 29 509 5000",
+  "Traficom": "+358 29 534 5000",
+  "Ruokavirasto": "+358 29 530 0400",
+  "Digi- ja väestötietovirasto": "+358 29 553 6000",
+};
+
+// Finnish government email: firstname.lastname@gov.fi for ministries
+// Agencies use their own domains
+const orgEmailDomains: Record<string, string> = {
+  "Valtioneuvoston kanslia": "gov.fi",
+  "Ulkoministeriö": "gov.fi",
+  "Oikeusministeriö": "gov.fi",
+  "Sisäministeriö": "gov.fi",
+  "Puolustusministeriö": "gov.fi",
+  "Valtiovarainministeriö": "gov.fi",
+  "Opetus- ja kulttuuriministeriö": "gov.fi",
+  "Maa- ja metsätalousministeriö": "gov.fi",
+  "Liikenne- ja viestintäministeriö": "gov.fi",
+  "Työ- ja elinkeinoministeriö": "gov.fi",
+  "Sosiaali- ja terveysministeriö": "gov.fi",
+  "Ympäristöministeriö": "gov.fi",
+  "Verohallinto": "vero.fi",
+  "Tulli": "tulli.fi",
+  "Maahanmuuttovirasto": "migri.fi",
+  "Patentti- ja rekisterihallitus": "prh.fi",
+  "Traficom": "traficom.fi",
+  "Ruokavirasto": "ruokavirasto.fi",
+  "Digi- ja väestötietovirasto": "dvv.fi",
+};
+
+// Apply contact info to state officials
+for (const p of allProfiles) {
+  const o = p.official;
+  const domain = orgEmailDomains[o.organization_fi];
+  if (domain && !o.email) {
+    o.email = `${o.first_name.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/å/g, "a").replace(/ü/g, "u").replace(/ /g, ".")}.${o.last_name.toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/å/g, "a").replace(/ü/g, "u").replace(/ /g, ".")}@${domain}`;
+  }
+  const phone = orgSwitchboards[o.organization_fi];
+  if (phone && !o.phone) {
+    o.phone = phone;
+  }
+}
+
 // Combine ministry/agency officials with municipal officials
 const combinedProfiles: OfficialProfile[] = [...allProfiles, ...municipalProfiles];
 
@@ -1305,6 +1371,14 @@ export function getOfficialBySlug(slug: string): OfficialProfile | null {
 
 export function getAllOfficials(): Official[] {
   return combinedProfiles.map((p) => p.official);
+}
+
+export function getStateOfficials(): Official[] {
+  return combinedProfiles.filter((p) => p.official.category === "state").map((p) => p.official);
+}
+
+export function getMunicipalOfficials(): Official[] {
+  return combinedProfiles.filter((p) => p.official.category === "municipal").map((p) => p.official);
 }
 
 export function searchOfficials(query: string): Official[] {

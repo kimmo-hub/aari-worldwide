@@ -13,7 +13,9 @@ function mOfficial(
   orgEn: string,
   appointmentDate: string,
   bioFi: string,
-  bioEn: string
+  bioEn: string,
+  email: string | null = null,
+  phone: string | null = null
 ): Official {
   return {
     id,
@@ -30,6 +32,9 @@ function mOfficial(
     appointed_by_en: "Municipal council",
     bio_fi: bioFi,
     bio_en: bioEn,
+    email,
+    phone,
+    category: "municipal",
     created_at: "2024-01-01T00:00:00Z",
     updated_at: "2026-04-01T00:00:00Z",
   };
@@ -521,6 +526,94 @@ export const municipalProfiles: OfficialProfile[] = [
     "Eero Väätäinen has served as City Manager of Nokia since 2020."
   )),
 ];
+
+// ─── Municipal contact info ───
+
+const citySwitchboards: Record<string, string> = {
+  "Helsingin kaupunki": "+358 9 310 1691",
+  "Espoon kaupunki": "+358 9 816 21",
+  "Vantaan kaupunki": "+358 9 839 11",
+  "Tampereen kaupunki": "+358 3 565 611",
+  "Oulun kaupunki": "+358 8 558 410",
+  "Turun kaupunki": "+358 2 330 000",
+  "Jyväskylän kaupunki": "+358 14 266 0000",
+  "Kuopion kaupunki": "+358 17 185 111",
+  "Lahden kaupunki": "+358 3 814 11",
+  "Porin kaupunki": "+358 2 621 1100",
+  "Kouvolan kaupunki": "+358 20 615 11",
+  "Joensuun kaupunki": "+358 13 267 7111",
+  "Lappeenrannan kaupunki": "+358 5 616 11",
+  "Hämeenlinnan kaupunki": "+358 3 621 2111",
+  "Vaasan kaupunki": "+358 6 325 1111",
+  "Rovaniemen kaupunki": "+358 16 322 2111",
+  "Seinäjoen kaupunki": "+358 6 416 2111",
+  "Mikkelin kaupunki": "+358 15 194 2111",
+  "Kotkan kaupunki": "+358 5 234 5000",
+  "Salon kaupunki": "+358 2 778 4111",
+  "Porvoon kaupunki": "+358 19 520 211",
+  "Kokkolan kaupunki": "+358 6 828 9111",
+  "Hyvinkään kaupunki": "+358 19 459 11",
+  "Lohjan kaupunki": "+358 19 369 1",
+  "Järvenpään kaupunki": "+358 9 27 191",
+  "Rauman kaupunki": "+358 2 834 3111",
+  "Kajaanin kaupunki": "+358 8 615 5111",
+  "Savonlinnan kaupunki": "+358 15 571 7300",
+  "Keravan kaupunki": "+358 9 294 91",
+  "Nokian kaupunki": "+358 3 365 1311",
+};
+
+const cityEmailDomains: Record<string, string> = {
+  "Helsingin kaupunki": "hel.fi",
+  "Espoon kaupunki": "espoo.fi",
+  "Vantaan kaupunki": "vantaa.fi",
+  "Tampereen kaupunki": "tampere.fi",
+  "Oulun kaupunki": "ouka.fi",
+  "Turun kaupunki": "turku.fi",
+  "Jyväskylän kaupunki": "jyvaskyla.fi",
+  "Kuopion kaupunki": "kuopio.fi",
+  "Lahden kaupunki": "lahti.fi",
+  "Porin kaupunki": "pori.fi",
+  "Kouvolan kaupunki": "kouvola.fi",
+  "Joensuun kaupunki": "joensuu.fi",
+  "Lappeenrannan kaupunki": "lappeenranta.fi",
+  "Hämeenlinnan kaupunki": "hameenlinna.fi",
+  "Vaasan kaupunki": "vaasa.fi",
+  "Rovaniemen kaupunki": "rovaniemi.fi",
+  "Seinäjoen kaupunki": "seinajoki.fi",
+  "Mikkelin kaupunki": "mikkeli.fi",
+  "Kotkan kaupunki": "kotka.fi",
+  "Salon kaupunki": "salo.fi",
+  "Porvoon kaupunki": "porvoo.fi",
+  "Kokkolan kaupunki": "kokkola.fi",
+  "Hyvinkään kaupunki": "hyvinkaa.fi",
+  "Lohjan kaupunki": "lohja.fi",
+  "Järvenpään kaupunki": "jarvenpaa.fi",
+  "Rauman kaupunki": "rauma.fi",
+  "Kajaanin kaupunki": "kajaani.fi",
+  "Savonlinnan kaupunki": "savonlinna.fi",
+  "Keravan kaupunki": "kerava.fi",
+  "Nokian kaupunki": "nokia.fi",
+};
+
+function finnishEmailName(name: string): string {
+  return name.toLowerCase()
+    .replace(/ä/g, "a").replace(/ö/g, "o").replace(/å/g, "a")
+    .replace(/ü/g, "u").replace(/é/g, "e")
+    .replace(/ /g, ".").replace(/-/g, ".");
+}
+
+// Apply contact info to municipal officials
+for (const p of municipalProfiles) {
+  const o = p.official;
+  const domain = cityEmailDomains[o.organization_fi];
+  if (domain && !o.email) {
+    o.email = `${finnishEmailName(o.first_name)}.${finnishEmailName(o.last_name)}@${domain}`;
+  }
+  const phone = citySwitchboards[o.organization_fi];
+  if (phone && !o.phone) {
+    o.phone = phone;
+  }
+}
 
 // Total municipality count for stats
 export const TOTAL_MUNICIPALITIES = MUNICIPALITIES.reduce((sum, r) => sum + r.municipalities.length, 0);

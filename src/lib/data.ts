@@ -7,6 +7,8 @@
 import {
   getOfficialBySlug as getOfficialBySlugSeed,
   getAllOfficials as getAllOfficialsSeed,
+  getStateOfficials as getStateOfficialsSeed,
+  getMunicipalOfficials as getMunicipalOfficialsSeed,
   searchOfficials as searchOfficialsSeed,
   policyAreas as policyAreasSeed,
 } from "./seed-data";
@@ -110,6 +112,34 @@ export async function getAllOfficials(): Promise<Official[]> {
     .order("last_name", { ascending: true });
 
   if (error || !data) return getAllOfficialsSeed();
+  return data as Official[];
+}
+
+export async function getStateOfficials(): Promise<Official[]> {
+  const supabase = getSupabase();
+  if (!supabase) return getStateOfficialsSeed();
+
+  const { data, error } = await supabase
+    .from("officials")
+    .select("*")
+    .eq("category", "state")
+    .order("last_name", { ascending: true });
+
+  if (error || !data) return getStateOfficialsSeed();
+  return data as Official[];
+}
+
+export async function getMunicipalOfficials(): Promise<Official[]> {
+  const supabase = getSupabase();
+  if (!supabase) return getMunicipalOfficialsSeed();
+
+  const { data, error } = await supabase
+    .from("officials")
+    .select("*")
+    .eq("category", "municipal")
+    .order("last_name", { ascending: true });
+
+  if (error || !data) return getMunicipalOfficialsSeed();
   return data as Official[];
 }
 

@@ -1,5 +1,7 @@
 // Database types for Virkavastuu.fi
 
+export type OfficialCategory = "state" | "municipal";
+
 export interface Official {
   id: string;
   slug: string;
@@ -15,6 +17,9 @@ export interface Official {
   appointed_by_en: string;
   bio_fi: string;
   bio_en: string;
+  email: string | null;
+  phone: string | null;
+  category: OfficialCategory;
   created_at: string;
   updated_at: string;
 }

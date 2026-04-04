@@ -47,7 +47,7 @@ export default function HomePage() {
             {t("home.hero.subtitle")}
           </p>
           <Link
-            href="/officials"
+            href="/state-officials"
             className="mt-8 inline-flex items-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-civic-900 shadow-sm transition-colors hover:bg-civic-50"
           >
             {t("home.hero.cta")}
