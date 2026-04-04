@@ -91,6 +91,46 @@ export const policyAreas: PolicyArea[] = [
     description_fi: "Elinkeinoelämän edistäminen ja työllisyys",
     description_en: "Business development and employment",
   },
+  {
+    id: "pa-11",
+    name_fi: "Rakentaminen ja maankäyttö",
+    name_en: "Building and land use",
+    slug: "building-land-use",
+    description_fi: "Rakennusluvat, kaavoitus ja maankäytön suunnittelu",
+    description_en: "Building permits, zoning, and land use planning",
+  },
+  {
+    id: "pa-12",
+    name_fi: "Kuntapalvelut",
+    name_en: "Municipal services",
+    slug: "municipal-services",
+    description_fi: "Kuntahallinto ja kuntalaispalvelut",
+    description_en: "Municipal administration and citizen services",
+  },
+  {
+    id: "pa-13",
+    name_fi: "Asuminen",
+    name_en: "Housing",
+    slug: "housing",
+    description_fi: "Asuntopolitiikka, vuokravalvonta ja asumisen kehittäminen",
+    description_en: "Housing policy, rental oversight, and housing development",
+  },
+  {
+    id: "pa-14",
+    name_fi: "Elinkeinoluvat",
+    name_en: "Business permits",
+    slug: "business-permits",
+    description_fi: "Anniskeluluvat, tapahtumailmoitukset ja elinkeinoluvat",
+    description_en: "Alcohol licenses, event permits, and business registrations",
+  },
+  {
+    id: "pa-15",
+    name_fi: "Infrastruktuuri",
+    name_en: "Infrastructure",
+    slug: "infrastructure",
+    description_fi: "Tiet, vesihuolto, jätehuolto ja yhdyskuntarakenne",
+    description_en: "Roads, water, waste management, and urban infrastructure",
+  },
 ];
 
 // ─── Helper to create an official ───
