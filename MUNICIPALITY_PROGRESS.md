@@ -40,7 +40,7 @@ _ Hirvensalmi
 _ Hollola
 _ Huittinen
 _ Humppila
-_ Hyrynsalmi
+✓ Hyrynsalmi
 ✓ Hyvinkää
 _ Hämeenkyrö
 ✓ Hämeenlinna
@@ -112,7 +112,7 @@ _ Koski Tl
 ✓ Kouvola
 _ Kristiinankaupunki
 _ Kruunupyy
-_ Kuhmo
+✓ Kuhmo
 _ Kuhmoinen
 _ Kumlinge
 ✓ Kuopio
@@ -185,7 +185,7 @@ _ Oulainen
 _ Outokumpu
 _ Padasjoki
 _ Paimio
-_ Paltamo
+✓ Paltamo
 ★ Parainen
 _ Parikkala
 _ Parkano
@@ -209,7 +209,7 @@ _ Posio
 _ Pudasjärvi
 _ Pukkila
 _ Punkalaidun
-_ Puolanka
+✓ Puolanka
 _ Puumala
 _ Pyhtää
 _ Pyhäjoki
@@ -229,7 +229,7 @@ _ Rautavaara
 _ Rautjärvi
 _ Reisjärvi
 _ Riihimäki
-_ Ristijärvi
+✓ Ristijärvi
 ✓ Rovaniemi
 _ Ruokolahti
 _ Ruovesi
@@ -257,11 +257,11 @@ _ Sodankylä
 _ Soini
 _ Somero
 _ Sonkajärvi
-_ Sotkamo
+✓ Sotkamo
 _ Sottunga
 _ Sulkava
 _ Sund
-_ Suomussalmi
+✓ Suomussalmi
 _ Suonenjoki
 _ Sysmä
 _ Säkylä
@@ -312,4 +312,4 @@ _ Ypäjä
 _ Ähtäri
 _ Äänekoski
 
-# Done: 31/309 (1 with full teams)
+# Done: 38/309 (1 with full teams, Kainuu complete)

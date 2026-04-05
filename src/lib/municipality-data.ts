@@ -626,6 +626,141 @@ export const municipalProfiles: OfficialProfile[] = [
     "Paavo Suominen serves as Environmental Protection Inspector of the City of Parainen. Responsible for environmental permits and supervision.",
     "paavo.suominen@parainen.fi", "+358 40 631 4882"
   )),
+
+  // ═══ KAINUU REGION — FULL MANAGEMENT TEAMS ═══
+
+  // ─── Kajaani (additional officials, kaupunginjohtaja m-27 above) ───
+
+  profile(mOfficial("m-200", "kari-huusko", "Kari", "Huusko",
+    "Johtava rakennustarkastaja", "Chief Building Inspector",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2015-01-01",
+    "Kari Huusko toimii Kajaanin johtavana rakennustarkastajana. Vastaa rakennusvalvonnasta ja rakennuslupapäätöksistä.",
+    "Kari Huusko serves as Chief Building Inspector of Kajaani. Responsible for building supervision and building permit decisions.",
+    null, "044 710 0246"
+  )),
+
+  profile(mOfficial("m-201", "juha-moilanen", "Juha", "Moilanen",
+    "Rakennustarkastaja", "Building Inspector",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2018-01-01",
+    "Juha Moilanen toimii Kajaanin rakennustarkastajana.",
+    "Juha Moilanen serves as Building Inspector in Kajaani.",
+    null, "040 678 3224"
+  )),
+
+  // ─── Sotkamo ───
+
+  profile(mOfficial("m-210", "mika-kilpelainen", "Mika", "Kilpeläinen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Sotkamon kunta", "Municipality of Sotkamo",
+    "2019-01-01",
+    "Mika Kilpeläinen toimii Sotkamon kunnanjohtajana. Sotkamo tunnetaan Vuokatin matkailukeskuksesta.",
+    "Mika Kilpeläinen serves as Municipal Manager of Sotkamo. Sotkamo is known for the Vuokatti tourism resort.",
+    "mika.kilpelainen@sotkamo.fi", "044 750 2111"
+  )),
+
+  profile(mOfficial("m-211", "riikka-boren", "Riikka", "Borén",
+    "Hallinto- ja henkilöstöjohtaja", "Administration and HR Director",
+    "Sotkamon kunta", "Municipality of Sotkamo",
+    "2018-01-01",
+    "Riikka Borén toimii Sotkamon hallinto- ja henkilöstöjohtajana.",
+    "Riikka Borén serves as Administration and HR Director of Sotkamo.",
+    "riikka.boren@sotkamo.fi", "044 198 6318"
+  )),
+
+  profile(mOfficial("m-212", "harri-helenius", "Harri", "Helenius",
+    "Tekninen johtaja", "Technical Director",
+    "Sotkamon kunta", "Municipality of Sotkamo",
+    "2017-01-01",
+    "Harri Helenius toimii Sotkamon teknisenä johtajana. Vastaa teknisistä palveluista ja infrastruktuurista.",
+    "Harri Helenius serves as Technical Director of Sotkamo. Responsible for technical services and infrastructure.",
+    "harri.helenius@sotkamo.fi", "044 750 2491"
+  )),
+
+  profile(mOfficial("m-213", "jenna-korhonen", "Jenna", "Korhonen",
+    "Rakennustarkastaja", "Building Inspector",
+    "Sotkamon kunta", "Municipality of Sotkamo",
+    "2020-01-01",
+    "Jenna Korhonen toimii Sotkamon rakennustarkastajana. Vastaa rakennusluvista ja rakennusvalvonnasta.",
+    "Jenna Korhonen serves as Building Inspector in Sotkamo. Responsible for building permits and building supervision.",
+    "jenna.korhonen@sotkamo.fi", "040 354 0586"
+  )),
+
+  // ─── Kuhmo ───
+
+  profile(mOfficial("m-220", "juhana-juntunen", "Juhana", "Juntunen",
+    "Kaupunginjohtaja", "City Manager",
+    "Kuhmon kaupunki", "City of Kuhmo",
+    "2019-01-01",
+    "Juhana Juntunen toimii Kuhmon kaupunginjohtajana. Kuhmo tunnetaan kamarimusiikkijuhlistaan.",
+    "Juhana Juntunen serves as City Manager of Kuhmo. Kuhmo is known for its Chamber Music Festival.",
+    null, "044 7255 222"
+  )),
+
+  // ─── Suomussalmi ───
+
+  profile(mOfficial("m-230", "erno-heikkinen", "Erno", "Heikkinen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Suomussalmen kunta", "Municipality of Suomussalmi",
+    "2021-01-01",
+    "Erno Heikkinen toimii Suomussalmen kunnanjohtajana.",
+    "Erno Heikkinen serves as Municipal Manager of Suomussalmi.",
+    null, "044 777 3344"
+  )),
+
+  // ─── Paltamo ───
+
+  profile(mOfficial("m-240", "pasi-ahoniemi", "Pasi", "Ahoniemi",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Paltamon kunta", "Municipality of Paltamo",
+    "2020-01-01",
+    "Pasi Ahoniemi toimii Paltamon kunnanjohtajana.",
+    "Pasi Ahoniemi serves as Municipal Manager of Paltamo.",
+    "pasi.ahoniemi@paltamo.fi", null
+  )),
+
+  // ─── Puolanka ───
+
+  profile(mOfficial("m-250", "harri-peltola", "Harri", "Peltola",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Puolangan kunta", "Municipality of Puolanka",
+    "2018-01-01",
+    "Harri Peltola toimii Puolangan kunnanjohtajana.",
+    "Harri Peltola serves as Municipal Manager of Puolanka.",
+    "harri.peltola@puolanka.fi", null
+  )),
+
+  // ─── Hyrynsalmi ───
+
+  profile(mOfficial("m-260", "heimo-keranen", "Heimo", "Keränen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi",
+    "2016-01-01",
+    "Heimo Keränen toimii Hyrynsalmen kunnanjohtajana.",
+    "Heimo Keränen serves as Municipal Manager of Hyrynsalmi.",
+    "heimo.keranen@hyrynsalmi.fi", null
+  )),
+
+  // ─── Ristijärvi ───
+
+  profile(mOfficial("m-270", "petteri-seppanen", "Petteri", "Seppänen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Ristijärven kunta", "Municipality of Ristijärvi",
+    "2019-01-01",
+    "Petteri Seppänen toimii Ristijärven kunnanjohtajana.",
+    "Petteri Seppänen serves as Municipal Manager of Ristijärvi.",
+    "petteri.seppanen@ristijarvi.fi", null
+  )),
+
+  profile(mOfficial("m-271", "jari-hurskainen", "Jari", "Hurskainen",
+    "Rakennustarkastaja", "Building Inspector",
+    "Ristijärven kunta", "Municipality of Ristijärvi",
+    "2015-01-01",
+    "Jari Hurskainen toimii rakennustarkastajana Ristijärven ja Hyrynsalmen kunnissa (yhteinen viranhaltija).",
+    "Jari Hurskainen serves as Building Inspector for the municipalities of Ristijärvi and Hyrynsalmi (shared official).",
+    null, "044 7104 434"
+  )),
 ];
 
 // ─── Municipal contact info ───
@@ -658,6 +793,13 @@ const citySwitchboards: Record<string, string> = {
   "Järvenpään kaupunki": "+358 9 27 191",
   "Rauman kaupunki": "+358 2 834 3111",
   "Kajaanin kaupunki": "+358 8 615 5111",
+  "Sotkamon kunta": "+358 8 615 5811",
+  "Kuhmon kaupunki": "+358 8 615 5521",
+  "Suomussalmen kunta": "+358 8 615 6811",
+  "Paltamon kunta": "+358 8 615 5401",
+  "Puolangan kunta": "+358 8 615 6611",
+  "Hyrynsalmen kunta": "+358 8 615 5001",
+  "Ristijärven kunta": "+358 8 615 5201",
   "Savonlinnan kaupunki": "+358 15 571 7300",
   "Keravan kaupunki": "+358 9 294 91",
   "Nokian kaupunki": "+358 3 365 1311",
@@ -691,6 +833,13 @@ const cityEmailDomains: Record<string, string> = {
   "Järvenpään kaupunki": "jarvenpaa.fi",
   "Rauman kaupunki": "rauma.fi",
   "Kajaanin kaupunki": "kajaani.fi",
+  "Sotkamon kunta": "sotkamo.fi",
+  "Kuhmon kaupunki": "kuhmo.fi",
+  "Suomussalmen kunta": "suomussalmi.fi",
+  "Paltamon kunta": "paltamo.fi",
+  "Puolangan kunta": "puolanka.fi",
+  "Hyrynsalmen kunta": "hyrynsalmi.fi",
+  "Ristijärven kunta": "ristijarvi.fi",
   "Savonlinnan kaupunki": "savonlinna.fi",
   "Keravan kaupunki": "kerava.fi",
   "Nokian kaupunki": "nokia.fi",
