@@ -629,9 +629,36 @@ export const municipalProfiles: OfficialProfile[] = [
 
   // ═══ KAINUU REGION — FULL MANAGEMENT TEAMS ═══
 
-  // ─── Kajaani (additional officials, kaupunginjohtaja m-27 above) ───
+  // ─── Kajaani (kaupunginjohtaja Jari Tolonen = m-27 above) ───
 
-  profile(mOfficial("m-200", "kari-huusko", "Kari", "Huusko",
+  profile(mOfficial("m-200", "paula-halonen", "Paula", "Halonen",
+    "Hallintojohtaja", "Administrative Director",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2018-01-01",
+    "Paula Halonen toimii Kajaanin hallintojohtajana ja kaupunginlakimiehenä.",
+    "Paula Halonen serves as Administrative Director and City Lawyer of Kajaani.",
+    "paula.halonen@kajaani.fi", "040 198 5857"
+  )),
+
+  profile(mOfficial("m-201", "mari-lyyra", "Mari", "Lyyra",
+    "Sivistysjohtaja", "Education Director",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2020-01-01",
+    "Mari Lyyra toimii Kajaanin sivistysjohtajana. Vastaa sivistyspalveluista ja sivistyslautakunnan esittelystä.",
+    "Mari Lyyra serves as Education Director of Kajaani. Responsible for education services.",
+    "mari.lyyra@kajaani.fi", null
+  )),
+
+  profile(mOfficial("m-202", "jussi-heikkinen", "Jussi", "Heikkinen",
+    "Tekninen johtaja", "Technical Director",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2019-01-01",
+    "Jussi Heikkinen toimii Kajaanin teknisenä johtajana ympäristöteknisessä toimialassa.",
+    "Jussi Heikkinen serves as Technical Director in Kajaani's Environmental Technical Division.",
+    "jussi.heikkinen@kajaani.fi", "040 678 3246"
+  )),
+
+  profile(mOfficial("m-203", "kari-huusko", "Kari", "Huusko",
     "Johtava rakennustarkastaja", "Chief Building Inspector",
     "Kajaanin kaupunki", "City of Kajaani",
     "2015-01-01",
@@ -640,7 +667,7 @@ export const municipalProfiles: OfficialProfile[] = [
     null, "044 710 0246"
   )),
 
-  profile(mOfficial("m-201", "juha-moilanen", "Juha", "Moilanen",
+  profile(mOfficial("m-204", "juha-moilanen", "Juha", "Moilanen",
     "Rakennustarkastaja", "Building Inspector",
     "Kajaanin kaupunki", "City of Kajaani",
     "2018-01-01",
@@ -695,7 +722,52 @@ export const municipalProfiles: OfficialProfile[] = [
     "2019-01-01",
     "Juhana Juntunen toimii Kuhmon kaupunginjohtajana. Kuhmo tunnetaan kamarimusiikkijuhlistaan.",
     "Juhana Juntunen serves as City Manager of Kuhmo. Kuhmo is known for its Chamber Music Festival.",
-    null, "044 7255 222"
+    "juhana.juntunen@kuhmo.fi", "044 7255 222"
+  )),
+
+  profile(mOfficial("m-221", "pinja-kyllonen", "Pinja", "Kyllönen",
+    "Hallintojohtaja", "Administrative Director",
+    "Kuhmon kaupunki", "City of Kuhmo",
+    "2024-01-01",
+    "Pinja Kyllönen toimii Kuhmon hallintojohtajana.",
+    "Pinja Kyllönen serves as Administrative Director of Kuhmo.",
+    "pinja.kyllonen@kuhmo.fi", "044 7255 223"
+  )),
+
+  profile(mOfficial("m-222", "marjut-kyllonen", "Marjut", "Kyllönen",
+    "Sivistystoimenjohtaja", "Director of Education and Culture",
+    "Kuhmon kaupunki", "City of Kuhmo",
+    "2020-01-01",
+    "Marjut Kyllönen toimii Kuhmon sivistystoimenjohtajana ja yläkoulun rehtorina.",
+    "Marjut Kyllönen serves as Director of Education and Culture in Kuhmo, also serving as secondary school principal.",
+    "marjut.kyllonen@kuhmo.fi", null
+  )),
+
+  profile(mOfficial("m-223", "kimmo-lamsa", "Kimmo", "Lämsä",
+    "Tekninen johtaja", "Technical Director",
+    "Kuhmon kaupunki", "City of Kuhmo",
+    "2015-01-01",
+    "Kimmo Lämsä toimii Kuhmon teknisenä johtajana.",
+    "Kimmo Lämsä serves as Technical Director of Kuhmo.",
+    "kimmo.lamsa@kuhmo.fi", "0400 393798"
+  )),
+
+  profile(mOfficial("m-224", "harri-piirainen", "Harri", "Piirainen",
+    "Rakennustarkastaja / Tilapalvelupäällikkö", "Building Inspector / Facility Services Manager",
+    "Kuhmon kaupunki", "City of Kuhmo",
+    "2016-01-01",
+    "Harri Piirainen toimii Kuhmon rakennustarkastajana ja tilapalvelupäällikkönä.",
+    "Harri Piirainen serves as Building Inspector and Facility Services Manager in Kuhmo.",
+    "harri.piirainen@kuhmo.fi", "044 7255 257"
+  )),
+
+  profile(mOfficial("m-225", "risto-saarinen", "Risto", "Saarinen",
+    "Rakennustarkastaja / Ympäristönsuojelusihteeri", "Building Inspector / Environmental Protection Secretary",
+    "Kuhmon kaupunki", "City of Kuhmo",
+    "2017-01-01",
+    "Risto Saarinen toimii Kuhmon rakennustarkastajana ja ympäristönsuojelusihteerinä.",
+    "Risto Saarinen serves as Building Inspector and Environmental Protection Secretary in Kuhmo.",
+    "risto.saarinen@kuhmo.fi", "044 7255 256"
   )),
 
   // ─── Suomussalmi ───
@@ -706,7 +778,52 @@ export const municipalProfiles: OfficialProfile[] = [
     "2021-01-01",
     "Erno Heikkinen toimii Suomussalmen kunnanjohtajana.",
     "Erno Heikkinen serves as Municipal Manager of Suomussalmi.",
-    null, "044 777 3344"
+    "erno.heikkinen@suomussalmi.fi", "044 777 3344"
+  )),
+
+  profile(mOfficial("m-231", "antton-vuolle", "Antton", "Vuolle",
+    "Vs. hallintojohtaja", "Acting Administrative Director",
+    "Suomussalmen kunta", "Municipality of Suomussalmi",
+    "2024-01-01",
+    "Antton Vuolle toimii Suomussalmen vs. hallintojohtajana.",
+    "Antton Vuolle serves as Acting Administrative Director of Suomussalmi.",
+    "antton.vuolle@suomussalmi.fi", "040 688 4499"
+  )),
+
+  profile(mOfficial("m-232", "teemu-piirainen", "Teemu", "Piirainen",
+    "Sivistysjohtaja", "Education Director",
+    "Suomussalmen kunta", "Municipality of Suomussalmi",
+    "2020-01-01",
+    "Teemu Piirainen toimii Suomussalmen sivistysjohtajana.",
+    "Teemu Piirainen serves as Education Director of Suomussalmi.",
+    "teemu.piirainen@suomussalmi.fi", "040 688 4545"
+  )),
+
+  profile(mOfficial("m-233", "niina-kinnunen", "Niina", "Kinnunen",
+    "Tekninen johtaja", "Technical Director",
+    "Suomussalmen kunta", "Municipality of Suomussalmi",
+    "2019-01-01",
+    "Niina Kinnunen toimii Suomussalmen teknisenä johtajana.",
+    "Niina Kinnunen serves as Technical Director of Suomussalmi.",
+    "niina.kinnunen@suomussalmi.fi", "044 777 3380"
+  )),
+
+  profile(mOfficial("m-234", "jonne-maaninka", "Jonne", "Maaninka",
+    "Elinvoimajohtaja", "Business Development Director",
+    "Suomussalmen kunta", "Municipality of Suomussalmi",
+    "2021-01-01",
+    "Jonne Maaninka toimii Suomussalmen elinvoimajohtajana.",
+    "Jonne Maaninka serves as Business Development Director of Suomussalmi.",
+    "jonne.maaninka@suomussalmi.fi", "040 688 4480"
+  )),
+
+  profile(mOfficial("m-235", "asko-kinnunen", "Asko", "Kinnunen",
+    "Rakennustarkastaja", "Building Inspector",
+    "Suomussalmen kunta", "Municipality of Suomussalmi",
+    "2015-01-01",
+    "Asko Kinnunen toimii Suomussalmen rakennustarkastajana. Vastaa rakennusluvista ja rakennusvalvonnasta.",
+    "Asko Kinnunen serves as Building Inspector in Suomussalmi. Responsible for building permits and supervision.",
+    "asko.kinnunen@suomussalmi.fi", "044 777 3121"
   )),
 
   // ─── Paltamo ───
@@ -717,7 +834,34 @@ export const municipalProfiles: OfficialProfile[] = [
     "2020-01-01",
     "Pasi Ahoniemi toimii Paltamon kunnanjohtajana.",
     "Pasi Ahoniemi serves as Municipal Manager of Paltamo.",
-    "pasi.ahoniemi@paltamo.fi", null
+    "pasi.ahoniemi@paltamo.fi", "044 750 0001"
+  )),
+
+  profile(mOfficial("m-241", "petra-juutinen", "Petra", "Juutinen",
+    "Hallintojohtaja", "Administrative Director",
+    "Paltamon kunta", "Municipality of Paltamo",
+    "2023-01-01",
+    "Petra Juutinen toimii Paltamon hallintojohtajana.",
+    "Petra Juutinen serves as Administrative Director of Paltamo.",
+    "petra.juutinen@paltamo.fi", "040 583 7200"
+  )),
+
+  profile(mOfficial("m-242", "helena-hynynen", "Helena", "Hynynen",
+    "Sivistysjohtaja", "Education Director",
+    "Paltamon kunta", "Municipality of Paltamo",
+    "2018-01-01",
+    "Helena Hynynen toimii Paltamon sivistysjohtajana ja kansalaisopiston rehtorina.",
+    "Helena Hynynen serves as Education Director and adult education principal in Paltamo.",
+    "helena.hynynen@paltamo.fi", "044 288 5400"
+  )),
+
+  profile(mOfficial("m-243", "salla-korhonen", "Salla", "Korhonen",
+    "Vs. tekninen johtaja / Kehitysjohtaja", "Acting Technical Director / Development Director",
+    "Paltamon kunta", "Municipality of Paltamo",
+    "2022-01-01",
+    "Salla Korhonen toimii Paltamon vs. teknisenä johtajana ja kehitysjohtajana.",
+    "Salla Korhonen serves as Acting Technical Director and Development Director of Paltamo.",
+    "salla.korhonen@paltamo.fi", "044 288 5660"
   )),
 
   // ─── Puolanka ───
@@ -731,6 +875,33 @@ export const municipalProfiles: OfficialProfile[] = [
     "harri.peltola@puolanka.fi", null
   )),
 
+  profile(mOfficial("m-251", "piia-heikkinen", "Piia", "Heikkinen",
+    "Hallintojohtaja", "Administrative Director",
+    "Puolangan kunta", "Municipality of Puolanka",
+    "2020-01-01",
+    "Piia Heikkinen toimii Puolangan hallintojohtajana.",
+    "Piia Heikkinen serves as Administrative Director of Puolanka.",
+    "piia.heikkinen@puolanka.fi", "040 575 0586"
+  )),
+
+  profile(mOfficial("m-252", "tuula-vaisanen", "Tuula", "Väisänen",
+    "Vs. sivistysjohtaja", "Acting Education Director",
+    "Puolangan kunta", "Municipality of Puolanka",
+    "2023-01-01",
+    "Tuula Väisänen toimii Puolangan vs. sivistysjohtajana.",
+    "Tuula Väisänen serves as Acting Education Director of Puolanka.",
+    "tuula.vaisanen@puolanka.fi", "040 740 2567"
+  )),
+
+  profile(mOfficial("m-253", "marko-vayrynen", "Marko", "Väyrynen",
+    "Tekninen johtaja", "Technical Director",
+    "Puolangan kunta", "Municipality of Puolanka",
+    "2019-01-01",
+    "Marko Väyrynen toimii Puolangan teknisenä johtajana.",
+    "Marko Väyrynen serves as Technical Director of Puolanka.",
+    "marko.vayrynen@puolanka.fi", "040 559 2084"
+  )),
+
   // ─── Hyrynsalmi ───
 
   profile(mOfficial("m-260", "heimo-keranen", "Heimo", "Keränen",
@@ -739,7 +910,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "2016-01-01",
     "Heimo Keränen toimii Hyrynsalmen kunnanjohtajana.",
     "Heimo Keränen serves as Municipal Manager of Hyrynsalmi.",
-    "heimo.keranen@hyrynsalmi.fi", null
+    "heimo.keranen@hyrynsalmi.fi", "044 7104 400"
   )),
 
   // ─── Ristijärvi ───
@@ -750,10 +921,37 @@ export const municipalProfiles: OfficialProfile[] = [
     "2019-01-01",
     "Petteri Seppänen toimii Ristijärven kunnanjohtajana.",
     "Petteri Seppänen serves as Municipal Manager of Ristijärvi.",
-    "petteri.seppanen@ristijarvi.fi", null
+    "petteri.seppanen@ristijarvi.fi", "044 715 9300"
   )),
 
-  profile(mOfficial("m-271", "jari-hurskainen", "Jari", "Hurskainen",
+  profile(mOfficial("m-271", "maarit-ojavuo", "Maarit", "Ojavuo",
+    "Hallintopäällikkö", "Administrative Manager",
+    "Ristijärven kunta", "Municipality of Ristijärvi",
+    "2018-01-01",
+    "Maarit Ojavuo toimii Ristijärven hallintopäällikkönä.",
+    "Maarit Ojavuo serves as Administrative Manager of Ristijärvi.",
+    "maarit.ojavuo@ristijarvi.fi", "044 715 9309"
+  )),
+
+  profile(mOfficial("m-272", "tiinaliisa-portano", "Tiinaliisa", "Portano",
+    "Sivistysjohtaja / Rehtori", "Education Director / Principal",
+    "Ristijärven kunta", "Municipality of Ristijärvi",
+    "2017-01-01",
+    "Tiinaliisa Portano toimii Ristijärven sivistysjohtajana ja rehtorina.",
+    "Tiinaliisa Portano serves as Education Director and Principal in Ristijärvi.",
+    "tiinaliisa.portano@ristijarvi.fi", "044 715 9334"
+  )),
+
+  profile(mOfficial("m-273", "ahti-mikkonen", "Ahti", "Mikkonen",
+    "Tekninen johtaja", "Technical Director",
+    "Ristijärven kunta", "Municipality of Ristijärvi",
+    "2016-01-01",
+    "Ahti Mikkonen toimii Ristijärven teknisenä johtajana.",
+    "Ahti Mikkonen serves as Technical Director of Ristijärvi.",
+    "ahti.mikkonen@ristijarvi.fi", "044 715 9744"
+  )),
+
+  profile(mOfficial("m-274", "jari-hurskainen", "Jari", "Hurskainen",
     "Rakennustarkastaja", "Building Inspector",
     "Ristijärven kunta", "Municipality of Ristijärvi",
     "2015-01-01",
