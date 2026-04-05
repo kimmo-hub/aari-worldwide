@@ -1417,7 +1417,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
   )),
 
-  // ─── Paltamo kunnanvaltuusto (21 seats, leadership) ───
+  // ─── Paltamo kunnanvaltuusto (21 seats — COMPLETE) ───
 
   profile(mCouncil("c-pa-1", "matti-valikangas", "Matti", "Välikangas",
     "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
@@ -1427,13 +1427,85 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuuston 1. varapuheenjohtaja", "Municipal Council 1st Vice Chair",
     "Paltamon kunta", "Municipality of Paltamo", "VAS"
   )),
-  profile(mCouncil("c-pa-kj", "pasi-ahoniemi-v", "Pasi", "Ahoniemi",
+  profile(mCouncil("c-pa-3", "maarit-rajatalo", "Maarit", "Rajatalo",
+    "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  // Kokoomus (2)
+  profile(mCouncil("c-pa-4", "samppa-homanen", "Samppa", "Homanen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KOK"
+  )),
+  profile(mCouncil("c-pa-5", "jyri-saastamoinen", "Jyri", "Saastamoinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KOK"
+  )),
+  // Keskusta (15 total incl. chair + 2nd vice)
+  profile(mCouncil("c-pa-6", "anne-huusko", "Anne", "Huusko",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Paltamon kunta", "Municipality of Paltamo", "KESK"
   )),
-  profile(mCouncil("c-pa-4", "jyri-saastamoinen", "Jyri", "Saastamoinen",
+  profile(mCouncil("c-pa-7", "ritva-huusko", "Ritva", "Huusko",
     "Kunnanvaltuutettu", "Municipal Councillor",
-    "Paltamon kunta", "Municipality of Paltamo", "KOK"
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-8", "ilkka-jarva", "Ilkka", "Jarva",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-9", "juha-junkkari", "Juha", "Junkkari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-10", "minna-jappinen", "Minna", "Jäppinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-11", "anita-karjalainen", "Anita", "Karjalainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-12", "sampo-karppinen-pa", "Sampo", "Karppinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-13", "erkki-kemppainen-pa", "Erkki", "Kemppainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-14", "pentti-keranen-pa", "Pentti", "Keränen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-15", "tiina-korhonen-pa", "Tiina", "Korhonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-16", "veli-vaisanen", "Veli", "Väisänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  // Vasemmistoliitto (5 incl. 1st vice)
+  profile(mCouncil("c-pa-17", "kari-keranen-pa", "Kari", "Keränen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "VAS"
+  )),
+  profile(mCouncil("c-pa-18", "tanja-luiro", "Tanja", "Luiro",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "VAS"
+  )),
+  profile(mCouncil("c-pa-19", "jari-pekka-pyykkonen", "Jari-Pekka", "Pyykkönen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "VAS"
+  )),
+  profile(mCouncil("c-pa-20", "paivi-soldatkin", "Päivi", "Soldatkin",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "VAS"
+  )),
+  // KD (1)
+  profile(mCouncil("c-pa-21", "kaisu-karppinen", "Kaisu", "Karppinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KD"
   )),
 
   // ─── Puolanka kunnanvaltuusto (17 seats — COMPLETE) ───
