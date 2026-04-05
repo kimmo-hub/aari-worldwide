@@ -1748,6 +1748,22 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
   )),
+  profile(mCouncil("c-ri-12", "hannu-halinen", "Hannu", "Hälinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-13", "ulla-maija-oikarinen", "Ulla-Maija", "Oikarinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "VIHR"
+  )),
+  profile(mCouncil("c-ri-14", "mikko-suutari-ri", "Mikko", "Suutari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "PS"
+  )),
+  profile(mCouncil("c-ri-15", "anssi-sotala", "Anssi", "Sotala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "PS"
+  )),
 ];
 
 // ─── Municipal contact info ───
