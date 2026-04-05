@@ -1003,6 +1003,51 @@ export const municipalProfiles: OfficialProfile[] = [
     "heimo.keranen@hyrynsalmi.fi", "044 7104 400"
   )),
 
+  profile(mOfficial("m-261", "veli-pekka-makelainen", "Veli-Pekka", "Mäkeläinen",
+    "Sivistyspalvelujen päällikkö / Rehtori", "Head of Education Services / Principal",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi",
+    "2005-01-01",
+    "Veli-Pekka Mäkeläinen toimii Hyrynsalmen sivistyspalvelujen päällikkönä ja yhtenäiskoulun rehtorina. Yli 20 vuoden kokemus.",
+    "Veli-Pekka Mäkeläinen serves as Head of Education Services and principal of Hyrynsalmi comprehensive school. Over 20 years of experience.",
+    "veli-pekka.makelainen@hyrynsalmi.fi", "044 7104 410"
+  )),
+
+  profile(mOfficial("m-262", "jouni-romppainen", "Jouni", "Romppainen",
+    "Kunnanrakennusmestari", "Municipal Building Master",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi",
+    "2015-01-01",
+    "Jouni Romppainen toimii Hyrynsalmen kunnanrakennusmestarina. Vastaa teknisistä palveluista, kiinteistönhoidosta ja infrastruktuurista.",
+    "Jouni Romppainen serves as Municipal Building Master of Hyrynsalmi. Responsible for technical services, property maintenance, and infrastructure.",
+    "jouni.romppainen@hyrynsalmi.fi", "044 710 4421"
+  )),
+
+  profile(mOfficial("m-263", "paivi-hyttinen", "Päivi", "Hyttinen",
+    "Varhaiskasvatuspäällikkö / Päiväkodinjohtaja", "Head of Early Childhood Education / Daycare Director",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi",
+    "2018-01-01",
+    "Päivi Hyttinen toimii Hyrynsalmen varhaiskasvatuspäällikkönä ja päiväkodinjohtajana.",
+    "Päivi Hyttinen serves as Head of Early Childhood Education and Daycare Director in Hyrynsalmi.",
+    "paivi.hyttinen@hyrynsalmi.fi", "044 7104 468"
+  )),
+
+  profile(mOfficial("m-264", "jukka-korhonen", "Jukka", "Korhonen",
+    "Ympäristötarkastaja", "Environmental Inspector",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi",
+    "2019-01-01",
+    "Jukka Korhonen toimii ympäristötarkastajana Hyrynsalmen kunnassa (Suomussalmen kunnan yhteispalvelu).",
+    "Jukka Korhonen serves as Environmental Inspector for Hyrynsalmi (shared service from Suomussalmi municipality).",
+    "jukka.korhonen@suomussalmi.fi", "044 038 4341"
+  )),
+
+  profile(mOfficial("m-265", "merja-toivanen", "Merja", "Toivanen",
+    "Toimistosihteeri (hallinto)", "Administrative Secretary",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi",
+    "2010-01-01",
+    "Merja Toivanen toimii Hyrynsalmen kunnan toimistosihteerinä hallinnossa.",
+    "Merja Toivanen serves as Administrative Secretary in Hyrynsalmi municipality.",
+    "merja.toivanen@hyrynsalmi.fi", "044 710 4500"
+  )),
+
   // ─── Ristijärvi ───
 
   profile(mOfficial("m-270", "petteri-seppanen", "Petteri", "Seppänen",
