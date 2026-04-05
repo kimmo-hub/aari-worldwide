@@ -1227,6 +1227,22 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "KD"
   )),
+  profile(mCouncil("c-k-19", "mikko-polvinen", "Mikko", "Polvinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-20", "sami-sainio", "Sami", "Sainio",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  profile(mCouncil("c-k-21", "miariikka-tervonen", "Miariikka", "Tervonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-22", "heikki-hekkala", "Heikki", "Hekkala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
 
   // ─── Sotkamo kunnanvaltuusto (27 seats, partial — leadership + top vote-getters) ───
 
@@ -1280,6 +1296,10 @@ export const municipalProfiles: OfficialProfile[] = [
   profile(mCouncil("c-ku-kj", "juhana-juntunen-v", "Juhana", "Juntunen",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-4", "riikka-seppanen-ku", "Riikka", "Seppänen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "SDP"
   )),
 
   // ─── Suomussalmi kunnanvaltuusto (27 seats — COMPLETE) ───
@@ -1410,6 +1430,10 @@ export const municipalProfiles: OfficialProfile[] = [
   profile(mCouncil("c-pa-kj", "pasi-ahoniemi-v", "Pasi", "Ahoniemi",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-4", "jyri-saastamoinen", "Jyri", "Saastamoinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Paltamon kunta", "Municipality of Paltamo", "KOK"
   )),
 
   // ─── Puolanka kunnanvaltuusto (17 seats — COMPLETE) ───
