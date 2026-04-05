@@ -1215,6 +1215,18 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "VIHR"
   )),
+  profile(mCouncil("c-k-16", "eila-aavakare", "Eila", "Aavakare",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-17", "pirra-keranen", "Pirra", "Keränen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  profile(mCouncil("c-k-18", "antti-schroderus", "Antti", "Schroderus",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KD"
+  )),
 
   // ─── Sotkamo kunnanvaltuusto (27 seats, partial — leadership + top vote-getters) ───
 
@@ -1516,6 +1528,46 @@ export const municipalProfiles: OfficialProfile[] = [
   profile(mCouncil("c-h-kj", "heimo-keranen-v", "Heimo", "Keränen",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-11", "esa-kemppainen-h", "Esa", "Kemppainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-12", "tapani-kemppainen", "Tapani", "Kemppainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-13", "pauli-keranen", "Pauli", "Keränen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-14", "taisto-keranen", "Taisto", "Keränen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-15", "tuula-kivijarvi", "Tuula", "Kivijärvi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-16", "juha-kortelainen", "Juha", "Kortelainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "VAS"
+  )),
+  profile(mCouncil("c-h-17", "herkko-kurkinen", "Herkko", "Kurkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-18", "outi-kuvaja-h", "Outi", "Kuvaja",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "SDP"
+  )),
+  profile(mCouncil("c-h-19", "kati-nykanen", "Kati", "Nykänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-20", "jussi-tolonen", "Jussi", "Tolonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "SDP"
   )),
 
   // ─── Ristijärvi kunnanvaltuusto (13 seats, partial) ───
