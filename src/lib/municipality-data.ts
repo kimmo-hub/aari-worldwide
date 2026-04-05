@@ -1414,7 +1414,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kuhmon kaupunki", "City of Kuhmo", "SDP"
   )),
   profile(mCouncil("c-ku-5", "heikki-huotari", "Heikki", "Huotari",
-    "Kaupunginvaltuutettu", "City Councillor",
+    "Kaupunginvaltuutettu, kaupunginhallituksen puheenjohtaja", "City Councillor, Chair of City Board",
     "Kuhmon kaupunki", "City of Kuhmo", "KESK"
   )),
   profile(mCouncil("c-ku-6", "marjo-riikka-makalainen", "Marjo-Riikka", "Mäkäläinen",
@@ -1422,6 +1422,46 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kuhmon kaupunki", "City of Kuhmo", "SDP"
   )),
   profile(mCouncil("c-ku-7", "kaisa-oinas-panuma", "Kaisa", "Oinas-Panuma",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-8", "antti-komulainen", "Antti", "Komulainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "PS"
+  )),
+  profile(mCouncil("c-ku-9", "timo-klemetti", "Timo", "Klemetti",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "PS"
+  )),
+  profile(mCouncil("c-ku-10", "timo-piirainen", "Timo", "Piirainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "PS"
+  )),
+  profile(mCouncil("c-ku-11", "ilmo-komulainen", "Ilmo", "Komulainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "PS"
+  )),
+  profile(mCouncil("c-ku-12", "unto-kyllonen-ku", "Unto", "Kyllönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "PS"
+  )),
+  profile(mCouncil("c-ku-13", "pentti-sorjonen", "Pentti", "Sorjonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "PS"
+  )),
+  profile(mCouncil("c-ku-14", "janne-lehtonen", "Janne", "Lehtonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "PS"
+  )),
+  profile(mCouncil("c-ku-15", "esko-ripaoja", "Esko", "Ripaoja",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KOK"
+  )),
+  profile(mCouncil("c-ku-16", "kati-sarvela", "Kati", "Sarvela",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "VIHR"
+  )),
+  profile(mCouncil("c-ku-17", "virpi-pikkarainen", "Virpi", "Pikkarainen",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kuhmon kaupunki", "City of Kuhmo", "KESK"
   )),
