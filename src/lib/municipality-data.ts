@@ -1259,6 +1259,46 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "VAS"
   )),
+  profile(mCouncil("c-k-27", "venla-osterberg", "Venla", "Österberg",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-28", "antero-kyllonen", "Antero", "Kyllönen",
+    "Kaupunginvaltuutettu, ympäristöteknisen lautakunnan puheenjohtaja", "City Councillor, Chair of Environmental Committee",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  profile(mCouncil("c-k-29", "toivo-kyllonen", "Toivo", "Kyllönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-30", "jere-vekkeli", "Jere", "Vekkeli",
+    "Kaupunginvaltuutettu, vaalilautakunnan puheenjohtaja", "City Councillor, Chair of Election Board",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-31", "juha-urpilainen", "Juha", "Urpilainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  profile(mCouncil("c-k-32", "aila-tartia-jalonen", "Aila", "Tartia-Jalonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  profile(mCouncil("c-k-33", "anssi-manninen", "Anssi", "Manninen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-34", "mikko-alakarppa", "Mikko", "Alakärppä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VIHR"
+  )),
+  profile(mCouncil("c-k-35", "mika-heikkinen-k", "Mika", "Heikkinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-36", "toni-keranen", "Toni", "Keränen",
+    "Kaupunginvaltuutettu, keskusvaalilautakunnan puheenjohtaja", "City Councillor, Chair of Central Election Board",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
 
   // ─── Sotkamo kunnanvaltuusto (27 seats, partial — leadership + top vote-getters) ───
 
