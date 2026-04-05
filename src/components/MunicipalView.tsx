@@ -17,8 +17,6 @@ function localized(obj: Record<string, unknown>, field: string, locale: Locale):
   return (obj[`${field}_${locale}`] as string) ?? (obj[`${field}_en`] as string) ?? "";
 }
 
-// Extract municipality name from org like "Paraisten kaupunki" -> "Parainen"
-// This is approximate — we match against the MUNICIPALITIES list instead
 function getMuniName(official: Official, municipalities: string[]): string | null {
   for (const m of municipalities) {
     if (official.organization_fi.includes(m) || official.organization_en.includes(m)) return m;
@@ -38,51 +36,148 @@ export default function MunicipalView({
   const [view, setView] = useState<"list" | "map">("list");
   const [query, setQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [selectedMuni, setSelectedMuni] = useState<string | null>(null);
 
-  // All municipality names flat list
   const allMuniNames = regions.flatMap(r => r.municipalities.map(m => m.fi));
 
-  // Count officials per municipality
-  const officialCounts: Record<string, number> = {};
+  // Index officials by municipality
+  const officialsByMuni: Record<string, Official[]> = {};
   for (const o of officials) {
     const muni = getMuniName(o, allMuniNames);
-    if (muni) officialCounts[muni] = (officialCounts[muni] || 0) + 1;
+    if (muni) {
+      if (!officialsByMuni[muni]) officialsByMuni[muni] = [];
+      officialsByMuni[muni].push(o);
+    }
   }
 
-  // Filter
-  const searchFiltered = query
-    ? officials.filter((o) => {
-        const q = query.toLowerCase();
-        return (
-          o.first_name.toLowerCase().includes(q) ||
-          o.last_name.toLowerCase().includes(q) ||
-          `${o.first_name} ${o.last_name}`.toLowerCase().includes(q) ||
-          o.organization_fi.toLowerCase().includes(q) ||
-          o.organization_en.toLowerCase().includes(q) ||
-          o.title_fi.toLowerCase().includes(q) ||
-          o.title_en.toLowerCase().includes(q)
-        );
-      })
-    : officials;
+  // Counts for map
+  const officialCounts: Record<string, number> = {};
+  for (const [muni, offs] of Object.entries(officialsByMuni)) {
+    officialCounts[muni] = offs.length;
+  }
 
-  // If a region is selected from map, filter to that region's municipalities
-  const regionMunis = selectedRegion
-    ? new Set(regions.find(r => r.region_fi === selectedRegion)?.municipalities.map(m => m.fi) || [])
-    : null;
+  // Filter regions/municipalities by search
+  const q = query.toLowerCase();
+  function muniMatchesQuery(mName: string): boolean {
+    if (!query) return true;
+    if (mName.toLowerCase().includes(q)) return true;
+    const offs = officialsByMuni[mName] || [];
+    return offs.some(o =>
+      o.first_name.toLowerCase().includes(q) ||
+      o.last_name.toLowerCase().includes(q) ||
+      `${o.first_name} ${o.last_name}`.toLowerCase().includes(q) ||
+      o.title_fi.toLowerCase().includes(q) ||
+      o.title_en.toLowerCase().includes(q)
+    );
+  }
 
-  const filtered = regionMunis
-    ? searchFiltered.filter(o => {
-        const muni = getMuniName(o, allMuniNames);
-        return muni && regionMunis.has(muni);
-      })
-    : searchFiltered;
+  const regionName = (r: RegionData) => locale === "fi" ? r.region_fi : r.region_en;
+  const muniName = (m: { fi: string; en: string }) => locale === "fi" ? m.fi : m.en;
 
-  // Sort alphabetically by last name
-  const sorted = [...filtered].sort((a, b) => a.last_name.localeCompare(b.last_name, "fi"));
+  // ─── LEVEL 3: Person list for a municipality ───
+  function PersonList({ muni }: { muni: string }) {
+    const offs = (officialsByMuni[muni] || []).sort((a, b) => a.last_name.localeCompare(b.last_name, "fi"));
+    if (offs.length === 0) {
+      return (
+        <p className="px-4 py-3 text-[11px] text-muted italic">
+          {locale === "fi" ? "Ei vielä tietoja" : "No data yet"}
+        </p>
+      );
+    }
+    return (
+      <div className="divide-y divide-border/30">
+        {offs.map(official => (
+          <Link
+            key={official.id}
+            href={`/officials/${official.slug}`}
+            className="flex items-center gap-2 px-4 py-1.5 hover:bg-civic-50 transition-colors"
+          >
+            <div className="min-w-0 flex-1">
+              <span className="text-[11px] font-medium text-civic-900">
+                {official.last_name}, {official.first_name}
+              </span>
+              <span className="text-[10px] text-muted ml-1.5">
+                — {localized(official as unknown as Record<string, unknown>, "title", locale)}
+              </span>
+            </div>
+            <div className="flex items-center gap-1 shrink-0">
+              {official.email && (
+                <span className="text-civic-400" title={official.email}>
+                  <svg className="h-2.5 w-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </span>
+              )}
+              {official.phone && (
+                <span className="text-civic-400" title={official.phone}>
+                  <svg className="h-2.5 w-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+              )}
+            </div>
+          </Link>
+        ))}
+      </div>
+    );
+  }
+
+  // ─── LEVEL 2: Municipality list for a region ───
+  function MuniList({ region }: { region: RegionData }) {
+    const munis = [...region.municipalities]
+      .filter(m => muniMatchesQuery(m.fi))
+      .sort((a, b) => a.fi.localeCompare(b.fi, "fi"));
+
+    if (munis.length === 0) return null;
+
+    return (
+      <div className="divide-y divide-border/30">
+        {munis.map(m => {
+          const count = officialsByMuni[m.fi]?.length || 0;
+          const isOpen = selectedMuni === m.fi;
+          return (
+            <div key={m.fi}>
+              <button
+                onClick={() => setSelectedMuni(isOpen ? null : m.fi)}
+                className="flex w-full items-center justify-between px-4 py-2 text-left hover:bg-civic-50/50 transition-colors"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-medium text-civic-800">{muniName(m)}</span>
+                  {count > 0 && (
+                    <span className="text-[10px] text-civic-500 bg-civic-50 rounded-full px-1.5 py-0.5">{count}</span>
+                  )}
+                  {count === 0 && (
+                    <span className="text-[10px] text-muted/40">—</span>
+                  )}
+                </div>
+                <svg
+                  className={`h-3 w-3 text-muted transition-transform ${isOpen ? "rotate-180" : ""}`}
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isOpen && (
+                <div className="bg-civic-50/30 border-t border-border/20">
+                  <PersonList muni={m.fi} />
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
+  // ─── Filtered regions ───
+  const filteredRegions = regions.filter(r => {
+    if (selectedRegion && r.region_fi !== selectedRegion) return false;
+    return r.municipalities.some(m => muniMatchesQuery(m.fi));
+  });
 
   return (
     <>
-      {/* Controls row */}
+      {/* Controls */}
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <div className="relative flex-1">
           <svg className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,29 +186,22 @@ export default function MunicipalView({
           <input
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => { setQuery(e.target.value); setSelectedMuni(null); }}
             placeholder={t("searchPlaceholder")}
             className="w-full rounded-xl border border-border bg-white py-2.5 pl-10 pr-4 text-sm text-foreground placeholder:text-muted/60 focus:border-civic-400 focus:outline-none focus:ring-2 focus:ring-civic-100"
           />
         </div>
-        {/* View toggle */}
         <div className="flex rounded-lg border border-border overflow-hidden shrink-0">
           <button
             onClick={() => setView("list")}
             className={`px-3 py-2 text-xs font-medium transition-colors ${view === "list" ? "bg-civic-800 text-white" : "bg-white text-muted hover:bg-civic-50"}`}
           >
-            <svg className="h-4 w-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-            </svg>
             {locale === "fi" ? "Lista" : "List"}
           </button>
           <button
             onClick={() => setView("map")}
             className={`px-3 py-2 text-xs font-medium transition-colors ${view === "map" ? "bg-civic-800 text-white" : "bg-white text-muted hover:bg-civic-50"}`}
           >
-            <svg className="h-4 w-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-            </svg>
             {locale === "fi" ? "Kartta" : "Map"}
           </button>
         </div>
@@ -122,9 +210,8 @@ export default function MunicipalView({
       {/* Region filter chip */}
       {selectedRegion && (
         <div className="mb-4 flex items-center gap-2">
-          <span className="text-xs text-muted">{locale === "fi" ? "Maakunta" : "Region"}:</span>
           <button
-            onClick={() => setSelectedRegion(null)}
+            onClick={() => { setSelectedRegion(null); setSelectedMuni(null); }}
             className="inline-flex items-center gap-1 rounded-full bg-civic-100 px-3 py-1 text-xs font-medium text-civic-800 hover:bg-civic-200 transition-colors"
           >
             {locale === "fi"
@@ -137,11 +224,11 @@ export default function MunicipalView({
         </div>
       )}
 
-      {/* Count */}
+      {/* Stats */}
       <p className="mb-3 text-[10px] text-muted/60 uppercase tracking-wider">
-        {sorted.length} / {officials.length} {locale === "fi" ? "viranhaltijaa" : "officials"}
-        {" — "}
-        {Object.keys(officialCounts).length} / {allMuniNames.length} {locale === "fi" ? "kuntaa" : "municipalities"}
+        {Object.keys(officialCounts).length}/{allMuniNames.length} {locale === "fi" ? "kuntaa tiedoilla" : "municipalities with data"}
+        {" · "}
+        {officials.length} {locale === "fi" ? "viranhaltijaa" : "officials"}
       </p>
 
       {view === "map" ? (
@@ -149,73 +236,90 @@ export default function MunicipalView({
           <FinlandMap
             regions={regions}
             officialCounts={officialCounts}
-            onRegionClick={(region) => setSelectedRegion(region === selectedRegion ? null : region)}
+            onRegionClick={(region) => {
+              setSelectedRegion(region === selectedRegion ? null : region);
+              setSelectedMuni(null);
+            }}
           />
-          {/* Side list for selected region or all */}
-          <div className="space-y-px max-h-[600px] overflow-y-auto rounded-xl border border-border bg-white">
-            {sorted.length > 0 ? sorted.map((official) => (
-              <Link
-                key={official.id}
-                href={`/officials/${official.slug}`}
-                className="flex items-center gap-2 px-3 py-1.5 hover:bg-civic-50 transition-colors border-b border-border/50 last:border-0"
-              >
-                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-civic-100 text-[9px] font-bold text-civic-700">
-                  {official.first_name[0]}{official.last_name[0]}
+          {/* Drill-down list next to map */}
+          <div className="max-h-[600px] overflow-y-auto rounded-xl border border-border bg-white">
+            {filteredRegions.map(region => (
+              <div key={region.region_fi}>
+                <div className="sticky top-0 bg-civic-800 px-4 py-1.5 z-10">
+                  <span className="text-[11px] font-semibold text-white">{regionName(region)}</span>
+                  <span className="text-[10px] text-civic-300 ml-2">{region.municipalities.length}</span>
                 </div>
-                <div className="min-w-0 flex-1">
-                  <span className="text-xs font-medium text-civic-900">{official.first_name} {official.last_name}</span>
-                  <span className="text-[10px] text-muted ml-1.5">{localized(official as unknown as Record<string, unknown>, "title", locale)}</span>
-                </div>
-              </Link>
-            )) : (
-              <p className="text-center text-xs text-muted py-8">{t("noResults")}</p>
-            )}
+                <MuniList region={region} />
+              </div>
+            ))}
           </div>
         </div>
       ) : (
-        /* Compact alphabetical list view */
-        <div className="rounded-xl border border-border bg-white overflow-hidden">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0">
-            {sorted.length > 0 ? sorted.map((official) => (
-              <div key={official.id} className="border-b border-border/30 last:border-0 sm:border-b sm:border-r sm:border-border/30">
-                <Link
-                  href={`/officials/${official.slug}`}
-                  className="flex items-center gap-2 px-3 py-1.5 hover:bg-civic-50 transition-colors"
-                >
-                  <div className="min-w-0 flex-1">
-                    <p className="text-xs font-medium text-civic-900 truncate">
-                      {official.last_name}, {official.first_name}
-                    </p>
-                    <p className="text-[10px] text-muted truncate">
-                      {localized(official as unknown as Record<string, unknown>, "title", locale)}
-                      {" — "}
-                      {localized(official as unknown as Record<string, unknown>, "organization", locale)}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    {official.email && (
-                      <span className="text-civic-400" title={official.email}>
-                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                      </span>
-                    )}
-                    {official.phone && (
-                      <span className="text-civic-400" title={official.phone}>
-                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                      </span>
-                    )}
-                  </div>
-                </Link>
-              </div>
-            )) : (
-              <p className="col-span-full text-center text-xs text-muted py-8">{t("noResults")}</p>
-            )}
-          </div>
+        /* ─── LEVEL 1: Region accordion list view ─── */
+        <div className="space-y-2">
+          {filteredRegions.map(region => (
+            <RegionAccordion key={region.region_fi} region={region} locale={locale} officialsByMuni={officialsByMuni}>
+              <MuniList region={region} />
+            </RegionAccordion>
+          ))}
+          {filteredRegions.length === 0 && (
+            <p className="text-center text-xs text-muted py-12">{t("noResults")}</p>
+          )}
         </div>
       )}
     </>
+  );
+}
+
+// ─── Region accordion (level 1) ───
+
+function RegionAccordion({
+  region,
+  locale,
+  officialsByMuni,
+  children,
+}: {
+  region: { region_fi: string; region_en: string; municipalities: { fi: string; en: string }[] };
+  locale: Locale;
+  officialsByMuni: Record<string, Official[]>;
+  children: React.ReactNode;
+}) {
+  const [open, setOpen] = useState(false);
+  const name = locale === "fi" ? region.region_fi : region.region_en;
+  const muniCount = region.municipalities.length;
+  const withData = region.municipalities.filter(m => (officialsByMuni[m.fi]?.length || 0) > 0).length;
+  const totalOfficials = region.municipalities.reduce((sum, m) => sum + (officialsByMuni[m.fi]?.length || 0), 0);
+
+  return (
+    <div className="rounded-xl border border-border bg-white overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between px-5 py-3 text-left hover:bg-civic-50 transition-colors"
+      >
+        <div>
+          <h2 className="text-sm font-semibold text-civic-800">{name}</h2>
+          <p className="text-[10px] text-muted">
+            {muniCount} {locale === "fi" ? "kuntaa" : "municipalities"}
+            {withData > 0 && (
+              <span className="text-civic-600"> · {totalOfficials} {locale === "fi" ? "viranhaltijaa" : "officials"}</span>
+            )}
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-[10px] text-muted">{withData}/{muniCount}</span>
+          <svg
+            className={`h-4 w-4 text-civic-500 transition-transform ${open ? "rotate-180" : ""}`}
+            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+      {open && (
+        <div className="border-t border-border">
+          {children}
+        </div>
+      )}
+    </div>
   );
 }
