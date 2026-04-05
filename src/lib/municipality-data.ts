@@ -1319,11 +1319,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
   )),
   profile(mCouncil("c-s-5", "jouko-korhonen", "Jouko", "Korhonen",
-    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kunnanvaltuuston 3. varapuheenjohtaja", "Municipal Council 3rd Vice Chair",
     "Sotkamon kunta", "Municipality of Sotkamo", "VAS"
   )),
   profile(mCouncil("c-s-6", "juho-lukkari", "Juho", "Lukkari",
-    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kunnanvaltuutettu, kunnanhallituksen puheenjohtaja", "Municipal Councillor, Chair of Municipal Board",
     "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
   )),
   profile(mCouncil("c-s-7", "riikka-huotari", "Riikka", "Huotari",
@@ -1339,6 +1339,54 @@ export const municipalProfiles: OfficialProfile[] = [
     "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
   )),
   profile(mCouncil("c-s-9", "nina-repo", "Nina", "Repo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KOK"
+  )),
+  profile(mCouncil("c-s-10", "unto-vaisanen", "Unto", "Väisänen",
+    "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KOK"
+  )),
+  profile(mCouncil("c-s-11", "timo-v-korhonen", "Timo V.", "Korhonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-12", "jani-komulainen", "Jani", "Komulainen",
+    "Kunnanvaltuutettu, KESK-valtuustoryhmän puheenjohtaja", "Municipal Councillor, KESK Group Chair",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-13", "piia-maatta", "Piia", "Määttä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-14", "sami-mahonen", "Sami", "Mähönen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KOK"
+  )),
+  profile(mCouncil("c-s-15", "juha-matti-halonen", "Juha-Matti", "Halonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "VAS"
+  )),
+  profile(mCouncil("c-s-16", "jarmo-huttunen", "Jarmo", "Huttunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KD"
+  )),
+  profile(mCouncil("c-s-17", "jouko-lipponen", "Jouko", "Lipponen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "PS"
+  )),
+  profile(mCouncil("c-s-18", "jari-turunen", "Jari", "Turunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "SDP"
+  )),
+  profile(mCouncil("c-s-19", "janne-raisanen-so", "Janne", "Räisänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "PS"
+  )),
+  profile(mCouncil("c-s-20", "markku-hyvarinen", "Markku", "Hyvärinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "VAS"
+  )),
+  profile(mCouncil("c-s-21", "pirjo-lahde", "Pirjo", "Lähde",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Sotkamon kunta", "Municipality of Sotkamo", "KOK"
   )),
