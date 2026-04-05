@@ -1243,6 +1243,22 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "SDP"
   )),
+  profile(mCouncil("c-k-23", "hannu-suutari", "Hannu", "Suutari",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-24", "kimmo-kumpulainen", "Kimmo", "Kumpulainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VIHR"
+  )),
+  profile(mCouncil("c-k-25", "harri-savonen", "Harri", "Savonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-26", "noora-kyllonen", "Noora", "Kyllönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
 
   // ─── Sotkamo kunnanvaltuusto (27 seats, partial — leadership + top vote-getters) ───
 
@@ -1308,6 +1324,18 @@ export const municipalProfiles: OfficialProfile[] = [
   profile(mCouncil("c-ku-4", "riikka-seppanen-ku", "Riikka", "Seppänen",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kuhmon kaupunki", "City of Kuhmo", "SDP"
+  )),
+  profile(mCouncil("c-ku-5", "heikki-huotari", "Heikki", "Huotari",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-6", "marjo-riikka-makalainen", "Marjo-Riikka", "Mäkäläinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "SDP"
+  )),
+  profile(mCouncil("c-ku-7", "kaisa-oinas-panuma", "Kaisa", "Oinas-Panuma",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
   )),
 
   // ─── Suomussalmi kunnanvaltuusto (27 seats — COMPLETE) ───
@@ -1674,9 +1702,49 @@ export const municipalProfiles: OfficialProfile[] = [
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "SDP"
   )),
 
-  // ─── Ristijärvi kunnanvaltuusto (13 seats, partial) ───
+  // ─── Ristijärvi kunnanvaltuusto (15 seats, partial — KESK 8, KOK gained via Tolonen switch) ───
 
-  profile(mCouncil("c-ri-1", "paavo-oikarinen", "Paavo", "Oikarinen",
+  profile(mCouncil("c-ri-1", "arto-j-tolonen", "Arto J.", "Tolonen",
+    "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KOK"
+  )),
+  profile(mCouncil("c-ri-2", "paavo-oikarinen", "Paavo", "Oikarinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-3", "salla-heikkinen-ri", "Salla", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-4", "arto-klemetti", "Arto", "Klemetti",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-5", "juha-kanervo", "Juha", "Kanervo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-6", "matja-hayrynen", "Matja", "Häyrynen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "VAS"
+  )),
+  profile(mCouncil("c-ri-7", "leila-karppinen-ri", "Leila", "Karppinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-8", "mari-korhonen-ri", "Mari", "Korhonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-9", "hannu-liljeblad", "Hannu", "Liljeblad",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "SIT"
+  )),
+  profile(mCouncil("c-ri-10", "helka-tolonen", "Helka", "Tolonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
+  profile(mCouncil("c-ri-11", "olavi-oikarinen", "Olavi", "Oikarinen",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
   )),
