@@ -74,8 +74,30 @@ export default function MunicipalView({
   const regionName = (r: RegionData) => locale === "fi" ? r.region_fi : r.region_en;
   const muniName = (m: { fi: string; en: string }) => locale === "fi" ? m.fi : m.en;
 
+  // ─── Double-role detection ───
+  // Build a set of "firstName|lastName|municipality" keys for each role type
+  const doubleRoleKeys = new Set<string>();
+  for (const [muni, offs] of Object.entries(officialsByMuni)) {
+    const staffNames = new Set(
+      offs.filter(o => o.role_type !== "council").map(o => `${o.first_name}|${o.last_name}`)
+    );
+    for (const o of offs) {
+      if (o.role_type === "council" && staffNames.has(`${o.first_name}|${o.last_name}`)) {
+        doubleRoleKeys.add(`${o.first_name}|${o.last_name}|${muni}`);
+      }
+    }
+  }
+
+  function isDoubleRole(official: Official, muni: string): boolean {
+    return doubleRoleKeys.has(`${official.first_name}|${official.last_name}|${muni}`);
+  }
+
+  // Count double roles for stats
+  const doubleRoleCount = doubleRoleKeys.size;
+
   // ─── Person row ───
-  function PersonRow({ official }: { official: Official }) {
+  function PersonRow({ official, muni }: { official: Official; muni: string }) {
+    const hasDoubleRole = isDoubleRole(official, muni);
     return (
       <Link
         href={`/officials/${official.slug}`}
@@ -90,6 +112,19 @@ export default function MunicipalView({
           </span>
           {official.party && (
             <span className="text-[9px] text-civic-500 ml-1">({official.party})</span>
+          )}
+          {hasDoubleRole && (
+            <span
+              className="inline-flex items-center gap-0.5 ml-1.5 px-1.5 py-0.5 rounded-full bg-red-50 border border-red-200 text-[8px] font-semibold text-red-700"
+              title={locale === "fi"
+                ? "Kaksoisrooli: sekä viranhaltija että valtuutettu"
+                : "Double role: both official and council member"}
+            >
+              <svg className="h-2 w-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+              {locale === "fi" ? "Kaksoisrooli" : "Double role"}
+            </span>
           )}
         </div>
         <div className="flex items-center gap-1 shrink-0">
@@ -118,6 +153,9 @@ export default function MunicipalView({
     const staff = all.filter(o => o.role_type !== "council");
     const council = all.filter(o => o.role_type === "council");
 
+    const muniDoubleRoles = all.filter(o => isDoubleRole(o, muni));
+    const uniqueDoubleRoleNames = new Set(muniDoubleRoles.map(o => `${o.first_name} ${o.last_name}`));
+
     if (all.length === 0) {
       return (
         <p className="px-4 py-3 text-[11px] text-muted italic">
@@ -127,6 +165,20 @@ export default function MunicipalView({
     }
     return (
       <div>
+        {uniqueDoubleRoleNames.size > 0 && (
+          <div className="px-4 py-2 bg-red-50/60 border-b border-red-200/40">
+            <div className="flex items-center gap-1.5">
+              <svg className="h-3 w-3 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+              <span className="text-[9px] text-red-700">
+                {locale === "fi"
+                  ? `Kaksoisrooli havaittu: ${[...uniqueDoubleRoleNames].join(", ")} — sekä viranhaltija että valtuutettu`
+                  : `Double role detected: ${[...uniqueDoubleRoleNames].join(", ")} — both official and council member`}
+              </span>
+            </div>
+          </div>
+        )}
         {staff.length > 0 && (
           <div>
             <div className="px-4 py-1 bg-civic-50/50 border-b border-border/20">
@@ -136,7 +188,7 @@ export default function MunicipalView({
               </span>
             </div>
             <div className="divide-y divide-border/30">
-              {staff.map(official => <PersonRow key={official.id} official={official} />)}
+              {staff.map(official => <PersonRow key={official.id} official={official} muni={muni} />)}
             </div>
           </div>
         )}
@@ -149,7 +201,7 @@ export default function MunicipalView({
               </span>
             </div>
             <div className="divide-y divide-border/30">
-              {council.map(official => <PersonRow key={official.id} official={official} />)}
+              {council.map(official => <PersonRow key={official.id} official={official} muni={muni} />)}
             </div>
           </div>
         )}
@@ -263,7 +315,12 @@ export default function MunicipalView({
       <p className="mb-3 text-[10px] text-muted/60 uppercase tracking-wider">
         {Object.keys(officialCounts).length}/{allMuniNames.length} {locale === "fi" ? "kuntaa tiedoilla" : "municipalities with data"}
         {" · "}
-        {officials.length} {locale === "fi" ? "viranhaltijaa" : "officials"}
+        {officials.length} {locale === "fi" ? "henkilöä" : "persons"}
+        {doubleRoleCount > 0 && (
+          <span className="text-red-500 font-semibold">
+            {" · "}{doubleRoleCount} {locale === "fi" ? "kaksoisroolia" : "double roles"}
+          </span>
+        )}
       </p>
 
       {view === "map" ? (

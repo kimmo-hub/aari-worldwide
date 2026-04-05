@@ -1174,12 +1174,24 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
     "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
   )),
+  profile(mCouncil("c-s-kj", "mika-kilpelainen-v", "Mika", "Kilpeläinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
 
   // ─── Kuhmo kaupunginvaltuusto (27 seats) ───
-  // (council member data to be added)
+
+  profile(mCouncil("c-ku-kj", "juhana-juntunen-v", "Juhana", "Juntunen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
 
   // ─── Suomussalmi kunnanvaltuusto (27 seats) ───
-  // (council member data to be added)
+
+  profile(mCouncil("c-su-kj", "erno-heikkinen-v", "Erno", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
 
   // ─── Paltamo kunnanvaltuusto (21 seats, leadership) ───
 
@@ -1193,6 +1205,10 @@ export const municipalProfiles: OfficialProfile[] = [
   )),
   profile(mCouncil("c-pa-3", "mari-mottonen", "Mari", "Möttönen",
     "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-kj", "pasi-ahoniemi-v", "Pasi", "Ahoniemi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
     "Paltamon kunta", "Municipality of Paltamo", "KESK"
   )),
 
@@ -1309,9 +1325,17 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
   )),
+  profile(mCouncil("c-h-kj", "heimo-keranen-v", "Heimo", "Keränen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
 
   // ─── Ristijärvi kunnanvaltuusto (15 seats) ───
-  // (council member data to be added)
+
+  profile(mCouncil("c-ri-kj", "petteri-seppanen-v", "Petteri", "Seppänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
+  )),
 ];
 
 // ─── Municipal contact info ───
