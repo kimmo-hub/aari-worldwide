@@ -74,10 +74,51 @@ export default function MunicipalView({
   const regionName = (r: RegionData) => locale === "fi" ? r.region_fi : r.region_en;
   const muniName = (m: { fi: string; en: string }) => locale === "fi" ? m.fi : m.en;
 
+  // ─── Person row ───
+  function PersonRow({ official }: { official: Official }) {
+    return (
+      <Link
+        href={`/officials/${official.slug}`}
+        className="flex items-center gap-2 px-4 py-1.5 hover:bg-civic-50 transition-colors"
+      >
+        <div className="min-w-0 flex-1">
+          <span className="text-[11px] font-medium text-civic-900">
+            {official.last_name}, {official.first_name}
+          </span>
+          <span className="text-[10px] text-muted ml-1.5">
+            — {localized(official as unknown as Record<string, unknown>, "title", locale)}
+          </span>
+          {official.party && (
+            <span className="text-[9px] text-civic-500 ml-1">({official.party})</span>
+          )}
+        </div>
+        <div className="flex items-center gap-1 shrink-0">
+          {official.email && (
+            <span className="text-civic-400" title={official.email}>
+              <svg className="h-2.5 w-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </span>
+          )}
+          {official.phone && (
+            <span className="text-civic-400" title={official.phone}>
+              <svg className="h-2.5 w-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </span>
+          )}
+        </div>
+      </Link>
+    );
+  }
+
   // ─── LEVEL 3: Person list for a municipality ───
   function PersonList({ muni }: { muni: string }) {
-    const offs = (officialsByMuni[muni] || []).sort((a, b) => a.last_name.localeCompare(b.last_name, "fi"));
-    if (offs.length === 0) {
+    const all = (officialsByMuni[muni] || []).sort((a, b) => a.last_name.localeCompare(b.last_name, "fi"));
+    const staff = all.filter(o => o.role_type !== "council");
+    const council = all.filter(o => o.role_type === "council");
+
+    if (all.length === 0) {
       return (
         <p className="px-4 py-3 text-[11px] text-muted italic">
           {locale === "fi" ? "Ei vielä tietoja" : "No data yet"}
@@ -85,39 +126,33 @@ export default function MunicipalView({
       );
     }
     return (
-      <div className="divide-y divide-border/30">
-        {offs.map(official => (
-          <Link
-            key={official.id}
-            href={`/officials/${official.slug}`}
-            className="flex items-center gap-2 px-4 py-1.5 hover:bg-civic-50 transition-colors"
-          >
-            <div className="min-w-0 flex-1">
-              <span className="text-[11px] font-medium text-civic-900">
-                {official.last_name}, {official.first_name}
-              </span>
-              <span className="text-[10px] text-muted ml-1.5">
-                — {localized(official as unknown as Record<string, unknown>, "title", locale)}
+      <div>
+        {staff.length > 0 && (
+          <div>
+            <div className="px-4 py-1 bg-civic-50/50 border-b border-border/20">
+              <span className="text-[9px] font-semibold text-civic-600 uppercase tracking-wider">
+                {locale === "fi" ? "Viranhaltijat" : "Officials"}
+                <span className="text-civic-400 ml-1 font-normal">{staff.length}</span>
               </span>
             </div>
-            <div className="flex items-center gap-1 shrink-0">
-              {official.email && (
-                <span className="text-civic-400" title={official.email}>
-                  <svg className="h-2.5 w-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </span>
-              )}
-              {official.phone && (
-                <span className="text-civic-400" title={official.phone}>
-                  <svg className="h-2.5 w-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </span>
-              )}
+            <div className="divide-y divide-border/30">
+              {staff.map(official => <PersonRow key={official.id} official={official} />)}
             </div>
-          </Link>
-        ))}
+          </div>
+        )}
+        {council.length > 0 && (
+          <div>
+            <div className="px-4 py-1 bg-amber-50/50 border-y border-border/20">
+              <span className="text-[9px] font-semibold text-amber-700 uppercase tracking-wider">
+                {locale === "fi" ? "Kunnanvaltuusto" : "Municipal council"}
+                <span className="text-amber-500 ml-1 font-normal">{council.length}</span>
+              </span>
+            </div>
+            <div className="divide-y divide-border/30">
+              {council.map(official => <PersonRow key={official.id} official={official} />)}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

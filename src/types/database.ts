@@ -1,6 +1,7 @@
 // Database types for Virkavastuu.fi
 
 export type OfficialCategory = "state" | "municipal";
+export type OfficialRoleType = "staff" | "council";
 
 export interface Official {
   id: string;
@@ -20,6 +21,8 @@ export interface Official {
   email: string | null;
   phone: string | null;
   category: OfficialCategory;
+  role_type: OfficialRoleType;
+  party?: string | null;
   created_at: string;
   updated_at: string;
 }

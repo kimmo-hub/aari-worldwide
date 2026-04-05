@@ -173,6 +173,7 @@ function official(
     email,
     phone,
     category: "state",
+    role_type: "staff",
     created_at: "2024-01-01T00:00:00Z",
     updated_at: "2026-04-01T00:00:00Z",
   };

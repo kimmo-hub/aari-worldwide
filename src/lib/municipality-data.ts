@@ -35,8 +35,46 @@ function mOfficial(
     email,
     phone,
     category: "municipal",
+    role_type: "staff",
     created_at: "2024-01-01T00:00:00Z",
     updated_at: "2026-04-01T00:00:00Z",
+  };
+}
+
+function mCouncil(
+  id: string,
+  slug: string,
+  firstName: string,
+  lastName: string,
+  titleFi: string,
+  titleEn: string,
+  orgFi: string,
+  orgEn: string,
+  party: string,
+  email: string | null = null,
+): Official {
+  return {
+    id,
+    slug,
+    first_name: firstName,
+    last_name: lastName,
+    title_fi: titleFi,
+    title_en: titleEn,
+    organization_fi: orgFi,
+    organization_en: orgEn,
+    photo_url: null,
+    appointment_date: "2025-06-01",
+    appointed_by_fi: "Kuntavaalit 2025",
+    appointed_by_en: "Municipal elections 2025",
+    bio_fi: "",
+    bio_en: "",
+    email,
+    phone: null,
+    category: "municipal",
+    role_type: "council",
+    party,
+    created_at: "2025-06-01T00:00:00Z",
+    updated_at: "2025-06-01T00:00:00Z",
   };
 }
 
@@ -1112,6 +1150,168 @@ export const municipalProfiles: OfficialProfile[] = [
     "Jenni Kuronen serves as Environmental Inspector for Ristijärvi (shared service from Suomussalmi municipality). Available on Mondays.",
     "jenni.kuronen@suomussalmi.fi", "040 688 4546"
   )),
+
+  // ═══ KAINUU — KUNNANVALTUUSTOT (Municipal Councils) 2025–2029 ═══
+
+  // ─── Kajaani kaupunginvaltuusto (51 seats, leadership) ───
+
+  profile(mCouncil("c-k-1", "peppiina-hakkarainen", "Peppiina", "Hakkarainen",
+    "Kaupunginvaltuuston puheenjohtaja", "City Council Chair",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  profile(mCouncil("c-k-2", "helena-ohtonen", "Helena", "Ohtonen",
+    "Kaupunginvaltuuston 1. varapuheenjohtaja", "City Council 1st Vice Chair",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  profile(mCouncil("c-k-3", "paavo-enroth", "Paavo", "Enroth",
+    "Kaupunginvaltuuston 2. varapuheenjohtaja", "City Council 2nd Vice Chair",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+
+  // ─── Sotkamo kunnanvaltuusto (27 seats, leadership) ───
+
+  profile(mCouncil("c-s-1", "anne-lukkari", "Anne", "Lukkari",
+    "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+
+  // ─── Kuhmo kaupunginvaltuusto (27 seats) ───
+  // (council member data to be added)
+
+  // ─── Suomussalmi kunnanvaltuusto (27 seats) ───
+  // (council member data to be added)
+
+  // ─── Paltamo kunnanvaltuusto (21 seats, leadership) ───
+
+  profile(mCouncil("c-pa-1", "aaro-tolonen-v", "Aaro", "Tolonen",
+    "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+  profile(mCouncil("c-pa-2", "juha-riipinen", "Juha", "Riipinen",
+    "Kunnanvaltuuston 1. varapuheenjohtaja", "Municipal Council 1st Vice Chair",
+    "Paltamon kunta", "Municipality of Paltamo", "VAS"
+  )),
+  profile(mCouncil("c-pa-3", "mari-mottonen", "Mari", "Möttönen",
+    "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
+    "Paltamon kunta", "Municipality of Paltamo", "KESK"
+  )),
+
+  // ─── Puolanka kunnanvaltuusto (17 seats — COMPLETE) ───
+
+  profile(mCouncil("c-pu-1", "mari-haapalainen", "Mari", "Haapalainen",
+    "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-2", "paavo-sutinen", "Paavo", "Sutinen",
+    "Kunnanvaltuuston 1. varapuheenjohtaja", "Municipal Council 1st Vice Chair",
+    "Puolangan kunta", "Municipality of Puolanka", "KOK"
+  )),
+  profile(mCouncil("c-pu-3", "eeva-vayrynen", "Eeva", "Väyrynen",
+    "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
+    "Puolangan kunta", "Municipality of Puolanka", "VAS"
+  )),
+  profile(mCouncil("c-pu-4", "juho-fingerroos", "Juho", "Fingerroos",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "YL1"
+  )),
+  profile(mCouncil("c-pu-5", "teemu-heikkinen-v", "Teemu", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-6", "arto-hilliaho", "Arto", "Hilliaho",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "YL1"
+  )),
+  profile(mCouncil("c-pu-7", "jaana-kemppainen-v", "Jaana", "Kemppainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "YL1"
+  )),
+  profile(mCouncil("c-pu-8", "teemu-kyllonen-v", "Teemu", "Kyllönen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-9", "arvo-mikkonen", "Arvo", "Mikkonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-10", "tauno-makelainen", "Tauno", "Mäkeläinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-11", "markku-nivakoski", "Markku", "Nivakoski",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-12", "harri-peltola-v", "Harri", "Peltola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-13", "seppo-rajala", "Seppo", "Rajala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-14", "juho-seppanen", "Juho", "Seppänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-15", "salla-seppanen", "Salla", "Seppänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "YL1"
+  )),
+  profile(mCouncil("c-pu-16", "alpo-siira", "Alpo", "Siira",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+  profile(mCouncil("c-pu-17", "laura-tolonen", "Laura", "Tolonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Puolangan kunta", "Municipality of Puolanka", "KESK"
+  )),
+
+  // ─── Hyrynsalmi kunnanvaltuusto (19 seats, partial) ───
+
+  profile(mCouncil("c-h-1", "johanna-sorri", "Johanna", "Sorri",
+    "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-2", "pertti-heikkinen", "Pertti", "Heikkinen",
+    "Kunnanvaltuuston 1. varapuheenjohtaja", "Municipal Council 1st Vice Chair",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-3", "markku-backman", "Markku", "Bäckman",
+    "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "SDP"
+  )),
+  profile(mCouncil("c-h-4", "juha-hankkila", "Juha", "Hankkila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "SDP"
+  )),
+  profile(mCouncil("c-h-5", "aira-heikkinen", "Aira", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-6", "jarkko-heikkinen", "Jarkko", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "VAS"
+  )),
+  profile(mCouncil("c-h-7", "tarmo-heikkinen", "Tarmo", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+  profile(mCouncil("c-h-8", "martti-huovinen", "Martti", "Huovinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "VAS"
+  )),
+  profile(mCouncil("c-h-9", "ari-juntunen", "Ari", "Juntunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "PS"
+  )),
+  profile(mCouncil("c-h-10", "kati-kaartinen", "Kati", "Kaartinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
+  )),
+
+  // ─── Ristijärvi kunnanvaltuusto (15 seats) ───
+  // (council member data to be added)
 ];
 
 // ─── Municipal contact info ───
