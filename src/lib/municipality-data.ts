@@ -1278,6 +1278,14 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
   )),
+  profile(mCouncil("c-s-8", "sakari-seppanen-so", "Sakari", "Seppänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-9", "nina-repo", "Nina", "Repo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KOK"
+  )),
 
   // ─── Kuhmo kaupunginvaltuusto (27 seats, leadership) ───
 
