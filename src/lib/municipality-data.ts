@@ -525,6 +525,107 @@ export const municipalProfiles: OfficialProfile[] = [
     "Eero Väätäinen on toiminut Nokian kaupunginjohtajana vuodesta 2020.",
     "Eero Väätäinen has served as City Manager of Nokia since 2020."
   )),
+
+  // ═══ PARAINEN / PARGAS — FULL MANAGEMENT TEAM (model municipality) ═══
+
+  profile(mOfficial("m-100", "hanna-maria-grandell", "Hanna-Maria", "Grandell",
+    "Vs. kaupunginjohtaja / Hallintojohtaja", "Acting City Manager / Administrative Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2024-01-01",
+    "Hanna-Maria Grandell toimii Paraisten vs. kaupunginjohtajana ja hallintojohtajana.",
+    "Hanna-Maria Grandell serves as Acting City Manager and Administrative Director of Parainen.",
+    "hanna-maria.grandell@parainen.fi", "+358 2 458 5700"
+  )),
+
+  profile(mOfficial("m-101", "petra-palmroos", "Petra", "Palmroos",
+    "Talousjohtaja", "Finance Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2020-01-01",
+    "Petra Palmroos toimii Paraisten kaupungin talousjohtajana.",
+    "Petra Palmroos serves as Finance Director of the City of Parainen.",
+    "petra.palmroos@parainen.fi", "+358 2 458 5700"
+  )),
+
+  profile(mOfficial("m-102", "matias-jensen", "Matias", "Jensén",
+    "Tekninen johtaja", "Technical Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2020-01-01",
+    "Matias Jensén toimii Paraisten kaupungin teknisenä johtajana. Vastaa infrastruktuurista ja teknisistä palveluista.",
+    "Matias Jensén serves as Technical Director of the City of Parainen. Responsible for infrastructure and technical services.",
+    "matias.jensen@parainen.fi", "+358 50 375 3593"
+  )),
+
+  profile(mOfficial("m-103", "ulrika-lundberg", "Ulrika", "Lundberg",
+    "Opetusjohtaja", "Education Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2018-01-01",
+    "Ulrika Lundberg toimii Paraisten kaupungin opetusjohtajana. Vastaa perusopetuksesta ja varhaiskasvatuksesta.",
+    "Ulrika Lundberg serves as Education Director of the City of Parainen. Responsible for basic education and early childhood education.",
+    "ulrika.lundberg@parainen.fi", "+358 50 596 2601"
+  )),
+
+  profile(mOfficial("m-104", "maria-leppakari", "Maria", "Leppäkari",
+    "Hyvinvointijohtaja", "Welfare Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2022-01-01",
+    "Maria Leppäkari toimii Paraisten kaupungin hyvinvointijohtajana.",
+    "Maria Leppäkari serves as Welfare Director of the City of Parainen.",
+    "maria.leppakari@parainen.fi", "+358 2 458 5700"
+  )),
+
+  profile(mOfficial("m-105", "niina-hemming", "Niina", "Hemming",
+    "Elinkeinojohtaja", "Business Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2020-01-01",
+    "Niina Hemming toimii Paraisten kaupungin elinkeinojohtajana. Vastaa elinkeinopolitiikasta ja yrityspalveluista.",
+    "Niina Hemming serves as Business Director of the City of Parainen. Responsible for business policy and enterprise services.",
+    "niina.hemming@parainen.fi", "+358 40 839 7170"
+  )),
+
+  profile(mOfficial("m-106", "linda-baarman", "Linda", "Baarman",
+    "Viestintä- ja markkinointijohtaja", "Communications and Marketing Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2022-01-01",
+    "Linda Baarman toimii Paraisten kaupungin viestintä- ja markkinointijohtajana.",
+    "Linda Baarman serves as Communications and Marketing Director of the City of Parainen.",
+    "linda.baarman@parainen.fi", "+358 2 458 5700"
+  )),
+
+  profile(mOfficial("m-107", "sanna-simonen", "Sanna", "Simonen",
+    "Johtava rakennustarkastaja", "Chief Building Inspector",
+    "Paraisten kaupunki", "City of Parainen",
+    "2019-01-01",
+    "Sanna Simonen toimii Paraisten johtavana rakennustarkastajana. Vastaa rakennusvalvonnasta ja rakennuslupapäätöksistä.",
+    "Sanna Simonen serves as Chief Building Inspector of the City of Parainen. Responsible for building supervision and building permit decisions.",
+    "sanna.simonen@parainen.fi", "+358 50 596 2642"
+  )),
+
+  profile(mOfficial("m-108", "kenneth-koskinen", "Kenneth", "Koskinen",
+    "Rakennustarkastaja", "Building Inspector",
+    "Paraisten kaupunki", "City of Parainen",
+    "2018-01-01",
+    "Kenneth Koskinen toimii Paraisten rakennustarkastajana. Vastuualueena Nauvo ja Paraisten asemakaavoitetut alueet.",
+    "Kenneth Koskinen serves as Building Inspector in Parainen. Responsible for Nauvo and Parainen's zoned areas.",
+    "kenneth.koskinen@parainen.fi", "+358 40 488 5700"
+  )),
+
+  profile(mOfficial("m-109", "heidi-saaristo-levin", "Heidi", "Saaristo-Levin",
+    "Kaavoituspäällikkö", "Planning Director",
+    "Paraisten kaupunki", "City of Parainen",
+    "2019-01-01",
+    "Heidi Saaristo-Levin toimii Paraisten kaavoituspäällikkönä. Vastaa maankäytön suunnittelusta ja kaavoituksesta.",
+    "Heidi Saaristo-Levin serves as Planning Director of the City of Parainen. Responsible for land use planning and zoning.",
+    "heidi.saaristo-levin@parainen.fi", "+358 40 488 5888"
+  )),
+
+  profile(mOfficial("m-110", "paavo-suominen", "Paavo", "Suominen",
+    "Ympäristönsuojelutarkastaja", "Environmental Protection Inspector",
+    "Paraisten kaupunki", "City of Parainen",
+    "2020-01-01",
+    "Paavo Suominen toimii Paraisten ympäristönsuojelutarkastajana. Vastaa ympäristöluvista ja ympäristövalvonnasta.",
+    "Paavo Suominen serves as Environmental Protection Inspector of the City of Parainen. Responsible for environmental permits and supervision.",
+    "paavo.suominen@parainen.fi", "+358 40 631 4882"
+  )),
 ];
 
 // ─── Municipal contact info ───
