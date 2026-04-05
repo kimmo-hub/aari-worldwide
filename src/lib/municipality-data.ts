@@ -1088,13 +1088,13 @@ export const municipalProfiles: OfficialProfile[] = [
 
   // ─── Ristijärvi ───
 
-  profile(mOfficial("m-270", "petteri-seppanen", "Petteri", "Seppänen",
+  profile(mOfficial("m-270", "katri-aula", "Katri", "Aula",
     "Kunnanjohtaja", "Municipal Manager",
     "Ristijärven kunta", "Municipality of Ristijärvi",
-    "2019-01-01",
-    "Petteri Seppänen toimii Ristijärven kunnanjohtajana.",
-    "Petteri Seppänen serves as Municipal Manager of Ristijärvi.",
-    "petteri.seppanen@ristijarvi.fi", "044 715 9300"
+    "2025-04-21",
+    "Katri Aula aloitti Ristijärven kunnanjohtajana huhtikuussa 2025. KTM, aiemmin liikkeenjohdon konsulttina.",
+    "Katri Aula started as Municipal Manager of Ristijärvi in April 2025. M.Sc. (Econ.), previously a management consultant.",
+    "katri.aula@ristijarvi.fi", "044 715 9300"
   )),
 
   profile(mOfficial("m-271", "maarit-ojavuo", "Maarit", "Ojavuo",
@@ -1153,59 +1153,247 @@ export const municipalProfiles: OfficialProfile[] = [
 
   // ═══ KAINUU — KUNNANVALTUUSTOT (Municipal Councils) 2025–2029 ═══
 
-  // ─── Kajaani kaupunginvaltuusto (51 seats, leadership) ───
+  // ─── Kajaani kaupunginvaltuusto (51 seats, partial — leadership + kaupunginhallitus members) ───
 
   profile(mCouncil("c-k-1", "peppiina-hakkarainen", "Peppiina", "Hakkarainen",
     "Kaupunginvaltuuston puheenjohtaja", "City Council Chair",
     "Kajaanin kaupunki", "City of Kajaani", "VAS"
   )),
   profile(mCouncil("c-k-2", "helena-ohtonen", "Helena", "Ohtonen",
-    "Kaupunginvaltuuston 1. varapuheenjohtaja", "City Council 1st Vice Chair",
+    "Kaupunginvaltuuston 2. varapuheenjohtaja", "City Council 2nd Vice Chair",
     "Kajaanin kaupunki", "City of Kajaani", "SDP"
   )),
   profile(mCouncil("c-k-3", "paavo-enroth", "Paavo", "Enroth",
-    "Kaupunginvaltuuston 2. varapuheenjohtaja", "City Council 2nd Vice Chair",
+    "Kaupunginvaltuuston 1. varapuheenjohtaja", "City Council 1st Vice Chair",
     "Kajaanin kaupunki", "City of Kajaani", "KOK"
   )),
+  profile(mCouncil("c-k-4", "silja-keranen", "Silja", "Keränen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VIHR"
+  )),
+  profile(mCouncil("c-k-5", "marjo-kangasharju", "Marjo", "Kangasharju",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  profile(mCouncil("c-k-6", "minna-leinonen", "Minna", "Leinonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-7", "paavo-niemela", "Paavo", "Niemelä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-8", "pasi-kilpelainen", "Pasi", "Kilpeläinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-9", "eveliina-kinnunen", "Eveliina", "Kinnunen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-10", "jari-lindh", "Jari", "Lindh",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  profile(mCouncil("c-k-11", "henna-kettunen-k", "Henna", "Kettunen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  profile(mCouncil("c-k-12", "jaakko-perhovaara", "Jaakko", "Perhovaara",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-13", "auli-halonen", "Auli", "Halonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-14", "raimo-piirainen", "Raimo", "Piirainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  profile(mCouncil("c-k-15", "karoliina-kuvaja", "Karoliina", "Kuvaja",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VIHR"
+  )),
 
-  // ─── Sotkamo kunnanvaltuusto (27 seats, leadership) ───
+  // ─── Sotkamo kunnanvaltuusto (27 seats, partial — leadership + top vote-getters) ───
 
   profile(mCouncil("c-s-1", "anne-lukkari", "Anne", "Lukkari",
     "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
     "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-2", "sami-kilpelainen-v", "Sami", "Kilpeläinen",
+    "Kunnanvaltuuston 1. varapuheenjohtaja", "Municipal Council 1st Vice Chair",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KD"
+  )),
+  profile(mCouncil("c-s-3", "pertti-granqvist", "Pertti", "Granqvist",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "VAS"
+  )),
+  profile(mCouncil("c-s-4", "janne-hyvonen", "Janne", "Hyvönen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-5", "jouko-korhonen", "Jouko", "Korhonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "VAS"
+  )),
+  profile(mCouncil("c-s-6", "juho-lukkari", "Juho", "Lukkari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-7", "riikka-huotari", "Riikka", "Huotari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KOK"
   )),
   profile(mCouncil("c-s-kj", "mika-kilpelainen-v", "Mika", "Kilpeläinen",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
   )),
 
-  // ─── Kuhmo kaupunginvaltuusto (27 seats) ───
+  // ─── Kuhmo kaupunginvaltuusto (27 seats, leadership) ───
 
+  profile(mCouncil("c-ku-1", "tuomas-kettunen", "Tuomas", "Kettunen",
+    "Kaupunginvaltuuston puheenjohtaja", "City Council Chair",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-2", "seija-lukkarinen", "Seija", "Lukkarinen",
+    "Kaupunginvaltuuston 1. varapuheenjohtaja", "City Council 1st Vice Chair",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-3", "matti-jussi-pollari", "Matti-Jussi", "Pollari",
+    "Kaupunginvaltuuston 2. varapuheenjohtaja", "City Council 2nd Vice Chair",
+    "Kuhmon kaupunki", "City of Kuhmo", "KOK"
+  )),
   profile(mCouncil("c-ku-kj", "juhana-juntunen-v", "Juhana", "Juntunen",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kuhmon kaupunki", "City of Kuhmo", "KESK"
   )),
 
-  // ─── Suomussalmi kunnanvaltuusto (27 seats) ───
+  // ─── Suomussalmi kunnanvaltuusto (27 seats — COMPLETE) ───
 
-  profile(mCouncil("c-su-kj", "erno-heikkinen-v", "Erno", "Heikkinen",
+  profile(mCouncil("c-su-1", "merja-kyllonen", "Merja", "Kyllönen",
+    "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "VAS"
+  )),
+  profile(mCouncil("c-su-2", "juha-k-heikkinen", "Juha K.", "Heikkinen",
+    "Kunnanvaltuuston 1. varapuheenjohtaja", "Municipal Council 1st Vice Chair",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-3", "atte-seppanen", "Atte", "Seppänen",
+    "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "SDP"
+  )),
+  profile(mCouncil("c-su-4", "jukka-pekka-alanko", "Jukka-Pekka", "Alanko",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KOK"
+  )),
+  profile(mCouncil("c-su-5", "juha-heikkinen-su", "Juha", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-6", "pirjo-heikkinen", "Pirjo", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-7", "risto-heikkinen", "Risto", "Heikkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-8", "erja-helttunen", "Erja", "Helttunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-9", "anne-holappa", "Anne", "Holappa",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "SDP"
+  )),
+  profile(mCouncil("c-su-10", "terttu-huttu-juntunen", "Terttu", "Huttu-Juntunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "VAS"
+  )),
+  profile(mCouncil("c-su-11", "mikko-juntunen-su", "Mikko", "Juntunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-12", "sami-juntunen-su", "Sami", "Juntunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KOK"
+  )),
+  profile(mCouncil("c-su-13", "mari-kela", "Mari", "Kela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "VAS"
+  )),
+  profile(mCouncil("c-su-14", "tuovi-kemppainen", "Tuovi", "Kemppainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-15", "jonna-kinnunen", "Jonna", "Kinnunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "VAS"
+  )),
+  profile(mCouncil("c-su-16", "markku-korvuo", "Markku", "Korvuo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-17", "janne-laatikainen", "Janne", "Laatikainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "VAS"
+  )),
+  profile(mCouncil("c-su-18", "leena-manner", "Leena", "Manner",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "VAS"
+  )),
+  profile(mCouncil("c-su-19", "kirsi-manninen", "Kirsi", "Manninen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-20", "petteri-matero", "Petteri", "Matero",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "PS"
+  )),
+  profile(mCouncil("c-su-21", "taina-matero", "Taina", "Matero",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "VAS"
+  )),
+  profile(mCouncil("c-su-22", "keijo-moilanen", "Keijo", "Moilanen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-23", "keijo-mulari", "Keijo", "Mulari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-24", "jari-paasovaara", "Jari", "Paasovaara",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-25", "sami-pihlajamaa", "Sami", "Pihlajamaa",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "PS"
+  )),
+  profile(mCouncil("c-su-26", "jonna-seppanen-su", "Jonna", "Seppänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
+  )),
+  profile(mCouncil("c-su-27", "marko-tauriainen", "Marko", "Tauriainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Suomussalmen kunta", "Municipality of Suomussalmi", "KOK"
+  )),
+  profile(mCouncil("c-su-28", "veikko-timonen", "Veikko", "Timonen",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Suomussalmen kunta", "Municipality of Suomussalmi", "KESK"
   )),
 
   // ─── Paltamo kunnanvaltuusto (21 seats, leadership) ───
 
-  profile(mCouncil("c-pa-1", "aaro-tolonen-v", "Aaro", "Tolonen",
+  profile(mCouncil("c-pa-1", "matti-valikangas", "Matti", "Välikangas",
     "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
     "Paltamon kunta", "Municipality of Paltamo", "KESK"
   )),
   profile(mCouncil("c-pa-2", "juha-riipinen", "Juha", "Riipinen",
     "Kunnanvaltuuston 1. varapuheenjohtaja", "Municipal Council 1st Vice Chair",
     "Paltamon kunta", "Municipality of Paltamo", "VAS"
-  )),
-  profile(mCouncil("c-pa-3", "mari-mottonen", "Mari", "Möttönen",
-    "Kunnanvaltuuston 2. varapuheenjohtaja", "Municipal Council 2nd Vice Chair",
-    "Paltamon kunta", "Municipality of Paltamo", "KESK"
   )),
   profile(mCouncil("c-pa-kj", "pasi-ahoniemi-v", "Pasi", "Ahoniemi",
     "Kunnanvaltuutettu", "Municipal Councillor",
@@ -1330,9 +1518,9 @@ export const municipalProfiles: OfficialProfile[] = [
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
   )),
 
-  // ─── Ristijärvi kunnanvaltuusto (15 seats) ───
+  // ─── Ristijärvi kunnanvaltuusto (13 seats, partial) ───
 
-  profile(mCouncil("c-ri-kj", "petteri-seppanen-v", "Petteri", "Seppänen",
+  profile(mCouncil("c-ri-1", "paavo-oikarinen", "Paavo", "Oikarinen",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Ristijärven kunta", "Municipality of Ristijärvi", "KESK"
   )),
