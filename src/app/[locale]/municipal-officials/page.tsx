@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { getMunicipalOfficials } from "@/lib/data";
-import OfficialsSearch from "@/components/OfficialsSearch";
+import { MUNICIPALITIES } from "@/lib/municipality-data";
+import MunicipalView from "@/components/MunicipalView";
 
 export default async function MunicipalOfficialsPage() {
   const t = await getTranslations("municipalOfficials");
@@ -14,7 +15,7 @@ export default async function MunicipalOfficialsPage() {
         </h1>
         <p className="mt-2 text-muted">{t("description")}</p>
       </div>
-      <OfficialsSearch officials={officials} />
+      <MunicipalView officials={officials} regions={MUNICIPALITIES} />
     </div>
   );
 }
