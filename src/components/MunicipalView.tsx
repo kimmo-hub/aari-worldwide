@@ -236,6 +236,7 @@ export default function MunicipalView({
           <FinlandMap
             regions={regions}
             officialCounts={officialCounts}
+            selectedRegion={selectedRegion}
             onRegionClick={(region) => {
               setSelectedRegion(region === selectedRegion ? null : region);
               setSelectedMuni(null);
