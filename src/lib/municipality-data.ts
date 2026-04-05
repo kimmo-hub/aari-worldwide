@@ -676,6 +676,51 @@ export const municipalProfiles: OfficialProfile[] = [
     null, "040 678 3224"
   )),
 
+  profile(mOfficial("m-205", "joni-partanen", "Joni", "Partanen",
+    "Talousjohtaja / Vt. kaupunginjohtaja", "Finance Director / Acting City Manager",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2017-01-01",
+    "Joni Partanen toimii Kajaanin talousjohtajana. Nimitetty vt. kaupunginjohtajaksi tammikuussa 2026.",
+    "Joni Partanen serves as Finance Director of Kajaani. Appointed as Acting City Manager in January 2026.",
+    "joni.partanen@kajaani.fi", null
+  )),
+
+  profile(mOfficial("m-206", "jyrki-komulainen", "Jyrki", "Komulainen",
+    "Henkilöstöjohtaja", "HR Director",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2018-01-01",
+    "Jyrki Komulainen toimii Kajaanin henkilöstöjohtajana.",
+    "Jyrki Komulainen serves as HR Director of Kajaani.",
+    "jyrki.komulainen@kajaani.fi", "044 714 7551"
+  )),
+
+  profile(mOfficial("m-207", "matti-nousiainen", "Matti", "Nousiainen",
+    "Kaupungininsinööri", "City Engineer",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2015-01-01",
+    "Matti Nousiainen toimii Kajaanin kaupungininsinöörinä. Vastaa kaupungin infrastruktuurista.",
+    "Matti Nousiainen serves as City Engineer of Kajaani. Responsible for city infrastructure.",
+    "matti.nousiainen@kajaani.fi", null
+  )),
+
+  profile(mOfficial("m-208", "minna-tuunainen", "Minna", "Tuunainen",
+    "Kulttuurijohtaja", "Culture Director",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2025-01-01",
+    "Minna Tuunainen toimii Kajaanin kulttuurijohtajana. Vastaa kulttuuri- ja nuorisopalveluista.",
+    "Minna Tuunainen serves as Culture Director of Kajaani. Responsible for culture and youth services.",
+    "minna.tuunainen@kajaani.fi", null
+  )),
+
+  profile(mOfficial("m-209", "kalle-komulainen", "Kalle", "Komulainen",
+    "Perusopetuksen tulosalueen johtaja", "Head of Basic Education",
+    "Kajaanin kaupunki", "City of Kajaani",
+    "2025-01-01",
+    "Kalle Komulainen toimii Kajaanin perusopetuksen tulosalueen johtajana vuodesta 2025.",
+    "Kalle Komulainen serves as Head of Basic Education in Kajaani since 2025.",
+    "kalle.komulainen@kajaani.fi", "044 710 0142"
+  )),
+
   // ─── Sotkamo ───
 
   profile(mOfficial("m-210", "mika-kilpelainen", "Mika", "Kilpeläinen",
@@ -712,6 +757,33 @@ export const municipalProfiles: OfficialProfile[] = [
     "Jenna Korhonen toimii Sotkamon rakennustarkastajana. Vastaa rakennusluvista ja rakennusvalvonnasta.",
     "Jenna Korhonen serves as Building Inspector in Sotkamo. Responsible for building permits and building supervision.",
     "jenna.korhonen@sotkamo.fi", "040 354 0586"
+  )),
+
+  profile(mOfficial("m-214", "piia-torhonen-sirvio", "Piia", "Törhönen-Sirviö",
+    "Talousjohtaja", "Finance Director",
+    "Sotkamon kunta", "Municipality of Sotkamo",
+    "2019-01-01",
+    "Piia Törhönen-Sirviö toimii Sotkamon talousjohtajana.",
+    "Piia Törhönen-Sirviö serves as Finance Director of Sotkamo.",
+    "piia.torhonen-sirvio@sotkamo.fi", "040 674 0269"
+  )),
+
+  profile(mOfficial("m-215", "merja-ojalammi", "Merja", "Ojalammi",
+    "Sivistysjohtaja", "Education Director",
+    "Sotkamon kunta", "Municipality of Sotkamo",
+    "2018-01-01",
+    "Merja Ojalammi toimii Sotkamon sivistysjohtajana ja kansalaisopiston rehtorina.",
+    "Merja Ojalammi serves as Education Director and adult education principal in Sotkamo.",
+    "merja.ojalammi@sotkamo.fi", "044 750 2125"
+  )),
+
+  profile(mOfficial("m-216", "antti-harri", "Antti", "Harri",
+    "Ympäristötoimen päällikkö / Rakennustarkastaja", "Head of Environmental Services / Building Inspector",
+    "Sotkamon kunta", "Municipality of Sotkamo",
+    "2020-01-01",
+    "Antti Harri toimii Sotkamon ympäristötoimen päällikkönä ja rakennustarkastajana. Vastaa myös Paltamon rakennusvalvonnasta.",
+    "Antti Harri serves as Head of Environmental Services and Building Inspector in Sotkamo. Also responsible for Paltamo's building supervision.",
+    "antti.harri@sotkamo.fi", "040 354 3525"
   )),
 
   // ─── Kuhmo ───
@@ -826,6 +898,15 @@ export const municipalProfiles: OfficialProfile[] = [
     "asko.kinnunen@suomussalmi.fi", "044 777 3121"
   )),
 
+  profile(mOfficial("m-236", "jarkko-juntunen", "Jarkko", "Juntunen",
+    "Maanmittausinsinööri", "Land Survey Engineer",
+    "Suomussalmen kunta", "Municipality of Suomussalmi",
+    "2018-01-01",
+    "Jarkko Juntunen toimii Suomussalmen maanmittausinsinöörinä. Vastaa tonteista, mittauspalveluista ja kaavoituksesta.",
+    "Jarkko Juntunen serves as Land Survey Engineer in Suomussalmi. Responsible for plots, surveying, and land use planning.",
+    "jarkko.juntunen@suomussalmi.fi", "044 568 4335"
+  )),
+
   // ─── Paltamo ───
 
   profile(mOfficial("m-240", "pasi-ahoniemi", "Pasi", "Ahoniemi",
@@ -902,6 +983,15 @@ export const municipalProfiles: OfficialProfile[] = [
     "marko.vayrynen@puolanka.fi", "040 559 2084"
   )),
 
+  profile(mOfficial("m-254", "kalevi-huovinen", "Kalevi", "Huovinen",
+    "Va. rakennustarkastaja", "Acting Building Inspector",
+    "Puolangan kunta", "Municipality of Puolanka",
+    "2024-01-01",
+    "Kalevi Huovinen toimii Puolangan va. rakennustarkastajana.",
+    "Kalevi Huovinen serves as Acting Building Inspector in Puolanka.",
+    "kalevi.huovinen@puolanka.fi", "040 546 2018"
+  )),
+
   // ─── Hyrynsalmi ───
 
   profile(mOfficial("m-260", "heimo-keranen", "Heimo", "Keränen",
@@ -957,7 +1047,25 @@ export const municipalProfiles: OfficialProfile[] = [
     "2015-01-01",
     "Jari Hurskainen toimii rakennustarkastajana Ristijärven ja Hyrynsalmen kunnissa (yhteinen viranhaltija).",
     "Jari Hurskainen serves as Building Inspector for the municipalities of Ristijärvi and Hyrynsalmi (shared official).",
-    null, "044 7104 434"
+    "jari.hurskainen@hyrynsalmi.fi", "044 7104 434"
+  )),
+
+  profile(mOfficial("m-275", "mika-hakkarainen", "Mika", "Hakkarainen",
+    "Kaavoittaja", "Land Use Planner",
+    "Ristijärven kunta", "Municipality of Ristijärvi",
+    "2020-01-01",
+    "Mika Hakkarainen toimii kaavoittajana Ristijärven kunnassa (Sotkamon kunnan yhteispalvelu).",
+    "Mika Hakkarainen serves as Land Use Planner for Ristijärvi (shared service from Sotkamo municipality).",
+    "mika.hakkarainen@sotkamo.fi", "040 187 7970"
+  )),
+
+  profile(mOfficial("m-276", "jenni-kuronen", "Jenni", "Kuronen",
+    "Ympäristötarkastaja", "Environmental Inspector",
+    "Ristijärven kunta", "Municipality of Ristijärvi",
+    "2019-01-01",
+    "Jenni Kuronen toimii ympäristötarkastajana Ristijärven kunnassa (Suomussalmen kunnan yhteispalvelu). Paikalla maanantaisin.",
+    "Jenni Kuronen serves as Environmental Inspector for Ristijärvi (shared service from Suomussalmi municipality). Available on Mondays.",
+    "jenni.kuronen@suomussalmi.fi", "040 688 4546"
   )),
 ];
 
