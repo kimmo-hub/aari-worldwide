@@ -1153,7 +1153,7 @@ export const municipalProfiles: OfficialProfile[] = [
 
   // ═══ KAINUU — KUNNANVALTUUSTOT (Municipal Councils) 2025–2029 ═══
 
-  // ─── Kajaani kaupunginvaltuusto (51 seats — near-complete, 56 identified incl. some unverified) ───
+  // ──�� Kajaani kaupunginvaltuusto (51 seats — KESK 15, KOK ~9, VAS ~9, SDP ~7, PS 6, VIHR 4, KD 1) ───
 
   profile(mCouncil("c-k-1", "peppiina-hakkarainen", "Peppiina", "Hakkarainen",
     "Kaupunginvaltuuston puheenjohtaja", "City Council Chair",
@@ -1227,10 +1227,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "KD"
   )),
-  profile(mCouncil("c-k-19", "mikko-polvinen", "Mikko", "Polvinen",
-    "Kaupunginvaltuutettu", "City Councillor",
-    "Kajaanin kaupunki", "City of Kajaani", "PS"
-  )),
+  // Mikko Polvinen removed — switched to KESK Feb 2026, uncertain if elected as PS valtuutettu
   profile(mCouncil("c-k-20", "sami-sainio", "Sami", "Sainio",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "VAS"
@@ -1271,10 +1268,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "KESK"
   )),
-  profile(mCouncil("c-k-30", "jere-vekkeli", "Jere", "Vekkeli",
-    "Kaupunginvaltuutettu, vaalilautakunnan puheenjohtaja", "City Councillor, Chair of Election Board",
-    "Kajaanin kaupunki", "City of Kajaani", "PS"
-  )),
+  // Jere Vekkeli removed — vaalilautakunta chair but not confirmed as valtuutettu
   profile(mCouncil("c-k-31", "juha-urpilainen", "Juha", "Urpilainen",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "SDP"
@@ -1283,10 +1277,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "SDP"
   )),
-  profile(mCouncil("c-k-33", "anssi-manninen", "Anssi", "Manninen",
-    "Kaupunginvaltuutettu", "City Councillor",
-    "Kajaanin kaupunki", "City of Kajaani", "PS"
-  )),
+  // Anssi Manninen removed — lautakunta member but not confirmed as valtuutettu
   profile(mCouncil("c-k-34", "mikko-alakarppa", "Mikko", "Alakärppä",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "VIHR"
@@ -1316,14 +1307,8 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "PS"
   )),
-  profile(mCouncil("c-k-41", "jouni-tervonen", "Jouni", "Tervonen",
-    "Kaupunginvaltuutettu", "City Councillor",
-    "Kajaanin kaupunki", "City of Kajaani", "PS"
-  )),
-  profile(mCouncil("c-k-42", "sami-halonen-k", "Sami", "Halonen",
-    "Kaupunginvaltuutettu", "City Councillor",
-    "Kajaanin kaupunki", "City of Kajaani", "PS"
-  )),
+  // Jouni Tervonen removed — lautakunta member but not confirmed as valtuutettu
+  // Sami Halonen removed — lautakunta member but not confirmed as valtuutettu
   // KESK members (confirmed from committee appointments)
   profile(mCouncil("c-k-43", "kimmo-tuulenkari", "Kimmo", "Tuulenkari",
     "Kaupunginvaltuutettu", "City Councillor",
