@@ -1300,7 +1300,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kajaanin kaupunki", "City of Kajaani", "KOK"
   )),
 
-  // ─── Sotkamo kunnanvaltuusto (27 seats, partial — leadership + top vote-getters) ───
+  // ─── Sotkamo kunnanvaltuusto (27 seats — COMPLETE) ───
 
   profile(mCouncil("c-s-1", "anne-lukkari", "Anne", "Lukkari",
     "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
@@ -1389,6 +1389,26 @@ export const municipalProfiles: OfficialProfile[] = [
   profile(mCouncil("c-s-21", "pirjo-lahde", "Pirjo", "Lähde",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Sotkamon kunta", "Municipality of Sotkamo", "KOK"
+  )),
+  profile(mCouncil("c-s-22", "kirsi-moisanen", "Kirsi", "Moisanen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-23", "tuulia-nikula", "Tuulia", "Nikula",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-24", "liinu-kauppinen", "Liinu", "Kauppinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KESK"
+  )),
+  profile(mCouncil("c-s-25", "antti-kela", "Antti", "Kela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KD"
+  )),
+  profile(mCouncil("c-s-26", "juha-juntunen-so", "Juha", "Juntunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sotkamon kunta", "Municipality of Sotkamo", "KD"
   )),
 
   // ─── Kuhmo kaupunginvaltuusto (27 seats, leadership) ───
