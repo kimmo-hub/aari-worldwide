@@ -1477,13 +1477,29 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Kuhmon kaupunki", "City of Kuhmo", "KOK"
   )),
-  profile(mCouncil("c-ku-16", "kati-sarvela", "Kati", "Sarvela",
+  profile(mCouncil("c-ku-16", "ulla-sisko-ekundayo", "Ulla-Sisko", "Ekundayo",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kuhmon kaupunki", "City of Kuhmo", "VIHR"
   )),
   profile(mCouncil("c-ku-17", "virpi-pikkarainen", "Virpi", "Pikkarainen",
     "Kaupunginvaltuutettu", "City Councillor",
     "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-18", "eija-komulainen", "Eija", "Komulainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-19", "ari-kyllonen-ku", "Ari", "Kyllönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-20", "heimo-karna", "Heimo", "Kärnä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KESK"
+  )),
+  profile(mCouncil("c-ku-21", "taimi-komulainen", "Taimi", "Komulainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuhmon kaupunki", "City of Kuhmo", "KOK"
   )),
 
   // ─── Suomussalmi kunnanvaltuusto (27 seats — COMPLETE) ───
