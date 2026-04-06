@@ -1153,7 +1153,7 @@ export const municipalProfiles: OfficialProfile[] = [
 
   // ═══ KAINUU — KUNNANVALTUUSTOT (Municipal Councils) 2025–2029 ═══
 
-  // ─── Kajaani kaupunginvaltuusto (51 seats, partial — leadership + kaupunginhallitus members) ───
+  // ─── Kajaani kaupunginvaltuusto (51 seats — near-complete, 56 identified incl. some unverified) ───
 
   profile(mCouncil("c-k-1", "peppiina-hakkarainen", "Peppiina", "Hakkarainen",
     "Kaupunginvaltuuston puheenjohtaja", "City Council Chair",
@@ -1217,7 +1217,7 @@ export const municipalProfiles: OfficialProfile[] = [
   )),
   profile(mCouncil("c-k-16", "eila-aavakare", "Eila", "Aavakare",
     "Kaupunginvaltuutettu", "City Councillor",
-    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
   )),
   profile(mCouncil("c-k-17", "pirra-keranen", "Pirra", "Keränen",
     "Kaupunginvaltuutettu", "City Councillor",
@@ -1297,6 +1297,91 @@ export const municipalProfiles: OfficialProfile[] = [
   )),
   profile(mCouncil("c-k-36", "toni-keranen", "Toni", "Keränen",
     "Kaupunginvaltuutettu, keskusvaalilautakunnan puheenjohtaja", "City Councillor, Chair of Central Election Board",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  // PS members (confirmed with vote counts)
+  profile(mCouncil("c-k-37", "timo-merilainen", "Timo", "Meriläinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-38", "minna-partanen", "Minna", "Partanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-39", "pasi-arffman", "Pasi", "Arffman",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-40", "teemu-niva", "Teemu", "Niva",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-41", "jouni-tervonen", "Jouni", "Tervonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  profile(mCouncil("c-k-42", "sami-halonen-k", "Sami", "Halonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "PS"
+  )),
+  // KESK members (confirmed from committee appointments)
+  profile(mCouncil("c-k-43", "kimmo-tuulenkari", "Kimmo", "Tuulenkari",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-44", "kaija-patronen", "Kaija", "Patronen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-45", "mousa-najafi", "Mousa", "Najafi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-46", "fanni-karjalainen", "Fanni", "Karjalainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  profile(mCouncil("c-k-47", "veli-matti-karppinen", "Veli-Matti", "Karppinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KESK"
+  )),
+  // VAS members
+  profile(mCouncil("c-k-48", "maria-kurtti", "Maria", "Kurtti",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  profile(mCouncil("c-k-49", "panu-huotari", "Panu", "Huotari",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  profile(mCouncil("c-k-50", "reija-korkatti", "Reija", "Korkatti",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "VAS"
+  )),
+  // SDP members
+  profile(mCouncil("c-k-51", "sonja-laurila", "Sonja", "Laurila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  profile(mCouncil("c-k-52", "markku-oikarinen", "Markku", "Oikarinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "SDP"
+  )),
+  // KOK members
+  profile(mCouncil("c-k-53", "matti-heikkinen-k", "Matti", "Heikkinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-54", "rea-stricker", "Rea", "Stricker",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-55", "nina-kahkonen", "Nina", "Kähkönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kajaanin kaupunki", "City of Kajaani", "KOK"
+  )),
+  profile(mCouncil("c-k-56", "teemu-takalo", "Teemu", "Takalo",
+    "Kaupunginvaltuutettu", "City Councillor",
     "Kajaanin kaupunki", "City of Kajaani", "KOK"
   )),
 
