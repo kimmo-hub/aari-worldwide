@@ -1743,9 +1743,9 @@ export const municipalProfiles: OfficialProfile[] = [
     "Puolangan kunta", "Municipality of Puolanka", "KESK"
   )),
 
-  // ─── Hyrynsalmi kunnanvaltuusto (19 seats, partial) ───
+  // ─── Hyrynsalmi kunnanvaltuusto (19 seats) ───
 
-  profile(mCouncil("c-h-1", "johanna-sorri", "Johanna", "Sorri",
+  profile(mCouncil("c-h-10", "kati-kaartinen", "Kati", "Kaartinen",
     "Kunnanvaltuuston puheenjohtaja", "Municipal Council Chair",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
   )),
@@ -1781,19 +1781,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "PS"
   )),
-  profile(mCouncil("c-h-10", "kati-kaartinen", "Kati", "Kaartinen",
-    "Kunnanvaltuutettu", "Municipal Councillor",
-    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
-  )),
-  profile(mCouncil("c-h-kj", "heimo-keranen-v", "Heimo", "Keränen",
+  profile(mCouncil("c-h-21", "helena-heikkinen-h", "Helena", "Heikkinen",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
   )),
   profile(mCouncil("c-h-11", "esa-kemppainen-h", "Esa", "Kemppainen",
-    "Kunnanvaltuutettu", "Municipal Councillor",
-    "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
-  )),
-  profile(mCouncil("c-h-12", "tapani-kemppainen", "Tapani", "Kemppainen",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
   )),
@@ -1809,7 +1801,7 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "KESK"
   )),
-  profile(mCouncil("c-h-16", "juha-kortelainen", "Juha", "Kortelainen",
+  profile(mCouncil("c-h-22", "anssi-helenius", "Anssi", "Helenius",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi", "VAS"
   )),
