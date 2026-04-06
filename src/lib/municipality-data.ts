@@ -540,8 +540,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginjohtaja", "City Manager",
     "Kajaanin kaupunki", "City of Kajaani",
     "2015-01-01",
-    "Jari Tolonen on toiminut Kajaanin kaupunginjohtajana vuodesta 2015.",
-    "Jari Tolonen has served as City Manager of Kajaani since 2015."
+    "Jari Tolonen on toiminut Kajaanin kaupunginjohtajana vuodesta 2009. MMM ja KTM. Aiemmin Siilinjärven ja Sotkamon kunnanjohtaja. Erosi helmikuussa 2026.",
+    "Jari Tolonen served as City Manager of Kajaani since 2009. M.Sc. (Agr.) and M.Sc. (Econ.). Previously municipal manager of Siilinjärvi and Sotkamo. Resigned February 2026.",
+    null, null,
+    "Ei tunnettua puoluetaustaa. Ammattimainen, sitoutumaton viranhaltija pitkällä kuntajohtajan uralla.",
+    "No known party affiliation. Professional, non-partisan civil servant with long municipal management career."
   )),
 
   profile(mOfficial("m-28", "ding-ma", "Ding", "Ma",
@@ -769,9 +772,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Sotkamon kunta", "Municipality of Sotkamo",
     "2019-01-01",
-    "Mika Kilpeläinen toimii Sotkamon kunnanjohtajana. Sotkamo tunnetaan Vuokatin matkailukeskuksesta.",
-    "Mika Kilpeläinen serves as Municipal Manager of Sotkamo. Sotkamo is known for the Vuokatti tourism resort.",
-    "mika.kilpelainen@sotkamo.fi", "044 750 2111"
+    "Mika Kilpeläinen toimii Sotkamon kunnanjohtajana huhtikuusta 2016. Entinen pesäpalloilija ja joukkueenjohtaja. Palkittu 'Virea Viranhaltija 2022'.",
+    "Mika Kilpeläinen has served as Municipal Manager of Sotkamo since April 2016. Former pesäpallo player and team director. Won 'Active Civil Servant 2022' award.",
+    "mika.kilpelainen@sotkamo.fi", "044 750 2111",
+    "Ei tunnettua puoluetaustaa. Myös kunnanvaltuuston jäsen (KESK-listalta), mikä on epätavallinen kaksoisrooli.",
+    "No confirmed party affiliation. Also serves as council member (from KESK list), which is an unusual dual role."
   )),
 
   profile(mOfficial("m-211", "riikka-boren", "Riikka", "Borén",
@@ -834,9 +839,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginjohtaja", "City Manager",
     "Kuhmon kaupunki", "City of Kuhmo",
     "2019-01-01",
-    "Juhana Juntunen toimii Kuhmon kaupunginjohtajana. Kuhmo tunnetaan kamarimusiikkijuhlistaan.",
-    "Juhana Juntunen serves as City Manager of Kuhmo. Kuhmo is known for its Chamber Music Festival.",
-    "juhana.juntunen@kuhmo.fi", "044 7255 222"
+    "Juhana Juntunen toimii Kuhmon kaupunginjohtajana. Valittu toukokuussa 2023 äänin 24/27. Toimi aiemmin Kuhmon hallintojohtajana.",
+    "Juhana Juntunen serves as City Manager of Kuhmo. Elected May 2023 by 24/27 council votes. Previously served as Kuhmo's administrative director.",
+    "juhana.juntunen@kuhmo.fi", "044 7255 222",
+    "Ei tunnettua puoluetaustaa. Valittu lähes yksimielisesti (24/27), mikä viittaa laajaan puolueiden väliseen tukeen.",
+    "No known party affiliation. Elected near-unanimously (24/27), suggesting broad cross-party support."
   )),
 
   profile(mOfficial("m-221", "pinja-kyllonen", "Pinja", "Kyllönen",
@@ -890,9 +897,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Suomussalmen kunta", "Municipality of Suomussalmi",
     "2021-01-01",
-    "Erno Heikkinen toimii Suomussalmen kunnanjohtajana.",
-    "Erno Heikkinen serves as Municipal Manager of Suomussalmi.",
-    "erno.heikkinen@suomussalmi.fi", "044 777 3344"
+    "Erno Heikkinen toimii Suomussalmen kunnanjohtajana vuodesta 2018. Valittiin 26-vuotiaana Suomen nuorimmaksi kunnanjohtajaksi. HT (hallintotieteiden maisteri), kotoisin Suomussalmelta.",
+    "Erno Heikkinen has served as Municipal Manager of Suomussalmi since 2018. Elected at age 26 as Finland's youngest municipal manager. M.Sc. (Admin.), originally from Suomussalmi.",
+    "erno.heikkinen@suomussalmi.fi", "044 777 3344",
+    "Ei tunnettua puoluetaustaa. Nuori ammattilainen, opiskeli kunta- ja aluejohtamista Tampereella.",
+    "No known party affiliation. Young professional, studied municipal and regional management in Tampere."
   )),
 
   profile(mOfficial("m-231", "antton-vuolle", "Antton", "Vuolle",
@@ -955,9 +964,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Paltamon kunta", "Municipality of Paltamo",
     "2020-01-01",
-    "Pasi Ahoniemi toimii Paltamon kunnanjohtajana.",
-    "Pasi Ahoniemi serves as Municipal Manager of Paltamo.",
-    "pasi.ahoniemi@paltamo.fi", "044 750 0001"
+    "Pasi Ahoniemi toimii Paltamon kunnanjohtajana. Tradenomi, kotoisin Paltamosta.",
+    "Pasi Ahoniemi serves as Municipal Manager of Paltamo. Business graduate, native of Paltamo.",
+    "pasi.ahoniemi@paltamo.fi", "044 750 0001",
+    "Keskusta (KESK). Toimi ennen kunnanjohtajaksi valintaa Paltamon kunnanhallituksen keskustalaisena puheenjohtajana. Siirtyi suoraan poliittisesta luottamustehtävästä viranhaltijan rooliin.",
+    "Centre Party (KESK). Served as Centre Party chairman of Paltamo's municipal board before being elected as municipal manager. Moved directly from a political leadership position to a professional role."
   )),
 
   profile(mOfficial("m-241", "petra-juutinen", "Petra", "Juutinen",
@@ -993,9 +1004,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Puolangan kunta", "Municipality of Puolanka",
     "2018-01-01",
-    "Harri Peltola toimii Puolangan kunnanjohtajana.",
-    "Harri Peltola serves as Municipal Manager of Puolanka.",
-    "harri.peltola@puolanka.fi", null
+    "Harri Peltola toimii Puolangan pormestarina (poliittinen johtaja). Agrologi (AMK), maidontuottaja. Kunnanhallituksen puheenjohtaja vuodesta 2005. MTK:n valtakunnallisia luottamustehtäviä.",
+    "Harri Peltola serves as Mayor of Puolanka (political leader). Agrologist, dairy farmer. Municipal board chair since 2005. National-level positions in MTK agricultural union.",
+    "harri.peltola@puolanka.fi", null,
+    "Keskusta (KESK). Pormestari = poliittinen valinta (ei viranhaltija). Valittu pormestariksi 2018 kun Puolanka siirtyi pormestarimalliin, jatkoi 2021–2025. Keskusta hallitsee Puolankaa (11/17 valtuustopaikkaa). Rikossyytteet joulukuussa 2024 liittyen vuoden 2020 terveyspalveluhankintapäätökseen ilman kilpailutusta.",
+    "Centre Party (KESK). Mayor = political appointment (not a civil servant). Elected mayor in 2018 when Puolanka switched to the mayor model, continued 2021–2025. Centre Party dominates Puolanka (11/17 council seats). Facing criminal charges (Dec 2024) related to a 2020 health services procurement decision made without competitive bidding."
   )),
 
   profile(mOfficial("m-251", "piia-heikkinen", "Piia", "Heikkinen",
@@ -1040,9 +1053,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Hyrynsalmen kunta", "Municipality of Hyrynsalmi",
     "2016-01-01",
-    "Heimo Keränen toimii Hyrynsalmen kunnanjohtajana.",
-    "Heimo Keränen serves as Municipal Manager of Hyrynsalmi.",
-    "heimo.keranen@hyrynsalmi.fi", "044 7104 400"
+    "Heimo Keränen toimii Hyrynsalmen kunnanjohtajana. FT (suunnittelumaantiede). Johtanut Hyrynsalmea kahdella kaudella: 2005–2013 ja 2017–. Välillä Kainuun liiton aluekehitysjohtaja. Ilmoittanut jäävänsä eläkkeelle 2025.",
+    "Heimo Keränen serves as Municipal Manager of Hyrynsalmi. PhD (planning geography). Led Hyrynsalmi in two periods: 2005–2013 and 2017–. Served as regional development director at Kainuu Regional Council in between. Announced retirement in 2025.",
+    "heimo.keranen@hyrynsalmi.fi", "044 7104 400",
+    "Keskusta (KESK). Ehdolla Keskustan listalta Kainuun aluevaalissa 2025. Yhdistää ammatillisen viranhaltijan roolin poliittiseen ehdokkuuteen.",
+    "Centre Party (KESK). Ran as Centre Party candidate in 2025 Kainuu regional welfare area elections. Combines professional civil servant role with political candidacy."
   )),
 
   profile(mOfficial("m-261", "veli-pekka-makelainen", "Veli-Pekka", "Mäkeläinen",
@@ -1096,9 +1111,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Ristijärven kunta", "Municipality of Ristijärvi",
     "2025-04-21",
-    "Katri Aula aloitti Ristijärven kunnanjohtajana huhtikuussa 2025. KTM, aiemmin liikkeenjohdon konsulttina.",
-    "Katri Aula started as Municipal Manager of Ristijärvi in April 2025. M.Sc. (Econ.), previously a management consultant.",
-    "katri.aula@ristijarvi.fi", "044 715 9300"
+    "Katri Aula aloitti Ristijärven kunnanjohtajana huhtikuussa 2025. KTM, liikkeenjohdon konsultti Kirkkonummelta. Valittu yksimielisesti valtuustossa.",
+    "Katri Aula started as Municipal Manager of Ristijärvi in April 2025. M.Sc. (Econ.), management consultant from Kirkkonummi. Elected unanimously by council.",
+    "katri.aula@ristijarvi.fi", "044 715 9300",
+    "Keskusta (KESK). Ehdolla Keskustan listalta Kirkkonummen kuntavaaleissa 2021 (nro 114, 32 ääntä, ei valittu). Toimi Kirkkonummen tarkastuslautakunnassa.",
+    "Centre Party (KESK). Ran as Centre Party candidate in 2021 Kirkkonummi municipal elections (#114, 32 votes, not elected). Served on Kirkkonummi's audit committee."
   )),
 
   profile(mOfficial("m-271", "maarit-ojavuo", "Maarit", "Ojavuo",
