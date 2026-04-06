@@ -680,9 +680,11 @@ export const municipalProfiles: OfficialProfile[] = [
     "Hallintojohtaja", "Administrative Director",
     "Kajaanin kaupunki", "City of Kajaani",
     "2018-01-01",
-    "Paula Halonen toimii Kajaanin hallintojohtajana ja kaupunginlakimiehenä.",
-    "Paula Halonen serves as Administrative Director and City Lawyer of Kajaani.",
-    "paula.halonen@kajaani.fi", "040 198 5857"
+    "Paula Halonen toimii Kajaanin hallintojohtajana ja kaupunginlakimiehenä aloittaen 1.1.2025. OTK ja KTM. Aiemmin Kainuun liiton hallintojohtaja.",
+    "Paula Halonen serves as Administrative Director and City Lawyer of Kajaani starting Jan 1, 2025. Degrees in law and business. Previously administrative director of Kainuu Regional Council.",
+    "paula.halonen@kajaani.fi", "040 198 5857",
+    "Keskusta (KESK). Ehdolla Keskustan listalta Pohjois-Pohjanmaan aluevaalissa 2022.",
+    "Centre Party (KESK). Ran as Centre Party candidate in 2022 North Ostrobothnia regional elections."
   )),
 
   profile(mOfficial("m-201", "mari-lyyra", "Mari", "Lyyra",
@@ -861,7 +863,9 @@ export const municipalProfiles: OfficialProfile[] = [
     "2020-01-01",
     "Marjut Kyllönen toimii Kuhmon sivistystoimenjohtajana ja yläkoulun rehtorina.",
     "Marjut Kyllönen serves as Director of Education and Culture in Kuhmo, also serving as secondary school principal.",
-    "marjut.kyllonen@kuhmo.fi", null
+    "marjut.kyllonen@kuhmo.fi", null,
+    "Kokoomus (KOK). Ehdolla Kokoomuksen listalta Suomussalmen kuntavaaleissa 2021 ja Kainuun aluevaalissa 2022.",
+    "National Coalition Party (KOK). Ran as Kokoomus candidate in 2021 Suomussalmi municipal elections and 2022 Kainuu regional elections."
   )),
 
   profile(mOfficial("m-223", "kimmo-lamsa", "Kimmo", "Lämsä",
@@ -910,7 +914,9 @@ export const municipalProfiles: OfficialProfile[] = [
     "2024-01-01",
     "Antton Vuolle toimii Suomussalmen vs. hallintojohtajana.",
     "Antton Vuolle serves as Acting Administrative Director of Suomussalmi.",
-    "antton.vuolle@suomussalmi.fi", "040 688 4499"
+    "antton.vuolle@suomussalmi.fi", "040 688 4499",
+    "Keskusta (KESK). Ehdolla Keskustan listalta Suomussalmen kuntavaaleissa 2025 (ehdokaslistalla 'tekninen johtaja').",
+    "Centre Party (KESK). Ran as Centre Party candidate in 2025 Suomussalmi municipal elections (listed as 'technical director' on candidate list)."
   )),
 
   profile(mOfficial("m-232", "teemu-piirainen", "Teemu", "Piirainen",
@@ -928,7 +934,9 @@ export const municipalProfiles: OfficialProfile[] = [
     "2019-01-01",
     "Niina Kinnunen toimii Suomussalmen teknisenä johtajana.",
     "Niina Kinnunen serves as Technical Director of Suomussalmi.",
-    "niina.kinnunen@suomussalmi.fi", "044 777 3380"
+    "niina.kinnunen@suomussalmi.fi", "044 777 3380",
+    "Keskusta (KESK, 2025), aiemmin Vasemmistoliitto (VAS, 2012). Ehdolla Keskustan listalta Suomussalmen kuntavaaleissa 2025. Ehdolla aiemmin Vasemmistoliiton listalta 2012.",
+    "Centre Party (KESK, 2025), previously Left Alliance (VAS, 2012). Ran as Centre Party candidate in 2025 Suomussalmi elections. Previously ran as Left Alliance candidate in 2012."
   )),
 
   profile(mOfficial("m-234", "jonne-maaninka", "Jonne", "Maaninka",
@@ -986,7 +994,9 @@ export const municipalProfiles: OfficialProfile[] = [
     "2018-01-01",
     "Helena Hynynen toimii Paltamon sivistysjohtajana ja kansalaisopiston rehtorina.",
     "Helena Hynynen serves as Education Director and adult education principal in Paltamo.",
-    "helena.hynynen@paltamo.fi", "044 288 5400"
+    "helena.hynynen@paltamo.fi", "044 288 5400",
+    "Keskusta (KESK). Ehdolla Keskustan listalta Paltamon kuntavaaleissa 2021 ja 2025.",
+    "Centre Party (KESK). Ran as Centre Party candidate in 2021 and 2025 Paltamo municipal elections."
   )),
 
   profile(mOfficial("m-243", "salla-korhonen", "Salla", "Korhonen",
@@ -1017,16 +1027,20 @@ export const municipalProfiles: OfficialProfile[] = [
     "2020-01-01",
     "Piia Heikkinen toimii Puolangan hallintojohtajana.",
     "Piia Heikkinen serves as Administrative Director of Puolanka.",
-    "piia.heikkinen@puolanka.fi", "040 575 0586"
+    "piia.heikkinen@puolanka.fi", "040 575 0586",
+    "Keskusta (KESK). Ehdolla Keskustan listalta Puolangan kuntavaaleissa 2025.",
+    "Centre Party (KESK). Ran as Centre Party candidate in 2025 Puolanka municipal elections."
   )),
 
   profile(mOfficial("m-252", "tuula-vaisanen", "Tuula", "Väisänen",
     "Vs. sivistysjohtaja", "Acting Education Director",
     "Puolangan kunta", "Municipality of Puolanka",
     "2023-01-01",
-    "Tuula Väisänen toimii Puolangan vs. sivistysjohtajana.",
-    "Tuula Väisänen serves as Acting Education Director of Puolanka.",
-    "tuula.vaisanen@puolanka.fi", "040 740 2567"
+    "Tuula Väisänen toimii Puolangan vs. sivistysjohtajana. Historian ja yhteiskuntaopin opettaja.",
+    "Tuula Väisänen serves as Acting Education Director of Puolanka. History and social studies teacher.",
+    "tuula.vaisanen@puolanka.fi", "040 740 2567",
+    "Vasemmistoliitto (VAS). Ehdolla Vasemmistoliiton listalta Puolangan kuntavaaleissa 2021.",
+    "Left Alliance (VAS). Ran as Left Alliance candidate in 2021 Puolanka municipal elections."
   )),
 
   profile(mOfficial("m-253", "marko-vayrynen", "Marko", "Väyrynen",
