@@ -23,6 +23,8 @@ export interface Official {
   category: OfficialCategory;
   role_type: OfficialRoleType;
   party?: string | null;
+  political_background_fi?: string | null;
+  political_background_en?: string | null;
   created_at: string;
   updated_at: string;
 }

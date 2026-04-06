@@ -113,6 +113,17 @@ export default function MunicipalView({
           {official.party && (
             <span className="text-[9px] text-civic-500 ml-1">({official.party})</span>
           )}
+          {official.role_type === "staff" && official.political_background_fi && (
+            <span
+              className="inline-flex items-center gap-0.5 ml-1.5 px-1.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-[8px] font-medium text-purple-700"
+              title={localized(official as unknown as Record<string, unknown>, "political_background", locale)}
+            >
+              <svg className="h-2 w-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {locale === "fi" ? "Poliittinen tausta" : "Political background"}
+            </span>
+          )}
           {hasDoubleRole && (
             <span
               className="inline-flex items-center gap-0.5 ml-1.5 px-1.5 py-0.5 rounded-full bg-red-50 border border-red-200 text-[8px] font-semibold text-red-700"

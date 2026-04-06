@@ -15,7 +15,9 @@ function mOfficial(
   bioFi: string,
   bioEn: string,
   email: string | null = null,
-  phone: string | null = null
+  phone: string | null = null,
+  politicalBgFi: string | null = null,
+  politicalBgEn: string | null = null
 ): Official {
   return {
     id,
@@ -36,6 +38,8 @@ function mOfficial(
     phone,
     category: "municipal",
     role_type: "staff",
+    political_background_fi: politicalBgFi,
+    political_background_en: politicalBgEn,
     created_at: "2024-01-01T00:00:00Z",
     updated_at: "2026-04-01T00:00:00Z",
   };
