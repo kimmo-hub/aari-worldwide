@@ -3247,6 +3247,1242 @@ export const municipalProfiles: OfficialProfile[] = [
     "Maarit Alikoski on toiminut Hailuodon kunnanjohtajana vuodesta 2021. Hailuoto on Suomen ainoa merellinen saaristokunta Perämerellä.",
     "Maarit Alikoski has served as Municipal Manager of Hailuoto since 2021. Hailuoto is Finland's only marine archipelago municipality in the Bay of Bothnia."
   )),
+
+  // ─── Oulun kaupunki valtuusto ───
+  profile(mCouncil("c-oul-1", "lauri-nikula", "Lauri", "Nikula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-2", "risto-pakkila", "Risto", "Päkkilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-3", "mirja-vehkapera", "Mirja", "Vehkaperä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-4", "pekka-kainua", "Pekka", "Kainua",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-5", "jorma-leskela", "Jorma", "Leskelä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-6", "anna-kaisa-lepisto", "Anna-Kaisa", "Lepistö",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-7", "suvi-helanen", "Suvi", "Helanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-8", "anneli-nappa", "Anneli", "Näppä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-9", "janika-harju", "Janika", "Harju",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-10", "johanna-karjula", "Johanna", "Karjula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-11", "matti-lukka", "Matti", "Lukka",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-12", "antti-mainio", "Antti", "Mainio",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-13", "eeva-maria-parkkinen", "Eeva-Maria", "Parkkinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KESK"
+  )),
+  profile(mCouncil("c-oul-14", "juha-hanninen", "Juha", "Hänninen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-15", "susanna-kisner", "Susanna", "Kisner",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-16", "jarmo-husso", "Jarmo", "Husso",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-17", "tomi-kaismo", "Tomi", "Kaismo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-18", "sebastian-stenfors", "Sebastian", "Stenfors",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-19", "mari-leena-talvitie", "Mari-Leena", "Talvitie",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-20", "lyly-rajala", "Lyly", "Rajala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-21", "pekka-simonen", "Pekka", "Simonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-22", "matti-honkala", "Matti", "Honkala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-23", "mikko-merihaara", "Mikko", "Merihaara",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-24", "emilia-huusko", "Emilia", "Huusko",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-25", "jussi-arponen", "Jussi", "Arponen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-26", "paivi-hirsso", "Päivi", "Hirsso",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-27", "mikko-korkeakoski", "Mikko", "Korkeakoski",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KOK"
+  )),
+  profile(mCouncil("c-oul-28", "tytti-tuppurainen", "Tytti", "Tuppurainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-29", "pia-hiltunen", "Pia", "Hiltunen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-30", "harri-minkkinen", "Harri", "Minkkinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-31", "miina-anniina-heiskanen", "Miina-Anniina", "Heiskanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-32", "joni-merilainen", "Joni", "Meriläinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-33", "kaarina-torro", "Kaarina", "Torro",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-34", "niina-kettunen", "Niina", "Kettunen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-35", "tuula-ala-aho", "Tuula", "Ala-Aho",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-36", "annemari-eskola", "Annemari", "Eskola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-37", "maire-maki", "Maire", "Mäki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-38", "taru-lehtinen", "Taru", "Lehtinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-39", "mika-hast", "Mika", "Hast",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "SDP"
+  )),
+  profile(mCouncil("c-oul-40", "juha-vuorio", "Juha", "Vuorio",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "PS"
+  )),
+  profile(mCouncil("c-oul-41", "jenna-simula", "Jenna", "Simula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "PS"
+  )),
+  profile(mCouncil("c-oul-42", "anne-snellman", "Anne", "Snellman",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "PS"
+  )),
+  profile(mCouncil("c-oul-43", "ville-vahamaki", "Ville", "Vähämäki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "PS"
+  )),
+  profile(mCouncil("c-oul-44", "annemari-enojarvi", "Annemari", "Enojärvi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "PS"
+  )),
+  profile(mCouncil("c-oul-45", "sebastian-tynkkynen", "Sebastian", "Tynkkynen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "PS"
+  )),
+  profile(mCouncil("c-oul-46", "saija-hyvonen", "Saija", "Hyvönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "PS"
+  )),
+  profile(mCouncil("c-oul-47", "susa-vikevakorva", "Susa", "Vikeväkorva",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VIHR"
+  )),
+  profile(mCouncil("c-oul-48", "mariam-kandelberg", "Mariam", "Kandelberg",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VIHR"
+  )),
+  profile(mCouncil("c-oul-49", "marika-koivuniemi", "Marika", "Koivuniemi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VIHR"
+  )),
+  profile(mCouncil("c-oul-50", "elisa-hallapuro", "Elisa", "Hallapuro",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VIHR"
+  )),
+  profile(mCouncil("c-oul-51", "jenni-pitko", "Jenni", "Pitko",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VIHR"
+  )),
+  profile(mCouncil("c-oul-52", "mikko-raudaskoski", "Mikko", "Raudaskoski",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VAS"
+  )),
+  profile(mCouncil("c-oul-53", "mimmi-jakola", "Mimmi", "Jakola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VAS"
+  )),
+  profile(mCouncil("c-oul-54", "olli-kohonen", "Olli", "Kohonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VAS"
+  )),
+  profile(mCouncil("c-oul-55", "anniina-koutonen", "Anniina", "Koutonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "VAS"
+  )),
+  profile(mCouncil("c-oul-56", "marja-leena-kemppainen", "Marja-Leena", "Kemppainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulun kaupunki", "City of Oulu", "KD"
+  )),
+
+  // ─── Raahen kaupunki valtuusto ───
+  profile(mCouncil("c-rah-1", "pekka-poukkula", "Pekka", "Poukkula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "KESK"
+  )),
+  profile(mCouncil("c-rah-2", "hanna-leena-mattila", "Hanna-Leena", "Mattila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "KESK"
+  )),
+  profile(mCouncil("c-rah-3", "saara-holappa", "Saara", "Holappa",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "KESK"
+  )),
+  profile(mCouncil("c-rah-4", "tarja-ollanketo", "Tarja", "Ollanketo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "VAS"
+  )),
+  profile(mCouncil("c-rah-5", "minna-aalto", "Minna", "Aalto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "VAS"
+  )),
+  profile(mCouncil("c-rah-6", "viljo-lehmusketo", "Viljo", "Lehmusketo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "VAS"
+  )),
+  profile(mCouncil("c-rah-7", "pirkko-valtanen", "Pirkko", "Valtanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "SDP"
+  )),
+  profile(mCouncil("c-rah-8", "anu-mattila", "Anu", "Mattila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "PS"
+  )),
+  profile(mCouncil("c-rah-9", "jari-seppanen", "Jari", "Seppänen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "PS"
+  )),
+  profile(mCouncil("c-rah-10", "timo-mattila", "Timo", "Mattila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "PS"
+  )),
+  profile(mCouncil("c-rah-11", "jonne-tormakangas", "Jonne", "Törmäkangas",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Raahen kaupunki", "City of Raahe", "PS"
+  )),
+
+  // ─── Ylivieskan kaupunki valtuusto ───
+  profile(mCouncil("c-yli-1", "terttu-alanen", "Terttu", "Alanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Ylivieskan kaupunki", "City of Ylivieska", "KESK"
+  )),
+  profile(mCouncil("c-yli-2", "marko-sorvisto", "Marko", "Sorvisto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Ylivieskan kaupunki", "City of Ylivieska", "KESK"
+  )),
+  profile(mCouncil("c-yli-3", "paula-haapakoski", "Paula", "Haapakoski",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Ylivieskan kaupunki", "City of Ylivieska", "KESK"
+  )),
+  profile(mCouncil("c-yli-4", "sanna-haggman", "Sanna", "Häggman",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Ylivieskan kaupunki", "City of Ylivieska", "KESK"
+  )),
+  profile(mCouncil("c-yli-5", "juha-koskela", "Juha", "Koskela",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Ylivieskan kaupunki", "City of Ylivieska", "KESK"
+  )),
+
+  // ─── Kalajoen kaupunki valtuusto ───
+  profile(mCouncil("c-kal-1", "miika-heikkila", "Miika", "Heikkilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-2", "antti-kuusisto", "Antti", "Kuusisto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-3", "antti-nikula", "Antti", "Nikula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-4", "eija-pahkala", "Eija", "Pahkala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-5", "minna-ainali", "Minna", "Ainali",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-6", "tuija-alahimanka", "Tuija", "Alahimanka",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-7", "tomi-gronoff", "Tomi", "Gronoff",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-8", "hannu-heikkila", "Hannu", "Heikkilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KESK"
+  )),
+  profile(mCouncil("c-kal-9", "jouko-arvo", "Jouko", "Arvo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KOK"
+  )),
+  profile(mCouncil("c-kal-10", "suvi-puhto", "Suvi", "Puhto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KOK"
+  )),
+  profile(mCouncil("c-kal-11", "hanna-saari", "Hanna", "Saari",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KOK"
+  )),
+  profile(mCouncil("c-kal-12", "reijo-perander", "Reijo", "Perander",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "KD"
+  )),
+  profile(mCouncil("c-kal-13", "sirpa-heiska", "Sirpa", "Heiska",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "SDP"
+  )),
+  profile(mCouncil("c-kal-14", "piia-harkonen", "Piia", "Härkönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "SDP"
+  )),
+  profile(mCouncil("c-kal-15", "sirkka-alho", "Sirkka", "Alho",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "VAS"
+  )),
+  profile(mCouncil("c-kal-16", "katja-tuliniemi", "Katja", "Tuliniemi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kalajoen kaupunki", "City of Kalajoki", "VAS"
+  )),
+
+  // ─── Kuusamon kaupunki valtuusto ───
+  profile(mCouncil("c-kus-1", "anna-kantola", "Anna", "Kantola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KESK"
+  )),
+  profile(mCouncil("c-kus-2", "mikko-ahonen", "Mikko", "Ahonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-3", "jarmo-bergbacka", "Jarmo", "Bergbacka",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-4", "kati-book", "Kati", "Böök",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-5", "hannu-ervasti", "Hannu", "Ervasti",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-6", "matti-ervasti", "Matti", "Ervasti",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-7", "maarit-gronholm-kaikkonen", "Maarit", "Grönholm-Kaikkonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-8", "mika-haataja", "Mika", "Haataja",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-9", "pertti-heiskanen", "Pertti", "Heiskanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-10", "tiina-hietajarvi", "Tiina", "Hietajärvi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-11", "hannu-hiltula", "Hannu", "Hiltula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-12", "milja-hokkanen", "Milja", "Hokkanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-13", "laura-illikainen", "Laura", "Illikainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "KOK"
+  )),
+  profile(mCouncil("c-kus-14", "mika-flojt", "Mika", "Flöjt",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "VIHR"
+  )),
+  profile(mCouncil("c-kus-15", "heikki-ketola", "Heikki", "Ketola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "VIHR"
+  )),
+  profile(mCouncil("c-kus-16", "marjo-koramo", "Marjo", "Koramo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "VIHR"
+  )),
+  profile(mCouncil("c-kus-17", "vuokko-kasma", "Vuokko", "Käsmä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kuusamon kaupunki", "City of Kuusamo", "VIHR"
+  )),
+
+  // ─── Nivalan kaupunki valtuusto ───
+  profile(mCouncil("c-niv-1", "elina-hyttinen", "Elina", "Hyttinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-2", "timo-vahasoyrinki", "Timo", "Vähäsöyrinki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-3", "aleksi-pakkila", "Aleksi", "Päkkilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-4", "tanja-makela", "Tanja", "Mäkelä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-5", "leena-peltosaari", "Leena", "Peltosaari",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-6", "eija-riitta-niinikoski", "Eija-Riitta", "Niinikoski",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-7", "jenni-myllylahti", "Jenni", "Myllylahti",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-8", "jarmo-vuolteenaho", "Jarmo", "Vuolteenaho",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+  profile(mCouncil("c-niv-9", "hannes-ohtamaa", "Hannes", "Ohtamaa",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Nivalan kaupunki", "City of Nivala", "KESK"
+  )),
+
+  // ─── Haapaveden kaupunki valtuusto ───
+  profile(mCouncil("c-hpv-1", "timo-mehtala", "Timo", "Mehtälä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-2", "raimo-jussila", "Raimo", "Jussila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-3", "heino-vuorenmaa", "Heino", "Vuorenmaa",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-4", "teemu-haukipuro", "Teemu", "Haukipuro",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-5", "diana-seppa", "Diana", "Seppä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-6", "hannu-riuttanen", "Hannu", "Riuttanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-7", "tuija-metsaharju", "Tuija", "Metsäharju",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-8", "kaisa-savolainen", "Kaisa", "Savolainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-9", "nea-noora-koukka", "Nea-Noora", "Koukka",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-10", "janne-makinen", "Janne", "Mäkinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-11", "sauli-pitkala", "Sauli", "Pitkälä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-12", "helina-niemela", "Helinä", "Niemelä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-13", "leila-sarkipaju", "Leila", "Särkipaju",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KESK"
+  )),
+  profile(mCouncil("c-hpv-14", "ulpu-ollila", "Ulpu", "Ollila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "SIT"
+  )),
+  profile(mCouncil("c-hpv-15", "heikki-pitkala", "Heikki", "Pitkälä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "SIT"
+  )),
+  profile(mCouncil("c-hpv-16", "mirva-mottonen", "Mirva", "Möttönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "SIT"
+  )),
+  profile(mCouncil("c-hpv-17", "joonas-vatjus", "Joonas", "Vatjus",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "SIT"
+  )),
+  profile(mCouncil("c-hpv-18", "ari-joentakanen", "Ari", "Joentakanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "SIT"
+  )),
+  profile(mCouncil("c-hpv-19", "aila-aakko", "Aila", "Aakko",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "VAS"
+  )),
+  profile(mCouncil("c-hpv-20", "outi-pekkala", "Outi", "Pekkala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "VAS"
+  )),
+  profile(mCouncil("c-hpv-21", "julia-puolitaival", "Julia", "Puolitaival",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "VAS"
+  )),
+  profile(mCouncil("c-hpv-22", "sirja-sirvio", "Sirja", "Sirviö",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "PS"
+  )),
+  profile(mCouncil("c-hpv-23", "sami-ritola", "Sami", "Ritola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "PS"
+  )),
+  profile(mCouncil("c-hpv-24", "ville-pirkkalainen", "Ville", "Pirkkalainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "PS"
+  )),
+  profile(mCouncil("c-hpv-25", "aleksi-hintta", "Aleksi", "Hintta",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "PS"
+  )),
+  profile(mCouncil("c-hpv-26", "paavo-pyy", "Paavo", "Pyy",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KOK"
+  )),
+  profile(mCouncil("c-hpv-27", "lasse-heikkila", "Lasse", "Heikkilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Haapaveden kaupunki", "City of Haapavesi", "KOK"
+  )),
+
+  // ─── Oulaisten kaupunki valtuusto ───
+  profile(mCouncil("c-oln-1", "janette-rajaniemi", "Janette", "Rajaniemi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulaisten kaupunki", "City of Oulainen", "KESK"
+  )),
+  profile(mCouncil("c-oln-2", "veli-tirila", "Veli", "Tirilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulaisten kaupunki", "City of Oulainen", "KESK"
+  )),
+  profile(mCouncil("c-oln-3", "jari-mannikko", "Jari", "Männikkö",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulaisten kaupunki", "City of Oulainen", "SDP"
+  )),
+  profile(mCouncil("c-oln-4", "anneli-rajaniemi", "Anneli", "Rajaniemi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Oulaisten kaupunki", "City of Oulainen", "VAS"
+  )),
+
+  // ─── Kempeleen kunta valtuusto ───
+  profile(mCouncil("c-kem-1", "jarmo-haapaniemi", "Jarmo", "Haapaniemi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kempeleen kunta", "Municipality of Kempele", "SDP"
+  )),
+  profile(mCouncil("c-kem-2", "sanna-laine", "Sanna", "Laine",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kempeleen kunta", "Municipality of Kempele", "SDP"
+  )),
+  profile(mCouncil("c-kem-3", "ahti-tahkola", "Ahti", "Tahkola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kempeleen kunta", "Municipality of Kempele", "KESK"
+  )),
+  profile(mCouncil("c-kem-4", "minna-huusari", "Minna", "Huusari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kempeleen kunta", "Municipality of Kempele", "KESK"
+  )),
+  profile(mCouncil("c-kem-5", "antti-ollikainen", "Antti", "Ollikainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kempeleen kunta", "Municipality of Kempele", "KESK"
+  )),
+
+  // ─── Limingan kunta valtuusto ───
+  profile(mCouncil("c-lim-1", "tuomas-ahola", "Tuomas", "Ahola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Limingan kunta", "Municipality of Liminka", "KESK"
+  )),
+  profile(mCouncil("c-lim-2", "juha-matti-holopainen", "Juha-Matti", "Holopainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Limingan kunta", "Municipality of Liminka", "PS"
+  )),
+
+  // ─── Muhoksen kunta valtuusto ───
+  profile(mCouncil("c-muh-1", "veli-paasimaa", "Veli", "Paasimaa",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muhoksen kunta", "Municipality of Muhos", "KESK"
+  )),
+
+  // ─── Iin kunta valtuusto ───
+  profile(mCouncil("c-iin-1", "johannes-tuomela", "Johannes", "Tuomela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-2", "sanna-tuomela", "Sanna", "Tuomela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-3", "johannes-kaisto", "Johannes", "Kaisto",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-4", "hannu-jokela", "Hannu", "Jokela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-5", "reijo-pakonen", "Reijo", "Pakonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-6", "ilkka-paaso", "Ilkka", "Paaso",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-7", "juha-matti-jutila", "Juha-Matti", "Jutila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-8", "mika-koskela", "Mika", "Koskela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-9", "pekka-klasila", "Pekka", "Klasila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-10", "pirjo-tapio", "Pirjo", "Tapio",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-11", "helka-matikainen", "Helka", "Matikainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-12", "anne-ojala", "Anne", "Ojala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-13", "raino-alaraasakka", "Raino", "Alaraasakka",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KESK"
+  )),
+  profile(mCouncil("c-iin-14", "jussi-kurttila", "Jussi", "Kurttila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KOK"
+  )),
+  profile(mCouncil("c-iin-15", "petri-kurttila", "Petri", "Kurttila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KOK"
+  )),
+  profile(mCouncil("c-iin-16", "jussi-ukkola", "Jussi", "Ukkola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KOK"
+  )),
+  profile(mCouncil("c-iin-17", "niko-huotari", "Niko", "Huotari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KOK"
+  )),
+  profile(mCouncil("c-iin-18", "noora-paakkola", "Noora", "Paakkola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KOK"
+  )),
+  profile(mCouncil("c-iin-19", "minna-maenpaa", "Minna", "Mäenpää",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KOK"
+  )),
+  profile(mCouncil("c-iin-20", "petteri-koskela", "Petteri", "Koskela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "KOK"
+  )),
+  profile(mCouncil("c-iin-21", "teijo-liedes", "Teijo", "Liedes",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "VAS"
+  )),
+  profile(mCouncil("c-iin-22", "teijo-haapaniemi", "Teijo", "Haapaniemi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "VAS"
+  )),
+  profile(mCouncil("c-iin-23", "heli-hannele-tiiro", "Heli-Hannele", "Tiiro",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "VAS"
+  )),
+  profile(mCouncil("c-iin-24", "leena-kivela", "Leena", "Kivelä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "VAS"
+  )),
+  profile(mCouncil("c-iin-25", "tauno-halonen", "Tauno", "Halonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "VAS"
+  )),
+  profile(mCouncil("c-iin-26", "minna-jakku-hiivala", "Minna", "Jakku-Hiivala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "VAS"
+  )),
+  profile(mCouncil("c-iin-27", "petri-hyvonen", "Petri", "Hyvönen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Iin kunta", "Municipality of Ii", "PS"
+  )),
+
+  // ─── Tyrnävän kunta valtuusto ───
+  profile(mCouncil("c-tyr-1", "maarit-matinolli", "Maarit", "Matinolli",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KOK"
+  )),
+  profile(mCouncil("c-tyr-2", "jari-matinolli", "Jari", "Matinolli",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KOK"
+  )),
+  profile(mCouncil("c-tyr-3", "lauri-sainio", "Lauri", "Sainio",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KOK"
+  )),
+  profile(mCouncil("c-tyr-4", "elina-palola", "Elina", "Palola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KOK"
+  )),
+  profile(mCouncil("c-tyr-5", "hannele-heikkila-tuomaala", "Hannele", "Heikkilä-Tuomaala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KOK"
+  )),
+  profile(mCouncil("c-tyr-6", "seija-haapalainen", "Seija", "Haapalainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KOK"
+  )),
+  profile(mCouncil("c-tyr-7", "mikko-kukkohovi", "Mikko", "Kukkohovi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KOK"
+  )),
+  profile(mCouncil("c-tyr-8", "heikki-patala", "Heikki", "Patala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "PS"
+  )),
+  profile(mCouncil("c-tyr-9", "mirjam-hurskainen", "Mirjam", "Hurskainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "PS"
+  )),
+  profile(mCouncil("c-tyr-10", "juha-luokkala", "Juha", "Luokkala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KESK"
+  )),
+  profile(mCouncil("c-tyr-11", "annukka-suotula", "Annukka", "Suotula",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KESK"
+  )),
+  profile(mCouncil("c-tyr-12", "soili-pokka", "Soili", "Pokka",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tyrnävän kunta", "Municipality of Tyrnävä", "KESK"
+  )),
+
+  // ─── Pudasjärven kaupunki valtuusto ───
+  profile(mCouncil("c-pud-1", "olga-oinas-panuma", "Olga", "Oinas-Panuma",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-2", "anni-inkeri-tormanen", "Anni-Inkeri", "Törmänen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-3", "jorma-kouva", "Jorma", "Kouva",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-4", "juhani-jurmu", "Juhani", "Jurmu",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-5", "marko-koivula", "Marko", "Koivula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-6", "juha-heikkila", "Juha", "Heikkilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-7", "sointu-veivo", "Sointu", "Veivo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-8", "eero-hyttinen", "Eero", "Hyttinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-9", "jouni-vengasaho", "Jouni", "Vengasaho",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-10", "outi-lehtimaki", "Outi", "Lehtimäki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-11", "maija-lax", "Maija", "Lax",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-12", "heikki-putula", "Heikki", "Putula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-13", "juha-mertala", "Juha", "Mertala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-14", "auri-haataja", "Auri", "Haataja",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-15", "marja-lantto", "Marja", "Lantto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-16", "vesa-riekki", "Vesa", "Riekki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pud-17", "sirkka-pankinaho", "Sirkka", "Pankinaho",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pudasjärven kaupunki", "City of Pudasjärvi", "PS"
+  )),
+
+  // ─── Taivalkosken kunta valtuusto ───
+  profile(mCouncil("c-tai-1", "harri-karjalainen", "Harri", "Karjalainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Taivalkosken kunta", "Municipality of Taivalkoski", "KESK"
+  )),
+  profile(mCouncil("c-tai-2", "heli-hietala", "Heli", "Hietala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Taivalkosken kunta", "Municipality of Taivalkoski", "SDP"
+  )),
+  profile(mCouncil("c-tai-3", "ville-meskus", "Ville", "Meskus",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Taivalkosken kunta", "Municipality of Taivalkoski", "SIT"
+  )),
+
+  // ─── Pyhäjoen kunta valtuusto ───
+  profile(mCouncil("c-pyj-1", "niko-rantanen", "Niko", "Rantanen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-2", "tauno-rajaniemi", "Tauno", "Rajaniemi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-3", "paula-anttila", "Paula", "Anttila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-4", "toni-grekula", "Toni", "Grekula",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-5", "terhi-kallio", "Terhi", "Kallio",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-6", "mikko-koskela", "Mikko", "Koskela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-7", "jutta-nikki", "Jutta", "Nikki",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-8", "lauri-parkka", "Lauri", "Pärkkä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-9", "tanja-siipilehto", "Tanja", "Siipilehto",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KESK"
+  )),
+  profile(mCouncil("c-pyj-10", "helena-widnas", "Helena", "Widnäs",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "VAS"
+  )),
+  profile(mCouncil("c-pyj-11", "eija-flink", "Eija", "Flink",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "VAS"
+  )),
+  profile(mCouncil("c-pyj-12", "nico-helaakoski", "Nico", "Helaakoski",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "VAS"
+  )),
+  profile(mCouncil("c-pyj-13", "jari-luoto", "Jari", "Luoto",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "VAS"
+  )),
+  profile(mCouncil("c-pyj-14", "saara-mustakallio", "Saara", "Mustakallio",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "VAS"
+  )),
+  profile(mCouncil("c-pyj-15", "raino-peltoniemi", "Raino", "Peltoniemi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KOK"
+  )),
+  profile(mCouncil("c-pyj-16", "kaisa-salmivuori-vaananen", "Kaisa", "Salmivuori-Väänänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki", "KOK"
+  )),
+
+  // ─── Pyhäjärven kaupunki valtuusto ───
+  profile(mCouncil("c-pyr-1", "jukka-tikanmaki", "Jukka", "Tikanmäki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-2", "pekka-tikanmaki", "Pekka", "Tikanmäki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-3", "juhani-pyhtila", "Juhani", "Pyhtilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-4", "markku-liuska", "Markku", "Liuska",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-5", "jarmo-halonen", "Jarmo", "Halonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-6", "erkki-karkkainen", "Erkki", "Kärkkäinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-7", "eeva-riitta-pappila", "Eeva-Riitta", "Pappila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-8", "olli-kuukasjarvi", "Olli", "Kuukasjärvi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-9", "jarkko-pylvas", "Jarkko", "Pylväs",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-10", "eeva-aulakoski", "Eeva", "Aulakoski",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-11", "aila-kauranen", "Aila", "Kauranen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "KESK"
+  )),
+  profile(mCouncil("c-pyr-12", "jorma-leskinen", "Jorma", "Leskinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "VAS"
+  )),
+  profile(mCouncil("c-pyr-13", "jouni-jussinniemi", "Jouni", "Jussinniemi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "VAS"
+  )),
+  profile(mCouncil("c-pyr-14", "hanna-reetta-majava", "Hanna-Reetta", "Majava",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "VAS"
+  )),
+  profile(mCouncil("c-pyr-15", "teija-mykkanen", "Teija", "Mykkänen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "VAS"
+  )),
+  profile(mCouncil("c-pyr-16", "timo-karsikas", "Timo", "Karsikas",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "VAS"
+  )),
+  profile(mCouncil("c-pyr-17", "pasi-vornanen", "Pasi", "Vornanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "VAS"
+  )),
+  profile(mCouncil("c-pyr-18", "jere-hakkarainen", "Jere", "Hakkarainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "VAS"
+  )),
+  profile(mCouncil("c-pyr-19", "raija-leppaharju", "Raija", "Leppäharju",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "PS"
+  )),
+  profile(mCouncil("c-pyr-20", "harri-lehto", "Harri", "Lehto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi", "PS"
+  )),
+
+  // ─── Kärsämäen kunta valtuusto ───
+  profile(mCouncil("c-krs-1", "anne-andersson", "Anne", "Andersson",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kärsämäen kunta", "Municipality of Kärsämäki", "SIT"
+  )),
+  profile(mCouncil("c-krs-2", "tero-ylitalo", "Tero", "Ylitalo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kärsämäen kunta", "Municipality of Kärsämäki", "SIT"
+  )),
+  profile(mCouncil("c-krs-3", "mika-pietikainen", "Mika", "Pietikäinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kärsämäen kunta", "Municipality of Kärsämäki", "SIT"
+  )),
+
+  // ─── Sievin kunta valtuusto ───
+  profile(mCouncil("c-sie-1", "rami-rauhala", "Rami", "Rauhala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-2", "janne-huhtala", "Janne", "Huhtala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-3", "ahti-hannula", "Ahti", "Hannula",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-4", "terhi-kangas", "Terhi", "Kangas",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-5", "ari-ahola", "Ari", "Ahola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-6", "kari-honkala", "Kari", "Honkala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-7", "hilla-linna", "Hilla", "Linna",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-8", "kirsi-nurkkala", "Kirsi", "Nurkkala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-9", "kati-paananen", "Kati", "Paananen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-10", "teuvo-nissila", "Teuvo", "Nissilä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KESK"
+  )),
+  profile(mCouncil("c-sie-11", "ilkka-heikkila", "Ilkka", "Heikkilä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sievin kunta", "Municipality of Sievi", "KD"
+  )),
+
+  // ─── Alavieskan kunta valtuusto ───
+  profile(mCouncil("c-ala-1", "tapio-mattila", "Tapio", "Mattila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-2", "jyrki-vaarakoski", "Jyrki", "Vääräkoski",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-3", "sakari-siitonen", "Sakari", "Siitonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-4", "kaija-hannula", "Kaija", "Hannula",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-5", "lauri-jaaskela", "Lauri", "Jääskelä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-6", "aki-makela", "Aki", "Mäkelä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-7", "olavi-simi", "Olavi", "Simi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-8", "heikki-hintsala", "Heikki", "Hintsala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-9", "mika-hakkinen", "Mika", "Häkkinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-10", "risto-isokaanta", "Risto", "Isokääntä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-11", "tiina-isokaanta", "Tiina", "Isokääntä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-12", "perttu-isotalus", "Perttu", "Isotalus",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-13", "marika-jylli", "Marika", "Jylli",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+  profile(mCouncil("c-ala-14", "heli-kantola", "Heli", "Kantola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Alavieskan kunta", "Municipality of Alavieska", "KESK"
+  )),
+
+  // ─── Merijärven kunta valtuusto ───
+  profile(mCouncil("c-mer-1", "esa-pikkumaki", "Esa", "Pikkumäki",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Merijärven kunta", "Municipality of Merijärvi", "SIT"
+  )),
+
+  // ─── Pyhännän kunta valtuusto ───
+  profile(mCouncil("c-pyt-1", "matti-leiviska", "Matti", "Leiviskä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhännän kunta", "Municipality of Pyhäntä", "KESK"
+  )),
+  profile(mCouncil("c-pyt-2", "liisa-tahkola", "Liisa", "Tahkola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhännän kunta", "Municipality of Pyhäntä", "KESK"
+  )),
+  profile(mCouncil("c-pyt-3", "sami-pellikka", "Sami", "Pellikka",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pyhännän kunta", "Municipality of Pyhäntä", "SDP"
+  )),
+
+  // ─── Reisjärven kunta valtuusto ───
+  profile(mCouncil("c-rei-1", "mervi-niskakoski", "Mervi", "Niskakoski",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Reisjärven kunta", "Municipality of Reisjärvi", "KESK"
+  )),
+  profile(mCouncil("c-rei-2", "mikko-kinnunen", "Mikko", "Kinnunen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Reisjärven kunta", "Municipality of Reisjärvi", "KESK"
+  )),
+  profile(mCouncil("c-rei-3", "anja-suontakanen", "Anja", "Suontakanen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Reisjärven kunta", "Municipality of Reisjärvi", "SIT"
+  )),
+
+  // ─── Siikajoen kunta valtuusto ───
+  profile(mCouncil("c-sik-1", "riitta-liisa-salmenkangas", "Riitta-Liisa", "Salmenkangas",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikajoen kunta", "Municipality of Siikajoki", "KESK"
+  )),
+
+  // ─── Siikalatvan kunta valtuusto ───
+  profile(mCouncil("c-sil-1", "pilvi-harma", "Pilvi", "Härmä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-2", "kaisa-louet", "Kaisa", "Louet",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-3", "kaarina-forsstrom", "Kaarina", "Forsström",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-4", "anna-maaria-keranen", "Anna-Maaria", "Keränen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-5", "ira-toppinen", "Ira", "Toppinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-6", "satu-niiranen", "Satu", "Niiranen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-7", "markus-saastamoinen", "Markus", "Saastamoinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-8", "marco-sudhom", "Marco", "Sudhom",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-9", "juha-myllynen", "Juha", "Myllynen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-10", "markus-viitamaki", "Markus", "Viitamäki",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+  profile(mCouncil("c-sil-11", "tero-vaisanen", "Tero", "Väisänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Siikalatvan kunta", "Municipality of Siikalatva", "KESK"
+  )),
+
+  // ─── Lumijoen kunta valtuusto ───
+  profile(mCouncil("c-lum-1", "jaakko-klaavo", "Jaakko", "Klaavo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Lumijoen kunta", "Municipality of Lumijoki", "KESK"
+  )),
 ];
 
 // ─── Municipal contact info ───
