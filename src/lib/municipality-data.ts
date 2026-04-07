@@ -2807,10 +2807,6 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
     "Simon kunta", "Municipality of Simo", "KESK"
   )),
-  profile(mCouncil("c-si-2", "helvi-hamari", "Helvi", "Hamari",
-    "Kunnanvaltuutettu, ääniharava", "Municipal Councillor, top vote-getter",
-    "Simon kunta", "Municipality of Simo", "VAS"
-  )),
 
   // ─── Keminmaa kunnanvaltuusto (31 seats: Keminmaalaisten Parhaaksi 13, KESK 10, VAS 4 — leadership only) ───
   profile(mCouncil("c-km-1", "auli-tasala", "Auli", "Tasala",
@@ -2850,6 +2846,165 @@ export const municipalProfiles: OfficialProfile[] = [
   profile(mCouncil("c-tv-8", "pia-palokangas", "Pia", "Palokangas",
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Tervolan kunta", "Municipality of Tervola", "SIT"
+  )),
+
+  // ─── Ranua kunnanvaltuusto (17 seats: KESK 6, YKK 6, KOK 4, SDP 1 — FULL ROSTER) ───
+  profile(mCouncil("c-rn-1", "keijo-ruonala", "Keijo", "Ruonala",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Ranuan kunta", "Municipality of Ranua", "SDP"
+  )),
+  profile(mCouncil("c-rn-2", "ulla-ilvesluoto", "Ulla", "Ilvesluoto",
+    "Kunnanvaltuutettu, 1. varapj.", "Municipal Councillor, 1st Vice Chair",
+    "Ranuan kunta", "Municipality of Ranua", "SIT"
+  )),
+  profile(mCouncil("c-rn-3", "esko-lopponen", "Esko", "Löppönen",
+    "Kunnanvaltuutettu, 2. varapj.", "Municipal Councillor, 2nd Vice Chair",
+    "Ranuan kunta", "Municipality of Ranua", "KESK"
+  )),
+  profile(mCouncil("c-rn-4", "mirva-salmela", "Mirva", "Salmela",
+    "Kunnanvaltuutettu, kunnanhallituksen pj., ääniharava", "Municipal Councillor, Chair of Board, top vote-getter",
+    "Ranuan kunta", "Municipality of Ranua", "KESK"
+  )),
+  profile(mCouncil("c-rn-5", "mikko-sarajarvi", "Mikko", "Sarajärvi",
+    "Kunnanvaltuutettu, kunnanhallituksen varapj.", "Municipal Councillor, Board Vice Chair",
+    "Ranuan kunta", "Municipality of Ranua", "SIT"
+  )),
+  profile(mCouncil("c-rn-6", "sirkka-illikainen", "Sirkka", "Illikainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KESK"
+  )),
+  profile(mCouncil("c-rn-7", "jaakko-kouva", "Jaakko", "Kouva",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KESK"
+  )),
+  profile(mCouncil("c-rn-8", "tea-romppainen", "Tea", "Romppainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KESK"
+  )),
+  profile(mCouncil("c-rn-9", "jari-hintsala", "Jari", "Hintsala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KESK"
+  )),
+  profile(mCouncil("c-rn-10", "terhi-salmela", "Terhi", "Salmela",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KOK"
+  )),
+  profile(mCouncil("c-rn-11", "antti-pekka-aikkila", "Antti-Pekka", "Aikkila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KOK"
+  )),
+  profile(mCouncil("c-rn-12", "juho-petajajarvi", "Juho", "Petäjäjärvi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KOK"
+  )),
+  profile(mCouncil("c-rn-13", "juha-kortesalmi", "Juha", "Kortesalmi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "KOK"
+  )),
+  profile(mCouncil("c-rn-14", "tuomas-vaarala", "Tuomas", "Väärälä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "SIT"
+  )),
+  profile(mCouncil("c-rn-15", "tatu-hietala", "Tatu", "Hietala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "SIT"
+  )),
+  profile(mCouncil("c-rn-16", "pekka-natti", "Pekka", "Nätti",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "SIT"
+  )),
+  profile(mCouncil("c-rn-17", "petri-manninen", "Petri", "Manninen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ranuan kunta", "Municipality of Ranua", "SIT"
+  )),
+
+  // ─── Salla kunnanvaltuusto (21 seats: KESK 11, PS 4, VAS 3, SDP 2, KOK 1 — partial) ───
+  profile(mCouncil("c-sl-1", "helvi-hamari", "Helvi", "Hamari",
+    "Kunnanvaltuutettu, ääniharava (22,2 % äänistä)", "Municipal Councillor, top vote-getter (22.2% of votes)",
+    "Sallan kunta", "Municipality of Salla", "VAS"
+  )),
+  profile(mCouncil("c-sl-2", "minna-karhu", "Minna", "Karhu",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sallan kunta", "Municipality of Salla", "VAS"
+  )),
+  profile(mCouncil("c-sl-3", "paula-soutukorva", "Paula", "Soutukorva",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Sallan kunta", "Municipality of Salla", "VAS"
+  )),
+
+  // ─── Pelkosenniemi kunnanvaltuusto (13 seats — partial leadership) ───
+  profile(mCouncil("c-pn-1", "markku-kallio", "Markku", "Kallio",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Pelkosenniemen kunta", "Municipality of Pelkosenniemi", "KESK"
+  )),
+  profile(mCouncil("c-pn-2", "heidi-karnaattu", "Heidi", "Karnaattu",
+    "Kunnanvaltuuston varapuheenjohtaja", "Vice Chair of Municipal Council",
+    "Pelkosenniemen kunta", "Municipality of Pelkosenniemi", "VIHR"
+  )),
+  profile(mCouncil("c-pn-3", "laura-lakso", "Laura", "Lakso",
+    "Kunnanvaltuutettu, kunnanhallituksen pj., ääniharava (27,3 % äänistä)", "Municipal Councillor, Chair of Board, top vote-getter (27.3% of votes)",
+    "Pelkosenniemen kunta", "Municipality of Pelkosenniemi", "KESK"
+  )),
+  profile(mCouncil("c-pn-4", "heikki-honkanen", "Heikki", "Honkanen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Pelkosenniemen kunta", "Municipality of Pelkosenniemi", "KESK"
+  )),
+  profile(mCouncil("c-pn-5", "jouko-viitamaki", "Jouko", "Viitamäki",
+    "Kunnanvaltuutettu (vaalikelpoisuus menetetty)", "Municipal Councillor (lost eligibility)",
+    "Pelkosenniemen kunta", "Municipality of Pelkosenniemi", "SIT"
+  )),
+
+  // ─── Ylitornio kunnanvaltuusto (21 seats: KESK 10, Ylitornion parhaaksi 7, VAS 3, SDP 1 — 12 of 21 confirmed) ───
+  // KESK
+  profile(mCouncil("c-yt-1", "tanja-joona", "Tanja", "Joona",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Ylitornion kunta", "Municipality of Ylitornio", "KESK"
+  )),
+  profile(mCouncil("c-yt-2", "jouni-ollikkala", "Jouni", "Ollikkala",
+    "Kunnanvaltuutettu, kunnanhallituksen pj. (kausi 1)", "Municipal Councillor, Chair of Board (term 1)",
+    "Ylitornion kunta", "Municipality of Ylitornio", "KESK"
+  )),
+  profile(mCouncil("c-yt-3", "regina-savolainen", "Regina", "Savolainen",
+    "Kunnanvaltuutettu, kunnanhallituksen pj. (kausi 2)", "Municipal Councillor, Chair of Board (term 2)",
+    "Ylitornion kunta", "Municipality of Ylitornio", "KESK"
+  )),
+  profile(mCouncil("c-yt-4", "sirpa-uusimaa", "Sirpa", "Uusimaa",
+    "Kunnanvaltuutettu, ryhmän äänikuningatar", "Municipal Councillor, party top vote-getter",
+    "Ylitornion kunta", "Municipality of Ylitornio", "KESK"
+  )),
+  // Ylitornion parhaaksi (yhteislista)
+  profile(mCouncil("c-yt-5", "petri-juvani", "Petri", "Juvani",
+    "Kunnanvaltuutettu, ryhmän äänikuningas", "Municipal Councillor, group top vote-getter",
+    "Ylitornion kunta", "Municipality of Ylitornio", "SIT"
+  )),
+  profile(mCouncil("c-yt-6", "katriina-koskela", "Katriina", "Koskela",
+    "Kunnanvaltuutettu, ryhmän perustaja", "Municipal Councillor, group founder",
+    "Ylitornion kunta", "Municipality of Ylitornio", "SIT"
+  )),
+  profile(mCouncil("c-yt-7", "tommi-knuuti", "Tommi", "Knuuti",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ylitornion kunta", "Municipality of Ylitornio", "SIT"
+  )),
+  profile(mCouncil("c-yt-8", "anne-mari-kovalainen", "Anne-Mari", "Kovalainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ylitornion kunta", "Municipality of Ylitornio", "SIT"
+  )),
+  profile(mCouncil("c-yt-9", "marja-huusko", "Marja", "Huusko",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ylitornion kunta", "Municipality of Ylitornio", "SIT"
+  )),
+  profile(mCouncil("c-yt-10", "olavi-maansaari", "Olavi", "Maansaari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ylitornion kunta", "Municipality of Ylitornio", "SIT"
+  )),
+  profile(mCouncil("c-yt-11", "paulina-koskenniemi", "Paulina", "Koskenniemi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ylitornion kunta", "Municipality of Ylitornio", "SIT"
+  )),
+  // VAS
+  profile(mCouncil("c-yt-12", "eugen-parviainen", "Eugen", "Parviainen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Ylitornion kunta", "Municipality of Ylitornio", "VAS"
   )),
 ];
 
