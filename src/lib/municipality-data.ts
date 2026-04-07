@@ -3006,6 +3006,247 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Ylitornion kunta", "Municipality of Ylitornio", "VAS"
   )),
+
+  // ─── Pohjois-Pohjanmaa kunnanjohtajat ───
+  // Oulu kaupunginjohtaja already covered as m-5
+
+  profile(mOfficial("m-400", "leena-mikkola-riekkinen", "Leena", "Mikkola-Riekkinen",
+    "Kaupunginjohtaja", "City Manager",
+    "Raahen kaupunki", "City of Raahe",
+    "2022-01-01",
+    "Leena Mikkola-Riekkinen on toiminut Raahen kaupunginjohtajana vuodesta 2022. Raahe on merkittävä teollisuus- ja satamakaupunki.",
+    "Leena Mikkola-Riekkinen has served as City Manager of Raahe since 2022. Raahe is a significant industrial and port city."
+  )),
+
+  profile(mOfficial("m-401", "maria-sorvisto", "Maria", "Sorvisto",
+    "Kaupunginjohtaja", "City Manager",
+    "Ylivieskan kaupunki", "City of Ylivieska",
+    "2018-01-01",
+    "Maria Sorvisto on toiminut Ylivieskan kaupunginjohtajana vuodesta 2018.",
+    "Maria Sorvisto has served as City Manager of Ylivieska since 2018."
+  )),
+
+  profile(mOfficial("m-402", "jukka-puoskari", "Jukka", "Puoskari",
+    "Kaupunginjohtaja", "City Manager",
+    "Kalajoen kaupunki", "City of Kalajoki",
+    "2000-01-01",
+    "Jukka Puoskari on toiminut Kalajoen kaupunginjohtajana vuodesta 2000. Pitkän linjan kunnallishallinnon ammattilainen.",
+    "Jukka Puoskari has served as City Manager of Kalajoki since 2000. A veteran municipal administration professional."
+  )),
+
+  profile(mOfficial("m-403", "jouko-manninen", "Jouko", "Manninen",
+    "Kaupunginjohtaja", "City Manager",
+    "Kuusamon kaupunki", "City of Kuusamo",
+    "2015-01-01",
+    "Jouko Manninen on toiminut Kuusamon kaupunginjohtajana vuodesta 2015.",
+    "Jouko Manninen has served as City Manager of Kuusamo since 2015."
+  )),
+
+  profile(mOfficial("m-404", "paivi-karikumpu", "Päivi", "Karikumpu",
+    "Kaupunginjohtaja", "City Manager",
+    "Nivalan kaupunki", "City of Nivala",
+    "2015-01-01",
+    "Päivi Karikumpu on toiminut Nivalan kaupunginjohtajana vuodesta 2015.",
+    "Päivi Karikumpu has served as City Manager of Nivala since 2015."
+  )),
+
+  profile(mOfficial("m-405", "jonna-tamminen", "Jonna", "Tamminen",
+    "Kaupunginjohtaja", "City Manager",
+    "Haapajärven kaupunki", "City of Haapajärvi",
+    "2024-01-01",
+    "Jonna Tamminen on toiminut Haapajärven kaupunginjohtajana vuodesta 2024.",
+    "Jonna Tamminen has served as City Manager of Haapajärvi since 2024."
+  )),
+
+  profile(mOfficial("m-406", "esa-jussila", "Esa", "Jussila",
+    "Kaupunginjohtaja", "City Manager",
+    "Haapaveden kaupunki", "City of Haapavesi",
+    "2024-01-01",
+    "Esa Jussila on toiminut Haapaveden kaupunginjohtajana vuodesta 2024.",
+    "Esa Jussila has served as City Manager of Haapavesi since 2024."
+  )),
+
+  profile(mOfficial("m-407", "riikka-moilanen", "Riikka", "Moilanen",
+    "Kaupunginjohtaja", "City Manager",
+    "Oulaisten kaupunki", "City of Oulainen",
+    "2021-01-01",
+    "Riikka Moilanen on toiminut Oulaisten kaupunginjohtajana vuodesta 2021.",
+    "Riikka Moilanen has served as City Manager of Oulainen since 2021."
+  )),
+
+  profile(mOfficial("m-408", "tuomas-lohi", "Tuomas", "Lohi",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Kempeleen kunta", "Municipality of Kempele",
+    "2013-01-01",
+    "Tuomas Lohi on toiminut Kempeleen kunnanjohtajana vuodesta 2013. Kempele on yksi Suomen nopeimmin kasvavista kunnista.",
+    "Tuomas Lohi has served as Municipal Manager of Kempele since 2013. Kempele is one of Finland's fastest-growing municipalities."
+  )),
+
+  profile(mOfficial("m-409", "pekka-rajala-li", "Pekka", "Rajala",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Limingan kunta", "Municipality of Liminka",
+    "2004-01-01",
+    "Pekka Rajala on toiminut Limingan kunnanjohtajana vuodesta 2004. Pitkän linjan kunnallishallinnon ammattilainen.",
+    "Pekka Rajala has served as Municipal Manager of Liminka since 2004. A veteran municipal administration professional."
+  )),
+
+  profile(mOfficial("m-410", "kimmo-hinno", "Kimmo", "Hinno",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Muhoksen kunta", "Municipality of Muhos",
+    "2023-01-01",
+    "Kimmo Hinno on toiminut Muhoksen kunnanjohtajana vuodesta 2023.",
+    "Kimmo Hinno has served as Municipal Manager of Muhos since 2023."
+  )),
+
+  profile(mOfficial("m-411", "marjukka-manninen", "Marjukka", "Manninen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Iin kunta", "Municipality of Ii",
+    "2022-01-01",
+    "Marjukka Manninen on toiminut Iin kunnanjohtajana vuodesta 2022.",
+    "Marjukka Manninen has served as Municipal Manager of Ii since 2022."
+  )),
+
+  profile(mOfficial("m-412", "vesa-anttila", "Vesa", "Anttila",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Tyrnävän kunta", "Municipality of Tyrnävä",
+    "2019-01-01",
+    "Vesa Anttila on toiminut Tyrnävän kunnanjohtajana vuodesta 2019.",
+    "Vesa Anttila has served as Municipal Manager of Tyrnävä since 2019."
+  )),
+
+  profile(mOfficial("m-413", "tomi-timonen", "Tomi", "Timonen",
+    "Kaupunginjohtaja", "City Manager",
+    "Pudasjärven kaupunki", "City of Pudasjärvi",
+    "2014-01-01",
+    "Tomi Timonen on toiminut Pudasjärven kaupunginjohtajana vuodesta 2014.",
+    "Tomi Timonen has served as City Manager of Pudasjärvi since 2014."
+  )),
+
+  profile(mOfficial("m-414", "mirva-haataja", "Mirva", "Haataja",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Taivalkosken kunta", "Municipality of Taivalkoski",
+    "2023-01-01",
+    "Mirva Haataja on toiminut Taivalkosken kunnanjohtajana vuodesta 2023.",
+    "Mirva Haataja has served as Municipal Manager of Taivalkoski since 2023."
+  )),
+
+  profile(mOfficial("m-415", "matti-soronen", "Matti", "Soronen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Pyhäjoen kunta", "Municipality of Pyhäjoki",
+    "2010-01-01",
+    "Matti Soronen on toiminut Pyhäjoen kunnanjohtajana vuodesta 2010. Toimii nykyisin Pohjois-Pohjanmaan hyvinvointialueen (Pohteen) aluevaltuuston puheenjohtajana.",
+    "Matti Soronen has served as Municipal Manager of Pyhäjoki since 2010. He currently serves as chair of the North Ostrobothnia wellbeing region (Pohde) regional council.",
+    null, null,
+    "Keskusta (KESK). Pohteen aluevaltuuston puheenjohtaja Keskustan ryhmästä.",
+    "Centre Party (KESK). Chair of Pohde regional council, Centre Party group."
+  )),
+
+  profile(mOfficial("m-416", "henrik-kiviniemi", "Henrik", "Kiviniemi",
+    "Kaupunginjohtaja", "City Manager",
+    "Pyhäjärven kaupunki", "City of Pyhäjärvi",
+    "2022-01-01",
+    "Henrik Kiviniemi on toiminut Pyhäjärven kaupunginjohtajana vuodesta 2022.",
+    "Henrik Kiviniemi has served as City Manager of Pyhäjärvi since 2022."
+  )),
+
+  profile(mOfficial("m-417", "juho-jukkola", "Juho", "Jukkola",
+    "Kunnanjohtaja (eronnut 21.1.2026)", "Municipal Manager (resigned 21 Jan 2026)",
+    "Kärsämäen kunta", "Municipality of Kärsämäki",
+    "2020-01-01",
+    "Juho Jukkola toimi Kärsämäen kunnanjohtajana ja erosi tehtävästä 21.1.2026. Tehtävää hoidetaan tällä hetkellä viran toistaiseksi avoinna ollessa.",
+    "Juho Jukkola served as Municipal Manager of Kärsämäki and resigned from the position on 21 January 2026. The position is currently being managed in an acting capacity."
+  )),
+
+  profile(mOfficial("m-418", "antti-jussi-vahteala", "Antti-Jussi", "Vahteala",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Sievin kunta", "Municipality of Sievi",
+    "2025-01-01",
+    "Antti-Jussi Vahteala on toiminut Sievin kunnanjohtajana vuodesta 2025.",
+    "Antti-Jussi Vahteala has served as Municipal Manager of Sievi since 2025."
+  )),
+
+  profile(mOfficial("m-419", "kari-pentti", "Kari", "Pentti",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Alavieskan kunta", "Municipality of Alavieska",
+    "2019-01-01",
+    "Kari Pentti on toiminut Alavieskan kunnanjohtajana vuodesta 2019.",
+    "Kari Pentti has served as Municipal Manager of Alavieska since 2019."
+  )),
+
+  profile(mOfficial("m-420", "kari-jokela", "Kari", "Jokela",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Merijärven kunta", "Municipality of Merijärvi",
+    "2012-01-01",
+    "Kari Jokela on toiminut Merijärven kunnanjohtajana vuodesta 2012.",
+    "Kari Jokela has served as Municipal Manager of Merijärvi since 2012."
+  )),
+
+  profile(mOfficial("m-421", "samuli-yrjana", "Samuli", "Yrjänä",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Pyhännän kunta", "Municipality of Pyhäntä",
+    "2025-01-01",
+    "Samuli Yrjänä on toiminut Pyhännän kunnanjohtajana vuodesta 2025.",
+    "Samuli Yrjänä has served as Municipal Manager of Pyhäntä since 2025."
+  )),
+
+  profile(mOfficial("m-422", "matias-ojalehto", "Matias", "Ojalehto",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Reisjärven kunta", "Municipality of Reisjärvi",
+    "2024-01-01",
+    "Matias Ojalehto on toiminut Reisjärven kunnanjohtajana vuodesta 2024. Aktiivinen Keskustan toimija Oulun kuntatasolla ja Pohjois-Pohjanmaan aluetasolla.",
+    "Matias Ojalehto has served as Municipal Manager of Reisjärvi since 2024. Active Centre Party figure at Oulu municipal and North Ostrobothnia regional level.",
+    null, null,
+    "Keskusta (KESK). Aktiivinen Keskustan toimija Oulun kuntatasolla ja Pohjois-Pohjanmaan aluetasolla.",
+    "Centre Party (KESK). Active in the Centre Party at Oulu municipal and North Ostrobothnia regional levels."
+  )),
+
+  profile(mOfficial("m-423", "tiina-hovi", "Tiina", "Hovi",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Siikajoen kunta", "Municipality of Siikajoki",
+    "2025-01-01",
+    "Tiina Hovi aloitti Siikajoen kunnanjohtajana 1.1.2025.",
+    "Tiina Hovi began as Municipal Manager of Siikajoki on 1 January 2025."
+  )),
+
+  profile(mOfficial("m-424", "pekka-iivari", "Pekka", "Iivari",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Siikalatvan kunta", "Municipality of Siikalatva",
+    "2024-01-01",
+    "Pekka Iivari on toiminut Siikalatvan kunnanjohtajana vuodesta 2024.",
+    "Pekka Iivari has served as Municipal Manager of Siikalatva since 2024."
+  )),
+
+  profile(mOfficial("m-425", "heidi-soini", "Heidi", "Soini",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Lumijoen kunta", "Municipality of Lumijoki",
+    "2025-12-01",
+    "Heidi Soini aloitti Lumijoen kunnanjohtajana 1.12.2025.",
+    "Heidi Soini began as Municipal Manager of Lumijoki on 1 December 2025."
+  )),
+
+  profile(mOfficial("m-426", "anne-sormunen", "Anne", "Sormunen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Utajärven kunta", "Municipality of Utajärvi",
+    "2017-08-01",
+    "Anne Sormunen on toiminut Utajärven kunnanjohtajana 1.8.2017 alkaen.",
+    "Anne Sormunen has served as Municipal Manager of Utajärvi since 1 August 2017."
+  )),
+
+  profile(mOfficial("m-427", "minna-karkkainen", "Minna", "Kärkkäinen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Vaalan kunta", "Municipality of Vaala",
+    "2023-08-01",
+    "Minna Kärkkäinen on toiminut Vaalan kunnanjohtajana 1.8.2023 alkaen.",
+    "Minna Kärkkäinen has served as Municipal Manager of Vaala since 1 August 2023."
+  )),
+
+  profile(mOfficial("m-428", "maarit-alikoski", "Maarit", "Alikoski",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Hailuodon kunta", "Municipality of Hailuoto",
+    "2021-01-01",
+    "Maarit Alikoski on toiminut Hailuodon kunnanjohtajana vuodesta 2021. Hailuoto on Suomen ainoa merellinen saaristokunta Perämerellä.",
+    "Maarit Alikoski has served as Municipal Manager of Hailuoto since 2021. Hailuoto is Finland's only marine archipelago municipality in the Bay of Bothnia."
+  )),
 ];
 
 // ─── Municipal contact info ───
