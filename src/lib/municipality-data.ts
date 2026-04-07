@@ -2230,6 +2230,171 @@ export const municipalProfiles: OfficialProfile[] = [
     "Jarmo Pienimäki on toiminut Ylitornion kunnanjohtajana. Ylitornio sijaitsee Tornionjokilaaksossa Ruotsin rajalla.",
     "Jarmo Pienimäki has served as Municipal Manager of Ylitornio. Ylitornio is located in the Tornio River Valley on the Swedish border."
   )),
+
+  // ─── Rovaniemi kaupunginvaltuusto (51 seats: KESK 14, SDP 13, KOK 10, PS 5, VAS 5, VIHR 4 — partial, 38 of 51 confirmed) ───
+  // KESK (14)
+  profile(mCouncil("c-ro-1", "susanna-junttila", "Susanna", "Junttila",
+    "Kaupunginvaltuutettu, kaupunginhallituksen pj.", "City Councillor, Chair of City Board",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-2", "heikki-kontiosalo", "Heikki", "Kontiosalo",
+    "Kaupunginvaltuutettu, 2. varapj.", "City Councillor, 2nd Vice Chair",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-3", "hilpi-ahola", "Hilpi", "Ahola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-4", "timo-haapa-aro", "Timo", "Haapa-aro",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-5", "kaisu-huhtalo", "Kaisu", "Huhtalo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-6", "mari-jolanki", "Mari", "Jolanki",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-7", "susanna-viitala", "Susanna", "Viitala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-8", "raija-keratar", "Raija", "Kerätär",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-9", "toni-jankala", "Toni", "Jänkälä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-10", "sanna-kylmanen", "Sanna", "Kylmänen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-11", "heikki-luiro", "Heikki", "Luiro",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-12", "riku-tapio", "Riku", "Tapio",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-13", "anne-ollila", "Anne", "Ollila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+  profile(mCouncil("c-ro-14", "mikko-riikola", "Mikko", "Riikola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KESK"
+  )),
+
+  // SDP (13 — 10 confirmed)
+  profile(mCouncil("c-ro-15", "eemeli-kajula", "Eemeli", "Kajula",
+    "Kaupunginvaltuuston puheenjohtaja", "Chair of City Council",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-16", "mikkel-nakkalajarvi", "Mikkel", "Näkkäläjärvi",
+    "Kaupunginvaltuutettu, ryhmän pj.", "City Councillor, Group Chair",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-17", "johanna-ojala-niemela", "Johanna", "Ojala-Niemelä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-18", "maria-riitta-mallinen", "Maria-Riitta", "Mällinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-19", "harri-rapo", "Harri", "Rapo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-20", "marjo-rundgren", "Marjo", "Rundgren",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-21", "kimmo-niukkanen", "Kimmo", "Niukkanen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-22", "terhi-heikkila", "Terhi", "Heikkilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-23", "maija-pirttijarvi", "Maija", "Pirttijärvi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+  profile(mCouncil("c-ro-24", "paivi-alaoja", "Päivi", "Alaoja",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "SDP"
+  )),
+
+  // KOK (10 — 2 confirmed)
+  profile(mCouncil("c-ro-25", "heikki-autto", "Heikki", "Autto",
+    "Kaupunginvaltuutettu, 1. varapj.", "City Councillor, 1st Vice Chair",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KOK"
+  )),
+  profile(mCouncil("c-ro-26", "sanna-luoma", "Sanna", "Luoma",
+    "Kaupunginvaltuutettu, ryhmän pj.", "City Councillor, Group Chair",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "KOK"
+  )),
+
+  // PS (5)
+  profile(mCouncil("c-ro-27", "tapio-keranen", "Tapio", "Keränen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "PS"
+  )),
+  profile(mCouncil("c-ro-28", "sara-seppanen", "Sara", "Seppänen",
+    "Kaupunginvaltuutettu, kaupunginhallituksen jäsen", "City Councillor, Board Member",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "PS"
+  )),
+  profile(mCouncil("c-ro-29", "mira-mustonen", "Mira", "Mustonen",
+    "Kaupunginvaltuutettu, kansanedustaja", "City Councillor, MP",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "PS"
+  )),
+  profile(mCouncil("c-ro-30", "tuomas-koskiniemi", "Tuomas", "Koskiniemi",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "PS"
+  )),
+  profile(mCouncil("c-ro-31", "timo-tolonen-ro", "Timo", "Tolonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "PS"
+  )),
+
+  // VAS (5)
+  profile(mCouncil("c-ro-32", "matti-huutola", "Matti", "Huutola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "VAS"
+  )),
+  profile(mCouncil("c-ro-33", "vesa-puuronen", "Vesa", "Puuronen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "VAS"
+  )),
+  profile(mCouncil("c-ro-34", "tiina-outila", "Tiina", "Outila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "VAS"
+  )),
+  profile(mCouncil("c-ro-35", "henri-ramberg", "Henri", "Ramberg",
+    "Kaupunginvaltuutettu, 3. varapj.", "City Councillor, 3rd Vice Chair",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "VAS"
+  )),
+  profile(mCouncil("c-ro-36", "mari-ikonen", "Mari", "Ikonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "VAS"
+  )),
+
+  // VIHR (4 — 2 confirmed)
+  profile(mCouncil("c-ro-37", "sanna-konola", "Sanna", "Konola",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "VIHR"
+  )),
+  profile(mCouncil("c-ro-38", "miikka-hast", "Miikka", "Hast",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Rovaniemen kaupunki", "City of Rovaniemi", "VIHR"
+  )),
 ];
 
 // ─── Municipal contact info ───
