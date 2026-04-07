@@ -2083,8 +2083,8 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Sodankylän kunta", "Municipality of Sodankylä",
     "2021-01-01",
-    "Jari Rantapelkonen on toiminut Sodankylän kunnanjohtajana vuodesta 2021. Entinen kansanedustaja (KOK). Sodankylä tunnetaan kaivostoiminnasta ja Lapin prikaatista.",
-    "Jari Rantapelkonen has served as Municipal Manager of Sodankylä since 2021. Former Member of Parliament (NCP). Sodankylä is known for mining and the Lapland Brigade."
+    "Jari Rantapelkonen on toiminut Sodankylän kunnanjohtajana vuodesta 2023. Sotatieteiden tohtori, valtiotieteiden maisteri, everstiluutnantti. Aiemmin Maanpuolustuskorkeakoulun sotilasprofessori. Toiminut myös Enontekiön (2016–) ja Kittilän (2022–) kunnanjohtajana.",
+    "Jari Rantapelkonen has served as Municipal Manager of Sodankylä since 2023. PhD in military sciences, MSc in political science, Lieutenant Colonel. Previously Military Professor at the National Defence University. Has also served as Municipal Manager of Enontekiö (2016–) and Kittilä (2022–)."
   )),
 
   // ─── Inari ───
@@ -2100,9 +2100,12 @@ export const municipalProfiles: OfficialProfile[] = [
   profile(mOfficial("m-305", "timo-kurula", "Timo", "Kurula",
     "Kunnanjohtaja", "Municipal Manager",
     "Kittilän kunta", "Municipality of Kittilä",
-    "2019-01-01",
-    "Timo Kurula on toiminut Kittilän kunnanjohtajana vuodesta 2019. Kittilä tunnetaan Levin matkailukeskuksesta ja kultakaivoksesta.",
-    "Timo Kurula has served as Municipal Manager of Kittilä since 2019. Kittilä is known for the Levi ski resort and gold mine."
+    "2022-12-01",
+    "Timo Kurula (s. 1965) on biologian opettaja ja toiminut Kittilän kunnanjohtajana joulukuusta 2022 lähtien. Korkein oikeus tuomitsi Kurulan ehdolliseen vankeusrangaistukseen virka-aseman väärinkäytöstä, petoksen yrityksestä ja virkavelvollisuuden rikkomisesta osana pitkään jatkunutta Kittilä-kriisiä. Valtuusto äänesti hänen jatkamisensa puolesta.",
+    "Timo Kurula (b. 1965) is a biology teacher who has served as Municipal Manager of Kittilä since December 2022. The Supreme Court convicted Kurula to a suspended prison sentence for abuse of office, attempted fraud, and breach of official duty as part of the long-running Kittilä corruption case. The council voted to allow him to continue in his role.",
+    null, null,
+    "Yli 20 vuoden kokemus Kittilän kunnallispolitiikassa Keskustan luottamushenkilönä. Raportoitu Keskustan eduskuntavaaliehdokkaana.",
+    "Over 20 years' experience as a Centre Party (Keskusta) elected official in Kittilä municipal politics. Reported as a Centre Party parliamentary election candidate."
   )),
 
   // ─── Enontekiö ───
@@ -2209,17 +2212,23 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanjohtaja", "Municipal Manager",
     "Keminmaan kunta", "Municipality of Keminmaa",
     "2019-01-01",
-    "Hannele Matinlassi on toiminut Keminmaan kunnanjohtajana. Keminmaa sijaitsee Kemin naapurissa Kemijoen varrella.",
-    "Hannele Matinlassi has served as Municipal Manager of Keminmaa. Keminmaa is located next to Kemi along the Kemi River."
+    "Hannele Matinlassi on toiminut Keminmaan kunnanjohtajana. Kasvatustieteen maisteri, koulutus- ja sivistysjohtamisen erikoispätevyydet. Aiemmin Keminmaan sivistysjohtaja vuodesta 2017 ja sitä ennen rehtori vuodesta 2015. Valittu kunnanjohtajaksi äänin 19–11 (vastaehdokas Yrjö Herva).",
+    "Hannele Matinlassi has served as Municipal Manager of Keminmaa. Master of Education with specialist qualifications in educational administration. Previously Keminmaa's Director of Education from 2017 and principal from 2015. Elected Municipal Manager 19–11 against Yrjö Herva.",
+    null, null,
+    "Piti Keminmaan kunnan tervehdyksen Suomen Keskustan Lapin piirin kesäjuhlilla heinäkuussa 2024 — vahva viite Keskusta-yhteyteen, vaikka virallista jäsenyyttä ei julkisissa lähteissä vahvisteta.",
+    "Gave the official Keminmaa municipality greeting at the Centre Party (Keskusta) Lapland district summer festival in July 2024 — a strong indicator of Keskusta affiliation, though formal party membership is not confirmed in public sources."
   )),
 
   // ─── Tervola ───
   profile(mOfficial("m-318", "mika-simoska", "Mika", "Simoska",
     "Kunnanjohtaja", "Municipal Manager",
     "Tervolan kunta", "Municipality of Tervola",
-    "2020-01-01",
-    "Mika Simoska on toiminut Tervolan kunnanjohtajana. Tervola sijaitsee Kemijoen varrella Rovaniemen ja Kemin välissä.",
-    "Mika Simoska has served as Municipal Manager of Tervola. Tervola is located along the Kemi River between Rovaniemi and Kemi."
+    "2004-01-01",
+    "Mika Simoska on toiminut Tervolan kunnanjohtajana yli 21 vuotta. Maa- ja metsätieteiden maisteri, agronomi (entinen Lapin TE-keskus). Toimi Lapin kunnanjohtajien yhdistyksen puheenjohtajana koronakriisin aikana. Tervola sijaitsee Kemijoen varrella Rovaniemen ja Kemin välissä.",
+    "Mika Simoska has served as Municipal Manager of Tervola for over 21 years. M.Sc. (Agriculture and Forestry), agronomist (formerly Lapland TE-Centre). Chaired the Lapland Municipal Managers' Association during the COVID crisis. Tervola is located along the Kemi River between Rovaniemi and Kemi.",
+    null, null,
+    "Asetui Keskustan ehdokkaaksi vuoden 2011 eduskuntavaaleissa Lapin vaalipiirissä.",
+    "Stood as a Centre Party (Keskusta) candidate in the 2011 parliamentary elections in the Lapland electoral district."
   )),
 
   // ─── Ylitornio ───
