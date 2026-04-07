@@ -2395,6 +2395,453 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kaupunginvaltuutettu", "City Councillor",
     "Rovaniemen kaupunki", "City of Rovaniemi", "VIHR"
   )),
+
+  // ─── Tornio kaupunginvaltuusto (43 seats — partial, leadership confirmed) ───
+  profile(mCouncil("c-to-1", "markku-ponkala", "Markku", "Ponkala",
+    "Kaupunginvaltuuston puheenjohtaja", "Chair of City Council",
+    "Tornion kaupunki", "City of Tornio", "KESK"
+  )),
+  profile(mCouncil("c-to-2", "outi-keinanen", "Outi", "Keinänen",
+    "Kaupunginvaltuutettu, 1. varapj.", "City Councillor, 1st Vice Chair",
+    "Tornion kaupunki", "City of Tornio", "KESK"
+  )),
+  profile(mCouncil("c-to-3", "olli-rainio", "Olli", "Rainio",
+    "Kaupunginvaltuutettu, kaupunginhallituksen pj.", "City Councillor, Chair of City Board",
+    "Tornion kaupunki", "City of Tornio", "KESK"
+  )),
+  profile(mCouncil("c-to-4", "jaakko-pelimanni", "Jaakko", "Pelimanni",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Tornion kaupunki", "City of Tornio", "KESK"
+  )),
+  profile(mCouncil("c-to-5", "toni-keranen", "Toni", "Keränen",
+    "Kaupunginvaltuutettu, 2. varapj.", "City Councillor, 2nd Vice Chair",
+    "Tornion kaupunki", "City of Tornio", "VAS"
+  )),
+  profile(mCouncil("c-to-6", "kosti-ollila", "Kosti", "Ollila",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Tornion kaupunki", "City of Tornio", "SDP"
+  )),
+  profile(mCouncil("c-to-7", "kaisa-juuso", "Kaisa", "Juuso",
+    "Kaupunginvaltuutettu, kansanedustaja", "City Councillor, MP",
+    "Tornion kaupunki", "City of Tornio", "PS"
+  )),
+
+  // ─── Kemi kaupunginvaltuusto (39 seats — SDP 17, VAS 10, KOK 6, KESK 4, PS 2) ───
+  // SDP (17 — 15 confirmed)
+  profile(mCouncil("c-ke-1", "viivi-jarvela", "Viivi", "Järvelä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-2", "jaakko-alamommo", "Jaakko", "Alamommo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-3", "mikko-alamommo", "Mikko", "Alamommo",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-4", "miia-alasaarela", "Miia", "Alasaarela",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-5", "sari-auvinen", "Sari", "Auvinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-6", "kalle-huusko-ke", "Kalle", "Huusko",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-7", "pirita-hyotyla", "Pirita", "Hyötylä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-8", "heikki-harkonen", "Heikki", "Härkönen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-9", "jukka-ikalainen", "Jukka", "Ikäläinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-10", "teija-jestila", "Teija", "Jestilä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-11", "jukka-kunnari", "Jukka", "Kunnari",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-12", "pekka-tiitinen", "Pekka", "Tiitinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-13", "ritva-aheinen", "Ritva", "Aheinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-14", "anniina-kumpula", "Anniina", "Kumpula",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  profile(mCouncil("c-ke-15", "johanna-buska", "Johanna", "Buska",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "SDP"
+  )),
+  // VAS (10 — 6 confirmed)
+  profile(mCouncil("c-ke-16", "mikko-koivulehto", "Mikko", "Koivulehto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "VAS"
+  )),
+  profile(mCouncil("c-ke-17", "sari-ekorre", "Sari", "Ekorre",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "VAS"
+  )),
+  profile(mCouncil("c-ke-18", "kari-hanhisuanto", "Kari", "Hanhisuanto",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "VAS"
+  )),
+  profile(mCouncil("c-ke-19", "jukka-herrala", "Jukka", "Herrala",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "VAS"
+  )),
+  profile(mCouncil("c-ke-20", "matti-kettunen-ke", "Matti", "Kettunen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "VAS"
+  )),
+  profile(mCouncil("c-ke-21", "tytti-kumpulainen", "Tytti", "Kumpulainen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "VAS"
+  )),
+  // KOK (6 — 1 confirmed)
+  profile(mCouncil("c-ke-22", "marja-leena-laitinen", "Marja-Leena", "Laitinen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemin kaupunki", "City of Kemi", "KOK"
+  )),
+
+  // ─── Kemijärvi kaupunginvaltuusto (27 seats — partial, Yhteinen Kemijärvi list) ───
+  profile(mCouncil("c-kj-1", "sirpa-iivari", "Sirpa", "Iivari",
+    "Kaupunginvaltuuston puheenjohtaja", "Chair of City Council",
+    "Kemijärven kaupunki", "City of Kemijärvi", "SIT"
+  )),
+  profile(mCouncil("c-kj-2", "henna-jyrkka", "Henna", "Jyrkkä",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemijärven kaupunki", "City of Kemijärvi", "SIT"
+  )),
+  profile(mCouncil("c-kj-3", "sari-leinonen", "Sari", "Leinonen",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemijärven kaupunki", "City of Kemijärvi", "SIT"
+  )),
+  profile(mCouncil("c-kj-4", "ari-aho", "Ari", "Aho",
+    "Kaupunginvaltuutettu", "City Councillor",
+    "Kemijärven kaupunki", "City of Kemijärvi", "SIT"
+  )),
+
+  // ─── Sodankylä kunnanvaltuusto (27 seats — leadership only) ───
+  profile(mCouncil("c-sd-1", "mikko-maijala", "Mikko", "Maijala",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Sodankylän kunta", "Municipality of Sodankylä", "KESK"
+  )),
+  profile(mCouncil("c-sd-2", "mari-anne-penttinen", "Mari-Anne", "Penttinen",
+    "Kunnanvaltuutettu, kunnanhallituksen pj.", "Municipal Councillor, Chair of Board",
+    "Sodankylän kunta", "Municipality of Sodankylä", "KESK"
+  )),
+  profile(mCouncil("c-sd-3", "veikko-virtanen", "Veikko", "Virtanen",
+    "Kunnanvaltuutettu, kunnanhallituksen 2. varapj.", "Municipal Councillor, Board 2nd Vice Chair",
+    "Sodankylän kunta", "Municipality of Sodankylä", "KESK"
+  )),
+  profile(mCouncil("c-sd-4", "mikko-sipila", "Mikko", "Sipilä",
+    "Kunnanvaltuutettu, 1. varapj.", "Municipal Councillor, 1st Vice Chair",
+    "Sodankylän kunta", "Municipality of Sodankylä", "VIHR"
+  )),
+  profile(mCouncil("c-sd-5", "satu-honkonen", "Satu", "Honkonen",
+    "Kunnanvaltuutettu, 2. varapj.", "Municipal Councillor, 2nd Vice Chair",
+    "Sodankylän kunta", "Municipality of Sodankylä", "SDP"
+  )),
+
+  // ─── Inari kunnanvaltuusto (27 seats: KESK 8, KOK 6, SDP 5, VIHR 3, VAS 3, PS 1, KD 1 — leadership confirmed) ───
+  profile(mCouncil("c-in-1", "janne-tervahauta", "Janne", "Tervahauta",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Inarin kunta", "Municipality of Inari", "KESK"
+  )),
+  profile(mCouncil("c-in-2", "aslak-pekkala", "Aslak", "Pekkala",
+    "Kunnanvaltuutettu, 1. varapj.", "Municipal Councillor, 1st Vice Chair",
+    "Inarin kunta", "Municipality of Inari", "KOK"
+  )),
+  profile(mCouncil("c-in-3", "jari-huotari", "Jari", "Huotari",
+    "Kunnanvaltuutettu, kunnanhallituksen pj.", "Municipal Councillor, Chair of Board",
+    "Inarin kunta", "Municipality of Inari", "KOK"
+  )),
+  profile(mCouncil("c-in-4", "anu-avaskari", "Anu", "Avaskari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Inarin kunta", "Municipality of Inari", "KOK"
+  )),
+  profile(mCouncil("c-in-5", "anni-koivisto", "Anni", "Koivisto",
+    "Kunnanvaltuutettu, 2. varapj.", "Municipal Councillor, 2nd Vice Chair",
+    "Inarin kunta", "Municipality of Inari", "SDP"
+  )),
+  profile(mCouncil("c-in-6", "pirita-nakkalajarvi", "Pirita", "Näkkäläjärvi",
+    "Kunnanvaltuutettu, saamelaiskäräjien pj.", "Municipal Councillor, Chair of Sámi Parliament",
+    "Inarin kunta", "Municipality of Inari", "VIHR"
+  )),
+
+  // ─── Kittilä kunnanvaltuusto (27 seats — leadership only) ───
+  profile(mCouncil("c-kt-1", "marita-toivanen", "Marita", "Toivanen",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Kittilän kunta", "Municipality of Kittilä", "VAS"
+  )),
+  profile(mCouncil("c-kt-2", "pekka-rajala", "Pekka", "Rajala",
+    "Kunnanvaltuutettu, 1. varapj.", "Municipal Councillor, 1st Vice Chair",
+    "Kittilän kunta", "Municipality of Kittilä", "KESK"
+  )),
+  profile(mCouncil("c-kt-3", "tarmo-salonen", "Tarmo", "Salonen",
+    "Kunnanvaltuutettu, 2. varapj.", "Municipal Councillor, 2nd Vice Chair",
+    "Kittilän kunta", "Municipality of Kittilä", "PS"
+  )),
+  profile(mCouncil("c-kt-4", "jukka-poti", "Jukka", "Poti",
+    "Kunnanvaltuutettu, 3. varapj.", "Municipal Councillor, 3rd Vice Chair",
+    "Kittilän kunta", "Municipality of Kittilä", "KOK"
+  )),
+
+  // ─── Enontekiö kunnanvaltuusto (17 seats — partial) ───
+  profile(mCouncil("c-en-1", "sari-norrgard", "Sari", "Norrgård",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Enontekiön kunta", "Municipality of Enontekiö", "KESK"
+  )),
+  profile(mCouncil("c-en-2", "elli-maria-kultima", "Elli-Maria", "Kultima",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Enontekiön kunta", "Municipality of Enontekiö", "KESK"
+  )),
+  profile(mCouncil("c-en-3", "emilia-lyttinen", "Emilia", "Lyttinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Enontekiön kunta", "Municipality of Enontekiö", "KESK"
+  )),
+  profile(mCouncil("c-en-4", "ulla-keinovaara", "Ulla", "Keinovaara",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Enontekiön kunta", "Municipality of Enontekiö", "KESK"
+  )),
+  profile(mCouncil("c-en-5", "anri-magga", "Anri", "Magga",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Enontekiön kunta", "Municipality of Enontekiö", "VAS"
+  )),
+
+  // ─── Kolari kunnanvaltuusto (21 seats — partial leadership) ───
+  profile(mCouncil("c-kl-1", "veli-pekka-uusitalo", "Veli-Pekka", "Uusitalo",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Kolarin kunta", "Municipality of Kolari", "SIT"
+  )),
+  profile(mCouncil("c-kl-2", "helena-kaikkonen-tiensuu", "Helena", "Kaikkonen-Tiensuu",
+    "Kunnanvaltuutettu, 1. varapj.", "Municipal Councillor, 1st Vice Chair",
+    "Kolarin kunta", "Municipality of Kolari", "KESK"
+  )),
+  profile(mCouncil("c-kl-3", "mikko-lipponen", "Mikko", "Lipponen",
+    "Kunnanvaltuutettu, 2. varapj.", "Municipal Councillor, 2nd Vice Chair",
+    "Kolarin kunta", "Municipality of Kolari", "SIT"
+  )),
+  profile(mCouncil("c-kl-4", "johanna-kiili", "Johanna", "Kiili",
+    "Kunnanvaltuutettu, kunnanhallituksen pj.", "Municipal Councillor, Chair of Board",
+    "Kolarin kunta", "Municipality of Kolari", "SIT"
+  )),
+  profile(mCouncil("c-kl-5", "orvo-vaattovaara", "Orvo", "Vaattovaara",
+    "Kunnanvaltuutettu, kunnanhallituksen varapj.", "Municipal Councillor, Board Vice Chair",
+    "Kolarin kunta", "Municipality of Kolari", "SIT"
+  )),
+  profile(mCouncil("c-kl-6", "stiina-kaisa-raisanen", "Stiina-Kaisa", "Räisänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kolarin kunta", "Municipality of Kolari", "SIT"
+  )),
+  profile(mCouncil("c-kl-7", "jarmo-kylmamaa", "Jarmo", "Kylmämaa",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kolarin kunta", "Municipality of Kolari", "KESK"
+  )),
+  profile(mCouncil("c-kl-8", "ville-ikonen", "Ville", "Ikonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kolarin kunta", "Municipality of Kolari", "KESK"
+  )),
+  profile(mCouncil("c-kl-9", "voitto-vaattovaara", "Voitto", "Vaattovaara",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kolarin kunta", "Municipality of Kolari", "VAS"
+  )),
+  profile(mCouncil("c-kl-10", "hanna-makela", "Hanna", "Mäkelä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Kolarin kunta", "Municipality of Kolari", "VAS"
+  )),
+
+  // ─── Muonio kunnanvaltuusto (17 seats: KESK 5, KOK 5, VAS 2, SDP 2, KD 1 — 15 of 17 confirmed) ───
+  profile(mCouncil("c-mu-1", "priitta-poyhtari-troen", "Priitta", "Pöyhtäri-Trøen",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Muonion kunta", "Municipality of Muonio", "KESK"
+  )),
+  profile(mCouncil("c-mu-2", "matti-myllykangas", "Matti", "Myllykangas",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KESK"
+  )),
+  profile(mCouncil("c-mu-3", "pirjo-a-rauhala", "Pirjo A.", "Rauhala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KESK"
+  )),
+  profile(mCouncil("c-mu-4", "pirkko-m-rauhala", "Pirkko M.", "Rauhala",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KESK"
+  )),
+  profile(mCouncil("c-mu-5", "tuomas-sieppi", "Tuomas", "Sieppi",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KESK"
+  )),
+  profile(mCouncil("c-mu-6", "minna-back", "Minna", "Back",
+    "Kunnanvaltuutettu, kunnanhallituksen pj.", "Municipal Councillor, Chair of Board",
+    "Muonion kunta", "Municipality of Muonio", "KOK"
+  )),
+  profile(mCouncil("c-mu-7", "mika-brannare", "Mika", "Brännare",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KOK"
+  )),
+  profile(mCouncil("c-mu-8", "petteri-hirsikangas", "Petteri", "Hirsikangas",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KOK"
+  )),
+  profile(mCouncil("c-mu-9", "maria-pietikainen", "Maria", "Pietikäinen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KOK"
+  )),
+  profile(mCouncil("c-mu-10", "teemu-taulavuori", "Teemu", "Taulavuori",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KOK"
+  )),
+  profile(mCouncil("c-mu-11", "manu-friman", "Manu", "Friman",
+    "Kunnanvaltuutettu, kunnanhallituksen 2. varapj.", "Municipal Councillor, Board 2nd Vice Chair",
+    "Muonion kunta", "Municipality of Muonio", "VAS"
+  )),
+  profile(mCouncil("c-mu-12", "johanna-mikkola", "Johanna", "Mikkola",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "VAS"
+  )),
+  profile(mCouncil("c-mu-13", "katriina-lauri", "Katriina", "Lauri",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "SDP"
+  )),
+  profile(mCouncil("c-mu-14", "sakari-silen", "Sakari", "Silén",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "SDP"
+  )),
+  profile(mCouncil("c-mu-15", "mikael-heikkila", "Mikael", "Heikkilä",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Muonion kunta", "Municipality of Muonio", "KD"
+  )),
+
+  // ─── Pello kunnanvaltuusto (17 seats — group leaders only) ───
+  profile(mCouncil("c-pe-1", "tuula-ylisaukko-oja", "Tuula", "Ylisaukko-oja",
+    "Kunnanvaltuutettu, ryhmän pj.", "Municipal Councillor, Group Chair",
+    "Pellon kunta", "Municipality of Pello", "KESK"
+  )),
+  profile(mCouncil("c-pe-2", "janne-niva", "Janne", "Niva",
+    "Kunnanvaltuutettu, ryhmän pj.", "Municipal Councillor, Group Chair",
+    "Pellon kunta", "Municipality of Pello", "SDP"
+  )),
+  profile(mCouncil("c-pe-3", "simo-keranen", "Simo", "Keränen",
+    "Kunnanvaltuutettu, ryhmän pj.", "Municipal Councillor, Group Chair",
+    "Pellon kunta", "Municipality of Pello", "VAS"
+  )),
+  profile(mCouncil("c-pe-4", "tiina-paakki", "Tiina", "Paakki",
+    "Kunnanvaltuutettu, ryhmän pj.", "Municipal Councillor, Group Chair",
+    "Pellon kunta", "Municipality of Pello", "PS"
+  )),
+
+  // ─── Posio kunnanvaltuusto (17 seats: KESK 12, Ryhmä 2008 2, PS 2, SDP 1) ───
+  profile(mCouncil("c-po-1", "eero-posio", "Eero", "Posio",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Posion kunta", "Municipality of Posio", "KESK"
+  )),
+  profile(mCouncil("c-po-2", "elina-ruokamo", "Elina", "Ruokamo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Posion kunta", "Municipality of Posio", "KESK"
+  )),
+
+  // ─── Savukoski kunnanvaltuusto (13 seats — partial) ───
+  profile(mCouncil("c-sv-1", "jalmari-harju", "Jalmari", "Harju",
+    "Kunnanvaltuutettu, ääniharava", "Municipal Councillor, top vote-getter",
+    "Savukosken kunta", "Municipality of Savukoski", "KESK"
+  )),
+  profile(mCouncil("c-sv-2", "kari-kilpimaa", "Kari", "Kilpimaa",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Savukosken kunta", "Municipality of Savukoski", "KOK"
+  )),
+  profile(mCouncil("c-sv-3", "jari-petri-mulari", "Jari-Petri", "Mulari",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Savukosken kunta", "Municipality of Savukoski", "SIT"
+  )),
+  profile(mCouncil("c-sv-4", "sinikka-leinonen", "Sinikka", "Leinonen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Savukosken kunta", "Municipality of Savukoski", "SIT"
+  )),
+  profile(mCouncil("c-sv-5", "jouni-halo", "Jouni", "Halo",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Savukosken kunta", "Municipality of Savukoski", "SIT"
+  )),
+
+  // ─── Utsjoki kunnanvaltuusto (15 seats — leadership only) ───
+  profile(mCouncil("c-ut-1", "arto-pohjanrinne", "Arto", "Pohjanrinne",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Utsjoen kunta", "Municipality of Utsjoki", "KOK"
+  )),
+  profile(mCouncil("c-ut-2", "vaino-guttorm", "Väinö", "Guttorm",
+    "Kunnanvaltuutettu, kunnanhallituksen pj.", "Municipal Councillor, Chair of Board",
+    "Utsjoen kunta", "Municipality of Utsjoki", "KD"
+  )),
+  profile(mCouncil("c-ut-3", "vuokko-tieva-niittyvuopio", "Vuokko", "Tieva-Niittyvuopio",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Utsjoen kunta", "Municipality of Utsjoki", "SIT"
+  )),
+
+  // ─── Simo kunnanvaltuusto (~19 seats — leadership only) ───
+  profile(mCouncil("c-si-1", "soile-vakkala", "Soile", "Vakkala",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Simon kunta", "Municipality of Simo", "KESK"
+  )),
+  profile(mCouncil("c-si-2", "helvi-hamari", "Helvi", "Hamari",
+    "Kunnanvaltuutettu, ääniharava", "Municipal Councillor, top vote-getter",
+    "Simon kunta", "Municipality of Simo", "VAS"
+  )),
+
+  // ─── Keminmaa kunnanvaltuusto (31 seats: Keminmaalaisten Parhaaksi 13, KESK 10, VAS 4 — leadership only) ───
+  profile(mCouncil("c-km-1", "auli-tasala", "Auli", "Tasala",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Keminmaan kunta", "Municipality of Keminmaa", "SIT"
+  )),
+
+  // ─── Tervola kunnanvaltuusto (17 seats — leadership confirmed) ───
+  profile(mCouncil("c-tv-1", "ari-hietanen", "Ari", "Hietanen",
+    "Kunnanvaltuuston puheenjohtaja", "Chair of Municipal Council",
+    "Tervolan kunta", "Municipality of Tervola", "SIT"
+  )),
+  profile(mCouncil("c-tv-2", "jorma-vaara", "Jorma", "Vaara",
+    "Kunnanvaltuutettu, 1. varapj.", "Municipal Councillor, 1st Vice Chair",
+    "Tervolan kunta", "Municipality of Tervola", "KESK"
+  )),
+  profile(mCouncil("c-tv-3", "eero-lampela", "Eero", "Lampela",
+    "Kunnanvaltuutettu, kunnanhallituksen pj.", "Municipal Councillor, Chair of Board",
+    "Tervolan kunta", "Municipality of Tervola", "KESK"
+  )),
+  profile(mCouncil("c-tv-4", "hanna-leena-kaasila", "Hanna-Leena", "Kaasila",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tervolan kunta", "Municipality of Tervola", "KESK"
+  )),
+  profile(mCouncil("c-tv-5", "riikka-oinas", "Riikka", "Oinas",
+    "Kunnanvaltuutettu, 2. varapj.", "Municipal Councillor, 2nd Vice Chair",
+    "Tervolan kunta", "Municipality of Tervola", "VAS"
+  )),
+  profile(mCouncil("c-tv-6", "pertti-hemminki", "Pertti", "Hemminki",
+    "Kunnanvaltuutettu, kunnanhallituksen varapj.", "Municipal Councillor, Board Vice Chair",
+    "Tervolan kunta", "Municipality of Tervola", "VAS"
+  )),
+  profile(mCouncil("c-tv-7", "jyrki-tormanen", "Jyrki", "Törmänen",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tervolan kunta", "Municipality of Tervola", "SIT"
+  )),
+  profile(mCouncil("c-tv-8", "pia-palokangas", "Pia", "Palokangas",
+    "Kunnanvaltuutettu", "Municipal Councillor",
+    "Tervolan kunta", "Municipality of Tervola", "SIT"
+  )),
 ];
 
 // ─── Municipal contact info ───
