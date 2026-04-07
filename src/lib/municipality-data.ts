@@ -2046,6 +2046,190 @@ export const municipalProfiles: OfficialProfile[] = [
     "Kunnanvaltuutettu", "Municipal Councillor",
     "Ristijärven kunta", "Municipality of Ristijärvi", "PS"
   )),
+
+  // ═══════════════════════════════════════════════════════════════
+  // LAPPI (Lapland) — 21 municipalities
+  // ═══════════════════════════════════════════════════════════════
+
+  // ─── Tornio (Rovaniemi already exists as m-16) ───
+  profile(mOfficial("m-300", "jukka-kujala", "Jukka", "Kujala",
+    "Kaupunginjohtaja", "City Manager",
+    "Tornion kaupunki", "City of Tornio",
+    "2013-01-01",
+    "Jukka Kujala on toiminut Tornion kaupunginjohtajana vuodesta 2013. Pitkän linjan kunnallishallinnon ammattilainen.",
+    "Jukka Kujala has served as City Manager of Tornio since 2013. A veteran municipal administration professional."
+  )),
+
+  // ─── Kemi ───
+  profile(mOfficial("m-301", "matti-ruotsalainen", "Matti", "Ruotsalainen",
+    "Kaupunginjohtaja", "City Manager",
+    "Kemin kaupunki", "City of Kemi",
+    "2023-01-01",
+    "Matti Ruotsalainen on toiminut Kemin kaupunginjohtajana vuodesta 2023. Kemi tunnetaan teollisuuskaupunkina Perämeren rannalla.",
+    "Matti Ruotsalainen has served as City Manager of Kemi since 2023. Kemi is known as an industrial city on the Bay of Bothnia."
+  )),
+
+  // ─── Kemijärvi ───
+  profile(mOfficial("m-302", "dina-solatie", "Dina", "Solatie",
+    "Kaupunginjohtaja", "City Manager",
+    "Kemijärven kaupunki", "City of Kemijärvi",
+    "2022-01-01",
+    "Dina Solatie on toiminut Kemijärven kaupunginjohtajana vuodesta 2022. Kemijärvi on Itä-Lapin keskuskaupunki.",
+    "Dina Solatie has served as City Manager of Kemijärvi since 2022. Kemijärvi is the central city of Eastern Lapland."
+  )),
+
+  // ─── Sodankylä ───
+  profile(mOfficial("m-303", "jari-rantapelkonen", "Jari", "Rantapelkonen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Sodankylän kunta", "Municipality of Sodankylä",
+    "2021-01-01",
+    "Jari Rantapelkonen on toiminut Sodankylän kunnanjohtajana vuodesta 2021. Entinen kansanedustaja (KOK). Sodankylä tunnetaan kaivostoiminnasta ja Lapin prikaatista.",
+    "Jari Rantapelkonen has served as Municipal Manager of Sodankylä since 2021. Former Member of Parliament (NCP). Sodankylä is known for mining and the Lapland Brigade."
+  )),
+
+  // ─── Inari ───
+  profile(mOfficial("m-304", "tommi-kasurinen", "Tommi", "Kasurinen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Inarin kunta", "Municipality of Inari",
+    "2021-01-01",
+    "Tommi Kasurinen on toiminut Inarin kunnanjohtajana vuodesta 2021. Inari on Suomen suurin kunta pinta-alaltaan ja saamelaisten kotiseutualuetta.",
+    "Tommi Kasurinen has served as Municipal Manager of Inari since 2021. Inari is Finland's largest municipality by area and part of the Sámi homeland."
+  )),
+
+  // ─── Kittilä ───
+  profile(mOfficial("m-305", "timo-kurula", "Timo", "Kurula",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Kittilän kunta", "Municipality of Kittilä",
+    "2019-01-01",
+    "Timo Kurula on toiminut Kittilän kunnanjohtajana vuodesta 2019. Kittilä tunnetaan Levin matkailukeskuksesta ja kultakaivoksesta.",
+    "Timo Kurula has served as Municipal Manager of Kittilä since 2019. Kittilä is known for the Levi ski resort and gold mine."
+  )),
+
+  // ─── Enontekiö ───
+  profile(mOfficial("m-306", "eero-ylitalo", "Eero", "Ylitalo",
+    "Vt. kunnanjohtaja", "Acting Municipal Manager",
+    "Enontekiön kunta", "Municipality of Enontekiö",
+    "2025-01-01",
+    "Eero Ylitalo toimii Enontekiön vt. kunnanjohtajana. Enontekiö on Suomen luoteisin kunta, tunnettu Hetan ja Kilpisjärven matkailualueista.",
+    "Eero Ylitalo serves as Acting Municipal Manager of Enontekiö. Enontekiö is Finland's northwesternmost municipality, known for the Hetta and Kilpisjärvi tourism areas."
+  )),
+
+  // ─── Kolari ───
+  profile(mOfficial("m-307", "markku-vehkaoja", "Markku", "Vehkaoja",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Kolarin kunta", "Municipality of Kolari",
+    "2020-01-01",
+    "Markku Vehkaoja on toiminut Kolarin kunnanjohtajana. Kolari tunnetaan Ylläksen matkailukeskuksesta ja kaivostoiminnasta.",
+    "Markku Vehkaoja has served as Municipal Manager of Kolari. Kolari is known for the Ylläs ski resort and mining activities."
+  )),
+
+  // ─── Muonio ───
+  profile(mOfficial("m-308", "laura-enbuska-maki", "Laura", "Enbuska-Mäki",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Muonion kunta", "Municipality of Muonio",
+    "2021-01-01",
+    "Laura Enbuska-Mäki on toiminut Muonion kunnanjohtajana vuodesta 2021. Muonio sijaitsee Tunturi-Lapissa Ruotsin rajan tuntumassa.",
+    "Laura Enbuska-Mäki has served as Municipal Manager of Muonio since 2021. Muonio is located in Fell Lapland near the Swedish border."
+  )),
+
+  // ─── Pello ───
+  profile(mOfficial("m-309", "katja-jaako-korkko", "Katja", "Jaako-Korkkö",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Pellon kunta", "Municipality of Pello",
+    "2022-01-01",
+    "Katja Jaako-Korkkö on toiminut Pellon kunnanjohtajana vuodesta 2022. Pello sijaitsee Tornionjokilaaksossa Ruotsin rajalla.",
+    "Katja Jaako-Korkkö has served as Municipal Manager of Pello since 2022. Pello is located in the Tornio River Valley on the Swedish border."
+  )),
+
+  // ─── Salla ───
+  profile(mOfficial("m-310", "erkki-parkkinen", "Erkki", "Parkkinen",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Sallan kunta", "Municipality of Salla",
+    "2018-01-01",
+    "Erkki Parkkinen on toiminut Sallan kunnanjohtajana vuodesta 2018. Salla tunnetaan hiihtomatkailusta ja Venäjän rajan läheisyydestä.",
+    "Erkki Parkkinen has served as Municipal Manager of Salla since 2018. Salla is known for ski tourism and proximity to the Russian border."
+  )),
+
+  // ─── Ranua ───
+  profile(mOfficial("m-311", "tuomas-aikkila", "Tuomas", "Aikkila",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Ranuan kunta", "Municipality of Ranua",
+    "2020-01-01",
+    "Tuomas Aikkila on toiminut Ranuan kunnanjohtajana. Ranua tunnetaan eläinpuistostaan ja joulumatkailusta.",
+    "Tuomas Aikkila has served as Municipal Manager of Ranua. Ranua is known for its wildlife park and Christmas tourism."
+  )),
+
+  // ─── Posio ───
+  profile(mOfficial("m-312", "pekka-jaasko", "Pekka", "Jääskö",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Posion kunta", "Municipality of Posio",
+    "2019-01-01",
+    "Pekka Jääskö on toiminut Posion kunnanjohtajana. Posio tunnetaan Riisitunturin kansallispuistosta ja keramiikkaosaamisestaan.",
+    "Pekka Jääskö has served as Municipal Manager of Posio. Posio is known for Riisitunturi National Park and its ceramics expertise."
+  )),
+
+  // ─── Savukoski ───
+  profile(mOfficial("m-313", "petri-harkonen", "Petri", "Härkönen",
+    "Kunnanjohtaja (eronnut 01/2026)", "Municipal Manager (resigned 01/2026)",
+    "Savukosken kunta", "Municipality of Savukoski",
+    "2019-01-01",
+    "Petri Härkönen toimi Savukosken kunnanjohtajana. Ero astui voimaan tammikuussa 2026. Savukoski on Suomen harvimmin asuttu kunta.",
+    "Petri Härkönen served as Municipal Manager of Savukoski. Resigned effective January 2026. Savukoski is Finland's most sparsely populated municipality."
+  )),
+
+  // ─── Pelkosenniemi ───
+  profile(mOfficial("m-314", "mikko-merikanto", "Mikko", "Merikanto",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Pelkosenniemen kunta", "Municipality of Pelkosenniemi",
+    "2020-01-01",
+    "Mikko Merikanto on toiminut Pelkosenniemen kunnanjohtajana. Pelkosenniemi tunnetaan Pyhätunturin matkailukeskuksesta.",
+    "Mikko Merikanto has served as Municipal Manager of Pelkosenniemi. Pelkosenniemi is known for the Pyhätunturi ski resort."
+  )),
+
+  // ─── Utsjoki ───
+  profile(mOfficial("m-315", "paivi-kontio", "Päivi", "Kontio",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Utsjoen kunta", "Municipality of Utsjoki",
+    "2021-01-01",
+    "Päivi Kontio on toiminut Utsjoen kunnanjohtajana. Utsjoki on Suomen pohjoisin kunta ja ainoa enemmistöltään saamenkielinen kunta.",
+    "Päivi Kontio has served as Municipal Manager of Utsjoki. Utsjoki is Finland's northernmost municipality and the only one with a Sámi-speaking majority."
+  )),
+
+  // ─── Simo ───
+  profile(mOfficial("m-316", "vivi-marttila", "Vivi", "Marttila",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Simon kunta", "Municipality of Simo",
+    "2022-01-01",
+    "Vivi Marttila on toiminut Simon kunnanjohtajana vuodesta 2022. Simo sijaitsee Perämeren rannalla Kemin ja Oulun välissä.",
+    "Vivi Marttila has served as Municipal Manager of Simo since 2022. Simo is located on the Bay of Bothnia between Kemi and Oulu."
+  )),
+
+  // ─── Keminmaa ───
+  profile(mOfficial("m-317", "hannele-matinlassi", "Hannele", "Matinlassi",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Keminmaan kunta", "Municipality of Keminmaa",
+    "2019-01-01",
+    "Hannele Matinlassi on toiminut Keminmaan kunnanjohtajana. Keminmaa sijaitsee Kemin naapurissa Kemijoen varrella.",
+    "Hannele Matinlassi has served as Municipal Manager of Keminmaa. Keminmaa is located next to Kemi along the Kemi River."
+  )),
+
+  // ─── Tervola ───
+  profile(mOfficial("m-318", "mika-simoska", "Mika", "Simoska",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Tervolan kunta", "Municipality of Tervola",
+    "2020-01-01",
+    "Mika Simoska on toiminut Tervolan kunnanjohtajana. Tervola sijaitsee Kemijoen varrella Rovaniemen ja Kemin välissä.",
+    "Mika Simoska has served as Municipal Manager of Tervola. Tervola is located along the Kemi River between Rovaniemi and Kemi."
+  )),
+
+  // ─── Ylitornio ───
+  profile(mOfficial("m-319", "jarmo-pienimaki", "Jarmo", "Pienimäki",
+    "Kunnanjohtaja", "Municipal Manager",
+    "Ylitornion kunta", "Municipality of Ylitornio",
+    "2018-01-01",
+    "Jarmo Pienimäki on toiminut Ylitornion kunnanjohtajana. Ylitornio sijaitsee Tornionjokilaaksossa Ruotsin rajalla.",
+    "Jarmo Pienimäki has served as Municipal Manager of Ylitornio. Ylitornio is located in the Tornio River Valley on the Swedish border."
+  )),
 ];
 
 // ─── Municipal contact info ───
@@ -2085,6 +2269,27 @@ const citySwitchboards: Record<string, string> = {
   "Puolangan kunta": "+358 8 615 6611",
   "Hyrynsalmen kunta": "+358 8 615 5001",
   "Ristijärven kunta": "+358 8 615 5201",
+  // Lappi
+  "Tornion kaupunki": "+358 16 432 111",
+  "Kemin kaupunki": "+358 16 259 111",
+  "Kemijärven kaupunki": "+358 16 810 111",
+  "Sodankylän kunta": "+358 16 617 111",
+  "Inarin kunta": "+358 16 687 111",
+  "Kittilän kunta": "+358 16 644 111",
+  "Enontekiön kunta": "+358 16 556 111",
+  "Kolarin kunta": "+358 16 561 111",
+  "Muonion kunta": "+358 16 532 111",
+  "Pellon kunta": "+358 16 557 111",
+  "Sallan kunta": "+358 16 689 111",
+  "Ranuan kunta": "+358 16 355 111",
+  "Posion kunta": "+358 16 531 111",
+  "Savukosken kunta": "+358 16 841 111",
+  "Pelkosenniemen kunta": "+358 16 856 111",
+  "Utsjoen kunta": "+358 16 677 111",
+  "Simon kunta": "+358 16 269 111",
+  "Keminmaan kunta": "+358 16 450 111",
+  "Tervolan kunta": "+358 16 451 111",
+  "Ylitornion kunta": "+358 16 565 111",
   "Savonlinnan kaupunki": "+358 15 571 7300",
   "Keravan kaupunki": "+358 9 294 91",
   "Nokian kaupunki": "+358 3 365 1311",
@@ -2125,6 +2330,27 @@ const cityEmailDomains: Record<string, string> = {
   "Puolangan kunta": "puolanka.fi",
   "Hyrynsalmen kunta": "hyrynsalmi.fi",
   "Ristijärven kunta": "ristijarvi.fi",
+  // Lappi
+  "Tornion kaupunki": "tornio.fi",
+  "Kemin kaupunki": "kemi.fi",
+  "Kemijärven kaupunki": "kemijarvi.fi",
+  "Sodankylän kunta": "sodankyla.fi",
+  "Inarin kunta": "inari.fi",
+  "Kittilän kunta": "kittila.fi",
+  "Enontekiön kunta": "enontekio.fi",
+  "Kolarin kunta": "kolari.fi",
+  "Muonion kunta": "muonio.fi",
+  "Pellon kunta": "pello.fi",
+  "Sallan kunta": "salla.fi",
+  "Ranuan kunta": "ranua.fi",
+  "Posion kunta": "posio.fi",
+  "Savukosken kunta": "savukoski.fi",
+  "Pelkosenniemen kunta": "pelkosenniemi.fi",
+  "Utsjoen kunta": "utsjoki.fi",
+  "Simon kunta": "simo.fi",
+  "Keminmaan kunta": "keminmaa.fi",
+  "Tervolan kunta": "tervola.fi",
+  "Ylitornion kunta": "ylitornio.fi",
   "Savonlinnan kaupunki": "savonlinna.fi",
   "Keravan kaupunki": "kerava.fi",
   "Nokian kaupunki": "nokia.fi",
